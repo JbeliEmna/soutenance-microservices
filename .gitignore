@@ -1,0 +1,21 @@
+# Maven
+target/
+*.class
+*.jar
+*.war
+
+# IDE
+.idea/
+.vscode/
+*.iml
+.classpath
+.project
+.settings/
+
+# Configs locales
+**/application-local.yml
+**/.env
+
+# OS
+.DS_Store
+Thumbs.db
