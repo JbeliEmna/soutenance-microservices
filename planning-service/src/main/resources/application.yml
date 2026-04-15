@@ -5,20 +5,15 @@ server:
   port: 8083
 
 # ============================================
-# DATASOURCE (MongoDB)
+# DATASOURCE (MongoDB Atlas)
 # ============================================
 spring:
   application:
     name: planning-service
   data:
     mongodb:
-      host: planning-cluster.o7nyftw.mongodb.net
-      port: 27017
-      database: planning_db
-      username: ahlemhorchani701_db_user
-      password: hd9L9KqaFGEylRhk
-      authentication-database: admin
-      ssl: true
+      # Option 1 : URI unique (RECOMMANDÉ)
+      uri: mongodb+srv://ahlemhorchani701_db_user:hd9L9KqaFGEylRhk@planning-cluster.o7nyftw.mongodb.net/planning_db?retryWrites=true&w=majority&appName=planning-cluster
 
 # ============================================
 # LOGGING
@@ -27,3 +22,4 @@ logging:
   level:
     com.soutenance.planning: DEBUG
     org.springframework.web: INFO
+    org.springframework.data.mongodb.core: DEBUG
