@@ -1,4 +1,4 @@
-package com.microservices.planning_service;
+package com.microservices.planning;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

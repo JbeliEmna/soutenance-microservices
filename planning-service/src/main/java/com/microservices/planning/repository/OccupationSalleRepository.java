@@ -1,7 +1,7 @@
-package com.soutenance.planning.repository;
+package com.microservices.planning.repository;
 
-import com.soutenance.planning.entity.OccupationSalle;
-import com.soutenance.planning.entity.Creneau;
+import com.microservices.planning.entity.OccupationSalle;
+import com.microservices.planning.entity.Creneau;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.data.mongodb.repository.Query;
 import org.springframework.stereotype.Repository;

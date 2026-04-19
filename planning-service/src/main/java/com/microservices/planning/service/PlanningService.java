@@ -1,9 +1,9 @@
-package com.soutenance.planning.service;
+package com.microservices.planning.service;
 
-import com.soutenance.planning.dto.DisponibiliteRequest;
-import com.soutenance.planning.dto.ReservationRequest;
-import com.soutenance.planning.entity.*;
-import com.soutenance.planning.repository.*;
+import com.microservices.planning.dto.DisponibiliteRequest;
+import com.microservices.planning.dto.ReservationRequest;
+import com.microservices.planning.entity.*;
+import com.microservices.planning.repository.*;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -175,6 +175,10 @@ public class PlanningService {
         return occupationRepository.findBySalleId(salleId);
     }
 
+    public List<OccupationSalle> getAllReservations() {
+        log.debug("Récupération de toutes les réservations (planning global)");
+        return occupationRepository.findAll();
+    }
     public void annulerReservation(String reservationId) {
         log.info("Annulation réservation id: {}", reservationId);
         OccupationSalle occupation = occupationRepository.findById(reservationId)

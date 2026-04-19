@@ -1,4 +1,4 @@
-package com.soutenance.planning.dto;
+package com.microservices.planning.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

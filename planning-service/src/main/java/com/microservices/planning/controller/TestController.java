@@ -1,8 +1,8 @@
-package com.soutenance.planning.controller;
+package com.microservices.planning.controller;
 
-import com.soutenance.planning.repository.SalleRepository;
-import com.soutenance.planning.repository.CreneauRepository;
-import com.soutenance.planning.repository.OccupationSalleRepository;
+import com.microservices.planning.repository.SalleRepository;
+import com.microservices.planning.repository.CreneauRepository;
+import com.microservices.planning.repository.OccupationSalleRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;

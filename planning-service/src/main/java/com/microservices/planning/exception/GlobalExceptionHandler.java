@@ -1,6 +1,6 @@
-package com.soutenance.planning.exception;
+package com.microservices.planning.exception;
 
-import com.soutenance.planning.dto.ErrorResponse;
+import com.microservices.planning.dto.ErrorResponse;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

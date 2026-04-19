@@ -1,4 +1,4 @@
-package com.soutenance.planning.entity;
+package com.microservices.planning.entity;
 
 import lombok.*;
 import org.springframework.data.annotation.Id;

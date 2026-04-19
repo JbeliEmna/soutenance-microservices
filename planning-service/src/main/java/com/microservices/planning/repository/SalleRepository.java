@@ -1,6 +1,6 @@
-package com.soutenance.planning.repository;
+package com.microservices.planning.repository;
 
-import com.soutenance.planning.entity.Salle;
+import com.microservices.planning.entity.Salle;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 import java.util.Optional;

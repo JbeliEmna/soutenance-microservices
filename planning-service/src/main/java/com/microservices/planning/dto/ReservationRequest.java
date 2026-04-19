@@ -1,4 +1,4 @@
-package com.soutenance.planning.dto;
+package com.microservices.planning.dto;
 
 import jakarta.validation.constraints.NotNull;
 import lombok.Data;

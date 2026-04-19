@@ -1,9 +1,9 @@
-package com.soutenance.planning.controller;
+package com.microservices.planning.controller;
 
-import com.soutenance.planning.dto.DisponibiliteRequest;
-import com.soutenance.planning.dto.ReservationRequest;
-import com.soutenance.planning.entity.*;
-import com.soutenance.planning.service.PlanningService;
+import com.microservices.planning.dto.DisponibiliteRequest;
+import com.microservices.planning.dto.ReservationRequest;
+import com.microservices.planning.entity.*;
+import com.microservices.planning.service.PlanningService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -120,6 +120,11 @@ public class PlanningController {
     public ResponseEntity<List<OccupationSalle>> getReservationsBySalle(@PathVariable String salleId) {
         log.info("GET /api/planning/reservations/salle/{} - Liste réservations", salleId);
         return ResponseEntity.ok(planningService.getReservationsBySalle(salleId));
+    }
+    @GetMapping("/reservations")
+    public ResponseEntity<List<OccupationSalle>> listerToutesLesReservations() {
+        log.info("GET /api/planning/reservations - Liste globale des réservations");
+        return ResponseEntity.ok(planningService.getAllReservations());
     }
 
     @DeleteMapping("/reservations/{id}")
