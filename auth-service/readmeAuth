@@ -1,0 +1,206 @@
+# Auth Service — Système de Gestion des Soutenances
+
+Service d'authentification et de gestion des utilisateurs basé sur Spring Boot et MongoDB Atlas.
+
+---
+
+## Informations du service
+
+| Propriété | Valeur |
+|-----------|--------|
+| Nom | auth-service |
+| Port | 8085 |
+| Base de données | MongoDB Atlas |
+| Collection | users |
+
+---
+
+## Technologies utilisées
+
+- Java 17
+- Spring Boot 3.5.13
+- Spring Security + JWT
+- MongoDB Atlas
+- Spring Cloud (Eureka Client)
+
+---
+
+## Prérequis
+
+Avant de lancer ce service, assurer que les services suivants sont démarrés :
+
+| Service | Port | Ordre |
+|---------|------|-------|
+| config-service | 8888 | 1er |
+| discovery-service | 8761 | 2ème |
+| auth-service | 8085 | 3ème |
+
+---
+
+## Lancer le service
+
+```bash
+cd auth-service
+mvn spring-boot:run
+```
+
+---
+
+## Vérifications après démarrage
+
+| URL | Description |
+|-----|-------------|
+| http://localhost:8085/actuator/health | Santé du service |
+| http://localhost:8085/swagger-ui/index.html | Documentation API |
+| http://localhost:8761 | Dashboard Eureka |
+
+---
+
+## Documentation API (Swagger)
+
+Accéder à la documentation complète et interactive :
+http://localhost:8085/swagger-ui/index.html
+---
+
+## Endpoints disponibles
+
+### Authentification (publics — pas besoin de token)
+
+| Méthode | URL | Description |
+|---------|-----|-------------|
+| POST | `/api/auth/register` | Inscription d'un utilisateur |
+| POST | `/api/auth/login` | Connexion et obtention du token JWT |
+
+### Utilisateur connecté (token requis)
+
+| Méthode | URL | Description | Rôle requis |
+|---------|-----|-------------|-------------|
+| GET | `/api/auth/me` | Profil de l'utilisateur connecté | Tous |
+
+### Administration (token admin requis)
+
+| Méthode | URL | Description | Rôle requis |
+|---------|-----|-------------|-------------|
+| POST | `/api/auth/admin/create-user` | Créer un enseignant ou admin | ROLE_ADMIN |
+
+---
+
+## Rôles utilisateurs
+
+| Rôle | Description | Inscription |
+|------|-------------|-------------|
+| `ROLE_ETUDIANT` | Consultation des résultats | Libre via `/register` |
+| `ROLE_ENSEIGNANT` | Jury, notes | Créé par l'admin |
+| `ROLE_ADMIN` | Accès complet | Créé par l'admin |
+
+---
+
+## Exemples de requêtes
+
+### 1. Inscription étudiant
+
+```http
+POST http://localhost:8085/api/auth/register
+Content-Type: application/json
+
+{
+    "nom": "Ben Ali",
+    "prenom": "Ahmed",
+    "email": "ahmed@etudiant.com",
+    "password": "password123",
+    "role": "ROLE_ETUDIANT",
+    "matricule": "ETU2024001"
+}
+```
+
+### 2. Inscription enseignant (admin requis)
+
+```http
+POST http://localhost:8085/api/auth/admin/create-user
+Authorization: Bearer TON_TOKEN_ADMIN
+Content-Type: application/json
+
+{
+    "nom": "Ben Salem",
+    "prenom": "Mohamed",
+    "email": "mohamed@enseignant.com",
+    "password": "password123",
+    "role": "ROLE_ENSEIGNANT",
+    "grade": "Maitre de Conferences"
+}
+```
+
+### 3. Connexion
+
+```http
+POST http://localhost:8085/api/auth/login
+Content-Type: application/json
+
+{
+    "email": "ahmed@etudiant.com",
+    "password": "password123"
+}
+```
+
+**Réponse :**
+```json
+{
+    "token": "eyJhbGciOiJIUzI1NiJ9...",
+    "email": "ahmed@etudiant.com",
+    "nom": "Ben Ali",
+    "prenom": "Ahmed",
+    "role": "ROLE_ETUDIANT",
+    "message": "Connexion reussie"
+}
+```
+
+### 4. Utiliser le token dans les requêtes suivantes
+
+```http
+GET http://localhost:8085/api/auth/me
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9...
+```
+
+---
+
+## Intégration avec le Frontend Angular
+
+### URL de base (toujours via Gateway)
+http://localhost:8080
+### Endpoints à utiliser depuis Angular
+
+| Action | URL via Gateway |
+|--------|----------------|
+| Login | `http://localhost:8080/api/auth/login` |
+| Register | `http://localhost:8080/api/auth/register` |
+| Profil | `http://localhost:8080/api/auth/me` |
+| Créer utilisateur | `http://localhost:8080/api/auth/admin/create-user` |
+
+### Ajouter le token dans Angular
+
+Après le login, sauvegarder le token et l'envoyer dans chaque requête :
+
+```typescript
+// Sauvegarder le token après login
+localStorage.setItem('token', response.token);
+localStorage.setItem('role', response.role);
+
+// Envoyer le token dans les requêtes suivantes
+headers: {
+  'Authorization': `Bearer ${localStorage.getItem('token')}`,
+  'Content-Type': 'application/json'
+}
+```
+
+### Vérifier le rôle dans Angular
+
+```typescript
+const role = localStorage.getItem('role');
+
+if (role === 'ROLE_ADMIN') {
+  // afficher menu admin
+} else if (role === 'ROLE_ETUDIANT') {
+  // afficher menu étudiant
+} else if (role === 'ROLE_ENSEIGNANT') {
+  // afficher menu enseignant
+}
