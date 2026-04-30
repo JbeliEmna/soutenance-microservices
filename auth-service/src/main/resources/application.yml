@@ -1,18 +1,15 @@
 spring:
   application:
     name: auth-service
-  datasource:
-    url: jdbc:mysql://localhost:3306/db_auth?createDatabaseIfNotExist=true&useSSL=false&serverTimezone=UTC
-    username: root
-    password: root
-    driver-class-name: com.mysql.cj.jdbc.Driver
-  jpa:
-    hibernate:
-      ddl-auto: update
-    show-sql: true
-    properties:
-      hibernate:
-        dialect: org.hibernate.dialect.MySQLDialect
+
+  config:
+    import: optional:configserver:http://localhost:8888
+
+  data:
+    mongodb:
+      uri: mongodb+srv://mouhanedmliki66_db_user:v9s8qfK0MEiSLKQL@cluster0.s3inqkc.mongodb.net/?appName=Cluster0
+      database: users_db
+      auto-index-creation: true
 
 server:
   port: 8085
@@ -24,9 +21,8 @@ eureka:
   instance:
     prefer-ip-address: true
 
-# Clé secrète JWT ? à changer en production
 jwt:
-  secret: 404E635266556A586E3272357538782F413F4428472B4B6250645367566B5970
+  secret: 96P0FrII0AVNGDBdY+EIF9EY/WQk4FKLqRV+ivPvsmhUyegmWPXXIrQkF1rjwrxg3E+NeDXlkznMLcvNx1uyg==
   expiration: 86400000
 
 management:
@@ -34,3 +30,18 @@ management:
     web:
       exposure:
         include: health,info
+
+logging:
+  level:
+    org.springframework.security: DEBUG
+    com.microservices: DEBUG
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+    enabled: true
+  swagger-ui:
+    path: /swagger-ui.html
+    enabled: true
+    try-it-out-enabled: true
+  packages-to-scan: com.microservices.auth_service
+  default-consumes-media-type: application/json

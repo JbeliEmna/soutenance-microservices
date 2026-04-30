@@ -1,18 +1,11 @@
 spring:
   application:
     name: jury-service
-  datasource:
-    url: jdbc:mysql://localhost:3306/db_jury?createDatabaseIfNotExist=true&useSSL=false&serverTimezone=UTC
-    username: root
-    password: root
-    driver-class-name: com.mysql.cj.jdbc.Driver
-  jpa:
-    hibernate:
-      ddl-auto: update
-    show-sql: true
-    properties:
-      hibernate:
-        dialect: org.hibernate.dialect.MySQLDialect
+  config:
+    import: optional:configserver:http://localhost:8888
+  data:
+    mongodb:
+      uri: mongodb+srv://mouhanedmliki66_db_user:v9s8qfK0MEiSLKQL@cluster0.s3inqkc.mongodb.net/?appName=Cluster0
 
 server:
   port: 8082
@@ -29,3 +22,24 @@ management:
     web:
       exposure:
         include: health,info
+
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+    enabled: true
+  swagger-ui:
+    path: /swagger-ui.html
+    enabled: true
+    try-it-out-enabled: true
+    operations-sorter: method
+    tags-sorter: alpha
+  show-actuator: true
+
+
+
+logging:
+  level:
+    com.microservices.jury_service: DEBUG
+    org.springframework.data.mongodb: DEBUG
+    org.springdoc: DEBUG
+    org.springframework.web: DEBUG

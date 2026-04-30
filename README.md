@@ -1,35 +1,36 @@
 # Soutenance Microservices
 
 ## Technologies
-- Java 17
-- Spring Boot 3.5.13
+- Java 17+
+- Spring Boot 3.5.x
 - Spring Cloud 2025.0.0
-- MySQL 8
-- Angular (frontend)
+- MongoDB
+- Angular/front-end via API Gateway
 
-## Prérequis
-- Java 17 installé
-- Maven installé
-- MySQL 8 installé (username: root, password: root)
-- Git installé
+## Prerequis
+- Java installe
+- Maven installe
+- MongoDB Atlas accessible ou MongoDB local configure
+- Git installe
 
 ## Structure du projet
-| Service | Port | Description | Package |
-|---------|------|-------------|---------|
-| config-service | 8888 | Configuration centralisée | com.microservices.config |
-| discovery-service | 8761 | Eureka - Service Discovery | com.microservices.discovery |
-| gateway-service | 8080 | API Gateway | com.microservices.gateway |
-| soutenance-service | 8081 | Gestion des soutenances | com.microservices.soutenance |
-| jury-service | 8082 | Gestion des jurys | com.microservices.jury |
-| planning-service | 8083 | Planning et conflits | com.microservices.planning |
-| notes-service | 8084 | Notes et résultats | com.microservices.notes |
-| auth-service | 8085 | Authentification | com.microservices.auth |
+| Service | Port | Description |
+|---------|------|-------------|
+| discovery-service | 8761 | Eureka - Service Discovery |
+| config-service | 8888 | Configuration centralisee |
+| auth-service | 8085 | Authentification et utilisateurs |
+| soutenance-service | 8084 | Gestion des soutenances, salles et planning |
+| jury-service | 8082 | Gestion des jurys |
+| planning-service | 8083 | Planning et conflits, module reserve |
+| notes-service | 8088 | Notes et resultats |
+| gateway-service | 8089 | API Gateway |
 
-## Ordre de démarrage (IMPORTANT)
-1. config-service
-2. discovery-service
-3. gateway-service
-4. Les services métier (dans n'importe quel ordre)
+## Ordre de demarrage
+1. discovery-service
+2. config-service
+3. auth-service
+4. soutenance-service, jury-service, notes-service
+5. gateway-service
 
 ## Lancer un service
 ```bash
@@ -37,36 +38,16 @@ cd nom-du-service
 mvn spring-boot:run
 ```
 
-## Vérifications après démarrage
-- Eureka Dashboard : http://localhost:8761
-- Config Server : http://localhost:8888/soutenance-service/default
-- Gateway : http://localhost:8080/actuator/health
+## Verifications apres demarrage
+- Eureka Dashboard: http://localhost:8761
+- Config Server: http://localhost:8888/actuator/health
+- Auth Service: http://localhost:8085/actuator/health
+- Soutenance Service: http://localhost:8084/actuator/health
+- Jury Service: http://localhost:8082/actuator/health
+- Notes Service: http://localhost:8088/actuator/health
+- Gateway: http://localhost:8089/actuator/health
 
-## Si ton mot de passe MySQL est différent de "root"
-Crée le fichier `src/main/resources/application-local.yml` :
-```yaml
-spring:
-  datasource:
-    username: root
-    password: TON_MOT_DE_PASSE
-```
-Puis lance avec :
-```bash
-mvn spring-boot:run -Dspring-boot.run.profiles=local
-```
-
-## La base de données est créée automatiquement au premier démarrage.
-
-## Instructions pour les collègues
-1. Cloner le projet :
-```bash
-git clone https://github.com/JbeliEmna/soutenance-microservices.git
-```
-2. Aller sur sa branche :
-```bash
-git checkout feature/nom-du-service
-```
-3. Ouvrir son dossier de service dans IntelliJ :
-    - File → Open → choisir le dossier du service (ex: jury-service)
-4. Lancer les 3 services infrastructure d'abord
-5. Lancer son service et commencer à coder
+## Notes importantes
+- Les utilisateurs viennent de `auth-service` avec `externalId`.
+- Les endpoints `/api/references/**` de `soutenance-service` sont legacy et ne sont plus la source de verite.
+- Utiliser le Gateway en priorite: http://localhost:8089

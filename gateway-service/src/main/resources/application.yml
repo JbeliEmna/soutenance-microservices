@@ -1,5 +1,5 @@
 server:
-  port: 8080
+  port: 8089
 
 spring:
   application:
@@ -15,15 +15,20 @@ spring:
               enabled: true
               lower-case-service-id: true
           routes:
+            - id: notes-soutenance-etudiants
+              uri: lb://notes-service
+              predicates:
+                - Path=/api/soutenances/*/etudiants,/api/soutenances/etudiants/assignations
+
             - id: soutenance-service
               uri: lb://soutenance-service
               predicates:
-                - Path=/api/soutenances/**
+                - Path=/api/soutenances/**,/api/salles/**,/api/references/**,/api/juries/**
 
             - id: jury-service
               uri: lb://jury-service
               predicates:
-                - Path=/api/jurys/**
+                - Path=/api/membres-jury/**,/api/affectations-jury/**
 
             - id: planning-service
               uri: lb://planning-service
@@ -33,24 +38,26 @@ spring:
             - id: notes-service
               uri: lb://notes-service
               predicates:
-                - Path=/api/notes/**
+                - Path=/api/evaluations/**,/api/resultats/**,/api/etudiants/**
 
             - id: auth-service
               uri: lb://auth-service
               predicates:
-                - Path=/api/auth/**
+                - Path=/api/auth/**,/api/users/internal/**
 
           globalcors:
             cors-configurations:
               '[/**]':
                 allowedOrigins:
                   - "http://localhost:4200"
+                  - "http://localhost:3000"
                 allowedMethods:
                   - GET
                   - POST
                   - PUT
                   - DELETE
                   - OPTIONS
+                  - PATCH
                 allowedHeaders: "*"
                 allowCredentials: true
 
