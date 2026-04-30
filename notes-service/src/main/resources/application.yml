@@ -5,8 +5,9 @@ spring:
     import: optional:configserver:http://localhost:8888
   data:
     mongodb:
-      uri: mongodb+srv://mouhanedmliki66_db_user:v9s8qfK0MEiSLKQL@cluster0.s3inqkc.mongodb.net/notes_service?appName=Cluster0
-      database: notes_service
+      uri: mongodb+srv://mouhanedmliki66_db_user:v9s8qfK0MEiSLKQL@cluster0.s3inqkc.mongodb.net/gestion_soutenances_notes?appName=Cluster0
+      database: gestion_soutenances_notes
+      auto-index-creation: true
 
 
 server:

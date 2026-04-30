@@ -7,8 +7,8 @@ spring:
 
   data:
     mongodb:
-      uri: mongodb+srv://mouhanedmliki66_db_user:v9s8qfK0MEiSLKQL@cluster0.s3inqkc.mongodb.net/?appName=Cluster0
-      database: users_db
+      uri: mongodb+srv://mouhanedmliki66_db_user:v9s8qfK0MEiSLKQL@cluster0.s3inqkc.mongodb.net/gestion_soutenances_auth?appName=Cluster0
+      database: gestion_soutenances_auth
       auto-index-creation: true
 
 server:

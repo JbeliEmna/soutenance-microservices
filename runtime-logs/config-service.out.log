@@ -35,66 +35,66 @@
 
  :: Spring Boot ::               (v3.5.13)
 
-2026-04-30T15:19:20.932+01:00  INFO 22248 --- [config-service] [           main] c.m.c.ConfigServiceApplication           : Starting ConfigServiceApplication using Java 23.0.2 with PID 22248 (C:\Users\mouha\projet_microservice\config-service\target\classes started by mouha in C:\Users\mouha\projet_microservice\config-service)
-2026-04-30T15:19:20.933+01:00  INFO 22248 --- [config-service] [           main] c.m.c.ConfigServiceApplication           : No active profile set, falling back to 1 default profile: "default"
-2026-04-30T15:19:20.933+01:00 DEBUG 22248 --- [config-service] [           main] o.s.boot.SpringApplication               : Loading source class com.microservices.config_service.ConfigServiceApplication
-2026-04-30T15:19:21.013+01:00 DEBUG 22248 --- [config-service] [           main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@54d18072
-2026-04-30T15:19:22.553+01:00  INFO 22248 --- [config-service] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=96648dec-86fd-32c3-95cf-b58d1a575829
-2026-04-30T15:19:22.863+01:00 DEBUG 22248 --- [config-service] [           main] .s.b.w.e.t.TomcatServletWebServerFactory : Code archive: C:\Users\mouha\.m2\repository\org\springframework\boot\spring-boot\3.5.13\spring-boot-3.5.13.jar
-2026-04-30T15:19:22.868+01:00 DEBUG 22248 --- [config-service] [           main] .s.b.w.e.t.TomcatServletWebServerFactory : Code archive: C:\Users\mouha\.m2\repository\org\springframework\boot\spring-boot\3.5.13\spring-boot-3.5.13.jar
-2026-04-30T15:19:22.868+01:00 DEBUG 22248 --- [config-service] [           main] .s.b.w.e.t.TomcatServletWebServerFactory : None of the document roots [src/main/webapp, public, static] point to a directory and will be ignored.
-2026-04-30T15:19:22.891+01:00  INFO 22248 --- [config-service] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8888 (http)
-2026-04-30T15:19:22.898+01:00  INFO 22248 --- [config-service] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-04-30T15:19:22.898+01:00  INFO 22248 --- [config-service] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.53]
-2026-04-30T15:19:22.977+01:00  INFO 22248 --- [config-service] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-04-30T15:19:22.977+01:00 DEBUG 22248 --- [config-service] [           main] w.s.c.ServletWebServerApplicationContext : Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
-2026-04-30T15:19:22.978+01:00  INFO 22248 --- [config-service] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1965 ms
-2026-04-30T15:19:23.223+01:00 DEBUG 22248 --- [config-service] [           main] o.s.b.w.s.ServletContextInitializerBeans : Mapping filters: webMvcObservationFilter urls=[/*] order=-2147483647, characterEncodingFilter urls=[/*] order=-2147483648, formContentFilter urls=[/*] order=-9900, requestContextFilter urls=[/*] order=-105
-2026-04-30T15:19:23.224+01:00 DEBUG 22248 --- [config-service] [           main] o.s.b.w.s.ServletContextInitializerBeans : Mapping servlets: dispatcherServlet urls=[/]
-2026-04-30T15:19:23.231+01:00 DEBUG 22248 --- [config-service] [           main] o.s.b.w.s.f.OrderedRequestContextFilter  : Filter 'requestContextFilter' configured for use
-2026-04-30T15:19:23.231+01:00 DEBUG 22248 --- [config-service] [           main] o.s.w.f.ServerHttpObservationFilter      : Filter 'webMvcObservationFilter' configured for use
-2026-04-30T15:19:23.231+01:00 DEBUG 22248 --- [config-service] [           main] s.b.w.s.f.OrderedCharacterEncodingFilter : Filter 'characterEncodingFilter' configured for use
-2026-04-30T15:19:23.231+01:00 DEBUG 22248 --- [config-service] [           main] o.s.b.w.s.f.OrderedFormContentFilter     : Filter 'formContentFilter' configured for use
-2026-04-30T15:19:23.388+01:00 DEBUG 22248 --- [config-service] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : 23 mappings in 'requestMappingHandlerMapping'
-2026-04-30T15:19:23.399+01:00 DEBUG 22248 --- [config-service] [           main] o.s.b.a.AutoConfigurationPackages        : @EnableAutoConfiguration was declared on a class in the package 'com.microservices.config_service'. Automatic @Repository and @Entity scanning is enabled.
-2026-04-30T15:19:23.432+01:00 DEBUG 22248 --- [config-service] [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
-2026-04-30T15:19:23.529+01:00 DEBUG 22248 --- [config-service] [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
-2026-04-30T15:19:23.598+01:00 DEBUG 22248 --- [config-service] [           main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
-2026-04-30T15:19:24.649+01:00  INFO 22248 --- [config-service] [           main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
-2026-04-30T15:19:26.162+01:00  INFO 22248 --- [config-service] [           main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
-2026-04-30T15:19:26.193+01:00  INFO 22248 --- [config-service] [           main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
-2026-04-30T15:19:26.304+01:00  WARN 22248 --- [config-service] [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2026-04-30T15:19:26.313+01:00  INFO 22248 --- [config-service] [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 3 endpoints beneath base path '/actuator'
-2026-04-30T15:19:26.371+01:00  INFO 22248 --- [config-service] [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
-2026-04-30T15:19:26.396+01:00  INFO 22248 --- [config-service] [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
-2026-04-30T15:19:26.403+01:00  INFO 22248 --- [config-service] [           main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2026-04-30T15:19:26.414+01:00  INFO 22248 --- [config-service] [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
-2026-04-30T15:19:26.414+01:00  INFO 22248 --- [config-service] [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
-2026-04-30T15:19:26.415+01:00  INFO 22248 --- [config-service] [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
-2026-04-30T15:19:26.415+01:00  INFO 22248 --- [config-service] [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
-2026-04-30T15:19:26.415+01:00  INFO 22248 --- [config-service] [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
-2026-04-30T15:19:26.416+01:00  INFO 22248 --- [config-service] [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
-2026-04-30T15:19:26.416+01:00  INFO 22248 --- [config-service] [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
-2026-04-30T15:19:26.684+01:00 DEBUG 22248 --- [config-service] [           main] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/
-2026-04-30T15:19:26.863+01:00 DEBUG 22248 --- [config-service] [           main] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
-2026-04-30T15:19:27.142+01:00 DEBUG 22248 --- [config-service] [           main] o.s.web.client.RestTemplate              : Response 200 OK
-2026-04-30T15:19:27.146+01:00 DEBUG 22248 --- [config-service] [           main] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
-2026-04-30T15:19:27.179+01:00  INFO 22248 --- [config-service] [           main] com.netflix.discovery.DiscoveryClient    : The response status is 200
-2026-04-30T15:19:27.181+01:00  INFO 22248 --- [config-service] [           main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
-2026-04-30T15:19:27.183+01:00  INFO 22248 --- [config-service] [           main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
-2026-04-30T15:19:27.187+01:00  INFO 22248 --- [config-service] [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1777558767185 with initial instances count: 0
-2026-04-30T15:19:27.191+01:00  INFO 22248 --- [config-service] [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application CONFIG-SERVICE with eureka with status UP
-2026-04-30T15:19:27.192+01:00  INFO 22248 --- [config-service] [           main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1777558767192, current=UP, previous=STARTING]
-2026-04-30T15:19:27.193+01:00  INFO 22248 --- [config-service] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CONFIG-SERVICE/localhost:config-service:8888: registering service...
-2026-04-30T15:19:27.193+01:00 DEBUG 22248 --- [config-service] [foReplicator-%d] o.s.web.client.RestTemplate              : HTTP POST http://localhost:8761/eureka/apps/CONFIG-SERVICE
-2026-04-30T15:19:27.204+01:00 DEBUG 22248 --- [config-service] [foReplicator-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
-2026-04-30T15:19:27.216+01:00  INFO 22248 --- [config-service] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8888 (http) with context path '/'
-2026-04-30T15:19:27.218+01:00  INFO 22248 --- [config-service] [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8888
-2026-04-30T15:19:27.229+01:00 DEBUG 22248 --- [config-service] [foReplicator-%d] o.s.web.client.RestTemplate              : Writing [InstanceInfo [instanceId = localhost:config-service:8888, appName = CONFIG-SERVICE, hostName = 192.168.56.1, status = UP, ipAddr = 192.168.56.1, port = 8888, securePort = 443, dataCenterInfo = com.netflix.appinfo.MyDataCenterInfo@713f80d9] as "application/json"
-2026-04-30T15:19:27.363+01:00 DEBUG 22248 --- [config-service] [foReplicator-%d] o.s.web.client.RestTemplate              : Response 204 NO_CONTENT
-2026-04-30T15:19:27.363+01:00  INFO 22248 --- [config-service] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CONFIG-SERVICE/localhost:config-service:8888 - registration status: 204
-2026-04-30T15:19:28.244+01:00  INFO 22248 --- [config-service] [           main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
-2026-04-30T15:19:28.271+01:00 DEBUG 22248 --- [config-service] [           main] .s.b.a.l.ConditionEvaluationReportLogger : 
+2026-04-30T15:41:50.323+01:00  INFO 17948 --- [config-service] [           main] c.m.c.ConfigServiceApplication           : Starting ConfigServiceApplication using Java 23.0.2 with PID 17948 (C:\Users\mouha\projet_microservice\config-service\target\classes started by mouha in C:\Users\mouha\projet_microservice\config-service)
+2026-04-30T15:41:50.329+01:00  INFO 17948 --- [config-service] [           main] c.m.c.ConfigServiceApplication           : No active profile set, falling back to 1 default profile: "default"
+2026-04-30T15:41:50.330+01:00 DEBUG 17948 --- [config-service] [           main] o.s.boot.SpringApplication               : Loading source class com.microservices.config_service.ConfigServiceApplication
+2026-04-30T15:41:50.386+01:00 DEBUG 17948 --- [config-service] [           main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@54d18072
+2026-04-30T15:41:51.364+01:00  INFO 17948 --- [config-service] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=96648dec-86fd-32c3-95cf-b58d1a575829
+2026-04-30T15:41:51.602+01:00 DEBUG 17948 --- [config-service] [           main] .s.b.w.e.t.TomcatServletWebServerFactory : Code archive: C:\Users\mouha\.m2\repository\org\springframework\boot\spring-boot\3.5.13\spring-boot-3.5.13.jar
+2026-04-30T15:41:51.606+01:00 DEBUG 17948 --- [config-service] [           main] .s.b.w.e.t.TomcatServletWebServerFactory : Code archive: C:\Users\mouha\.m2\repository\org\springframework\boot\spring-boot\3.5.13\spring-boot-3.5.13.jar
+2026-04-30T15:41:51.606+01:00 DEBUG 17948 --- [config-service] [           main] .s.b.w.e.t.TomcatServletWebServerFactory : None of the document roots [src/main/webapp, public, static] point to a directory and will be ignored.
+2026-04-30T15:41:51.626+01:00  INFO 17948 --- [config-service] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8888 (http)
+2026-04-30T15:41:51.640+01:00  INFO 17948 --- [config-service] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-30T15:41:51.640+01:00  INFO 17948 --- [config-service] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.53]
+2026-04-30T15:41:51.688+01:00  INFO 17948 --- [config-service] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-04-30T15:41:51.689+01:00 DEBUG 17948 --- [config-service] [           main] w.s.c.ServletWebServerApplicationContext : Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
+2026-04-30T15:41:51.690+01:00  INFO 17948 --- [config-service] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1304 ms
+2026-04-30T15:41:51.905+01:00 DEBUG 17948 --- [config-service] [           main] o.s.b.w.s.ServletContextInitializerBeans : Mapping filters: webMvcObservationFilter urls=[/*] order=-2147483647, characterEncodingFilter urls=[/*] order=-2147483648, formContentFilter urls=[/*] order=-9900, requestContextFilter urls=[/*] order=-105
+2026-04-30T15:41:51.907+01:00 DEBUG 17948 --- [config-service] [           main] o.s.b.w.s.ServletContextInitializerBeans : Mapping servlets: dispatcherServlet urls=[/]
+2026-04-30T15:41:51.925+01:00 DEBUG 17948 --- [config-service] [           main] o.s.b.w.s.f.OrderedRequestContextFilter  : Filter 'requestContextFilter' configured for use
+2026-04-30T15:41:51.926+01:00 DEBUG 17948 --- [config-service] [           main] o.s.w.f.ServerHttpObservationFilter      : Filter 'webMvcObservationFilter' configured for use
+2026-04-30T15:41:51.927+01:00 DEBUG 17948 --- [config-service] [           main] s.b.w.s.f.OrderedCharacterEncodingFilter : Filter 'characterEncodingFilter' configured for use
+2026-04-30T15:41:51.927+01:00 DEBUG 17948 --- [config-service] [           main] o.s.b.w.s.f.OrderedFormContentFilter     : Filter 'formContentFilter' configured for use
+2026-04-30T15:41:52.112+01:00 DEBUG 17948 --- [config-service] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : 23 mappings in 'requestMappingHandlerMapping'
+2026-04-30T15:41:52.137+01:00 DEBUG 17948 --- [config-service] [           main] o.s.b.a.AutoConfigurationPackages        : @EnableAutoConfiguration was declared on a class in the package 'com.microservices.config_service'. Automatic @Repository and @Entity scanning is enabled.
+2026-04-30T15:41:52.166+01:00 DEBUG 17948 --- [config-service] [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2026-04-30T15:41:52.262+01:00 DEBUG 17948 --- [config-service] [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2026-04-30T15:41:52.310+01:00 DEBUG 17948 --- [config-service] [           main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2026-04-30T15:41:53.369+01:00  INFO 17948 --- [config-service] [           main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2026-04-30T15:41:54.693+01:00  INFO 17948 --- [config-service] [           main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2026-04-30T15:41:54.883+01:00  INFO 17948 --- [config-service] [           main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2026-04-30T15:41:54.963+01:00  WARN 17948 --- [config-service] [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-04-30T15:41:54.972+01:00  INFO 17948 --- [config-service] [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 3 endpoints beneath base path '/actuator'
+2026-04-30T15:41:55.024+01:00  INFO 17948 --- [config-service] [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2026-04-30T15:41:55.048+01:00  INFO 17948 --- [config-service] [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2026-04-30T15:41:55.052+01:00  INFO 17948 --- [config-service] [           main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-04-30T15:41:55.060+01:00  INFO 17948 --- [config-service] [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-04-30T15:41:55.060+01:00  INFO 17948 --- [config-service] [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-04-30T15:41:55.060+01:00  INFO 17948 --- [config-service] [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-04-30T15:41:55.060+01:00  INFO 17948 --- [config-service] [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-04-30T15:41:55.060+01:00  INFO 17948 --- [config-service] [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-04-30T15:41:55.060+01:00  INFO 17948 --- [config-service] [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2026-04-30T15:41:55.061+01:00  INFO 17948 --- [config-service] [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-04-30T15:41:55.216+01:00 DEBUG 17948 --- [config-service] [           main] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/
+2026-04-30T15:41:55.361+01:00 DEBUG 17948 --- [config-service] [           main] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2026-04-30T15:41:55.529+01:00 DEBUG 17948 --- [config-service] [           main] o.s.web.client.RestTemplate              : Response 200 OK
+2026-04-30T15:41:55.532+01:00 DEBUG 17948 --- [config-service] [           main] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2026-04-30T15:41:55.557+01:00  INFO 17948 --- [config-service] [           main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-04-30T15:41:55.559+01:00  INFO 17948 --- [config-service] [           main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2026-04-30T15:41:55.561+01:00  INFO 17948 --- [config-service] [           main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-04-30T15:41:55.566+01:00  INFO 17948 --- [config-service] [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1777560115564 with initial instances count: 0
+2026-04-30T15:41:55.572+01:00  INFO 17948 --- [config-service] [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application CONFIG-SERVICE with eureka with status UP
+2026-04-30T15:41:55.573+01:00  INFO 17948 --- [config-service] [           main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1777560115573, current=UP, previous=STARTING]
+2026-04-30T15:41:55.575+01:00  INFO 17948 --- [config-service] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CONFIG-SERVICE/localhost:config-service:8888: registering service...
+2026-04-30T15:41:55.580+01:00 DEBUG 17948 --- [config-service] [foReplicator-%d] o.s.web.client.RestTemplate              : HTTP POST http://localhost:8761/eureka/apps/CONFIG-SERVICE
+2026-04-30T15:41:55.584+01:00 DEBUG 17948 --- [config-service] [foReplicator-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2026-04-30T15:41:55.600+01:00  INFO 17948 --- [config-service] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8888 (http) with context path '/'
+2026-04-30T15:41:55.602+01:00  INFO 17948 --- [config-service] [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8888
+2026-04-30T15:41:55.605+01:00 DEBUG 17948 --- [config-service] [foReplicator-%d] o.s.web.client.RestTemplate              : Writing [InstanceInfo [instanceId = localhost:config-service:8888, appName = CONFIG-SERVICE, hostName = 192.168.56.1, status = UP, ipAddr = 192.168.56.1, port = 8888, securePort = 443, dataCenterInfo = com.netflix.appinfo.MyDataCenterInfo@5ba7396] as "application/json"
+2026-04-30T15:41:55.714+01:00 DEBUG 17948 --- [config-service] [foReplicator-%d] o.s.web.client.RestTemplate              : Response 204 NO_CONTENT
+2026-04-30T15:41:55.715+01:00  INFO 17948 --- [config-service] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CONFIG-SERVICE/localhost:config-service:8888 - registration status: 204
+2026-04-30T15:41:56.613+01:00  INFO 17948 --- [config-service] [           main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2026-04-30T15:41:56.634+01:00 DEBUG 17948 --- [config-service] [           main] .s.b.a.l.ConditionEvaluationReportLogger : 
 
 
 ============================
@@ -2496,230 +2496,521 @@ Unconditional classes:
 
 
 
-2026-04-30T15:19:28.275+01:00  INFO 22248 --- [config-service] [           main] c.m.c.ConfigServiceApplication           : Started ConfigServiceApplication in 8.946 seconds (process running for 9.652)
-2026-04-30T15:19:28.353+01:00 DEBUG 22248 --- [config-service] [           main] o.s.b.a.ApplicationAvailabilityBean      : Application availability state LivenessState changed to CORRECT
-2026-04-30T15:19:28.356+01:00 DEBUG 22248 --- [config-service] [           main] o.s.b.a.ApplicationAvailabilityBean      : Application availability state ReadinessState changed to ACCEPTING_TRAFFIC
-2026-04-30T15:19:29.711+01:00  INFO 22248 --- [config-service] [nio-8888-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-04-30T15:19:29.715+01:00  INFO 22248 --- [config-service] [nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-04-30T15:19:29.716+01:00 DEBUG 22248 --- [config-service] [nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
-2026-04-30T15:19:29.716+01:00 DEBUG 22248 --- [config-service] [nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
-2026-04-30T15:19:29.716+01:00 DEBUG 22248 --- [config-service] [nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
-2026-04-30T15:19:29.717+01:00 DEBUG 22248 --- [config-service] [nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@d1d3acd
-2026-04-30T15:19:29.718+01:00 DEBUG 22248 --- [config-service] [nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@438c2a63
-2026-04-30T15:19:29.718+01:00 DEBUG 22248 --- [config-service] [nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
-2026-04-30T15:19:29.718+01:00  INFO 22248 --- [config-service] [nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2026-04-30T15:19:29.734+01:00 DEBUG 22248 --- [config-service] [nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/auth-service/default", parameters={}
-2026-04-30T15:19:29.744+01:00 DEBUG 22248 --- [config-service] [nio-8888-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.cloud.config.server.environment.EnvironmentController#defaultLabelIncludeOrigin(String, String)
-2026-04-30T15:19:30.294+01:00  WARN 22248 --- [config-service] [nio-8888-exec-1] .c.s.e.MultipleJGitEnvironmentRepository : Dirty files found: [gateway-service.yml, soutenance-service.yml]
-2026-04-30T15:19:30.306+01:00  WARN 22248 --- [config-service] [nio-8888-exec-1] .c.s.e.MultipleJGitEnvironmentRepository : Could not fetch remote for main remote: null
-2026-04-30T15:19:30.391+01:00  WARN 22248 --- [config-service] [nio-8888-exec-1] .c.s.e.MultipleJGitEnvironmentRepository : Could not merge remote for main remote: null
-2026-04-30T15:19:30.404+01:00  WARN 22248 --- [config-service] [nio-8888-exec-1] .c.s.e.MultipleJGitEnvironmentRepository : The local repository is dirty or ahead of origin. Resetting it to origin/main.
-2026-04-30T15:19:30.420+01:00  WARN 22248 --- [config-service] [nio-8888-exec-1] .c.s.e.MultipleJGitEnvironmentRepository : Could not reset to remote for main (current ref=refs/remotes/origin/main), remote: null
-2026-04-30T15:19:30.444+01:00 DEBUG 22248 --- [config-service] [nio-8888-exec-1] o.s.boot.env.OriginTrackedYamlLoader     : Loading from YAML: URL [file:/C:/Users/mouha/soutenance-microservices/config-repo/application.yml]
-2026-04-30T15:19:30.444+01:00 DEBUG 22248 --- [config-service] [nio-8888-exec-1] o.s.boot.env.OriginTrackedYamlLoader     : Loaded 0 document from YAML resource: URL [file:/C:/Users/mouha/soutenance-microservices/config-repo/application.yml]
-2026-04-30T15:19:30.468+01:00 DEBUG 22248 --- [config-service] [nio-8888-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/vnd.spring-cloud.config-server.v2+json', given [application/vnd.spring-cloud.config-server.v2+json] and supported [application/vnd.spring-cloud.config-server.v2+json]
-2026-04-30T15:19:30.478+01:00 DEBUG 22248 --- [config-service] [nio-8888-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Writing [Environment [name=auth-service, profiles=[default], label=null, propertySources=[], version=3d4c59ac (truncated)...]
-2026-04-30T15:19:30.484+01:00 DEBUG 22248 --- [config-service] [nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2026-04-30T15:19:42.875+01:00 DEBUG 22248 --- [config-service] [nio-8888-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/soutenance-service/default", parameters={}
-2026-04-30T15:19:42.878+01:00 DEBUG 22248 --- [config-service] [nio-8888-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.cloud.config.server.environment.EnvironmentController#defaultLabelIncludeOrigin(String, String)
-2026-04-30T15:19:42.886+01:00  WARN 22248 --- [config-service] [nio-8888-exec-2] .c.s.e.MultipleJGitEnvironmentRepository : Dirty files found: [gateway-service.yml, soutenance-service.yml]
-2026-04-30T15:19:42.888+01:00  WARN 22248 --- [config-service] [nio-8888-exec-2] .c.s.e.MultipleJGitEnvironmentRepository : Could not fetch remote for main remote: null
-2026-04-30T15:19:42.897+01:00  WARN 22248 --- [config-service] [nio-8888-exec-2] .c.s.e.MultipleJGitEnvironmentRepository : Could not merge remote for main remote: null
-2026-04-30T15:19:42.902+01:00  WARN 22248 --- [config-service] [nio-8888-exec-2] .c.s.e.MultipleJGitEnvironmentRepository : The local repository is dirty or ahead of origin. Resetting it to origin/main.
-2026-04-30T15:19:42.904+01:00  WARN 22248 --- [config-service] [nio-8888-exec-2] .c.s.e.MultipleJGitEnvironmentRepository : Could not reset to remote for main (current ref=refs/remotes/origin/main), remote: null
-2026-04-30T15:19:42.907+01:00 DEBUG 22248 --- [config-service] [nio-8888-exec-2] o.s.boot.env.OriginTrackedYamlLoader     : Loading from YAML: URL [file:/C:/Users/mouha/soutenance-microservices/config-repo/soutenance-service.yml]
-2026-04-30T15:19:42.908+01:00 DEBUG 22248 --- [config-service] [nio-8888-exec-2] o.s.boot.env.OriginTrackedYamlLoader     : Merging document (no matchers set): {server={port=8084}, spring={data={mongodb={uri=mongodb+srv://mouhanedmliki66_db_user:v9s8qfK0MEiSLKQL@cluster0.s3inqkc.mongodb.net/soutenance_db?appName=Cluster0}}}, eureka={client={service-url={defaultZone=http://localhost:8761/eureka/}}}}
-2026-04-30T15:19:42.909+01:00 DEBUG 22248 --- [config-service] [nio-8888-exec-2] o.s.boot.env.OriginTrackedYamlLoader     : Loaded 1 document from YAML resource: URL [file:/C:/Users/mouha/soutenance-microservices/config-repo/soutenance-service.yml]
-2026-04-30T15:19:42.909+01:00 DEBUG 22248 --- [config-service] [nio-8888-exec-2] o.s.boot.env.OriginTrackedYamlLoader     : Loading from YAML: URL [file:/C:/Users/mouha/soutenance-microservices/config-repo/application.yml]
-2026-04-30T15:19:42.910+01:00 DEBUG 22248 --- [config-service] [nio-8888-exec-2] o.s.boot.env.OriginTrackedYamlLoader     : Loaded 0 document from YAML resource: URL [file:/C:/Users/mouha/soutenance-microservices/config-repo/application.yml]
-2026-04-30T15:19:42.913+01:00  INFO 22248 --- [config-service] [nio-8888-exec-2] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [C:\Users\mouha\soutenance-microservices\config-repo\soutenance-service.yml]' via location 'file:/C:/Users/mouha/soutenance-microservices/config-repo/'
-2026-04-30T15:19:42.914+01:00 DEBUG 22248 --- [config-service] [nio-8888-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/vnd.spring-cloud.config-server.v2+json', given [application/vnd.spring-cloud.config-server.v2+json] and supported [application/vnd.spring-cloud.config-server.v2+json]
-2026-04-30T15:19:42.915+01:00 DEBUG 22248 --- [config-service] [nio-8888-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Writing [Environment [name=soutenance-service, profiles=[default], label=null, propertySources=[PropertySourc (truncated)...]
-2026-04-30T15:19:42.918+01:00 DEBUG 22248 --- [config-service] [nio-8888-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2026-04-30T15:19:56.794+01:00 DEBUG 22248 --- [config-service] [nio-8888-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/jury-service/default", parameters={}
-2026-04-30T15:19:56.798+01:00 DEBUG 22248 --- [config-service] [nio-8888-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.cloud.config.server.environment.EnvironmentController#defaultLabelIncludeOrigin(String, String)
-2026-04-30T15:19:56.806+01:00  WARN 22248 --- [config-service] [nio-8888-exec-5] .c.s.e.MultipleJGitEnvironmentRepository : Dirty files found: [gateway-service.yml, soutenance-service.yml]
-2026-04-30T15:19:56.807+01:00  WARN 22248 --- [config-service] [nio-8888-exec-5] .c.s.e.MultipleJGitEnvironmentRepository : Could not fetch remote for main remote: null
-2026-04-30T15:19:56.818+01:00  WARN 22248 --- [config-service] [nio-8888-exec-5] .c.s.e.MultipleJGitEnvironmentRepository : Could not merge remote for main remote: null
-2026-04-30T15:19:56.821+01:00  WARN 22248 --- [config-service] [nio-8888-exec-5] .c.s.e.MultipleJGitEnvironmentRepository : The local repository is dirty or ahead of origin. Resetting it to origin/main.
-2026-04-30T15:19:56.823+01:00  WARN 22248 --- [config-service] [nio-8888-exec-5] .c.s.e.MultipleJGitEnvironmentRepository : Could not reset to remote for main (current ref=refs/remotes/origin/main), remote: null
-2026-04-30T15:19:56.825+01:00 DEBUG 22248 --- [config-service] [nio-8888-exec-5] o.s.boot.env.OriginTrackedYamlLoader     : Loading from YAML: URL [file:/C:/Users/mouha/soutenance-microservices/config-repo/application.yml]
-2026-04-30T15:19:56.826+01:00 DEBUG 22248 --- [config-service] [nio-8888-exec-5] o.s.boot.env.OriginTrackedYamlLoader     : Loaded 0 document from YAML resource: URL [file:/C:/Users/mouha/soutenance-microservices/config-repo/application.yml]
-2026-04-30T15:19:56.829+01:00 DEBUG 22248 --- [config-service] [nio-8888-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/vnd.spring-cloud.config-server.v2+json', given [application/vnd.spring-cloud.config-server.v2+json] and supported [application/vnd.spring-cloud.config-server.v2+json]
-2026-04-30T15:19:56.829+01:00 DEBUG 22248 --- [config-service] [nio-8888-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Writing [Environment [name=jury-service, profiles=[default], label=null, propertySources=[], version=3d4c59ac (truncated)...]
-2026-04-30T15:19:56.830+01:00 DEBUG 22248 --- [config-service] [nio-8888-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2026-04-30T15:19:57.186+01:00  INFO 22248 --- [config-service] [reshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
-2026-04-30T15:19:57.189+01:00 DEBUG 22248 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/CONFIG-SERVICE/localhost:config-service:8888?status=UP&lastDirtyTimestamp=1777558767192
-2026-04-30T15:19:57.191+01:00  INFO 22248 --- [config-service] [reshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
-2026-04-30T15:19:57.192+01:00  INFO 22248 --- [config-service] [reshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
-2026-04-30T15:19:57.193+01:00  INFO 22248 --- [config-service] [reshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Application is null : false
-2026-04-30T15:19:57.193+01:00  INFO 22248 --- [config-service] [reshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
-2026-04-30T15:19:57.193+01:00  INFO 22248 --- [config-service] [reshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Application version is -1: false
-2026-04-30T15:19:57.194+01:00  INFO 22248 --- [config-service] [reshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
-2026-04-30T15:19:57.195+01:00 DEBUG 22248 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/
-2026-04-30T15:19:57.195+01:00 DEBUG 22248 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
-2026-04-30T15:19:57.198+01:00 DEBUG 22248 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
-2026-04-30T15:19:57.204+01:00 DEBUG 22248 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
-2026-04-30T15:19:57.205+01:00 DEBUG 22248 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
-2026-04-30T15:19:57.216+01:00  INFO 22248 --- [config-service] [reshExecutor-%d] com.netflix.discovery.DiscoveryClient    : The response status is 200
-2026-04-30T15:19:57.225+01:00 DEBUG 22248 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
-2026-04-30T15:20:11.011+01:00 DEBUG 22248 --- [config-service] [nio-8888-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/notes-service/default", parameters={}
-2026-04-30T15:20:11.013+01:00 DEBUG 22248 --- [config-service] [nio-8888-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.cloud.config.server.environment.EnvironmentController#defaultLabelIncludeOrigin(String, String)
-2026-04-30T15:20:11.024+01:00  WARN 22248 --- [config-service] [nio-8888-exec-3] .c.s.e.MultipleJGitEnvironmentRepository : Dirty files found: [gateway-service.yml, soutenance-service.yml]
-2026-04-30T15:20:11.025+01:00  WARN 22248 --- [config-service] [nio-8888-exec-3] .c.s.e.MultipleJGitEnvironmentRepository : Could not fetch remote for main remote: null
-2026-04-30T15:20:11.036+01:00  WARN 22248 --- [config-service] [nio-8888-exec-3] .c.s.e.MultipleJGitEnvironmentRepository : Could not merge remote for main remote: null
-2026-04-30T15:20:11.040+01:00  WARN 22248 --- [config-service] [nio-8888-exec-3] .c.s.e.MultipleJGitEnvironmentRepository : The local repository is dirty or ahead of origin. Resetting it to origin/main.
-2026-04-30T15:20:11.041+01:00  WARN 22248 --- [config-service] [nio-8888-exec-3] .c.s.e.MultipleJGitEnvironmentRepository : Could not reset to remote for main (current ref=refs/remotes/origin/main), remote: null
-2026-04-30T15:20:11.044+01:00 DEBUG 22248 --- [config-service] [nio-8888-exec-3] o.s.boot.env.OriginTrackedYamlLoader     : Loading from YAML: URL [file:/C:/Users/mouha/soutenance-microservices/config-repo/application.yml]
-2026-04-30T15:20:11.046+01:00 DEBUG 22248 --- [config-service] [nio-8888-exec-3] o.s.boot.env.OriginTrackedYamlLoader     : Loaded 0 document from YAML resource: URL [file:/C:/Users/mouha/soutenance-microservices/config-repo/application.yml]
-2026-04-30T15:20:11.048+01:00 DEBUG 22248 --- [config-service] [nio-8888-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/vnd.spring-cloud.config-server.v2+json', given [application/vnd.spring-cloud.config-server.v2+json] and supported [application/vnd.spring-cloud.config-server.v2+json]
-2026-04-30T15:20:11.049+01:00 DEBUG 22248 --- [config-service] [nio-8888-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Writing [Environment [name=notes-service, profiles=[default], label=null, propertySources=[], version=3d4c59a (truncated)...]
-2026-04-30T15:20:11.050+01:00 DEBUG 22248 --- [config-service] [nio-8888-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2026-04-30T15:20:24.843+01:00 DEBUG 22248 --- [config-service] [nio-8888-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/gateway-service/default", parameters={}
-2026-04-30T15:20:24.844+01:00 DEBUG 22248 --- [config-service] [nio-8888-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.cloud.config.server.environment.EnvironmentController#defaultLabelIncludeOrigin(String, String)
-2026-04-30T15:20:24.862+01:00  WARN 22248 --- [config-service] [nio-8888-exec-6] .c.s.e.MultipleJGitEnvironmentRepository : Dirty files found: [gateway-service.yml, soutenance-service.yml]
-2026-04-30T15:20:24.864+01:00  WARN 22248 --- [config-service] [nio-8888-exec-6] .c.s.e.MultipleJGitEnvironmentRepository : Could not fetch remote for main remote: null
-2026-04-30T15:20:24.887+01:00  WARN 22248 --- [config-service] [nio-8888-exec-6] .c.s.e.MultipleJGitEnvironmentRepository : Could not merge remote for main remote: null
-2026-04-30T15:20:24.895+01:00  WARN 22248 --- [config-service] [nio-8888-exec-6] .c.s.e.MultipleJGitEnvironmentRepository : The local repository is dirty or ahead of origin. Resetting it to origin/main.
-2026-04-30T15:20:24.896+01:00  WARN 22248 --- [config-service] [nio-8888-exec-6] .c.s.e.MultipleJGitEnvironmentRepository : Could not reset to remote for main (current ref=refs/remotes/origin/main), remote: null
-2026-04-30T15:20:24.899+01:00 DEBUG 22248 --- [config-service] [nio-8888-exec-6] o.s.boot.env.OriginTrackedYamlLoader     : Loading from YAML: URL [file:/C:/Users/mouha/soutenance-microservices/config-repo/gateway-service.yml]
-2026-04-30T15:20:24.904+01:00 DEBUG 22248 --- [config-service] [nio-8888-exec-6] o.s.boot.env.OriginTrackedYamlLoader     : Merging document (no matchers set): {server={port=8089}, spring={cloud={gateway={server={webflux={discovery={locator={enabled=true, lower-case-service-id=true}}, routes=[{id=notes-soutenance-etudiants, uri=lb://notes-service, predicates=[Path=/api/soutenances/*/etudiants,/api/soutenances/etudiants/assignations]}, {id=soutenance-service, uri=lb://soutenance-service, predicates=[Path=/api/soutenances/**,/api/salles/**,/api/references/**,/api/juries/**]}, {id=jury-service, uri=lb://jury-service, predicates=[Path=/api/membres-jury/**,/api/affectations-jury/**]}, {id=planning-service, uri=lb://planning-service, predicates=[Path=/api/planning/**]}, {id=notes-service, uri=lb://notes-service, predicates=[Path=/api/evaluations/**,/api/resultats/**,/api/etudiants/**]}, {id=auth-service, uri=lb://auth-service, predicates=[Path=/api/auth/**,/api/users/internal/**]}]}}}}}, eureka={client={service-url={defaultZone=http://localhost:8761/eureka/}}}}
-2026-04-30T15:20:24.905+01:00 DEBUG 22248 --- [config-service] [nio-8888-exec-6] o.s.boot.env.OriginTrackedYamlLoader     : Loaded 1 document from YAML resource: URL [file:/C:/Users/mouha/soutenance-microservices/config-repo/gateway-service.yml]
-2026-04-30T15:20:24.905+01:00 DEBUG 22248 --- [config-service] [nio-8888-exec-6] o.s.boot.env.OriginTrackedYamlLoader     : Loading from YAML: URL [file:/C:/Users/mouha/soutenance-microservices/config-repo/application.yml]
-2026-04-30T15:20:24.906+01:00 DEBUG 22248 --- [config-service] [nio-8888-exec-6] o.s.boot.env.OriginTrackedYamlLoader     : Loaded 0 document from YAML resource: URL [file:/C:/Users/mouha/soutenance-microservices/config-repo/application.yml]
-2026-04-30T15:20:24.912+01:00  INFO 22248 --- [config-service] [nio-8888-exec-6] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [C:\Users\mouha\soutenance-microservices\config-repo\gateway-service.yml]' via location 'file:/C:/Users/mouha/soutenance-microservices/config-repo/'
-2026-04-30T15:20:24.914+01:00 DEBUG 22248 --- [config-service] [nio-8888-exec-6] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/vnd.spring-cloud.config-server.v2+json', given [application/vnd.spring-cloud.config-server.v2+json] and supported [application/vnd.spring-cloud.config-server.v2+json]
-2026-04-30T15:20:24.915+01:00 DEBUG 22248 --- [config-service] [nio-8888-exec-6] m.m.a.RequestResponseBodyMethodProcessor : Writing [Environment [name=gateway-service, profiles=[default], label=null, propertySources=[PropertySource [ (truncated)...]
-2026-04-30T15:20:24.916+01:00 DEBUG 22248 --- [config-service] [nio-8888-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2026-04-30T15:20:27.233+01:00 DEBUG 22248 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/CONFIG-SERVICE/localhost:config-service:8888?status=UP&lastDirtyTimestamp=1777558767192
-2026-04-30T15:20:27.233+01:00 DEBUG 22248 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/delta
-2026-04-30T15:20:27.233+01:00 DEBUG 22248 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
-2026-04-30T15:20:27.233+01:00 DEBUG 22248 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
-2026-04-30T15:20:27.250+01:00 DEBUG 22248 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
-2026-04-30T15:20:27.250+01:00 DEBUG 22248 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
-2026-04-30T15:20:27.251+01:00 DEBUG 22248 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
-2026-04-30T15:20:34.124+01:00 DEBUG 22248 --- [config-service] [nio-8888-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/actuator/health", parameters={}
-2026-04-30T15:20:34.124+01:00 DEBUG 22248 --- [config-service] [nio-8888-exec-4] s.b.a.e.w.s.WebMvcEndpointHandlerMapping : Mapped to Actuator web endpoint 'health'
-2026-04-30T15:20:34.126+01:00 DEBUG 22248 --- [config-service] [nio-8888-exec-4] m.m.a.RequestResponseBodyMethodProcessor : Read "application/octet-stream" to []
-2026-04-30T15:20:34.140+01:00  WARN 22248 --- [config-service] [nio-8888-exec-4] .c.s.e.MultipleJGitEnvironmentRepository : Dirty files found: [gateway-service.yml, soutenance-service.yml]
-2026-04-30T15:20:34.141+01:00  WARN 22248 --- [config-service] [nio-8888-exec-4] .c.s.e.MultipleJGitEnvironmentRepository : Could not fetch remote for main remote: null
-2026-04-30T15:20:34.150+01:00  WARN 22248 --- [config-service] [nio-8888-exec-4] .c.s.e.MultipleJGitEnvironmentRepository : Could not merge remote for main remote: null
-2026-04-30T15:20:34.154+01:00  WARN 22248 --- [config-service] [nio-8888-exec-4] .c.s.e.MultipleJGitEnvironmentRepository : The local repository is dirty or ahead of origin. Resetting it to origin/main.
-2026-04-30T15:20:34.156+01:00  WARN 22248 --- [config-service] [nio-8888-exec-4] .c.s.e.MultipleJGitEnvironmentRepository : Could not reset to remote for main (current ref=refs/remotes/origin/main), remote: null
-2026-04-30T15:20:34.157+01:00 DEBUG 22248 --- [config-service] [nio-8888-exec-4] o.s.boot.env.OriginTrackedYamlLoader     : Loading from YAML: URL [file:/C:/Users/mouha/soutenance-microservices/config-repo/application.yml]
-2026-04-30T15:20:34.158+01:00 DEBUG 22248 --- [config-service] [nio-8888-exec-4] o.s.boot.env.OriginTrackedYamlLoader     : Loaded 0 document from YAML resource: URL [file:/C:/Users/mouha/soutenance-microservices/config-repo/application.yml]
-2026-04-30T15:20:34.162+01:00 DEBUG 22248 --- [config-service] [nio-8888-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/vnd.spring-boot.actuator.v3+json', given [*/*] and supported [application/vnd.spring-boot.actuator.v3+json, application/vnd.spring-boot.actuator.v2+json, application/json]
-2026-04-30T15:20:34.166+01:00 DEBUG 22248 --- [config-service] [nio-8888-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [org.springframework.boot.actuate.health.SystemHealth@102ebab9]
-2026-04-30T15:20:34.168+01:00 DEBUG 22248 --- [config-service] [nio-8888-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2026-04-30T15:20:57.253+01:00 DEBUG 22248 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/CONFIG-SERVICE/localhost:config-service:8888?status=UP&lastDirtyTimestamp=1777558767192
-2026-04-30T15:20:57.254+01:00 DEBUG 22248 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
-2026-04-30T15:20:57.269+01:00 DEBUG 22248 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/delta
-2026-04-30T15:20:57.270+01:00 DEBUG 22248 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
-2026-04-30T15:20:57.273+01:00 DEBUG 22248 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
-2026-04-30T15:20:57.288+01:00 DEBUG 22248 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
-2026-04-30T15:20:57.289+01:00 DEBUG 22248 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
-2026-04-30T15:21:27.275+01:00 DEBUG 22248 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/CONFIG-SERVICE/localhost:config-service:8888?status=UP&lastDirtyTimestamp=1777558767192
-2026-04-30T15:21:27.277+01:00 DEBUG 22248 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
-2026-04-30T15:21:27.294+01:00 DEBUG 22248 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
-2026-04-30T15:21:27.295+01:00 DEBUG 22248 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/delta
-2026-04-30T15:21:27.296+01:00 DEBUG 22248 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
-2026-04-30T15:21:27.308+01:00 DEBUG 22248 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
-2026-04-30T15:21:27.309+01:00 DEBUG 22248 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
-2026-04-30T15:21:29.623+01:00 DEBUG 22248 --- [config-service] [nio-8888-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/actuator/health", parameters={}
-2026-04-30T15:21:29.623+01:00 DEBUG 22248 --- [config-service] [nio-8888-exec-5] s.b.a.e.w.s.WebMvcEndpointHandlerMapping : Mapped to Actuator web endpoint 'health'
-2026-04-30T15:21:29.624+01:00 DEBUG 22248 --- [config-service] [nio-8888-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Read "application/octet-stream" to []
-2026-04-30T15:21:29.638+01:00  WARN 22248 --- [config-service] [nio-8888-exec-5] .c.s.e.MultipleJGitEnvironmentRepository : Dirty files found: [gateway-service.yml, soutenance-service.yml]
-2026-04-30T15:21:29.640+01:00  WARN 22248 --- [config-service] [nio-8888-exec-5] .c.s.e.MultipleJGitEnvironmentRepository : Could not fetch remote for main remote: null
-2026-04-30T15:21:29.655+01:00  WARN 22248 --- [config-service] [nio-8888-exec-5] .c.s.e.MultipleJGitEnvironmentRepository : Could not merge remote for main remote: null
-2026-04-30T15:21:29.659+01:00  WARN 22248 --- [config-service] [nio-8888-exec-5] .c.s.e.MultipleJGitEnvironmentRepository : The local repository is dirty or ahead of origin. Resetting it to origin/main.
-2026-04-30T15:21:29.660+01:00  WARN 22248 --- [config-service] [nio-8888-exec-5] .c.s.e.MultipleJGitEnvironmentRepository : Could not reset to remote for main (current ref=refs/remotes/origin/main), remote: null
-2026-04-30T15:21:29.664+01:00 DEBUG 22248 --- [config-service] [nio-8888-exec-5] o.s.boot.env.OriginTrackedYamlLoader     : Loading from YAML: URL [file:/C:/Users/mouha/soutenance-microservices/config-repo/application.yml]
-2026-04-30T15:21:29.665+01:00 DEBUG 22248 --- [config-service] [nio-8888-exec-5] o.s.boot.env.OriginTrackedYamlLoader     : Loaded 0 document from YAML resource: URL [file:/C:/Users/mouha/soutenance-microservices/config-repo/application.yml]
-2026-04-30T15:21:29.669+01:00 DEBUG 22248 --- [config-service] [nio-8888-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/vnd.spring-boot.actuator.v3+json', given [*/*] and supported [application/vnd.spring-boot.actuator.v3+json, application/vnd.spring-boot.actuator.v2+json, application/json]
-2026-04-30T15:21:29.670+01:00 DEBUG 22248 --- [config-service] [nio-8888-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [org.springframework.boot.actuate.health.SystemHealth@5382d402]
-2026-04-30T15:21:29.671+01:00 DEBUG 22248 --- [config-service] [nio-8888-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2026-04-30T15:21:57.301+01:00 DEBUG 22248 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/CONFIG-SERVICE/localhost:config-service:8888?status=UP&lastDirtyTimestamp=1777558767192
-2026-04-30T15:21:57.302+01:00 DEBUG 22248 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
-2026-04-30T15:21:57.317+01:00 DEBUG 22248 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/delta
-2026-04-30T15:21:57.318+01:00 DEBUG 22248 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
-2026-04-30T15:21:57.320+01:00 DEBUG 22248 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
-2026-04-30T15:21:57.334+01:00 DEBUG 22248 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
-2026-04-30T15:21:57.335+01:00 DEBUG 22248 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
-2026-04-30T15:22:27.324+01:00 DEBUG 22248 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/CONFIG-SERVICE/localhost:config-service:8888?status=UP&lastDirtyTimestamp=1777558767192
-2026-04-30T15:22:27.328+01:00 DEBUG 22248 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
-2026-04-30T15:22:27.340+01:00 DEBUG 22248 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/delta
-2026-04-30T15:22:27.341+01:00 DEBUG 22248 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
-2026-04-30T15:22:27.342+01:00 DEBUG 22248 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
-2026-04-30T15:22:27.358+01:00 DEBUG 22248 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
-2026-04-30T15:22:27.358+01:00 DEBUG 22248 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
-2026-04-30T15:22:57.355+01:00 DEBUG 22248 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/CONFIG-SERVICE/localhost:config-service:8888?status=UP&lastDirtyTimestamp=1777558767192
-2026-04-30T15:22:57.359+01:00 DEBUG 22248 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
-2026-04-30T15:22:57.369+01:00 DEBUG 22248 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/delta
-2026-04-30T15:22:57.370+01:00 DEBUG 22248 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
-2026-04-30T15:22:57.372+01:00 DEBUG 22248 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
-2026-04-30T15:22:57.387+01:00 DEBUG 22248 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
-2026-04-30T15:22:57.388+01:00 DEBUG 22248 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
-2026-04-30T15:23:27.389+01:00 DEBUG 22248 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/CONFIG-SERVICE/localhost:config-service:8888?status=UP&lastDirtyTimestamp=1777558767192
-2026-04-30T15:23:27.391+01:00 DEBUG 22248 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
-2026-04-30T15:23:27.404+01:00 DEBUG 22248 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/delta
-2026-04-30T15:23:27.405+01:00 DEBUG 22248 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
-2026-04-30T15:23:27.407+01:00 DEBUG 22248 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
-2026-04-30T15:23:27.423+01:00 DEBUG 22248 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
-2026-04-30T15:23:27.424+01:00 DEBUG 22248 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
-2026-04-30T15:23:57.415+01:00 DEBUG 22248 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/CONFIG-SERVICE/localhost:config-service:8888?status=UP&lastDirtyTimestamp=1777558767192
-2026-04-30T15:23:57.417+01:00 DEBUG 22248 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
-2026-04-30T15:23:57.429+01:00 DEBUG 22248 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/delta
-2026-04-30T15:23:57.431+01:00 DEBUG 22248 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
-2026-04-30T15:23:57.434+01:00 DEBUG 22248 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
-2026-04-30T15:23:57.448+01:00 DEBUG 22248 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
-2026-04-30T15:23:57.449+01:00 DEBUG 22248 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
-2026-04-30T15:24:26.431+01:00  INFO 22248 --- [config-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2026-04-30T15:24:27.446+01:00 DEBUG 22248 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/CONFIG-SERVICE/localhost:config-service:8888?status=UP&lastDirtyTimestamp=1777558767192
-2026-04-30T15:24:27.451+01:00 DEBUG 22248 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
-2026-04-30T15:24:27.462+01:00 DEBUG 22248 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/delta
-2026-04-30T15:24:27.463+01:00 DEBUG 22248 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
-2026-04-30T15:24:27.465+01:00 DEBUG 22248 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
-2026-04-30T15:24:27.479+01:00 DEBUG 22248 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
-2026-04-30T15:24:27.480+01:00 DEBUG 22248 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
-2026-04-30T15:24:57.480+01:00 DEBUG 22248 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/CONFIG-SERVICE/localhost:config-service:8888?status=UP&lastDirtyTimestamp=1777558767192
-2026-04-30T15:24:57.482+01:00 DEBUG 22248 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
-2026-04-30T15:24:57.495+01:00 DEBUG 22248 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/delta
-2026-04-30T15:24:57.497+01:00 DEBUG 22248 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
-2026-04-30T15:24:57.501+01:00 DEBUG 22248 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
-2026-04-30T15:24:57.513+01:00 DEBUG 22248 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
-2026-04-30T15:24:57.513+01:00 DEBUG 22248 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
-2026-04-30T15:25:27.511+01:00 DEBUG 22248 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/CONFIG-SERVICE/localhost:config-service:8888?status=UP&lastDirtyTimestamp=1777558767192
-2026-04-30T15:25:27.515+01:00 DEBUG 22248 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
-2026-04-30T15:25:27.526+01:00 DEBUG 22248 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/delta
-2026-04-30T15:25:27.527+01:00 DEBUG 22248 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
-2026-04-30T15:25:27.527+01:00 DEBUG 22248 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
-2026-04-30T15:25:27.533+01:00 DEBUG 22248 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
-2026-04-30T15:25:27.533+01:00 DEBUG 22248 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
-2026-04-30T15:25:57.539+01:00 DEBUG 22248 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/CONFIG-SERVICE/localhost:config-service:8888?status=UP&lastDirtyTimestamp=1777558767192
-2026-04-30T15:25:57.542+01:00 DEBUG 22248 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
-2026-04-30T15:25:57.554+01:00 DEBUG 22248 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/delta
-2026-04-30T15:25:57.555+01:00 DEBUG 22248 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
-2026-04-30T15:25:57.556+01:00 DEBUG 22248 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
-2026-04-30T15:25:57.571+01:00 DEBUG 22248 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
-2026-04-30T15:25:57.571+01:00 DEBUG 22248 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
-2026-04-30T15:26:27.572+01:00 DEBUG 22248 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/CONFIG-SERVICE/localhost:config-service:8888?status=UP&lastDirtyTimestamp=1777558767192
-2026-04-30T15:26:27.574+01:00 DEBUG 22248 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
-2026-04-30T15:26:27.588+01:00 DEBUG 22248 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/delta
-2026-04-30T15:26:27.588+01:00 DEBUG 22248 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
-2026-04-30T15:26:27.588+01:00 DEBUG 22248 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
-2026-04-30T15:26:27.606+01:00 DEBUG 22248 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
-2026-04-30T15:26:27.607+01:00 DEBUG 22248 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
-2026-04-30T15:26:57.605+01:00 DEBUG 22248 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/CONFIG-SERVICE/localhost:config-service:8888?status=UP&lastDirtyTimestamp=1777558767192
-2026-04-30T15:26:57.605+01:00 DEBUG 22248 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
-2026-04-30T15:26:57.620+01:00 DEBUG 22248 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/delta
-2026-04-30T15:26:57.621+01:00 DEBUG 22248 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
-2026-04-30T15:26:57.622+01:00 DEBUG 22248 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
-2026-04-30T15:26:57.637+01:00 DEBUG 22248 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
-2026-04-30T15:26:57.638+01:00 DEBUG 22248 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
-2026-04-30T15:27:27.630+01:00 DEBUG 22248 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/CONFIG-SERVICE/localhost:config-service:8888?status=UP&lastDirtyTimestamp=1777558767192
-2026-04-30T15:27:27.633+01:00 DEBUG 22248 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
-2026-04-30T15:27:27.645+01:00 DEBUG 22248 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/delta
-2026-04-30T15:27:27.646+01:00 DEBUG 22248 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
-2026-04-30T15:27:27.647+01:00 DEBUG 22248 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
-2026-04-30T15:27:27.665+01:00 DEBUG 22248 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
-2026-04-30T15:27:27.666+01:00 DEBUG 22248 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2026-04-30T15:41:56.637+01:00  INFO 17948 --- [config-service] [           main] c.m.c.ConfigServiceApplication           : Started ConfigServiceApplication in 7.839 seconds (process running for 8.38)
+2026-04-30T15:41:56.716+01:00 DEBUG 17948 --- [config-service] [           main] o.s.b.a.ApplicationAvailabilityBean      : Application availability state LivenessState changed to CORRECT
+2026-04-30T15:41:56.720+01:00 DEBUG 17948 --- [config-service] [           main] o.s.b.a.ApplicationAvailabilityBean      : Application availability state ReadinessState changed to ACCEPTING_TRAFFIC
+2026-04-30T15:41:59.532+01:00  INFO 17948 --- [config-service] [nio-8888-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-30T15:41:59.533+01:00  INFO 17948 --- [config-service] [nio-8888-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-04-30T15:41:59.533+01:00 DEBUG 17948 --- [config-service] [nio-8888-exec-2] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2026-04-30T15:41:59.533+01:00 DEBUG 17948 --- [config-service] [nio-8888-exec-2] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2026-04-30T15:41:59.533+01:00 DEBUG 17948 --- [config-service] [nio-8888-exec-2] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2026-04-30T15:41:59.534+01:00 DEBUG 17948 --- [config-service] [nio-8888-exec-2] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@808ae0f
+2026-04-30T15:41:59.534+01:00 DEBUG 17948 --- [config-service] [nio-8888-exec-2] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@1d3b3398
+2026-04-30T15:41:59.534+01:00 DEBUG 17948 --- [config-service] [nio-8888-exec-2] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2026-04-30T15:41:59.535+01:00  INFO 17948 --- [config-service] [nio-8888-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-04-30T15:41:59.542+01:00 DEBUG 17948 --- [config-service] [nio-8888-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/auth-service/default", parameters={}
+2026-04-30T15:41:59.546+01:00 DEBUG 17948 --- [config-service] [nio-8888-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.cloud.config.server.environment.EnvironmentController#defaultLabelIncludeOrigin(String, String)
+2026-04-30T15:41:59.794+01:00  WARN 17948 --- [config-service] [nio-8888-exec-2] .c.s.e.MultipleJGitEnvironmentRepository : Dirty files found: [gateway-service.yml, soutenance-service.yml, jury-service.yml, auth-service.yml, planning-service.yml, notes-service.yml]
+2026-04-30T15:41:59.799+01:00  WARN 17948 --- [config-service] [nio-8888-exec-2] .c.s.e.MultipleJGitEnvironmentRepository : Could not fetch remote for main remote: null
+2026-04-30T15:41:59.836+01:00  WARN 17948 --- [config-service] [nio-8888-exec-2] .c.s.e.MultipleJGitEnvironmentRepository : Could not merge remote for main remote: null
+2026-04-30T15:41:59.842+01:00  WARN 17948 --- [config-service] [nio-8888-exec-2] .c.s.e.MultipleJGitEnvironmentRepository : The local repository is dirty or ahead of origin. Resetting it to origin/main.
+2026-04-30T15:41:59.848+01:00  WARN 17948 --- [config-service] [nio-8888-exec-2] .c.s.e.MultipleJGitEnvironmentRepository : Could not reset to remote for main (current ref=refs/remotes/origin/main), remote: null
+2026-04-30T15:41:59.856+01:00 DEBUG 17948 --- [config-service] [nio-8888-exec-2] o.s.boot.env.OriginTrackedYamlLoader     : Loading from YAML: URL [file:/C:/Users/mouha/soutenance-microservices/config-repo/auth-service.yml]
+2026-04-30T15:41:59.857+01:00 DEBUG 17948 --- [config-service] [nio-8888-exec-2] o.s.boot.env.OriginTrackedYamlLoader     : Merging document (no matchers set): {server={port=8085}, spring={data={mongodb={uri=mongodb+srv://mouhanedmliki66_db_user:v9s8qfK0MEiSLKQL@cluster0.s3inqkc.mongodb.net/gestion_soutenances_auth?appName=Cluster0, database=gestion_soutenances_auth, auto-index-creation=true}}}, eureka={client={service-url={defaultZone=http://localhost:8761/eureka/}}}}
+2026-04-30T15:41:59.858+01:00 DEBUG 17948 --- [config-service] [nio-8888-exec-2] o.s.boot.env.OriginTrackedYamlLoader     : Loaded 1 document from YAML resource: URL [file:/C:/Users/mouha/soutenance-microservices/config-repo/auth-service.yml]
+2026-04-30T15:41:59.858+01:00 DEBUG 17948 --- [config-service] [nio-8888-exec-2] o.s.boot.env.OriginTrackedYamlLoader     : Loading from YAML: URL [file:/C:/Users/mouha/soutenance-microservices/config-repo/application.yml]
+2026-04-30T15:41:59.859+01:00 DEBUG 17948 --- [config-service] [nio-8888-exec-2] o.s.boot.env.OriginTrackedYamlLoader     : Loaded 0 document from YAML resource: URL [file:/C:/Users/mouha/soutenance-microservices/config-repo/application.yml]
+2026-04-30T15:41:59.864+01:00  INFO 17948 --- [config-service] [nio-8888-exec-2] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [C:\Users\mouha\soutenance-microservices\config-repo\auth-service.yml]' via location 'file:/C:/Users/mouha/soutenance-microservices/config-repo/'
+2026-04-30T15:41:59.868+01:00 DEBUG 17948 --- [config-service] [nio-8888-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/vnd.spring-cloud.config-server.v2+json', given [application/vnd.spring-cloud.config-server.v2+json] and supported [application/vnd.spring-cloud.config-server.v2+json]
+2026-04-30T15:41:59.871+01:00 DEBUG 17948 --- [config-service] [nio-8888-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Writing [Environment [name=auth-service, profiles=[default], label=null, propertySources=[PropertySource [nam (truncated)...]
+2026-04-30T15:41:59.877+01:00 DEBUG 17948 --- [config-service] [nio-8888-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-04-30T15:42:13.563+01:00 DEBUG 17948 --- [config-service] [nio-8888-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/soutenance-service/default", parameters={}
+2026-04-30T15:42:13.567+01:00 DEBUG 17948 --- [config-service] [nio-8888-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.cloud.config.server.environment.EnvironmentController#defaultLabelIncludeOrigin(String, String)
+2026-04-30T15:42:13.575+01:00  WARN 17948 --- [config-service] [nio-8888-exec-3] .c.s.e.MultipleJGitEnvironmentRepository : Dirty files found: [gateway-service.yml, soutenance-service.yml, jury-service.yml, auth-service.yml, planning-service.yml, notes-service.yml]
+2026-04-30T15:42:13.576+01:00  WARN 17948 --- [config-service] [nio-8888-exec-3] .c.s.e.MultipleJGitEnvironmentRepository : Could not fetch remote for main remote: null
+2026-04-30T15:42:13.584+01:00  WARN 17948 --- [config-service] [nio-8888-exec-3] .c.s.e.MultipleJGitEnvironmentRepository : Could not merge remote for main remote: null
+2026-04-30T15:42:13.588+01:00  WARN 17948 --- [config-service] [nio-8888-exec-3] .c.s.e.MultipleJGitEnvironmentRepository : The local repository is dirty or ahead of origin. Resetting it to origin/main.
+2026-04-30T15:42:13.589+01:00  WARN 17948 --- [config-service] [nio-8888-exec-3] .c.s.e.MultipleJGitEnvironmentRepository : Could not reset to remote for main (current ref=refs/remotes/origin/main), remote: null
+2026-04-30T15:42:13.590+01:00 DEBUG 17948 --- [config-service] [nio-8888-exec-3] o.s.boot.env.OriginTrackedYamlLoader     : Loading from YAML: URL [file:/C:/Users/mouha/soutenance-microservices/config-repo/soutenance-service.yml]
+2026-04-30T15:42:13.591+01:00 DEBUG 17948 --- [config-service] [nio-8888-exec-3] o.s.boot.env.OriginTrackedYamlLoader     : Merging document (no matchers set): {server={port=8084}, spring={data={mongodb={uri=mongodb+srv://mouhanedmliki66_db_user:v9s8qfK0MEiSLKQL@cluster0.s3inqkc.mongodb.net/gestion_soutenances_soutenance?appName=Cluster0, database=gestion_soutenances_soutenance, auto-index-creation=true}}}, eureka={client={service-url={defaultZone=http://localhost:8761/eureka/}}}}
+2026-04-30T15:42:13.592+01:00 DEBUG 17948 --- [config-service] [nio-8888-exec-3] o.s.boot.env.OriginTrackedYamlLoader     : Loaded 1 document from YAML resource: URL [file:/C:/Users/mouha/soutenance-microservices/config-repo/soutenance-service.yml]
+2026-04-30T15:42:13.592+01:00 DEBUG 17948 --- [config-service] [nio-8888-exec-3] o.s.boot.env.OriginTrackedYamlLoader     : Loading from YAML: URL [file:/C:/Users/mouha/soutenance-microservices/config-repo/application.yml]
+2026-04-30T15:42:13.592+01:00 DEBUG 17948 --- [config-service] [nio-8888-exec-3] o.s.boot.env.OriginTrackedYamlLoader     : Loaded 0 document from YAML resource: URL [file:/C:/Users/mouha/soutenance-microservices/config-repo/application.yml]
+2026-04-30T15:42:13.595+01:00  INFO 17948 --- [config-service] [nio-8888-exec-3] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [C:\Users\mouha\soutenance-microservices\config-repo\soutenance-service.yml]' via location 'file:/C:/Users/mouha/soutenance-microservices/config-repo/'
+2026-04-30T15:42:13.595+01:00 DEBUG 17948 --- [config-service] [nio-8888-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/vnd.spring-cloud.config-server.v2+json', given [application/vnd.spring-cloud.config-server.v2+json] and supported [application/vnd.spring-cloud.config-server.v2+json]
+2026-04-30T15:42:13.595+01:00 DEBUG 17948 --- [config-service] [nio-8888-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Writing [Environment [name=soutenance-service, profiles=[default], label=null, propertySources=[PropertySourc (truncated)...]
+2026-04-30T15:42:13.596+01:00 DEBUG 17948 --- [config-service] [nio-8888-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-04-30T15:42:25.564+01:00  INFO 17948 --- [config-service] [reshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-04-30T15:42:25.566+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/CONFIG-SERVICE/localhost:config-service:8888?status=UP&lastDirtyTimestamp=1777560115573
+2026-04-30T15:42:25.568+01:00  INFO 17948 --- [config-service] [reshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-04-30T15:42:25.569+01:00  INFO 17948 --- [config-service] [reshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-04-30T15:42:25.569+01:00  INFO 17948 --- [config-service] [reshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-04-30T15:42:25.569+01:00  INFO 17948 --- [config-service] [reshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-04-30T15:42:25.570+01:00  INFO 17948 --- [config-service] [reshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Application version is -1: false
+2026-04-30T15:42:25.570+01:00  INFO 17948 --- [config-service] [reshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-04-30T15:42:25.570+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/
+2026-04-30T15:42:25.571+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2026-04-30T15:42:25.574+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2026-04-30T15:42:25.584+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2026-04-30T15:42:25.585+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2026-04-30T15:42:25.597+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2026-04-30T15:42:25.602+01:00  INFO 17948 --- [config-service] [reshExecutor-%d] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-04-30T15:42:27.538+01:00 DEBUG 17948 --- [config-service] [nio-8888-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/jury-service/default", parameters={}
+2026-04-30T15:42:27.542+01:00 DEBUG 17948 --- [config-service] [nio-8888-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.cloud.config.server.environment.EnvironmentController#defaultLabelIncludeOrigin(String, String)
+2026-04-30T15:42:27.550+01:00  WARN 17948 --- [config-service] [nio-8888-exec-6] .c.s.e.MultipleJGitEnvironmentRepository : Dirty files found: [gateway-service.yml, soutenance-service.yml, jury-service.yml, auth-service.yml, planning-service.yml, notes-service.yml]
+2026-04-30T15:42:27.552+01:00  WARN 17948 --- [config-service] [nio-8888-exec-6] .c.s.e.MultipleJGitEnvironmentRepository : Could not fetch remote for main remote: null
+2026-04-30T15:42:27.562+01:00  WARN 17948 --- [config-service] [nio-8888-exec-6] .c.s.e.MultipleJGitEnvironmentRepository : Could not merge remote for main remote: null
+2026-04-30T15:42:27.567+01:00  WARN 17948 --- [config-service] [nio-8888-exec-6] .c.s.e.MultipleJGitEnvironmentRepository : The local repository is dirty or ahead of origin. Resetting it to origin/main.
+2026-04-30T15:42:27.568+01:00  WARN 17948 --- [config-service] [nio-8888-exec-6] .c.s.e.MultipleJGitEnvironmentRepository : Could not reset to remote for main (current ref=refs/remotes/origin/main), remote: null
+2026-04-30T15:42:27.571+01:00 DEBUG 17948 --- [config-service] [nio-8888-exec-6] o.s.boot.env.OriginTrackedYamlLoader     : Loading from YAML: URL [file:/C:/Users/mouha/soutenance-microservices/config-repo/jury-service.yml]
+2026-04-30T15:42:27.572+01:00 DEBUG 17948 --- [config-service] [nio-8888-exec-6] o.s.boot.env.OriginTrackedYamlLoader     : Merging document (no matchers set): {server={port=8082}, spring={data={mongodb={uri=mongodb+srv://mouhanedmliki66_db_user:v9s8qfK0MEiSLKQL@cluster0.s3inqkc.mongodb.net/gestion_soutenances_jury?appName=Cluster0, database=gestion_soutenances_jury, auto-index-creation=true}}}, eureka={client={service-url={defaultZone=http://localhost:8761/eureka/}}}}
+2026-04-30T15:42:27.572+01:00 DEBUG 17948 --- [config-service] [nio-8888-exec-6] o.s.boot.env.OriginTrackedYamlLoader     : Loaded 1 document from YAML resource: URL [file:/C:/Users/mouha/soutenance-microservices/config-repo/jury-service.yml]
+2026-04-30T15:42:27.572+01:00 DEBUG 17948 --- [config-service] [nio-8888-exec-6] o.s.boot.env.OriginTrackedYamlLoader     : Loading from YAML: URL [file:/C:/Users/mouha/soutenance-microservices/config-repo/application.yml]
+2026-04-30T15:42:27.573+01:00 DEBUG 17948 --- [config-service] [nio-8888-exec-6] o.s.boot.env.OriginTrackedYamlLoader     : Loaded 0 document from YAML resource: URL [file:/C:/Users/mouha/soutenance-microservices/config-repo/application.yml]
+2026-04-30T15:42:27.576+01:00  INFO 17948 --- [config-service] [nio-8888-exec-6] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [C:\Users\mouha\soutenance-microservices\config-repo\jury-service.yml]' via location 'file:/C:/Users/mouha/soutenance-microservices/config-repo/'
+2026-04-30T15:42:27.577+01:00 DEBUG 17948 --- [config-service] [nio-8888-exec-6] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/vnd.spring-cloud.config-server.v2+json', given [application/vnd.spring-cloud.config-server.v2+json] and supported [application/vnd.spring-cloud.config-server.v2+json]
+2026-04-30T15:42:27.577+01:00 DEBUG 17948 --- [config-service] [nio-8888-exec-6] m.m.a.RequestResponseBodyMethodProcessor : Writing [Environment [name=jury-service, profiles=[default], label=null, propertySources=[PropertySource [nam (truncated)...]
+2026-04-30T15:42:27.578+01:00 DEBUG 17948 --- [config-service] [nio-8888-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-04-30T15:42:42.071+01:00 DEBUG 17948 --- [config-service] [nio-8888-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/planning-service/default", parameters={}
+2026-04-30T15:42:42.075+01:00 DEBUG 17948 --- [config-service] [nio-8888-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.cloud.config.server.environment.EnvironmentController#defaultLabelIncludeOrigin(String, String)
+2026-04-30T15:42:42.083+01:00  WARN 17948 --- [config-service] [nio-8888-exec-7] .c.s.e.MultipleJGitEnvironmentRepository : Dirty files found: [gateway-service.yml, soutenance-service.yml, jury-service.yml, auth-service.yml, planning-service.yml, notes-service.yml]
+2026-04-30T15:42:42.084+01:00  WARN 17948 --- [config-service] [nio-8888-exec-7] .c.s.e.MultipleJGitEnvironmentRepository : Could not fetch remote for main remote: null
+2026-04-30T15:42:42.093+01:00  WARN 17948 --- [config-service] [nio-8888-exec-7] .c.s.e.MultipleJGitEnvironmentRepository : Could not merge remote for main remote: null
+2026-04-30T15:42:42.096+01:00  WARN 17948 --- [config-service] [nio-8888-exec-7] .c.s.e.MultipleJGitEnvironmentRepository : The local repository is dirty or ahead of origin. Resetting it to origin/main.
+2026-04-30T15:42:42.098+01:00  WARN 17948 --- [config-service] [nio-8888-exec-7] .c.s.e.MultipleJGitEnvironmentRepository : Could not reset to remote for main (current ref=refs/remotes/origin/main), remote: null
+2026-04-30T15:42:42.101+01:00 DEBUG 17948 --- [config-service] [nio-8888-exec-7] o.s.boot.env.OriginTrackedYamlLoader     : Loading from YAML: URL [file:/C:/Users/mouha/soutenance-microservices/config-repo/planning-service.yml]
+2026-04-30T15:42:42.102+01:00 DEBUG 17948 --- [config-service] [nio-8888-exec-7] o.s.boot.env.OriginTrackedYamlLoader     : Merging document (no matchers set): {server={port=8083}, spring={data={mongodb={uri=mongodb+srv://mouhanedmliki66_db_user:v9s8qfK0MEiSLKQL@cluster0.s3inqkc.mongodb.net/gestion_soutenances_planning?appName=Cluster0, database=gestion_soutenances_planning, auto-index-creation=true}}}, eureka={client={service-url={defaultZone=http://localhost:8761/eureka/}}}}
+2026-04-30T15:42:42.102+01:00 DEBUG 17948 --- [config-service] [nio-8888-exec-7] o.s.boot.env.OriginTrackedYamlLoader     : Loaded 1 document from YAML resource: URL [file:/C:/Users/mouha/soutenance-microservices/config-repo/planning-service.yml]
+2026-04-30T15:42:42.103+01:00 DEBUG 17948 --- [config-service] [nio-8888-exec-7] o.s.boot.env.OriginTrackedYamlLoader     : Loading from YAML: URL [file:/C:/Users/mouha/soutenance-microservices/config-repo/application.yml]
+2026-04-30T15:42:42.103+01:00 DEBUG 17948 --- [config-service] [nio-8888-exec-7] o.s.boot.env.OriginTrackedYamlLoader     : Loaded 0 document from YAML resource: URL [file:/C:/Users/mouha/soutenance-microservices/config-repo/application.yml]
+2026-04-30T15:42:42.107+01:00  INFO 17948 --- [config-service] [nio-8888-exec-7] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [C:\Users\mouha\soutenance-microservices\config-repo\planning-service.yml]' via location 'file:/C:/Users/mouha/soutenance-microservices/config-repo/'
+2026-04-30T15:42:42.108+01:00 DEBUG 17948 --- [config-service] [nio-8888-exec-7] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/vnd.spring-cloud.config-server.v2+json', given [application/vnd.spring-cloud.config-server.v2+json] and supported [application/vnd.spring-cloud.config-server.v2+json]
+2026-04-30T15:42:42.108+01:00 DEBUG 17948 --- [config-service] [nio-8888-exec-7] m.m.a.RequestResponseBodyMethodProcessor : Writing [Environment [name=planning-service, profiles=[default], label=null, propertySources=[PropertySource  (truncated)...]
+2026-04-30T15:42:42.108+01:00 DEBUG 17948 --- [config-service] [nio-8888-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-04-30T15:42:51.672+01:00 DEBUG 17948 --- [config-service] [nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/notes-service/default", parameters={}
+2026-04-30T15:42:51.676+01:00 DEBUG 17948 --- [config-service] [nio-8888-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.cloud.config.server.environment.EnvironmentController#defaultLabelIncludeOrigin(String, String)
+2026-04-30T15:42:51.686+01:00  WARN 17948 --- [config-service] [nio-8888-exec-1] .c.s.e.MultipleJGitEnvironmentRepository : Dirty files found: [gateway-service.yml, soutenance-service.yml, jury-service.yml, auth-service.yml, planning-service.yml, notes-service.yml]
+2026-04-30T15:42:51.686+01:00  WARN 17948 --- [config-service] [nio-8888-exec-1] .c.s.e.MultipleJGitEnvironmentRepository : Could not fetch remote for main remote: null
+2026-04-30T15:42:51.696+01:00  WARN 17948 --- [config-service] [nio-8888-exec-1] .c.s.e.MultipleJGitEnvironmentRepository : Could not merge remote for main remote: null
+2026-04-30T15:42:51.700+01:00  WARN 17948 --- [config-service] [nio-8888-exec-1] .c.s.e.MultipleJGitEnvironmentRepository : The local repository is dirty or ahead of origin. Resetting it to origin/main.
+2026-04-30T15:42:51.700+01:00  WARN 17948 --- [config-service] [nio-8888-exec-1] .c.s.e.MultipleJGitEnvironmentRepository : Could not reset to remote for main (current ref=refs/remotes/origin/main), remote: null
+2026-04-30T15:42:51.702+01:00 DEBUG 17948 --- [config-service] [nio-8888-exec-1] o.s.boot.env.OriginTrackedYamlLoader     : Loading from YAML: URL [file:/C:/Users/mouha/soutenance-microservices/config-repo/notes-service.yml]
+2026-04-30T15:42:51.703+01:00 DEBUG 17948 --- [config-service] [nio-8888-exec-1] o.s.boot.env.OriginTrackedYamlLoader     : Merging document (no matchers set): {server={port=8088}, spring={data={mongodb={uri=mongodb+srv://mouhanedmliki66_db_user:v9s8qfK0MEiSLKQL@cluster0.s3inqkc.mongodb.net/gestion_soutenances_notes?appName=Cluster0, database=gestion_soutenances_notes, auto-index-creation=true}}}, eureka={client={service-url={defaultZone=http://localhost:8761/eureka/}}}}
+2026-04-30T15:42:51.704+01:00 DEBUG 17948 --- [config-service] [nio-8888-exec-1] o.s.boot.env.OriginTrackedYamlLoader     : Loaded 1 document from YAML resource: URL [file:/C:/Users/mouha/soutenance-microservices/config-repo/notes-service.yml]
+2026-04-30T15:42:51.704+01:00 DEBUG 17948 --- [config-service] [nio-8888-exec-1] o.s.boot.env.OriginTrackedYamlLoader     : Loading from YAML: URL [file:/C:/Users/mouha/soutenance-microservices/config-repo/application.yml]
+2026-04-30T15:42:51.704+01:00 DEBUG 17948 --- [config-service] [nio-8888-exec-1] o.s.boot.env.OriginTrackedYamlLoader     : Loaded 0 document from YAML resource: URL [file:/C:/Users/mouha/soutenance-microservices/config-repo/application.yml]
+2026-04-30T15:42:51.707+01:00  INFO 17948 --- [config-service] [nio-8888-exec-1] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [C:\Users\mouha\soutenance-microservices\config-repo\notes-service.yml]' via location 'file:/C:/Users/mouha/soutenance-microservices/config-repo/'
+2026-04-30T15:42:51.708+01:00 DEBUG 17948 --- [config-service] [nio-8888-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/vnd.spring-cloud.config-server.v2+json', given [application/vnd.spring-cloud.config-server.v2+json] and supported [application/vnd.spring-cloud.config-server.v2+json]
+2026-04-30T15:42:51.708+01:00 DEBUG 17948 --- [config-service] [nio-8888-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Writing [Environment [name=notes-service, profiles=[default], label=null, propertySources=[PropertySource [na (truncated)...]
+2026-04-30T15:42:51.709+01:00 DEBUG 17948 --- [config-service] [nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-04-30T15:42:55.612+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/CONFIG-SERVICE/localhost:config-service:8888?status=UP&lastDirtyTimestamp=1777560115573
+2026-04-30T15:42:55.613+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/delta
+2026-04-30T15:42:55.617+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2026-04-30T15:42:55.617+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2026-04-30T15:42:55.630+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2026-04-30T15:42:55.630+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2026-04-30T15:42:55.631+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2026-04-30T15:43:05.839+01:00 DEBUG 17948 --- [config-service] [nio-8888-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/gateway-service/default", parameters={}
+2026-04-30T15:43:05.843+01:00 DEBUG 17948 --- [config-service] [nio-8888-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.cloud.config.server.environment.EnvironmentController#defaultLabelIncludeOrigin(String, String)
+2026-04-30T15:43:05.852+01:00  WARN 17948 --- [config-service] [nio-8888-exec-4] .c.s.e.MultipleJGitEnvironmentRepository : Dirty files found: [gateway-service.yml, soutenance-service.yml, jury-service.yml, auth-service.yml, planning-service.yml, notes-service.yml]
+2026-04-30T15:43:05.853+01:00  WARN 17948 --- [config-service] [nio-8888-exec-4] .c.s.e.MultipleJGitEnvironmentRepository : Could not fetch remote for main remote: null
+2026-04-30T15:43:05.862+01:00  WARN 17948 --- [config-service] [nio-8888-exec-4] .c.s.e.MultipleJGitEnvironmentRepository : Could not merge remote for main remote: null
+2026-04-30T15:43:05.866+01:00  WARN 17948 --- [config-service] [nio-8888-exec-4] .c.s.e.MultipleJGitEnvironmentRepository : The local repository is dirty or ahead of origin. Resetting it to origin/main.
+2026-04-30T15:43:05.867+01:00  WARN 17948 --- [config-service] [nio-8888-exec-4] .c.s.e.MultipleJGitEnvironmentRepository : Could not reset to remote for main (current ref=refs/remotes/origin/main), remote: null
+2026-04-30T15:43:05.870+01:00 DEBUG 17948 --- [config-service] [nio-8888-exec-4] o.s.boot.env.OriginTrackedYamlLoader     : Loading from YAML: URL [file:/C:/Users/mouha/soutenance-microservices/config-repo/gateway-service.yml]
+2026-04-30T15:43:05.874+01:00 DEBUG 17948 --- [config-service] [nio-8888-exec-4] o.s.boot.env.OriginTrackedYamlLoader     : Merging document (no matchers set): {server={port=8089}, spring={cloud={gateway={server={webflux={discovery={locator={enabled=true, lower-case-service-id=true}}, routes=[{id=notes-soutenance-etudiants, uri=lb://notes-service, predicates=[Path=/api/soutenances/*/etudiants,/api/soutenances/etudiants/assignations]}, {id=soutenance-service, uri=lb://soutenance-service, predicates=[Path=/api/soutenances/**,/api/salles/**,/api/references/**,/api/juries/**]}, {id=jury-service, uri=lb://jury-service, predicates=[Path=/api/membres-jury/**,/api/affectations-jury/**]}, {id=planning-service, uri=lb://planning-service, predicates=[Path=/api/planning/**]}, {id=notes-service, uri=lb://notes-service, predicates=[Path=/api/evaluations/**,/api/resultats/**,/api/etudiants/**]}, {id=auth-service, uri=lb://auth-service, predicates=[Path=/api/auth/**,/api/users/internal/**]}]}}}}}, eureka={client={service-url={defaultZone=http://localhost:8761/eureka/}}}}
+2026-04-30T15:43:05.875+01:00 DEBUG 17948 --- [config-service] [nio-8888-exec-4] o.s.boot.env.OriginTrackedYamlLoader     : Loaded 1 document from YAML resource: URL [file:/C:/Users/mouha/soutenance-microservices/config-repo/gateway-service.yml]
+2026-04-30T15:43:05.876+01:00 DEBUG 17948 --- [config-service] [nio-8888-exec-4] o.s.boot.env.OriginTrackedYamlLoader     : Loading from YAML: URL [file:/C:/Users/mouha/soutenance-microservices/config-repo/application.yml]
+2026-04-30T15:43:05.876+01:00 DEBUG 17948 --- [config-service] [nio-8888-exec-4] o.s.boot.env.OriginTrackedYamlLoader     : Loaded 0 document from YAML resource: URL [file:/C:/Users/mouha/soutenance-microservices/config-repo/application.yml]
+2026-04-30T15:43:05.879+01:00  INFO 17948 --- [config-service] [nio-8888-exec-4] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [C:\Users\mouha\soutenance-microservices\config-repo\gateway-service.yml]' via location 'file:/C:/Users/mouha/soutenance-microservices/config-repo/'
+2026-04-30T15:43:05.880+01:00 DEBUG 17948 --- [config-service] [nio-8888-exec-4] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/vnd.spring-cloud.config-server.v2+json', given [application/vnd.spring-cloud.config-server.v2+json] and supported [application/vnd.spring-cloud.config-server.v2+json]
+2026-04-30T15:43:05.881+01:00 DEBUG 17948 --- [config-service] [nio-8888-exec-4] m.m.a.RequestResponseBodyMethodProcessor : Writing [Environment [name=gateway-service, profiles=[default], label=null, propertySources=[PropertySource [ (truncated)...]
+2026-04-30T15:43:05.882+01:00 DEBUG 17948 --- [config-service] [nio-8888-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-04-30T15:43:15.507+01:00 DEBUG 17948 --- [config-service] [nio-8888-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/actuator/health", parameters={}
+2026-04-30T15:43:15.508+01:00 DEBUG 17948 --- [config-service] [nio-8888-exec-8] s.b.a.e.w.s.WebMvcEndpointHandlerMapping : Mapped to Actuator web endpoint 'health'
+2026-04-30T15:43:15.511+01:00 DEBUG 17948 --- [config-service] [nio-8888-exec-8] m.m.a.RequestResponseBodyMethodProcessor : Read "application/octet-stream" to []
+2026-04-30T15:43:15.534+01:00  WARN 17948 --- [config-service] [nio-8888-exec-8] .c.s.e.MultipleJGitEnvironmentRepository : Dirty files found: [gateway-service.yml, soutenance-service.yml, jury-service.yml, auth-service.yml, planning-service.yml, notes-service.yml]
+2026-04-30T15:43:15.537+01:00  WARN 17948 --- [config-service] [nio-8888-exec-8] .c.s.e.MultipleJGitEnvironmentRepository : Could not fetch remote for main remote: null
+2026-04-30T15:43:15.555+01:00  WARN 17948 --- [config-service] [nio-8888-exec-8] .c.s.e.MultipleJGitEnvironmentRepository : Could not merge remote for main remote: null
+2026-04-30T15:43:15.565+01:00  WARN 17948 --- [config-service] [nio-8888-exec-8] .c.s.e.MultipleJGitEnvironmentRepository : The local repository is dirty or ahead of origin. Resetting it to origin/main.
+2026-04-30T15:43:15.569+01:00  WARN 17948 --- [config-service] [nio-8888-exec-8] .c.s.e.MultipleJGitEnvironmentRepository : Could not reset to remote for main (current ref=refs/remotes/origin/main), remote: null
+2026-04-30T15:43:15.571+01:00 DEBUG 17948 --- [config-service] [nio-8888-exec-8] o.s.boot.env.OriginTrackedYamlLoader     : Loading from YAML: URL [file:/C:/Users/mouha/soutenance-microservices/config-repo/application.yml]
+2026-04-30T15:43:15.579+01:00 DEBUG 17948 --- [config-service] [nio-8888-exec-8] o.s.boot.env.OriginTrackedYamlLoader     : Loaded 0 document from YAML resource: URL [file:/C:/Users/mouha/soutenance-microservices/config-repo/application.yml]
+2026-04-30T15:43:15.588+01:00 DEBUG 17948 --- [config-service] [nio-8888-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/vnd.spring-boot.actuator.v3+json', given [*/*] and supported [application/vnd.spring-boot.actuator.v3+json, application/vnd.spring-boot.actuator.v2+json, application/json]
+2026-04-30T15:43:15.598+01:00 DEBUG 17948 --- [config-service] [nio-8888-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [org.springframework.boot.actuate.health.SystemHealth@414fee94]
+2026-04-30T15:43:15.601+01:00 DEBUG 17948 --- [config-service] [nio-8888-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-04-30T15:43:25.639+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/delta
+2026-04-30T15:43:25.639+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/CONFIG-SERVICE/localhost:config-service:8888?status=UP&lastDirtyTimestamp=1777560115573
+2026-04-30T15:43:25.643+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2026-04-30T15:43:25.644+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2026-04-30T15:43:25.655+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2026-04-30T15:43:25.655+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2026-04-30T15:43:25.655+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2026-04-30T15:43:55.667+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/CONFIG-SERVICE/localhost:config-service:8888?status=UP&lastDirtyTimestamp=1777560115573
+2026-04-30T15:43:55.670+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2026-04-30T15:43:55.685+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/delta
+2026-04-30T15:43:55.686+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2026-04-30T15:43:55.689+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2026-04-30T15:43:55.705+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2026-04-30T15:43:55.705+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2026-04-30T15:44:11.476+01:00 DEBUG 17948 --- [config-service] [nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/actuator/health", parameters={}
+2026-04-30T15:44:11.477+01:00 DEBUG 17948 --- [config-service] [nio-8888-exec-1] s.b.a.e.w.s.WebMvcEndpointHandlerMapping : Mapped to Actuator web endpoint 'health'
+2026-04-30T15:44:11.477+01:00 DEBUG 17948 --- [config-service] [nio-8888-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Read "application/octet-stream" to []
+2026-04-30T15:44:11.497+01:00  WARN 17948 --- [config-service] [nio-8888-exec-1] .c.s.e.MultipleJGitEnvironmentRepository : Dirty files found: [gateway-service.yml, soutenance-service.yml, jury-service.yml, auth-service.yml, planning-service.yml, notes-service.yml]
+2026-04-30T15:44:11.499+01:00  WARN 17948 --- [config-service] [nio-8888-exec-1] .c.s.e.MultipleJGitEnvironmentRepository : Could not fetch remote for main remote: null
+2026-04-30T15:44:11.516+01:00  WARN 17948 --- [config-service] [nio-8888-exec-1] .c.s.e.MultipleJGitEnvironmentRepository : Could not merge remote for main remote: null
+2026-04-30T15:44:11.522+01:00  WARN 17948 --- [config-service] [nio-8888-exec-1] .c.s.e.MultipleJGitEnvironmentRepository : The local repository is dirty or ahead of origin. Resetting it to origin/main.
+2026-04-30T15:44:11.525+01:00  WARN 17948 --- [config-service] [nio-8888-exec-1] .c.s.e.MultipleJGitEnvironmentRepository : Could not reset to remote for main (current ref=refs/remotes/origin/main), remote: null
+2026-04-30T15:44:11.526+01:00 DEBUG 17948 --- [config-service] [nio-8888-exec-1] o.s.boot.env.OriginTrackedYamlLoader     : Loading from YAML: URL [file:/C:/Users/mouha/soutenance-microservices/config-repo/application.yml]
+2026-04-30T15:44:11.526+01:00 DEBUG 17948 --- [config-service] [nio-8888-exec-1] o.s.boot.env.OriginTrackedYamlLoader     : Loaded 0 document from YAML resource: URL [file:/C:/Users/mouha/soutenance-microservices/config-repo/application.yml]
+2026-04-30T15:44:11.526+01:00 DEBUG 17948 --- [config-service] [nio-8888-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/vnd.spring-boot.actuator.v3+json', given [*/*] and supported [application/vnd.spring-boot.actuator.v3+json, application/vnd.spring-boot.actuator.v2+json, application/json]
+2026-04-30T15:44:11.526+01:00 DEBUG 17948 --- [config-service] [nio-8888-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [org.springframework.boot.actuate.health.SystemHealth@7c75594f]
+2026-04-30T15:44:11.526+01:00 DEBUG 17948 --- [config-service] [nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-04-30T15:44:25.703+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/CONFIG-SERVICE/localhost:config-service:8888?status=UP&lastDirtyTimestamp=1777560115573
+2026-04-30T15:44:25.705+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2026-04-30T15:44:25.719+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/delta
+2026-04-30T15:44:25.720+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2026-04-30T15:44:25.722+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2026-04-30T15:44:25.737+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2026-04-30T15:44:25.738+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2026-04-30T15:44:55.727+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/CONFIG-SERVICE/localhost:config-service:8888?status=UP&lastDirtyTimestamp=1777560115573
+2026-04-30T15:44:55.732+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2026-04-30T15:44:55.743+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/delta
+2026-04-30T15:44:55.744+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2026-04-30T15:44:55.746+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2026-04-30T15:44:55.761+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2026-04-30T15:44:55.761+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2026-04-30T15:45:25.747+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/CONFIG-SERVICE/localhost:config-service:8888?status=UP&lastDirtyTimestamp=1777560115573
+2026-04-30T15:45:25.748+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2026-04-30T15:45:25.766+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2026-04-30T15:45:25.767+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/delta
+2026-04-30T15:45:25.768+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2026-04-30T15:45:25.782+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2026-04-30T15:45:25.783+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2026-04-30T15:45:55.779+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/CONFIG-SERVICE/localhost:config-service:8888?status=UP&lastDirtyTimestamp=1777560115573
+2026-04-30T15:45:55.779+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2026-04-30T15:45:55.796+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/delta
+2026-04-30T15:45:55.796+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2026-04-30T15:45:55.796+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2026-04-30T15:45:55.811+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2026-04-30T15:45:55.811+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2026-04-30T15:46:25.816+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/CONFIG-SERVICE/localhost:config-service:8888?status=UP&lastDirtyTimestamp=1777560115573
+2026-04-30T15:46:25.816+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2026-04-30T15:46:25.831+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/delta
+2026-04-30T15:46:25.832+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2026-04-30T15:46:25.835+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2026-04-30T15:46:25.847+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2026-04-30T15:46:25.847+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2026-04-30T15:46:55.075+01:00  INFO 17948 --- [config-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-04-30T15:46:55.839+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/CONFIG-SERVICE/localhost:config-service:8888?status=UP&lastDirtyTimestamp=1777560115573
+2026-04-30T15:46:55.844+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2026-04-30T15:46:55.855+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2026-04-30T15:46:55.859+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/delta
+2026-04-30T15:46:55.860+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2026-04-30T15:46:55.875+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2026-04-30T15:46:55.875+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2026-04-30T15:47:25.872+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/CONFIG-SERVICE/localhost:config-service:8888?status=UP&lastDirtyTimestamp=1777560115573
+2026-04-30T15:47:25.876+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2026-04-30T15:47:25.888+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/delta
+2026-04-30T15:47:25.889+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2026-04-30T15:47:25.892+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2026-04-30T15:47:25.906+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2026-04-30T15:47:25.906+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2026-04-30T15:47:55.902+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/CONFIG-SERVICE/localhost:config-service:8888?status=UP&lastDirtyTimestamp=1777560115573
+2026-04-30T15:47:55.906+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2026-04-30T15:47:55.909+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2026-04-30T15:47:55.915+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/delta
+2026-04-30T15:47:55.915+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2026-04-30T15:47:55.926+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2026-04-30T15:47:55.926+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2026-04-30T15:48:25.918+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/CONFIG-SERVICE/localhost:config-service:8888?status=UP&lastDirtyTimestamp=1777560115573
+2026-04-30T15:48:25.922+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2026-04-30T15:48:25.932+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2026-04-30T15:48:25.933+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/delta
+2026-04-30T15:48:25.934+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2026-04-30T15:48:25.954+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2026-04-30T15:48:25.955+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2026-04-30T15:48:55.946+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/CONFIG-SERVICE/localhost:config-service:8888?status=UP&lastDirtyTimestamp=1777560115573
+2026-04-30T15:48:55.951+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2026-04-30T15:48:55.961+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/delta
+2026-04-30T15:48:55.962+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2026-04-30T15:48:55.967+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2026-04-30T15:48:55.972+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2026-04-30T15:48:55.973+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2026-04-30T15:49:25.977+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/CONFIG-SERVICE/localhost:config-service:8888?status=UP&lastDirtyTimestamp=1777560115573
+2026-04-30T15:49:25.981+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2026-04-30T15:49:25.991+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/delta
+2026-04-30T15:49:25.994+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2026-04-30T15:49:25.997+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2026-04-30T15:49:26.012+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2026-04-30T15:49:26.013+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2026-04-30T15:49:56.007+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/CONFIG-SERVICE/localhost:config-service:8888?status=UP&lastDirtyTimestamp=1777560115573
+2026-04-30T15:49:56.010+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2026-04-30T15:49:56.022+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/delta
+2026-04-30T15:49:56.023+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2026-04-30T15:49:56.026+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2026-04-30T15:49:56.040+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2026-04-30T15:49:56.041+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2026-04-30T15:50:26.042+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/CONFIG-SERVICE/localhost:config-service:8888?status=UP&lastDirtyTimestamp=1777560115573
+2026-04-30T15:50:26.047+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2026-04-30T15:50:26.058+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/delta
+2026-04-30T15:50:26.060+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2026-04-30T15:50:26.062+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2026-04-30T15:50:26.078+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2026-04-30T15:50:26.079+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2026-04-30T15:50:56.074+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/CONFIG-SERVICE/localhost:config-service:8888?status=UP&lastDirtyTimestamp=1777560115573
+2026-04-30T15:50:56.079+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2026-04-30T15:50:56.090+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/delta
+2026-04-30T15:50:56.090+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2026-04-30T15:50:56.093+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2026-04-30T15:50:56.107+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2026-04-30T15:50:56.107+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2026-04-30T15:51:26.111+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/delta
+2026-04-30T15:51:26.111+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/CONFIG-SERVICE/localhost:config-service:8888?status=UP&lastDirtyTimestamp=1777560115573
+2026-04-30T15:51:26.115+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2026-04-30T15:51:26.115+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2026-04-30T15:51:26.131+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2026-04-30T15:51:26.131+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2026-04-30T15:51:26.131+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2026-04-30T15:51:55.082+01:00  INFO 17948 --- [config-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-04-30T15:51:56.134+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/delta
+2026-04-30T15:51:56.134+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/CONFIG-SERVICE/localhost:config-service:8888?status=UP&lastDirtyTimestamp=1777560115573
+2026-04-30T15:51:56.139+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2026-04-30T15:51:56.139+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2026-04-30T15:51:56.151+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2026-04-30T15:51:56.151+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2026-04-30T15:51:56.151+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2026-04-30T15:52:26.158+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/CONFIG-SERVICE/localhost:config-service:8888?status=UP&lastDirtyTimestamp=1777560115573
+2026-04-30T15:52:26.158+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/delta
+2026-04-30T15:52:26.159+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2026-04-30T15:52:26.159+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2026-04-30T15:52:26.177+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2026-04-30T15:52:26.177+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2026-04-30T15:52:26.179+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2026-04-30T15:52:56.180+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/delta
+2026-04-30T15:52:56.180+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/CONFIG-SERVICE/localhost:config-service:8888?status=UP&lastDirtyTimestamp=1777560115573
+2026-04-30T15:52:56.184+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2026-04-30T15:52:56.184+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2026-04-30T15:52:56.198+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2026-04-30T15:52:56.198+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2026-04-30T15:52:56.199+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2026-04-30T15:53:26.212+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/delta
+2026-04-30T15:53:26.212+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/CONFIG-SERVICE/localhost:config-service:8888?status=UP&lastDirtyTimestamp=1777560115573
+2026-04-30T15:53:26.212+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2026-04-30T15:53:26.212+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2026-04-30T15:53:26.228+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2026-04-30T15:53:26.228+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2026-04-30T15:53:26.228+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2026-04-30T15:53:56.236+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/CONFIG-SERVICE/localhost:config-service:8888?status=UP&lastDirtyTimestamp=1777560115573
+2026-04-30T15:53:56.236+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/delta
+2026-04-30T15:53:56.240+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2026-04-30T15:53:56.240+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2026-04-30T15:53:56.258+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2026-04-30T15:53:56.258+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2026-04-30T15:53:56.258+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2026-04-30T15:54:26.264+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/CONFIG-SERVICE/localhost:config-service:8888?status=UP&lastDirtyTimestamp=1777560115573
+2026-04-30T15:54:26.264+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/delta
+2026-04-30T15:54:26.267+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2026-04-30T15:54:26.267+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2026-04-30T15:54:26.272+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2026-04-30T15:54:26.272+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2026-04-30T15:54:26.273+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2026-04-30T15:54:56.279+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/delta
+2026-04-30T15:54:56.279+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/CONFIG-SERVICE/localhost:config-service:8888?status=UP&lastDirtyTimestamp=1777560115573
+2026-04-30T15:54:56.283+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2026-04-30T15:54:56.283+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2026-04-30T15:54:56.298+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2026-04-30T15:54:56.298+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2026-04-30T15:54:56.300+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2026-04-30T15:55:26.306+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/delta
+2026-04-30T15:55:26.306+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/CONFIG-SERVICE/localhost:config-service:8888?status=UP&lastDirtyTimestamp=1777560115573
+2026-04-30T15:55:26.311+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2026-04-30T15:55:26.311+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2026-04-30T15:55:26.326+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2026-04-30T15:55:26.326+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2026-04-30T15:55:26.328+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2026-04-30T15:55:56.342+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/CONFIG-SERVICE/localhost:config-service:8888?status=UP&lastDirtyTimestamp=1777560115573
+2026-04-30T15:55:56.342+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/delta
+2026-04-30T15:55:56.346+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2026-04-30T15:55:56.346+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2026-04-30T15:55:56.360+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2026-04-30T15:55:56.360+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2026-04-30T15:55:56.360+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2026-04-30T15:56:26.374+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/delta
+2026-04-30T15:56:26.374+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/CONFIG-SERVICE/localhost:config-service:8888?status=UP&lastDirtyTimestamp=1777560115573
+2026-04-30T15:56:26.377+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2026-04-30T15:56:26.377+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2026-04-30T15:56:26.391+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2026-04-30T15:56:26.391+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2026-04-30T15:56:26.392+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2026-04-30T15:56:55.087+01:00  INFO 17948 --- [config-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-04-30T15:56:56.405+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/CONFIG-SERVICE/localhost:config-service:8888?status=UP&lastDirtyTimestamp=1777560115573
+2026-04-30T15:56:56.405+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/delta
+2026-04-30T15:56:56.406+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2026-04-30T15:56:56.407+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2026-04-30T15:56:56.421+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2026-04-30T15:56:56.421+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2026-04-30T15:56:56.423+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2026-04-30T15:57:26.437+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/delta
+2026-04-30T15:57:26.437+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/CONFIG-SERVICE/localhost:config-service:8888?status=UP&lastDirtyTimestamp=1777560115573
+2026-04-30T15:57:26.441+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2026-04-30T15:57:26.441+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2026-04-30T15:57:26.452+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2026-04-30T15:57:26.452+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2026-04-30T15:57:26.452+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2026-04-30T15:57:56.466+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/delta
+2026-04-30T15:57:56.466+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/CONFIG-SERVICE/localhost:config-service:8888?status=UP&lastDirtyTimestamp=1777560115573
+2026-04-30T15:57:56.469+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2026-04-30T15:57:56.469+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2026-04-30T15:57:56.483+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2026-04-30T15:57:56.483+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2026-04-30T15:57:56.485+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2026-04-30T15:58:26.486+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/CONFIG-SERVICE/localhost:config-service:8888?status=UP&lastDirtyTimestamp=1777560115573
+2026-04-30T15:58:26.490+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2026-04-30T15:58:26.497+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/delta
+2026-04-30T15:58:26.498+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2026-04-30T15:58:26.499+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2026-04-30T15:58:26.514+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2026-04-30T15:58:26.514+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2026-04-30T15:58:56.511+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/CONFIG-SERVICE/localhost:config-service:8888?status=UP&lastDirtyTimestamp=1777560115573
+2026-04-30T15:58:56.515+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2026-04-30T15:58:56.519+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/delta
+2026-04-30T15:58:56.520+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2026-04-30T15:58:56.522+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2026-04-30T15:58:56.532+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2026-04-30T15:58:56.533+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2026-04-30T15:59:26.526+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/CONFIG-SERVICE/localhost:config-service:8888?status=UP&lastDirtyTimestamp=1777560115573
+2026-04-30T15:59:26.526+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2026-04-30T15:59:26.542+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/delta
+2026-04-30T15:59:26.543+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2026-04-30T15:59:26.544+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2026-04-30T15:59:26.553+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2026-04-30T15:59:26.553+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2026-04-30T15:59:56.554+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/CONFIG-SERVICE/localhost:config-service:8888?status=UP&lastDirtyTimestamp=1777560115573
+2026-04-30T15:59:56.558+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/delta
+2026-04-30T15:59:56.558+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2026-04-30T15:59:56.558+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2026-04-30T15:59:56.563+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2026-04-30T15:59:56.563+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2026-04-30T15:59:56.564+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2026-04-30T16:00:26.569+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/CONFIG-SERVICE/localhost:config-service:8888?status=UP&lastDirtyTimestamp=1777560115573
+2026-04-30T16:00:26.569+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/delta
+2026-04-30T16:00:26.570+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2026-04-30T16:00:26.570+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2026-04-30T16:00:26.585+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2026-04-30T16:00:26.585+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2026-04-30T16:00:26.586+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2026-04-30T16:00:56.588+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/delta
+2026-04-30T16:00:56.588+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/CONFIG-SERVICE/localhost:config-service:8888?status=UP&lastDirtyTimestamp=1777560115573
+2026-04-30T16:00:56.589+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2026-04-30T16:00:56.589+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2026-04-30T16:00:56.606+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2026-04-30T16:00:56.606+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2026-04-30T16:00:56.607+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2026-04-30T16:01:26.619+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/delta
+2026-04-30T16:01:26.619+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/CONFIG-SERVICE/localhost:config-service:8888?status=UP&lastDirtyTimestamp=1777560115573
+2026-04-30T16:01:26.623+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2026-04-30T16:01:26.623+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2026-04-30T16:01:26.635+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2026-04-30T16:01:26.635+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2026-04-30T16:01:26.636+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2026-04-30T16:01:55.100+01:00  INFO 17948 --- [config-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-04-30T16:01:56.648+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/delta
+2026-04-30T16:01:56.648+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/CONFIG-SERVICE/localhost:config-service:8888?status=UP&lastDirtyTimestamp=1777560115573
+2026-04-30T16:01:56.652+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2026-04-30T16:01:56.652+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2026-04-30T16:01:56.666+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2026-04-30T16:01:56.666+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2026-04-30T16:01:56.667+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2026-04-30T16:02:26.677+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/CONFIG-SERVICE/localhost:config-service:8888?status=UP&lastDirtyTimestamp=1777560115573
+2026-04-30T16:02:26.677+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/delta
+2026-04-30T16:02:26.679+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2026-04-30T16:02:26.679+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2026-04-30T16:02:26.694+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2026-04-30T16:02:26.694+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2026-04-30T16:02:26.695+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2026-04-30T16:02:56.696+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/CONFIG-SERVICE/localhost:config-service:8888?status=UP&lastDirtyTimestamp=1777560115573
+2026-04-30T16:02:56.696+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/delta
+2026-04-30T16:02:56.697+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2026-04-30T16:02:56.697+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2026-04-30T16:02:56.713+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2026-04-30T16:02:56.713+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2026-04-30T16:02:56.713+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2026-04-30T16:03:26.718+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/CONFIG-SERVICE/localhost:config-service:8888?status=UP&lastDirtyTimestamp=1777560115573
+2026-04-30T16:03:26.718+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/delta
+2026-04-30T16:03:26.737+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2026-04-30T16:03:26.737+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2026-04-30T16:03:26.755+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2026-04-30T16:03:26.755+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2026-04-30T16:03:26.756+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2026-04-30T16:03:56.766+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/CONFIG-SERVICE/localhost:config-service:8888?status=UP&lastDirtyTimestamp=1777560115573
+2026-04-30T16:03:56.766+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/delta
+2026-04-30T16:03:56.768+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2026-04-30T16:03:56.768+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2026-04-30T16:03:56.783+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2026-04-30T16:03:56.783+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2026-04-30T16:03:56.783+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2026-04-30T16:04:26.785+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/CONFIG-SERVICE/localhost:config-service:8888?status=UP&lastDirtyTimestamp=1777560115573
+2026-04-30T16:04:26.785+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/delta
+2026-04-30T16:04:26.786+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2026-04-30T16:04:26.786+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2026-04-30T16:04:26.801+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2026-04-30T16:04:26.801+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2026-04-30T16:04:26.802+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2026-04-30T16:04:56.808+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/delta
+2026-04-30T16:04:56.808+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/CONFIG-SERVICE/localhost:config-service:8888?status=UP&lastDirtyTimestamp=1777560115573
+2026-04-30T16:04:56.812+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2026-04-30T16:04:56.814+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2026-04-30T16:04:56.826+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2026-04-30T16:04:56.826+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2026-04-30T16:04:56.828+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2026-04-30T16:05:26.839+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/CONFIG-SERVICE/localhost:config-service:8888?status=UP&lastDirtyTimestamp=1777560115573
+2026-04-30T16:05:26.839+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/delta
+2026-04-30T16:05:26.842+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2026-04-30T16:05:26.842+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2026-04-30T16:05:26.855+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2026-04-30T16:05:26.855+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2026-04-30T16:05:26.855+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2026-04-30T16:05:56.868+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/delta
+2026-04-30T16:05:56.868+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/CONFIG-SERVICE/localhost:config-service:8888?status=UP&lastDirtyTimestamp=1777560115573
+2026-04-30T16:05:56.872+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2026-04-30T16:05:56.872+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2026-04-30T16:05:56.885+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2026-04-30T16:05:56.885+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2026-04-30T16:05:56.885+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2026-04-30T16:06:26.898+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/CONFIG-SERVICE/localhost:config-service:8888?status=UP&lastDirtyTimestamp=1777560115573
+2026-04-30T16:06:26.898+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/delta
+2026-04-30T16:06:26.902+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2026-04-30T16:06:26.903+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2026-04-30T16:06:26.916+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2026-04-30T16:06:26.916+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2026-04-30T16:06:26.917+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2026-04-30T16:06:55.104+01:00  INFO 17948 --- [config-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-04-30T16:06:56.922+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/CONFIG-SERVICE/localhost:config-service:8888?status=UP&lastDirtyTimestamp=1777560115573
+2026-04-30T16:06:56.922+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/delta
+2026-04-30T16:06:56.923+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2026-04-30T16:06:56.923+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2026-04-30T16:06:56.939+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2026-04-30T16:06:56.939+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2026-04-30T16:06:56.939+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2026-04-30T16:07:26.946+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/delta
+2026-04-30T16:07:26.946+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/CONFIG-SERVICE/localhost:config-service:8888?status=UP&lastDirtyTimestamp=1777560115573
+2026-04-30T16:07:26.949+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2026-04-30T16:07:26.950+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2026-04-30T16:07:26.964+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2026-04-30T16:07:26.964+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2026-04-30T16:07:26.965+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2026-04-30T16:07:56.971+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/delta
+2026-04-30T16:07:56.976+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2026-04-30T16:07:56.981+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/CONFIG-SERVICE/localhost:config-service:8888?status=UP&lastDirtyTimestamp=1777560115573
+2026-04-30T16:07:56.987+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2026-04-30T16:07:56.987+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2026-04-30T16:07:56.988+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2026-04-30T16:07:56.989+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2026-04-30T16:08:26.997+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/CONFIG-SERVICE/localhost:config-service:8888?status=UP&lastDirtyTimestamp=1777560115573
+2026-04-30T16:08:26.998+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2026-04-30T16:08:26.999+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/delta
+2026-04-30T16:08:27.003+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2026-04-30T16:08:27.005+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2026-04-30T16:08:27.005+01:00 DEBUG 17948 --- [config-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2026-04-30T16:08:27.013+01:00 DEBUG 17948 --- [config-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK

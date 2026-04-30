@@ -1,9 +1,13 @@
 spring:
   application:
     name: planning-service
+  config:
+    import: optional:configserver:http://localhost:8888
   data:
     mongodb:
-      uri: mongodb+srv://mouhanedmliki66_db_user:v9s8qfK0MEiSLKQL@cluster0.s3inqkc.mongodb.net/?appName=Cluster0
+      uri: mongodb+srv://mouhanedmliki66_db_user:v9s8qfK0MEiSLKQL@cluster0.s3inqkc.mongodb.net/gestion_soutenances_planning?appName=Cluster0
+      database: gestion_soutenances_planning
+      auto-index-creation: true
 
 
 server:

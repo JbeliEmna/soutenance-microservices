@@ -25,6 +25,7 @@ Le script compile le backend, demarre les services Spring Boot, verifie les endp
 | auth-service | 8085 | http://localhost:8085/actuator/health | UP |
 | soutenance-service | 8084 | http://localhost:8084/actuator/health | UP |
 | jury-service | 8082 | http://localhost:8082/actuator/health | UP |
+| planning-service | 8083 | http://localhost:8083/actuator/health | UP |
 | notes-service | 8088 | http://localhost:8088/actuator/health | UP |
 | gateway-service | 8089 | http://localhost:8089/actuator/health | UP |
 
@@ -32,6 +33,61 @@ URL principale a utiliser pour tester:
 
 ```text
 http://localhost:8089
+```
+
+## 2.1 Bases de donnees separees
+
+Tous les services utilisent le meme serveur MongoDB Atlas de Mouhanned, mais chaque service pointe maintenant vers une base differente.
+
+| Service | Base MongoDB |
+| --- | --- |
+| auth-service | `gestion_soutenances_auth` |
+| soutenance-service | `gestion_soutenances_soutenance` |
+| jury-service | `gestion_soutenances_jury` |
+| planning-service | `gestion_soutenances_planning` |
+| notes-service | `gestion_soutenances_notes` |
+
+La configuration est presente dans les `application.yml` locaux et dans le depot de configuration:
+
+```text
+C:\Users\mouha\soutenance-microservices\config-repo
+```
+
+Cela permet de garder une separation claire:
+
+- `auth-service` garde les utilisateurs et roles;
+- `soutenance-service` garde salles, soutenances, references legacy et jurys legacy;
+- `jury-service` garde les membres et affectations jury;
+- `notes-service` garde etudiants, assignations, evaluations et resultats;
+- `planning-service` a sa propre base reservee pour les futures entites de planning.
+
+## 2.2 Seed des donnees
+
+Des seeders idempotents ont ete ajoutes. Ils s'executent au demarrage et n'inserent pas de doublons.
+
+Fichiers ajoutes:
+
+```text
+auth-service/src/main/java/com/microservices/auth_service/config/DataSeeder.java
+soutenance-service/src/main/java/com/microservices/soutenance_service/config/DataSeeder.java
+jury-service/src/main/java/com/microservices/jury_service/config/DataSeeder.java
+notes-service/src/main/java/com/microservices/notes_service/config/DataSeeder.java
+```
+
+Donnees principales seed:
+
+| Domaine | Donnees |
+| --- | --- |
+| Auth | admin `9001`, etudiants `1001`, `1002`, enseignants `2001`, `2002`, `3001`, `3002`, `3003`, `3999` |
+| Soutenance | salles `Salle Seed A1`, `Salle Seed B1`, soutenance `id=1` |
+| Jury | president `3001`, rapporteur `3002`, examinateur `3003` affectes a la soutenance `1` |
+| Notes | etudiants notes `1`, `2`, evaluations `16`, `14`, `15`, resultat final `BIEN` |
+
+Compte admin seed:
+
+```text
+email: admin.postman@test.tn
+password: password123
 ```
 
 ## 3. Tests fonctionnels executes
@@ -54,6 +110,21 @@ http://localhost:8089
 | Attribution mention | moyenne 15.0 | BIEN |
 | Consultation resultat etudiant | GET /api/resultats/etudiants/{id} | 200 OK |
 | Details complets soutenance | GET /api/soutenances/{id}/details | jury + evaluations + resultat |
+
+## 3.1 Tests seed verifies apres separation des bases
+
+| Test | Resultat |
+| --- | --- |
+| Login admin seed | 200 OK |
+| GET `/api/soutenances/1` | 200 OK, etat `TERMINEE`, salle `Salle Seed A1` |
+| GET `/api/salles` | 200 OK |
+| GET `/api/affectations-jury/soutenance/1` | 200 OK, 3 affectations |
+| GET `/api/affectations-jury/soutenance/1/jury-complet` | 200 OK, `Jury complet: 3 membres` |
+| GET `/api/evaluations/soutenance/1` | 200 OK, 3 evaluations |
+| GET `/api/resultats/soutenances/1` | 200 OK, moyenne `15.0`, mention `BIEN` |
+| GET `/api/resultats/etudiants/1` | 200 OK |
+| GET `/api/soutenances/1/details` | 200 OK, aggregation OpenFeign complete |
+| POST conflit salle sur `Salle Seed A1` | 409 Conflict |
 
 Resultat final du scenario:
 

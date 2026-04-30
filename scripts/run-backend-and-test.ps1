@@ -17,6 +17,7 @@ $Services = @(
     @{ Name = "auth-service";       Port = 8085; Health = "http://localhost:8085/actuator/health";  Delay = 14 },
     @{ Name = "soutenance-service"; Port = 8084; Health = "http://localhost:8084/actuator/health";  Delay = 14 },
     @{ Name = "jury-service";       Port = 8082; Health = "http://localhost:8082/actuator/health";  Delay = 14 },
+    @{ Name = "planning-service";   Port = 8083; Health = "http://localhost:8083/actuator/health";  Delay = 10 },
     @{ Name = "notes-service";      Port = 8088; Health = "http://localhost:8088/actuator/health";  Delay = 14 },
     @{ Name = "gateway-service";    Port = 8089; Health = "http://localhost:8089/actuator/health";  Delay = 14 }
 )
@@ -354,7 +355,7 @@ try {
     }
 
     Write-Step "Waiting for Eureka registry"
-    foreach ($app in @("AUTH-SERVICE", "SOUTENANCE-SERVICE", "JURY-SERVICE", "NOTES-SERVICE", "GATEWAY-SERVICE")) {
+    foreach ($app in @("AUTH-SERVICE", "SOUTENANCE-SERVICE", "JURY-SERVICE", "PLANNING-SERVICE", "NOTES-SERVICE", "GATEWAY-SERVICE")) {
         Wait-EurekaApp $app 120
     }
     Start-Sleep -Seconds 15

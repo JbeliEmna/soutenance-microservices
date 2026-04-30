@@ -35,60 +35,60 @@
 
  :: Spring Boot ::               (v3.5.13)
 
-2026-04-30T15:19:07.143+01:00  INFO 15704 --- [discovery-service] [           main] c.m.d.DiscoveryServiceApplication        : Starting DiscoveryServiceApplication using Java 23.0.2 with PID 15704 (C:\Users\mouha\projet_microservice\discovery-service\target\classes started by mouha in C:\Users\mouha\projet_microservice\discovery-service)
-2026-04-30T15:19:07.147+01:00  INFO 15704 --- [discovery-service] [           main] c.m.d.DiscoveryServiceApplication        : No active profile set, falling back to 1 default profile: "default"
-2026-04-30T15:19:07.147+01:00 DEBUG 15704 --- [discovery-service] [           main] o.s.boot.SpringApplication               : Loading source class com.microservices.discovery_service.DiscoveryServiceApplication
-2026-04-30T15:19:07.212+01:00 DEBUG 15704 --- [discovery-service] [           main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@3c9bfddc
-2026-04-30T15:19:08.185+01:00  INFO 15704 --- [discovery-service] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=5410db74-4a5d-34fb-b45d-5439c9653199
-2026-04-30T15:19:08.478+01:00 DEBUG 15704 --- [discovery-service] [           main] .s.b.w.e.t.TomcatServletWebServerFactory : Code archive: C:\Users\mouha\.m2\repository\org\springframework\boot\spring-boot\3.5.13\spring-boot-3.5.13.jar
-2026-04-30T15:19:08.478+01:00 DEBUG 15704 --- [discovery-service] [           main] .s.b.w.e.t.TomcatServletWebServerFactory : Code archive: C:\Users\mouha\.m2\repository\org\springframework\boot\spring-boot\3.5.13\spring-boot-3.5.13.jar
-2026-04-30T15:19:08.478+01:00 DEBUG 15704 --- [discovery-service] [           main] .s.b.w.e.t.TomcatServletWebServerFactory : None of the document roots [src/main/webapp, public, static] point to a directory and will be ignored.
-2026-04-30T15:19:08.506+01:00  INFO 15704 --- [discovery-service] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8761 (http)
-2026-04-30T15:19:08.522+01:00  INFO 15704 --- [discovery-service] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-04-30T15:19:08.524+01:00  INFO 15704 --- [discovery-service] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.53]
-2026-04-30T15:19:08.576+01:00  INFO 15704 --- [discovery-service] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-04-30T15:19:08.576+01:00 DEBUG 15704 --- [discovery-service] [           main] w.s.c.ServletWebServerApplicationContext : Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
-2026-04-30T15:19:08.576+01:00  INFO 15704 --- [discovery-service] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1364 ms
-2026-04-30T15:19:08.940+01:00 DEBUG 15704 --- [discovery-service] [           main] o.s.b.w.s.ServletContextInitializerBeans : Mapping filters: webMvcObservationFilter urls=[/*] order=-2147483647, eurekaVersionFilterRegistration urls=[/eureka/*] order=0, jerseyFilterRegistration urls=[/eureka/*] order=2147483647, characterEncodingFilter urls=[/*] order=-2147483648, formContentFilter urls=[/*] order=-9900, requestContextFilter urls=[/*] order=-105
-2026-04-30T15:19:08.940+01:00 DEBUG 15704 --- [discovery-service] [           main] o.s.b.w.s.ServletContextInitializerBeans : Mapping servlets: dispatcherServlet urls=[/]
-2026-04-30T15:19:08.973+01:00 DEBUG 15704 --- [discovery-service] [           main] o.s.b.w.s.f.OrderedRequestContextFilter  : Filter 'requestContextFilter' configured for use
-2026-04-30T15:19:08.975+01:00 DEBUG 15704 --- [discovery-service] [           main] o.s.w.f.ServerHttpObservationFilter      : Filter 'webMvcObservationFilter' configured for use
-2026-04-30T15:19:08.976+01:00 DEBUG 15704 --- [discovery-service] [           main] s.b.w.s.f.OrderedCharacterEncodingFilter : Filter 'characterEncodingFilter' configured for use
-2026-04-30T15:19:09.440+01:00  INFO 15704 --- [discovery-service] [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
-2026-04-30T15:19:09.440+01:00  INFO 15704 --- [discovery-service] [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
-2026-04-30T15:19:09.625+01:00  INFO 15704 --- [discovery-service] [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
-2026-04-30T15:19:09.626+01:00  INFO 15704 --- [discovery-service] [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
-2026-04-30T15:19:09.690+01:00 DEBUG 15704 --- [discovery-service] [           main] o.s.b.w.s.f.OrderedFormContentFilter     : Filter 'formContentFilter' configured for use
-2026-04-30T15:19:09.774+01:00  INFO 15704 --- [discovery-service] [           main] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
-2026-04-30T15:19:09.823+01:00 DEBUG 15704 --- [discovery-service] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : 4 mappings in 'requestMappingHandlerMapping'
-2026-04-30T15:19:09.839+01:00 DEBUG 15704 --- [discovery-service] [           main] o.s.b.a.AutoConfigurationPackages        : @EnableAutoConfiguration was declared on a class in the package 'com.microservices.discovery_service'. Automatic @Repository and @Entity scanning is enabled.
-2026-04-30T15:19:09.876+01:00 DEBUG 15704 --- [discovery-service] [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
-2026-04-30T15:19:09.984+01:00 DEBUG 15704 --- [discovery-service] [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
-2026-04-30T15:19:10.024+01:00 DEBUG 15704 --- [discovery-service] [           main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
-2026-04-30T15:19:11.068+01:00  INFO 15704 --- [discovery-service] [           main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
-2026-04-30T15:19:11.342+01:00 DEBUG 15704 --- [discovery-service] [           main] o.s.w.s.v.f.FreeMarkerConfigurer         : File system access not preferred: using SpringTemplateLoader
-2026-04-30T15:19:12.373+01:00  INFO 15704 --- [discovery-service] [           main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
-2026-04-30T15:19:12.438+01:00  WARN 15704 --- [discovery-service] [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2026-04-30T15:19:12.457+01:00  INFO 15704 --- [discovery-service] [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
-2026-04-30T15:19:12.476+01:00  INFO 15704 --- [discovery-service] [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
-2026-04-30T15:19:12.477+01:00  INFO 15704 --- [discovery-service] [           main] com.netflix.discovery.DiscoveryClient    : Client configured to neither register nor query for data.
-2026-04-30T15:19:12.483+01:00  INFO 15704 --- [discovery-service] [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1777558752478 with initial instances count: 0
-2026-04-30T15:19:12.556+01:00  INFO 15704 --- [discovery-service] [           main] c.n.eureka.DefaultEurekaServerContext    : Initializing ...
-2026-04-30T15:19:12.559+01:00  WARN 15704 --- [discovery-service] [           main] c.n.eureka.cluster.PeerEurekaNodes       : The replica size seems to be empty. Check the route 53 DNS Registry
-2026-04-30T15:19:12.573+01:00  INFO 15704 --- [discovery-service] [           main] c.n.e.registry.AbstractInstanceRegistry  : Finished initializing remote region registries. All known remote regions: []
-2026-04-30T15:19:12.573+01:00  INFO 15704 --- [discovery-service] [           main] c.n.eureka.DefaultEurekaServerContext    : Initialized
-2026-04-30T15:19:12.582+01:00  INFO 15704 --- [discovery-service] [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'
-2026-04-30T15:19:12.619+01:00  INFO 15704 --- [discovery-service] [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application DISCOVERY-SERVICE with eureka with status UP
-2026-04-30T15:19:12.627+01:00  INFO 15704 --- [discovery-service] [      Thread-10] o.s.c.n.e.server.EurekaServerBootstrap   : isAws returned false
-2026-04-30T15:19:12.628+01:00  INFO 15704 --- [discovery-service] [      Thread-10] o.s.c.n.e.server.EurekaServerBootstrap   : Initialized server context
-2026-04-30T15:19:12.629+01:00  INFO 15704 --- [discovery-service] [      Thread-10] c.n.e.r.PeerAwareInstanceRegistryImpl    : Got 1 instances from neighboring DS node
-2026-04-30T15:19:12.629+01:00  INFO 15704 --- [discovery-service] [      Thread-10] c.n.e.r.PeerAwareInstanceRegistryImpl    : Renew threshold is: 1
-2026-04-30T15:19:12.629+01:00  INFO 15704 --- [discovery-service] [      Thread-10] c.n.e.r.PeerAwareInstanceRegistryImpl    : Changing status to UP
-2026-04-30T15:19:12.631+01:00  INFO 15704 --- [discovery-service] [      Thread-10] e.s.EurekaServerInitializerConfiguration : Started Eureka Server
-2026-04-30T15:19:12.645+01:00  INFO 15704 --- [discovery-service] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8761 (http) with context path '/'
-2026-04-30T15:19:12.645+01:00  INFO 15704 --- [discovery-service] [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8761
-2026-04-30T15:19:13.649+01:00  INFO 15704 --- [discovery-service] [           main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
-2026-04-30T15:19:13.671+01:00 DEBUG 15704 --- [discovery-service] [           main] .s.b.a.l.ConditionEvaluationReportLogger : 
+2026-04-30T15:41:38.130+01:00  INFO 11116 --- [discovery-service] [           main] c.m.d.DiscoveryServiceApplication        : Starting DiscoveryServiceApplication using Java 23.0.2 with PID 11116 (C:\Users\mouha\projet_microservice\discovery-service\target\classes started by mouha in C:\Users\mouha\projet_microservice\discovery-service)
+2026-04-30T15:41:38.135+01:00  INFO 11116 --- [discovery-service] [           main] c.m.d.DiscoveryServiceApplication        : No active profile set, falling back to 1 default profile: "default"
+2026-04-30T15:41:38.137+01:00 DEBUG 11116 --- [discovery-service] [           main] o.s.boot.SpringApplication               : Loading source class com.microservices.discovery_service.DiscoveryServiceApplication
+2026-04-30T15:41:38.212+01:00 DEBUG 11116 --- [discovery-service] [           main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@3c9bfddc
+2026-04-30T15:41:39.165+01:00  INFO 11116 --- [discovery-service] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=5410db74-4a5d-34fb-b45d-5439c9653199
+2026-04-30T15:41:39.432+01:00 DEBUG 11116 --- [discovery-service] [           main] .s.b.w.e.t.TomcatServletWebServerFactory : Code archive: C:\Users\mouha\.m2\repository\org\springframework\boot\spring-boot\3.5.13\spring-boot-3.5.13.jar
+2026-04-30T15:41:39.433+01:00 DEBUG 11116 --- [discovery-service] [           main] .s.b.w.e.t.TomcatServletWebServerFactory : Code archive: C:\Users\mouha\.m2\repository\org\springframework\boot\spring-boot\3.5.13\spring-boot-3.5.13.jar
+2026-04-30T15:41:39.434+01:00 DEBUG 11116 --- [discovery-service] [           main] .s.b.w.e.t.TomcatServletWebServerFactory : None of the document roots [src/main/webapp, public, static] point to a directory and will be ignored.
+2026-04-30T15:41:39.456+01:00  INFO 11116 --- [discovery-service] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8761 (http)
+2026-04-30T15:41:39.475+01:00  INFO 11116 --- [discovery-service] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-30T15:41:39.475+01:00  INFO 11116 --- [discovery-service] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.53]
+2026-04-30T15:41:39.531+01:00  INFO 11116 --- [discovery-service] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-04-30T15:41:39.533+01:00 DEBUG 11116 --- [discovery-service] [           main] w.s.c.ServletWebServerApplicationContext : Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
+2026-04-30T15:41:39.534+01:00  INFO 11116 --- [discovery-service] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1321 ms
+2026-04-30T15:41:40.057+01:00 DEBUG 11116 --- [discovery-service] [           main] o.s.b.w.s.ServletContextInitializerBeans : Mapping filters: webMvcObservationFilter urls=[/*] order=-2147483647, eurekaVersionFilterRegistration urls=[/eureka/*] order=0, jerseyFilterRegistration urls=[/eureka/*] order=2147483647, characterEncodingFilter urls=[/*] order=-2147483648, formContentFilter urls=[/*] order=-9900, requestContextFilter urls=[/*] order=-105
+2026-04-30T15:41:40.057+01:00 DEBUG 11116 --- [discovery-service] [           main] o.s.b.w.s.ServletContextInitializerBeans : Mapping servlets: dispatcherServlet urls=[/]
+2026-04-30T15:41:40.087+01:00 DEBUG 11116 --- [discovery-service] [           main] o.s.b.w.s.f.OrderedRequestContextFilter  : Filter 'requestContextFilter' configured for use
+2026-04-30T15:41:40.087+01:00 DEBUG 11116 --- [discovery-service] [           main] o.s.w.f.ServerHttpObservationFilter      : Filter 'webMvcObservationFilter' configured for use
+2026-04-30T15:41:40.087+01:00 DEBUG 11116 --- [discovery-service] [           main] s.b.w.s.f.OrderedCharacterEncodingFilter : Filter 'characterEncodingFilter' configured for use
+2026-04-30T15:41:40.544+01:00  INFO 11116 --- [discovery-service] [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2026-04-30T15:41:40.548+01:00  INFO 11116 --- [discovery-service] [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2026-04-30T15:41:40.717+01:00  INFO 11116 --- [discovery-service] [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2026-04-30T15:41:40.718+01:00  INFO 11116 --- [discovery-service] [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2026-04-30T15:41:40.776+01:00 DEBUG 11116 --- [discovery-service] [           main] o.s.b.w.s.f.OrderedFormContentFilter     : Filter 'formContentFilter' configured for use
+2026-04-30T15:41:40.859+01:00  INFO 11116 --- [discovery-service] [           main] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2026-04-30T15:41:40.905+01:00 DEBUG 11116 --- [discovery-service] [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : 4 mappings in 'requestMappingHandlerMapping'
+2026-04-30T15:41:40.920+01:00 DEBUG 11116 --- [discovery-service] [           main] o.s.b.a.AutoConfigurationPackages        : @EnableAutoConfiguration was declared on a class in the package 'com.microservices.discovery_service'. Automatic @Repository and @Entity scanning is enabled.
+2026-04-30T15:41:40.946+01:00 DEBUG 11116 --- [discovery-service] [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2026-04-30T15:41:41.021+01:00 DEBUG 11116 --- [discovery-service] [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2026-04-30T15:41:41.059+01:00 DEBUG 11116 --- [discovery-service] [           main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2026-04-30T15:41:42.090+01:00  INFO 11116 --- [discovery-service] [           main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2026-04-30T15:41:42.287+01:00 DEBUG 11116 --- [discovery-service] [           main] o.s.w.s.v.f.FreeMarkerConfigurer         : File system access not preferred: using SpringTemplateLoader
+2026-04-30T15:41:43.310+01:00  INFO 11116 --- [discovery-service] [           main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2026-04-30T15:41:43.351+01:00  WARN 11116 --- [discovery-service] [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-04-30T15:41:43.369+01:00  INFO 11116 --- [discovery-service] [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2026-04-30T15:41:43.383+01:00  INFO 11116 --- [discovery-service] [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2026-04-30T15:41:43.383+01:00  INFO 11116 --- [discovery-service] [           main] com.netflix.discovery.DiscoveryClient    : Client configured to neither register nor query for data.
+2026-04-30T15:41:43.385+01:00  INFO 11116 --- [discovery-service] [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1777560103384 with initial instances count: 0
+2026-04-30T15:41:43.415+01:00  INFO 11116 --- [discovery-service] [           main] c.n.eureka.DefaultEurekaServerContext    : Initializing ...
+2026-04-30T15:41:43.418+01:00  WARN 11116 --- [discovery-service] [           main] c.n.eureka.cluster.PeerEurekaNodes       : The replica size seems to be empty. Check the route 53 DNS Registry
+2026-04-30T15:41:43.424+01:00  INFO 11116 --- [discovery-service] [           main] c.n.e.registry.AbstractInstanceRegistry  : Finished initializing remote region registries. All known remote regions: []
+2026-04-30T15:41:43.425+01:00  INFO 11116 --- [discovery-service] [           main] c.n.eureka.DefaultEurekaServerContext    : Initialized
+2026-04-30T15:41:43.432+01:00  INFO 11116 --- [discovery-service] [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'
+2026-04-30T15:41:43.482+01:00  INFO 11116 --- [discovery-service] [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application DISCOVERY-SERVICE with eureka with status UP
+2026-04-30T15:41:43.492+01:00  INFO 11116 --- [discovery-service] [      Thread-10] o.s.c.n.e.server.EurekaServerBootstrap   : isAws returned false
+2026-04-30T15:41:43.493+01:00  INFO 11116 --- [discovery-service] [      Thread-10] o.s.c.n.e.server.EurekaServerBootstrap   : Initialized server context
+2026-04-30T15:41:43.493+01:00  INFO 11116 --- [discovery-service] [      Thread-10] c.n.e.r.PeerAwareInstanceRegistryImpl    : Got 1 instances from neighboring DS node
+2026-04-30T15:41:43.494+01:00  INFO 11116 --- [discovery-service] [      Thread-10] c.n.e.r.PeerAwareInstanceRegistryImpl    : Renew threshold is: 1
+2026-04-30T15:41:43.494+01:00  INFO 11116 --- [discovery-service] [      Thread-10] c.n.e.r.PeerAwareInstanceRegistryImpl    : Changing status to UP
+2026-04-30T15:41:43.496+01:00  INFO 11116 --- [discovery-service] [      Thread-10] e.s.EurekaServerInitializerConfiguration : Started Eureka Server
+2026-04-30T15:41:43.502+01:00  INFO 11116 --- [discovery-service] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8761 (http) with context path '/'
+2026-04-30T15:41:43.503+01:00  INFO 11116 --- [discovery-service] [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8761
+2026-04-30T15:41:44.507+01:00  INFO 11116 --- [discovery-service] [           main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2026-04-30T15:41:44.531+01:00 DEBUG 11116 --- [discovery-service] [           main] .s.b.a.l.ConditionEvaluationReportLogger : 
 
 
 ============================
@@ -2347,41 +2347,64 @@ Unconditional classes:
 
 
 
-2026-04-30T15:19:13.675+01:00  INFO 15704 --- [discovery-service] [           main] c.m.d.DiscoveryServiceApplication        : Started DiscoveryServiceApplication in 8.204 seconds (process running for 8.792)
-2026-04-30T15:19:13.795+01:00 DEBUG 15704 --- [discovery-service] [           main] o.s.b.a.ApplicationAvailabilityBean      : Application availability state LivenessState changed to CORRECT
-2026-04-30T15:19:13.798+01:00 DEBUG 15704 --- [discovery-service] [           main] o.s.b.a.ApplicationAvailabilityBean      : Application availability state ReadinessState changed to ACCEPTING_TRAFFIC
-2026-04-30T15:19:27.004+01:00  INFO 15704 --- [discovery-service] [nio-8761-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-04-30T15:19:27.004+01:00  INFO 15704 --- [discovery-service] [nio-8761-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-04-30T15:19:27.004+01:00 DEBUG 15704 --- [discovery-service] [nio-8761-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
-2026-04-30T15:19:27.004+01:00 DEBUG 15704 --- [discovery-service] [nio-8761-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
-2026-04-30T15:19:27.009+01:00 DEBUG 15704 --- [discovery-service] [nio-8761-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
-2026-04-30T15:19:27.011+01:00 DEBUG 15704 --- [discovery-service] [nio-8761-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@11b7c72
-2026-04-30T15:19:27.011+01:00 DEBUG 15704 --- [discovery-service] [nio-8761-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@566a1485
-2026-04-30T15:19:27.013+01:00 DEBUG 15704 --- [discovery-service] [nio-8761-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
-2026-04-30T15:19:27.013+01:00  INFO 15704 --- [discovery-service] [nio-8761-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
-2026-04-30T15:19:27.363+01:00  INFO 15704 --- [discovery-service] [nio-8761-exec-2] c.n.e.registry.AbstractInstanceRegistry  : Registered instance CONFIG-SERVICE/localhost:config-service:8888 with status UP (replication=false)
-2026-04-30T15:19:39.772+01:00  INFO 15704 --- [discovery-service] [nio-8761-exec-4] c.n.e.registry.AbstractInstanceRegistry  : Registered instance AUTH-SERVICE/localhost:auth-service:8085 with status UP (replication=false)
-2026-04-30T15:19:49.548+01:00  INFO 15704 --- [discovery-service] [nio-8761-exec-6] c.n.e.registry.AbstractInstanceRegistry  : Registered instance SOUTENANCE-SERVICE/localhost:soutenance-service:8084 with status UP (replication=false)
-2026-04-30T15:20:03.565+01:00  INFO 15704 --- [discovery-service] [io-8761-exec-10] c.n.e.registry.AbstractInstanceRegistry  : Registered instance JURY-SERVICE/localhost:jury-service:8082 with status UP (replication=false)
-2026-04-30T15:20:12.631+01:00  INFO 15704 --- [discovery-service] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2026-04-30T15:20:17.954+01:00  INFO 15704 --- [discovery-service] [nio-8761-exec-4] c.n.e.registry.AbstractInstanceRegistry  : Registered instance NOTES-SERVICE/localhost:notes-service:8088 with status UP (replication=false)
-2026-04-30T15:20:31.839+01:00  INFO 15704 --- [discovery-service] [io-8761-exec-10] c.n.e.registry.AbstractInstanceRegistry  : Registered instance GATEWAY-SERVICE/localhost:gateway-service:8089 with status UP (replication=false)
-2026-04-30T15:20:34.032+01:00 DEBUG 15704 --- [discovery-service] [nio-8761-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/actuator/health", parameters={}
-2026-04-30T15:20:34.040+01:00 DEBUG 15704 --- [discovery-service] [nio-8761-exec-5] s.b.a.e.w.s.WebMvcEndpointHandlerMapping : Mapped to Actuator web endpoint 'health'
-2026-04-30T15:20:34.053+01:00 DEBUG 15704 --- [discovery-service] [nio-8761-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Read "application/octet-stream" to []
-2026-04-30T15:20:34.068+01:00 DEBUG 15704 --- [discovery-service] [nio-8761-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/vnd.spring-boot.actuator.v3+json', given [*/*] and supported [application/vnd.spring-boot.actuator.v3+json, application/vnd.spring-boot.actuator.v2+json, application/json]
-2026-04-30T15:20:34.075+01:00 DEBUG 15704 --- [discovery-service] [nio-8761-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [org.springframework.boot.actuate.health.SystemHealth@ca31a8f]
-2026-04-30T15:20:34.082+01:00 DEBUG 15704 --- [discovery-service] [nio-8761-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2026-04-30T15:21:12.631+01:00  INFO 15704 --- [discovery-service] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2026-04-30T15:21:29.577+01:00 DEBUG 15704 --- [discovery-service] [io-8761-exec-10] o.s.web.servlet.DispatcherServlet        : GET "/actuator/health", parameters={}
-2026-04-30T15:21:29.579+01:00 DEBUG 15704 --- [discovery-service] [io-8761-exec-10] s.b.a.e.w.s.WebMvcEndpointHandlerMapping : Mapped to Actuator web endpoint 'health'
-2026-04-30T15:21:29.579+01:00 DEBUG 15704 --- [discovery-service] [io-8761-exec-10] m.m.a.RequestResponseBodyMethodProcessor : Read "application/octet-stream" to []
-2026-04-30T15:21:29.581+01:00 DEBUG 15704 --- [discovery-service] [io-8761-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/vnd.spring-boot.actuator.v3+json', given [*/*] and supported [application/vnd.spring-boot.actuator.v3+json, application/vnd.spring-boot.actuator.v2+json, application/json]
-2026-04-30T15:21:29.581+01:00 DEBUG 15704 --- [discovery-service] [io-8761-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [org.springframework.boot.actuate.health.SystemHealth@5501937b]
-2026-04-30T15:21:29.582+01:00 DEBUG 15704 --- [discovery-service] [io-8761-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2026-04-30T15:22:12.632+01:00  INFO 15704 --- [discovery-service] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 1ms
-2026-04-30T15:23:12.632+01:00  INFO 15704 --- [discovery-service] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2026-04-30T15:24:12.632+01:00  INFO 15704 --- [discovery-service] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2026-04-30T15:25:12.632+01:00  INFO 15704 --- [discovery-service] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2026-04-30T15:26:12.641+01:00  INFO 15704 --- [discovery-service] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 8ms
-2026-04-30T15:27:12.642+01:00  INFO 15704 --- [discovery-service] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 1ms
+2026-04-30T15:41:44.533+01:00  INFO 11116 --- [discovery-service] [           main] c.m.d.DiscoveryServiceApplication        : Started DiscoveryServiceApplication in 7.912 seconds (process running for 8.376)
+2026-04-30T15:41:44.587+01:00 DEBUG 11116 --- [discovery-service] [           main] o.s.b.a.ApplicationAvailabilityBean      : Application availability state LivenessState changed to CORRECT
+2026-04-30T15:41:44.590+01:00 DEBUG 11116 --- [discovery-service] [           main] o.s.b.a.ApplicationAvailabilityBean      : Application availability state ReadinessState changed to ACCEPTING_TRAFFIC
+2026-04-30T15:41:55.436+01:00  INFO 11116 --- [discovery-service] [nio-8761-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-30T15:41:55.437+01:00  INFO 11116 --- [discovery-service] [nio-8761-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-04-30T15:41:55.437+01:00 DEBUG 11116 --- [discovery-service] [nio-8761-exec-2] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2026-04-30T15:41:55.437+01:00 DEBUG 11116 --- [discovery-service] [nio-8761-exec-2] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2026-04-30T15:41:55.437+01:00 DEBUG 11116 --- [discovery-service] [nio-8761-exec-2] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2026-04-30T15:41:55.438+01:00 DEBUG 11116 --- [discovery-service] [nio-8761-exec-2] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@3493d300
+2026-04-30T15:41:55.439+01:00 DEBUG 11116 --- [discovery-service] [nio-8761-exec-2] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@6a807773
+2026-04-30T15:41:55.439+01:00 DEBUG 11116 --- [discovery-service] [nio-8761-exec-2] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2026-04-30T15:41:55.439+01:00  INFO 11116 --- [discovery-service] [nio-8761-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-04-30T15:41:55.710+01:00  INFO 11116 --- [discovery-service] [nio-8761-exec-3] c.n.e.registry.AbstractInstanceRegistry  : Registered instance CONFIG-SERVICE/localhost:config-service:8888 with status UP (replication=false)
+2026-04-30T15:42:10.256+01:00  INFO 11116 --- [discovery-service] [nio-8761-exec-4] c.n.e.registry.AbstractInstanceRegistry  : Registered instance AUTH-SERVICE/localhost:auth-service:8085 with status UP (replication=false)
+2026-04-30T15:42:20.390+01:00  INFO 11116 --- [discovery-service] [nio-8761-exec-6] c.n.e.registry.AbstractInstanceRegistry  : Registered instance SOUTENANCE-SERVICE/localhost:soutenance-service:8084 with status UP (replication=false)
+2026-04-30T15:42:34.274+01:00  INFO 11116 --- [discovery-service] [io-8761-exec-10] c.n.e.registry.AbstractInstanceRegistry  : Registered instance JURY-SERVICE/localhost:jury-service:8082 with status UP (replication=false)
+2026-04-30T15:42:43.495+01:00  INFO 11116 --- [discovery-service] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2026-04-30T15:42:47.979+01:00  INFO 11116 --- [discovery-service] [nio-8761-exec-4] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PLANNING-SERVICE/localhost:planning-service:8083 with status UP (replication=false)
+2026-04-30T15:42:59.415+01:00  INFO 11116 --- [discovery-service] [io-8761-exec-10] c.n.e.registry.AbstractInstanceRegistry  : Registered instance NOTES-SERVICE/localhost:notes-service:8088 with status UP (replication=false)
+2026-04-30T15:43:13.867+01:00  INFO 11116 --- [discovery-service] [nio-8761-exec-5] c.n.e.registry.AbstractInstanceRegistry  : Registered instance GATEWAY-SERVICE/localhost:gateway-service:8089 with status UP (replication=false)
+2026-04-30T15:43:15.362+01:00 DEBUG 11116 --- [discovery-service] [nio-8761-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/actuator/health", parameters={}
+2026-04-30T15:43:15.389+01:00 DEBUG 11116 --- [discovery-service] [nio-8761-exec-8] s.b.a.e.w.s.WebMvcEndpointHandlerMapping : Mapped to Actuator web endpoint 'health'
+2026-04-30T15:43:15.410+01:00 DEBUG 11116 --- [discovery-service] [nio-8761-exec-8] m.m.a.RequestResponseBodyMethodProcessor : Read "application/octet-stream" to []
+2026-04-30T15:43:15.434+01:00 DEBUG 11116 --- [discovery-service] [nio-8761-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/vnd.spring-boot.actuator.v3+json', given [*/*] and supported [application/vnd.spring-boot.actuator.v3+json, application/vnd.spring-boot.actuator.v2+json, application/json]
+2026-04-30T15:43:15.451+01:00 DEBUG 11116 --- [discovery-service] [nio-8761-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [org.springframework.boot.actuate.health.SystemHealth@14be1a3a]
+2026-04-30T15:43:15.463+01:00 DEBUG 11116 --- [discovery-service] [nio-8761-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-04-30T15:43:43.496+01:00  INFO 11116 --- [discovery-service] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 1ms
+2026-04-30T15:44:11.426+01:00 DEBUG 11116 --- [discovery-service] [nio-8761-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/actuator/health", parameters={}
+2026-04-30T15:44:11.441+01:00 DEBUG 11116 --- [discovery-service] [nio-8761-exec-3] s.b.a.e.w.s.WebMvcEndpointHandlerMapping : Mapped to Actuator web endpoint 'health'
+2026-04-30T15:44:11.443+01:00 DEBUG 11116 --- [discovery-service] [nio-8761-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Read "application/octet-stream" to []
+2026-04-30T15:44:11.445+01:00 DEBUG 11116 --- [discovery-service] [nio-8761-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/vnd.spring-boot.actuator.v3+json', given [*/*] and supported [application/vnd.spring-boot.actuator.v3+json, application/vnd.spring-boot.actuator.v2+json, application/json]
+2026-04-30T15:44:11.446+01:00 DEBUG 11116 --- [discovery-service] [nio-8761-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [org.springframework.boot.actuate.health.SystemHealth@621d7a66]
+2026-04-30T15:44:11.447+01:00 DEBUG 11116 --- [discovery-service] [nio-8761-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-04-30T15:44:43.509+01:00  INFO 11116 --- [discovery-service] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 13ms
+2026-04-30T15:45:43.510+01:00  INFO 11116 --- [discovery-service] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2026-04-30T15:46:43.513+01:00  INFO 11116 --- [discovery-service] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 3ms
+2026-04-30T15:47:43.526+01:00  INFO 11116 --- [discovery-service] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 13ms
+2026-04-30T15:48:43.536+01:00  INFO 11116 --- [discovery-service] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 9ms
+2026-04-30T15:49:43.549+01:00  INFO 11116 --- [discovery-service] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 13ms
+2026-04-30T15:50:43.549+01:00  INFO 11116 --- [discovery-service] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2026-04-30T15:51:43.419+01:00  WARN 11116 --- [discovery-service] [eerNodesUpdater] c.n.eureka.cluster.PeerEurekaNodes       : The replica size seems to be empty. Check the route 53 DNS Registry
+2026-04-30T15:51:43.552+01:00  INFO 11116 --- [discovery-service] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 2ms
+2026-04-30T15:52:43.555+01:00  INFO 11116 --- [discovery-service] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 3ms
+2026-04-30T15:53:43.564+01:00  INFO 11116 --- [discovery-service] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 8ms
+2026-04-30T15:54:43.567+01:00  INFO 11116 --- [discovery-service] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 3ms
+2026-04-30T15:55:43.570+01:00  INFO 11116 --- [discovery-service] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 3ms
+2026-04-30T15:56:43.425+01:00  INFO 11116 --- [discovery-service] [hresholdUpdater] c.n.e.r.PeerAwareInstanceRegistryImpl    : Current renewal threshold is : 13
+2026-04-30T15:56:43.578+01:00  INFO 11116 --- [discovery-service] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 8ms
+2026-04-30T15:57:43.591+01:00  INFO 11116 --- [discovery-service] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 13ms
+2026-04-30T15:58:43.602+01:00  INFO 11116 --- [discovery-service] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 10ms
+2026-04-30T15:59:43.615+01:00  INFO 11116 --- [discovery-service] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 13ms
+2026-04-30T16:00:43.619+01:00  INFO 11116 --- [discovery-service] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 3ms
+2026-04-30T16:01:43.421+01:00  WARN 11116 --- [discovery-service] [eerNodesUpdater] c.n.eureka.cluster.PeerEurekaNodes       : The replica size seems to be empty. Check the route 53 DNS Registry
+2026-04-30T16:01:43.619+01:00  INFO 11116 --- [discovery-service] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2026-04-30T16:02:43.619+01:00  INFO 11116 --- [discovery-service] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2026-04-30T16:03:43.620+01:00  INFO 11116 --- [discovery-service] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2026-04-30T16:04:43.621+01:00  INFO 11116 --- [discovery-service] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 1ms
+2026-04-30T16:05:43.621+01:00  INFO 11116 --- [discovery-service] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2026-04-30T16:06:43.621+01:00  INFO 11116 --- [discovery-service] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2026-04-30T16:07:43.621+01:00  INFO 11116 --- [discovery-service] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2026-04-30T16:08:43.621+01:00  INFO 11116 --- [discovery-service] [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
