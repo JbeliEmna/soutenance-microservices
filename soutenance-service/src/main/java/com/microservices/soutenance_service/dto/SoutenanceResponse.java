@@ -4,10 +4,11 @@ import com.microservices.soutenance_service.enums.EtatSoutenance;
 import com.microservices.soutenance_service.model.Soutenance;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 public record SoutenanceResponse(
         Long id,
-        Long etudiantId,
+        List<Long> etudiantIds,
         Long encadrantId,
         String salle,
         LocalDateTime dateDebut,
@@ -19,7 +20,7 @@ public record SoutenanceResponse(
     public static SoutenanceResponse fromEntity(Soutenance soutenance) {
         return new SoutenanceResponse(
                 soutenance.getId(),
-                soutenance.getEtudiantId(),
+                soutenance.getEtudiantIds(),
                 soutenance.getEncadrantId(),
                 soutenance.getSalle(),
                 soutenance.getDateDebut(),

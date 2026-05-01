@@ -8,10 +8,15 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
+import java.util.List;
+
 @FeignClient(name = "soutenance-service")
 public interface SoutenanceServiceClient {
     @GetMapping("/api/soutenances/{id}")
     SoutenanceFeignResponse getSoutenanceById(@PathVariable("id") Long id);
+
+    @GetMapping("/api/soutenances/etudiants/{etudiantId}")
+    List<SoutenanceFeignResponse> getSoutenancesByEtudiantId(@PathVariable("etudiantId") Long etudiantId);
 
     @PutMapping("/api/soutenances/{id}/etat")
     SoutenanceFeignResponse updateEtat(

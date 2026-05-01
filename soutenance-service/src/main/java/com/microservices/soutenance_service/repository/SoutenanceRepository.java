@@ -19,7 +19,7 @@ public interface SoutenanceRepository extends MongoRepository<Soutenance, Long> 
             LocalDateTime dateDebut
     );
 
-    boolean existsByEtudiantIdAndDateDebutLessThanAndDateFinGreaterThan(
+    boolean existsByEtudiantIdsContainingAndDateDebutLessThanAndDateFinGreaterThan(
             Long etudiantId,
             LocalDateTime dateFin,
             LocalDateTime dateDebut
@@ -39,10 +39,12 @@ public interface SoutenanceRepository extends MongoRepository<Soutenance, Long> 
             LocalDateTime dateDebut
     );
 
-    boolean existsByIdNotAndEtudiantIdAndDateDebutLessThanAndDateFinGreaterThan(
+    boolean existsByIdNotAndEtudiantIdsContainingAndDateDebutLessThanAndDateFinGreaterThan(
             Long id,
             Long etudiantId,
             LocalDateTime dateFin,
             LocalDateTime dateDebut
     );
+
+    java.util.List<Soutenance> findByEtudiantIdsContaining(Long etudiantId);
 }

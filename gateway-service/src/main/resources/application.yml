@@ -15,11 +15,6 @@ spring:
               enabled: true
               lower-case-service-id: true
           routes:
-            - id: notes-soutenance-etudiants
-              uri: lb://notes-service
-              predicates:
-                - Path=/api/soutenances/*/etudiants,/api/soutenances/etudiants/assignations
-
             - id: soutenance-service
               uri: lb://soutenance-service
               predicates:

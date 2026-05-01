@@ -1,5 +1,7 @@
 package com.microservices.notes_service.service;
 
+import com.microservices.notes_service.client.SoutenanceServiceClient;
+import com.microservices.notes_service.dto.SoutenanceFeignResponse;
 import com.microservices.notes_service.dto.ResultatSoutenanceResponse;
 import com.microservices.notes_service.exception.BusinessException;
 import com.microservices.notes_service.model.ResultatSoutenance;
@@ -13,26 +15,29 @@ import java.util.List;
 public class ResultatService {
 
     private final ResultatSoutenanceRepository resultatSoutenanceRepository;
-    private final SoutenanceEtudiantService soutenanceEtudiantService;
+    private final SoutenanceServiceClient soutenanceServiceClient;
 
     public ResultatService(
             ResultatSoutenanceRepository resultatSoutenanceRepository,
-            SoutenanceEtudiantService soutenanceEtudiantService
+            SoutenanceServiceClient soutenanceServiceClient
     ) {
         this.resultatSoutenanceRepository = resultatSoutenanceRepository;
-        this.soutenanceEtudiantService = soutenanceEtudiantService;
+        this.soutenanceServiceClient = soutenanceServiceClient;
     }
 
     public ResultatSoutenanceResponse getBySoutenanceId(Long soutenanceId) {
         ResultatSoutenance resultat = resultatSoutenanceRepository.findBySoutenanceId(soutenanceId)
                 .orElseThrow(() -> new BusinessException(HttpStatus.NOT_FOUND, "Resultat introuvable pour cette soutenance"));
 
-        List<Long> etudiantIds = soutenanceEtudiantService.getEtudiantsBySoutenance(soutenanceId);
+        List<Long> etudiantIds = soutenanceServiceClient.getSoutenanceById(soutenanceId).etudiantIds();
         return ResultatSoutenanceResponse.fromEntity(resultat, etudiantIds);
     }
 
     public List<ResultatSoutenanceResponse> getByEtudiantId(Long etudiantId) {
-        List<Long> soutenanceIds = soutenanceEtudiantService.getSoutenancesByEtudiant(etudiantId);
+        List<Long> soutenanceIds = soutenanceServiceClient.getSoutenancesByEtudiantId(etudiantId)
+                .stream()
+                .map(SoutenanceFeignResponse::id)
+                .toList();
 
         return soutenanceIds.stream()
                 .map(resultatSoutenanceRepository::findBySoutenanceId)
@@ -40,7 +45,7 @@ public class ResultatService {
                 .map(java.util.Optional::get)
                 .map(resultat -> ResultatSoutenanceResponse.fromEntity(
                         resultat,
-                        soutenanceEtudiantService.getEtudiantsBySoutenance(resultat.getSoutenanceId())
+                        soutenanceServiceClient.getSoutenanceById(resultat.getSoutenanceId()).etudiantIds()
                 ))
                 .toList();
     }

@@ -1,8 +1,10 @@
 package com.microservices.jury_service.dto;
 
+import java.util.List;
+
 public record SoutenanceSummaryDTO(
         Long id,
-        Long etudiantId,
+        List<Long> etudiantIds,
         Long encadrantId,
         String salle,
         String dateDebut,

@@ -30,7 +30,6 @@ public class EvaluationService {
 
     private final EvaluationRepository evaluationRepository;
     private final ResultatSoutenanceRepository resultatSoutenanceRepository;
-    private final SoutenanceEtudiantService soutenanceEtudiantService;
     private final ResultatCalculationService resultatCalculationService;
     private final SequenceGeneratorService sequenceGeneratorService;
     private final SoutenanceServiceClient soutenanceServiceClient;
@@ -39,7 +38,6 @@ public class EvaluationService {
     public EvaluationService(
             EvaluationRepository evaluationRepository,
             ResultatSoutenanceRepository resultatSoutenanceRepository,
-            SoutenanceEtudiantService soutenanceEtudiantService,
             ResultatCalculationService resultatCalculationService,
             SequenceGeneratorService sequenceGeneratorService,
             SoutenanceServiceClient soutenanceServiceClient,
@@ -47,7 +45,6 @@ public class EvaluationService {
     ) {
         this.evaluationRepository = evaluationRepository;
         this.resultatSoutenanceRepository = resultatSoutenanceRepository;
-        this.soutenanceEtudiantService = soutenanceEtudiantService;
         this.resultatCalculationService = resultatCalculationService;
         this.sequenceGeneratorService = sequenceGeneratorService;
         this.soutenanceServiceClient = soutenanceServiceClient;
@@ -123,8 +120,8 @@ public class EvaluationService {
             Long enseignantId,
             com.microservices.notes_service.enums.RoleJury roleJury
     ) {
-        validateSoutenanceExists(soutenanceId);
-        soutenanceEtudiantService.validateSoutenanceHasBinomeConstraint(soutenanceId);
+        SoutenanceFeignResponse soutenance = getSoutenanceOrThrow(soutenanceId);
+        validateSoutenanceHasStudents(soutenance);
         validateJuryAffectation(soutenanceId, enseignantId, roleJury);
 
         long count = evaluationRepository.countBySoutenanceId(soutenanceId);
@@ -149,11 +146,21 @@ public class EvaluationService {
         }
     }
 
-    private void validateSoutenanceExists(Long soutenanceId) {
+    private SoutenanceFeignResponse getSoutenanceOrThrow(Long soutenanceId) {
         try {
-            soutenanceServiceClient.getSoutenanceById(soutenanceId);
+            return soutenanceServiceClient.getSoutenanceById(soutenanceId);
         } catch (FeignException.NotFound ex) {
             throw new BusinessException(HttpStatus.BAD_REQUEST, "La soutenance n'existe pas");
+        }
+    }
+
+    private void validateSoutenanceHasStudents(SoutenanceFeignResponse soutenance) {
+        List<Long> etudiantIds = soutenance.etudiantIds();
+        if (etudiantIds == null || etudiantIds.isEmpty() || etudiantIds.size() > 2) {
+            throw new BusinessException(
+                    HttpStatus.BAD_REQUEST,
+                    "Contrainte systeme: une soutenance doit concerner 1 ou 2 etudiants"
+            );
         }
     }
 

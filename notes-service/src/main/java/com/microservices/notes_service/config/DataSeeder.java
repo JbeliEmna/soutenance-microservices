@@ -5,11 +5,9 @@ import com.microservices.notes_service.enums.RoleJury;
 import com.microservices.notes_service.model.Etudiant;
 import com.microservices.notes_service.model.Evaluation;
 import com.microservices.notes_service.model.ResultatSoutenance;
-import com.microservices.notes_service.model.SoutenanceEtudiant;
 import com.microservices.notes_service.repository.EtudiantRepository;
 import com.microservices.notes_service.repository.EvaluationRepository;
 import com.microservices.notes_service.repository.ResultatSoutenanceRepository;
-import com.microservices.notes_service.repository.SoutenanceEtudiantRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -26,7 +24,6 @@ public class DataSeeder {
     @Bean
     CommandLineRunner seedNotesData(
             EtudiantRepository etudiantRepository,
-            SoutenanceEtudiantRepository soutenanceEtudiantRepository,
             EvaluationRepository evaluationRepository,
             ResultatSoutenanceRepository resultatSoutenanceRepository,
             MongoTemplate mongoTemplate
@@ -36,8 +33,6 @@ public class DataSeeder {
 
             seedEtudiant(etudiantRepository, 1L, "ETU-SEED-1001", "Ben Ali", "Ahmed", now);
             seedEtudiant(etudiantRepository, 2L, "ETU-SEED-1002", "Trabelsi", "Mouna", now);
-            seedSoutenanceEtudiant(soutenanceEtudiantRepository, 1L, 1L, 1L);
-            seedSoutenanceEtudiant(soutenanceEtudiantRepository, 2L, 1L, 2L);
 
             seedEvaluation(evaluationRepository, 1L, 1L, 3001L, RoleJury.PRESIDENT, 16.0, now);
             seedEvaluation(evaluationRepository, 2L, 1L, 3002L, RoleJury.RAPPORTEUR, 14.0, now);
@@ -55,7 +50,6 @@ public class DataSeeder {
             }
 
             seedSequence(mongoTemplate, "etudiant_sequence", 1000L);
-            seedSequence(mongoTemplate, "soutenance_etudiant_sequence", 1000L);
             seedSequence(mongoTemplate, "evaluation_sequence", 1000L);
             seedSequence(mongoTemplate, "resultat_sequence", 1000L);
         };
@@ -80,22 +74,6 @@ public class DataSeeder {
         etudiant.setCreatedAt(now);
         etudiant.setUpdatedAt(now);
         repository.save(etudiant);
-    }
-
-    private void seedSoutenanceEtudiant(
-            SoutenanceEtudiantRepository repository,
-            Long id,
-            Long soutenanceId,
-            Long etudiantId
-    ) {
-        if (repository.existsById(id) || repository.existsBySoutenanceIdAndEtudiantId(soutenanceId, etudiantId)) {
-            return;
-        }
-        SoutenanceEtudiant relation = new SoutenanceEtudiant();
-        relation.setId(id);
-        relation.setSoutenanceId(soutenanceId);
-        relation.setEtudiantId(etudiantId);
-        repository.save(relation);
     }
 
     private void seedEvaluation(

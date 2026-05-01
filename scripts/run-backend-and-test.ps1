@@ -264,7 +264,7 @@ function Run-SmokeScenario {
     Invoke-Json "POST" "/api/salles" @{ nom = $room } -ExpectedStatus @(409) | Out-Null
 
     $soutenance = Invoke-Json "POST" "/api/soutenances" @{
-        etudiantId = $student1
+        etudiantIds = @($student1, $student2)
         encadrantId = $encadrant
         salle = $room
         dateDebut = "2026-05-10T09:00:00"
@@ -272,7 +272,7 @@ function Run-SmokeScenario {
     } -ExpectedStatus @(201)
 
     Invoke-Json "POST" "/api/soutenances" @{
-        etudiantId = $student2
+        etudiantIds = @($student2)
         encadrantId = $encadrant
         salle = $room2
         dateDebut = "2026-05-10T09:30:00"
@@ -300,14 +300,9 @@ function Run-SmokeScenario {
     Invoke-Json "POST" "/api/affectations-jury" @{ idSoutenance = $soutenance.id; idEnseignant = $examinateur; roleJury = "examinateur" } -ExpectedStatus @(201) | Out-Null
     Invoke-Json "POST" "/api/affectations-jury" @{ idSoutenance = $soutenance.id; idEnseignant = $intrus; roleJury = "examinateur" } -ExpectedStatus @(409) | Out-Null
 
-    Write-Host "Creating notes students, assignation, evaluations and result"
+    Write-Host "Creating notes students, evaluations and result"
     $noteStudent1 = Invoke-Json "POST" "/api/etudiants" @{ matricule = "ETU-$stamp-1"; nom = "Student"; prenom = "One" } -ExpectedStatus @(201)
     $noteStudent2 = Invoke-Json "POST" "/api/etudiants" @{ matricule = "ETU-$stamp-2"; nom = "Student"; prenom = "Two" } -ExpectedStatus @(201)
-
-    Invoke-Json "POST" "/api/soutenances/etudiants/assignations" @{
-        soutenanceId = $soutenance.id
-        etudiantIds = @($noteStudent1.id, $noteStudent2.id)
-    } -ExpectedStatus @(200) | Out-Null
 
     Invoke-Json "POST" "/api/evaluations" @{ soutenanceId = $soutenance.id; enseignantId = $intrus; roleJury = "PRESIDENT"; note = 15.0 } -ExpectedStatus @(409) | Out-Null
     Invoke-Json "POST" "/api/evaluations" @{ soutenanceId = $soutenance.id; enseignantId = $president; roleJury = "PRESIDENT"; note = 16.0 } -ExpectedStatus @(201) | Out-Null
@@ -318,6 +313,12 @@ function Run-SmokeScenario {
     if ($result.noteFinale -ne 15.0 -or $result.mention -ne "BIEN") {
         throw "Unexpected result: $($result | ConvertTo-Json -Compress)"
     }
+    if ($result.etudiantIds.Count -ne 2 -or $result.etudiantIds[0] -ne $student1 -or $result.etudiantIds[1] -ne $student2) {
+        throw "Unexpected result students: $($result | ConvertTo-Json -Compress)"
+    }
+
+    Invoke-Json "GET" "/api/resultats/etudiants/$student1" -ExpectedStatus @(200) | Out-Null
+    Invoke-Json "GET" "/api/soutenances/$($soutenance.id)/etudiants" -ExpectedStatus @(200) | Out-Null
 
     $details = Invoke-Json "GET" "/api/soutenances/$($soutenance.id)/details" -ExpectedStatus @(200)
     if (-not $details.soutenance -or -not $details.jury -or -not $details.evaluations -or -not $details.resultat) {

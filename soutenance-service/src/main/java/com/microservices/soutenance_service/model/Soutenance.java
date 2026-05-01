@@ -5,6 +5,7 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Document(collection = "soutenances")
 public class Soutenance {
@@ -12,7 +13,7 @@ public class Soutenance {
     @Id
     private Long id;
 
-    private Long etudiantId;
+    private List<Long> etudiantIds;
 
     private Long encadrantId;
 
@@ -36,12 +37,12 @@ public class Soutenance {
         this.id = id;
     }
 
-    public Long getEtudiantId() {
-        return etudiantId;
+    public List<Long> getEtudiantIds() {
+        return etudiantIds;
     }
 
-    public void setEtudiantId(Long etudiantId) {
-        this.etudiantId = etudiantId;
+    public void setEtudiantIds(List<Long> etudiantIds) {
+        this.etudiantIds = etudiantIds;
     }
 
     public Long getEncadrantId() {

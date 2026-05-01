@@ -63,6 +63,16 @@ public class SoutenanceController {
         return soutenanceOrchestrationService.getDetails(id);
     }
 
+    @GetMapping("/{id}/etudiants")
+    public List<Long> getEtudiants(@PathVariable Long id) {
+        return soutenanceService.getById(id).etudiantIds();
+    }
+
+    @GetMapping("/etudiants/{etudiantId}")
+    public List<SoutenanceResponse> listByEtudiantId(@PathVariable Long etudiantId) {
+        return soutenanceService.listByEtudiantId(etudiantId);
+    }
+
     @GetMapping
     public List<SoutenanceResponse> listAll() {
         return soutenanceService.listAll();

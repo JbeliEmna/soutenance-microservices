@@ -20,6 +20,7 @@ import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.data.mongodb.core.query.Update;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Configuration
 public class DataSeeder {
@@ -47,7 +48,7 @@ public class DataSeeder {
             if (!soutenanceRepository.existsById(1L)) {
                 Soutenance soutenance = new Soutenance();
                 soutenance.setId(1L);
-                soutenance.setEtudiantId(1001L);
+                soutenance.setEtudiantIds(List.of(1001L, 1002L));
                 soutenance.setEncadrantId(2001L);
                 soutenance.setSalle("Salle Seed A1");
                 soutenance.setDateDebut(LocalDateTime.of(2026, 5, 10, 9, 0));

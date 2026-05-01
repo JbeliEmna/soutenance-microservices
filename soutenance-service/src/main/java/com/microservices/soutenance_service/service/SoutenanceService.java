@@ -12,7 +12,9 @@ import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 @Service
 public class SoutenanceService {
@@ -41,7 +43,7 @@ public class SoutenanceService {
 
         ResolvedPlanningUsers users = validatePlanningInput(
                 null,
-                request.etudiantId(),
+                request.etudiantIds(),
                 request.encadrantId(),
                 normalizedSalle,
                 request.dateDebut(),
@@ -50,7 +52,7 @@ public class SoutenanceService {
 
         Soutenance soutenance = new Soutenance();
         soutenance.setId(sequenceGeneratorService.generateSequence(SOUTENANCE_SEQUENCE));
-        soutenance.setEtudiantId(users.etudiantId());
+        soutenance.setEtudiantIds(users.etudiantIds());
         soutenance.setEncadrantId(users.encadrantId());
         soutenance.setSalle(normalizedSalle);
         soutenance.setDateDebut(request.dateDebut());
@@ -68,14 +70,14 @@ public class SoutenanceService {
 
         ResolvedPlanningUsers users = validatePlanningInput(
                 id,
-                request.etudiantId(),
+                request.etudiantIds(),
                 request.encadrantId(),
                 normalizedSalle,
                 request.dateDebut(),
                 request.dateFin()
         );
 
-        soutenance.setEtudiantId(users.etudiantId());
+        soutenance.setEtudiantIds(users.etudiantIds());
         soutenance.setEncadrantId(users.encadrantId());
         soutenance.setSalle(normalizedSalle);
         soutenance.setDateDebut(request.dateDebut());
@@ -115,6 +117,13 @@ public class SoutenanceService {
         return soutenanceRepository.findAll().stream().map(SoutenanceResponse::fromEntity).toList();
     }
 
+    public List<SoutenanceResponse> listByEtudiantId(Long etudiantId) {
+        return soutenanceRepository.findByEtudiantIdsContaining(etudiantId)
+                .stream()
+                .map(SoutenanceResponse::fromEntity)
+                .toList();
+    }
+
     public void delete(Long id) {
         Soutenance soutenance = getEntityOrThrow(id);
         soutenanceRepository.deleteById(soutenance.getId());
@@ -127,7 +136,7 @@ public class SoutenanceService {
 
     private ResolvedPlanningUsers validatePlanningInput(
             Long existingId,
-            Long etudiantId,
+            List<Long> etudiantIds,
             Long encadrantId,
             String salle,
             java.time.LocalDateTime dateDebut,
@@ -137,7 +146,7 @@ public class SoutenanceService {
             throw new BusinessException(HttpStatus.BAD_REQUEST, "La date de debut doit etre avant la date de fin");
         }
 
-        Long resolvedEtudiantId = referenceDataService.resolveStudentIdFromAuth(etudiantId);
+        List<Long> resolvedEtudiantIds = resolveStudentIds(etudiantIds);
         Long resolvedEncadrantId = referenceDataService.resolveEncadrantIdFromAuth(encadrantId);
 
         if (!salleService.salleExistsByNom(salle)) {
@@ -146,7 +155,7 @@ public class SoutenanceService {
 
         boolean salleConflict;
         boolean encadrantConflict;
-        boolean etudiantConflict;
+        boolean etudiantConflict = false;
 
         if (existingId == null) {
             salleConflict = soutenanceRepository.existsBySalleAndDateDebutLessThanAndDateFinGreaterThan(
@@ -159,11 +168,16 @@ public class SoutenanceService {
                     dateFin,
                     dateDebut
             );
-            etudiantConflict = soutenanceRepository.existsByEtudiantIdAndDateDebutLessThanAndDateFinGreaterThan(
-                    resolvedEtudiantId,
-                    dateFin,
-                    dateDebut
-            );
+            for (Long resolvedEtudiantId : resolvedEtudiantIds) {
+                etudiantConflict = soutenanceRepository.existsByEtudiantIdsContainingAndDateDebutLessThanAndDateFinGreaterThan(
+                        resolvedEtudiantId,
+                        dateFin,
+                        dateDebut
+                );
+                if (etudiantConflict) {
+                    break;
+                }
+            }
         } else {
             salleConflict = soutenanceRepository.existsByIdNotAndSalleAndDateDebutLessThanAndDateFinGreaterThan(
                     existingId,
@@ -177,12 +191,17 @@ public class SoutenanceService {
                     dateFin,
                     dateDebut
             );
-            etudiantConflict = soutenanceRepository.existsByIdNotAndEtudiantIdAndDateDebutLessThanAndDateFinGreaterThan(
-                    existingId,
-                    resolvedEtudiantId,
-                    dateFin,
-                    dateDebut
-            );
+            for (Long resolvedEtudiantId : resolvedEtudiantIds) {
+                etudiantConflict = soutenanceRepository.existsByIdNotAndEtudiantIdsContainingAndDateDebutLessThanAndDateFinGreaterThan(
+                        existingId,
+                        resolvedEtudiantId,
+                        dateFin,
+                        dateDebut
+                );
+                if (etudiantConflict) {
+                    break;
+                }
+            }
         }
 
         if (salleConflict) {
@@ -195,7 +214,25 @@ public class SoutenanceService {
             throw new BusinessException(HttpStatus.CONFLICT, "Conflit horaire: etudiant deja planifie sur ce creneau");
         }
 
-        return new ResolvedPlanningUsers(resolvedEtudiantId, resolvedEncadrantId);
+        return new ResolvedPlanningUsers(resolvedEtudiantIds, resolvedEncadrantId);
+    }
+
+    private List<Long> resolveStudentIds(List<Long> requestedEtudiantIds) {
+        if (requestedEtudiantIds == null || requestedEtudiantIds.isEmpty() || requestedEtudiantIds.size() > 2) {
+            throw new BusinessException(
+                    HttpStatus.BAD_REQUEST,
+                    "Une soutenance doit concerner 1 ou 2 etudiants"
+            );
+        }
+
+        Set<Long> distinctIds = new HashSet<>(requestedEtudiantIds);
+        if (distinctIds.size() != requestedEtudiantIds.size()) {
+            throw new BusinessException(HttpStatus.BAD_REQUEST, "La liste des etudiants contient des doublons");
+        }
+
+        return requestedEtudiantIds.stream()
+                .map(referenceDataService::resolveStudentIdFromAuth)
+                .toList();
     }
 
     private String normalizeSalle(String salle) {
@@ -221,6 +258,6 @@ public class SoutenanceService {
         soutenance.setUpdatedAt(LocalDateTime.now());
     }
 
-    private record ResolvedPlanningUsers(Long etudiantId, Long encadrantId) {
+    private record ResolvedPlanningUsers(List<Long> etudiantIds, Long encadrantId) {
     }
 }
