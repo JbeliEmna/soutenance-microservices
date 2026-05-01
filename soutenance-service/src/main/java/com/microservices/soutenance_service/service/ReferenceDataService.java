@@ -1,6 +1,7 @@
 package com.microservices.soutenance_service.service;
 
 import com.microservices.soutenance_service.client.AuthServiceClient;
+import com.microservices.soutenance_service.dto.AuthUserResponse;
 import com.microservices.soutenance_service.dto.ReferencePersonRequest;
 import com.microservices.soutenance_service.dto.ReferencePersonResponse;
 import com.microservices.soutenance_service.exception.BusinessException;
@@ -18,7 +19,7 @@ import java.util.List;
 public class ReferenceDataService {
 
     /*
-     * User existence checks are intentionally delegated to auth-service.
+     * Student and teacher data is resolved from auth-service through OpenFeign.
      * Local StudentRef/EncadrantRef collections are legacy compatibility data only.
      */
     private final StudentRefRepository studentRefRepository;
@@ -56,15 +57,27 @@ public class ReferenceDataService {
     }
 
     public boolean studentExists(Long id) {
-        return authUserExistsWithRole(id, "ROLE_ETUDIANT");
+        return authUserWithRoleExists(id, "ROLE_ETUDIANT");
     }
 
     public boolean encadrantExists(Long id) {
-        return authUserExistsWithRole(id, "ROLE_ENSEIGNANT");
+        return authUserWithRoleExists(id, "ROLE_ENSEIGNANT");
     }
 
     public boolean enseignantExists(Long id) {
-        return authUserExistsWithRole(id, "ROLE_ENSEIGNANT");
+        return authUserWithRoleExists(id, "ROLE_ENSEIGNANT");
+    }
+
+    public Long resolveStudentIdFromAuth(Long requestedExternalId) {
+        return getAuthUserWithRole(requestedExternalId, "ROLE_ETUDIANT", "L'etudiant n'existe pas").externalId();
+    }
+
+    public Long resolveEncadrantIdFromAuth(Long requestedExternalId) {
+        return getAuthUserWithRole(requestedExternalId, "ROLE_ENSEIGNANT", "L'encadrant n'existe pas").externalId();
+    }
+
+    public Long resolveEnseignantIdFromAuth(Long requestedExternalId) {
+        return getAuthUserWithRole(requestedExternalId, "ROLE_ENSEIGNANT", "L'enseignant n'existe pas").externalId();
     }
 
     public List<ReferencePersonResponse> listStudents() {
@@ -97,12 +110,34 @@ public class ReferenceDataService {
         return new ReferencePersonResponse(saved.getId(), saved.getNomComplet());
     }
 
-    private boolean authUserExistsWithRole(Long externalId, String role) {
+    private boolean authUserWithRoleExists(Long externalId, String role) {
         try {
-            Boolean exists = authServiceClient.existsByExternalIdAndRole(externalId, role);
-            return Boolean.TRUE.equals(exists);
+            AuthUserResponse user = getAuthUserWithRole(externalId, role, "Utilisateur introuvable");
+            return user != null;
         } catch (FeignException.NotFound ex) {
             return false;
+        } catch (BusinessException ex) {
+            return false;
         }
+    }
+
+    private AuthUserResponse getAuthUserWithRole(Long externalId, String role, String notFoundMessage) {
+        AuthUserResponse user;
+        try {
+            user = authServiceClient.getByExternalId(externalId);
+        } catch (FeignException.NotFound ex) {
+            throw new BusinessException(HttpStatus.BAD_REQUEST, notFoundMessage);
+        }
+
+        if (user == null || user.externalId() == null) {
+            throw new BusinessException(HttpStatus.BAD_REQUEST, notFoundMessage);
+        }
+        if (!role.equals(user.role())) {
+            throw new BusinessException(HttpStatus.BAD_REQUEST, notFoundMessage);
+        }
+        if (!user.enabled()) {
+            throw new BusinessException(HttpStatus.BAD_REQUEST, "Utilisateur desactive dans auth-service");
+        }
+        return user;
     }
 }

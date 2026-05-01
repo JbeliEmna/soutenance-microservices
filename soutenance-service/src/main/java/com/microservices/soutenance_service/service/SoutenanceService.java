@@ -39,7 +39,7 @@ public class SoutenanceService {
     public SoutenanceResponse create(CreateSoutenanceRequest request) {
         String normalizedSalle = normalizeSalle(request.salle());
 
-        validatePlanningInput(
+        ResolvedPlanningUsers users = validatePlanningInput(
                 null,
                 request.etudiantId(),
                 request.encadrantId(),
@@ -50,8 +50,8 @@ public class SoutenanceService {
 
         Soutenance soutenance = new Soutenance();
         soutenance.setId(sequenceGeneratorService.generateSequence(SOUTENANCE_SEQUENCE));
-        soutenance.setEtudiantId(request.etudiantId());
-        soutenance.setEncadrantId(request.encadrantId());
+        soutenance.setEtudiantId(users.etudiantId());
+        soutenance.setEncadrantId(users.encadrantId());
         soutenance.setSalle(normalizedSalle);
         soutenance.setDateDebut(request.dateDebut());
         soutenance.setDateFin(request.dateFin());
@@ -66,7 +66,7 @@ public class SoutenanceService {
         Soutenance soutenance = getEntityOrThrow(id);
         String normalizedSalle = normalizeSalle(request.salle());
 
-        validatePlanningInput(
+        ResolvedPlanningUsers users = validatePlanningInput(
                 id,
                 request.etudiantId(),
                 request.encadrantId(),
@@ -75,8 +75,8 @@ public class SoutenanceService {
                 request.dateFin()
         );
 
-        soutenance.setEtudiantId(request.etudiantId());
-        soutenance.setEncadrantId(request.encadrantId());
+        soutenance.setEtudiantId(users.etudiantId());
+        soutenance.setEncadrantId(users.encadrantId());
         soutenance.setSalle(normalizedSalle);
         soutenance.setDateDebut(request.dateDebut());
         soutenance.setDateFin(request.dateFin());
@@ -125,7 +125,7 @@ public class SoutenanceService {
                 .orElseThrow(() -> new BusinessException(HttpStatus.NOT_FOUND, "Soutenance introuvable"));
     }
 
-    private void validatePlanningInput(
+    private ResolvedPlanningUsers validatePlanningInput(
             Long existingId,
             Long etudiantId,
             Long encadrantId,
@@ -137,13 +137,8 @@ public class SoutenanceService {
             throw new BusinessException(HttpStatus.BAD_REQUEST, "La date de debut doit etre avant la date de fin");
         }
 
-        if (!referenceDataService.studentExists(etudiantId)) {
-            throw new BusinessException(HttpStatus.BAD_REQUEST, "L'etudiant n'existe pas");
-        }
-
-        if (!referenceDataService.encadrantExists(encadrantId)) {
-            throw new BusinessException(HttpStatus.BAD_REQUEST, "L'encadrant n'existe pas");
-        }
+        Long resolvedEtudiantId = referenceDataService.resolveStudentIdFromAuth(etudiantId);
+        Long resolvedEncadrantId = referenceDataService.resolveEncadrantIdFromAuth(encadrantId);
 
         if (!salleService.salleExistsByNom(salle)) {
             throw new BusinessException(HttpStatus.BAD_REQUEST, "La salle n'existe pas");
@@ -160,12 +155,12 @@ public class SoutenanceService {
                     dateDebut
             );
             encadrantConflict = soutenanceRepository.existsByEncadrantIdAndDateDebutLessThanAndDateFinGreaterThan(
-                    encadrantId,
+                    resolvedEncadrantId,
                     dateFin,
                     dateDebut
             );
             etudiantConflict = soutenanceRepository.existsByEtudiantIdAndDateDebutLessThanAndDateFinGreaterThan(
-                    etudiantId,
+                    resolvedEtudiantId,
                     dateFin,
                     dateDebut
             );
@@ -178,13 +173,13 @@ public class SoutenanceService {
             );
             encadrantConflict = soutenanceRepository.existsByIdNotAndEncadrantIdAndDateDebutLessThanAndDateFinGreaterThan(
                     existingId,
-                    encadrantId,
+                    resolvedEncadrantId,
                     dateFin,
                     dateDebut
             );
             etudiantConflict = soutenanceRepository.existsByIdNotAndEtudiantIdAndDateDebutLessThanAndDateFinGreaterThan(
                     existingId,
-                    etudiantId,
+                    resolvedEtudiantId,
                     dateFin,
                     dateDebut
             );
@@ -199,6 +194,8 @@ public class SoutenanceService {
         if (etudiantConflict) {
             throw new BusinessException(HttpStatus.CONFLICT, "Conflit horaire: etudiant deja planifie sur ce creneau");
         }
+
+        return new ResolvedPlanningUsers(resolvedEtudiantId, resolvedEncadrantId);
     }
 
     private String normalizeSalle(String salle) {
@@ -222,5 +219,8 @@ public class SoutenanceService {
 
     private void touchOnUpdate(Soutenance soutenance) {
         soutenance.setUpdatedAt(LocalDateTime.now());
+    }
+
+    private record ResolvedPlanningUsers(Long etudiantId, Long encadrantId) {
     }
 }
