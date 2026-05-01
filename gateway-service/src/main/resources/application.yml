@@ -18,7 +18,7 @@ spring:
             - id: soutenance-service
               uri: lb://soutenance-service
               predicates:
-                - Path=/api/soutenances/**,/api/salles/**,/api/references/**,/api/juries/**
+                - Path=/api/soutenances/**,/api/salles/**
 
             - id: jury-service
               uri: lb://jury-service
