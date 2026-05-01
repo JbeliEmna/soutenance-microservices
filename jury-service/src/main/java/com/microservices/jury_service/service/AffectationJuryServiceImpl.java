@@ -123,10 +123,7 @@ public class AffectationJuryServiceImpl implements AffectationJuryService {
         List<AffectationJury> affectations = affectationRepository.findByIdSoutenance(idSoutenance);
 
         if (affectations.isEmpty()) {
-            return ReponseJuryDTO.builder()
-                    .success(false)
-                    .message("Aucun jury affecte a cette soutenance")
-                    .build();
+            throw new JuryNotFoundException("Aucun jury affecte a cette soutenance");
         }
 
         List<AffectationJuryDTO> juryDTOs = affectations.stream()
