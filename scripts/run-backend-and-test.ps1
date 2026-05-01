@@ -300,9 +300,7 @@ function Run-SmokeScenario {
     Invoke-Json "POST" "/api/affectations-jury" @{ idSoutenance = $soutenance.id; idEnseignant = $examinateur; roleJury = "examinateur" } -ExpectedStatus @(201) | Out-Null
     Invoke-Json "POST" "/api/affectations-jury" @{ idSoutenance = $soutenance.id; idEnseignant = $intrus; roleJury = "examinateur" } -ExpectedStatus @(409) | Out-Null
 
-    Write-Host "Creating notes students, evaluations and result"
-    $noteStudent1 = Invoke-Json "POST" "/api/etudiants" @{ matricule = "ETU-$stamp-1"; nom = "Student"; prenom = "One" } -ExpectedStatus @(201)
-    $noteStudent2 = Invoke-Json "POST" "/api/etudiants" @{ matricule = "ETU-$stamp-2"; nom = "Student"; prenom = "Two" } -ExpectedStatus @(201)
+    Write-Host "Creating evaluations and result"
 
     Invoke-Json "POST" "/api/evaluations" @{ soutenanceId = $soutenance.id; enseignantId = $intrus; roleJury = "PRESIDENT"; note = 15.0 } -ExpectedStatus @(409) | Out-Null
     Invoke-Json "POST" "/api/evaluations" @{ soutenanceId = $soutenance.id; enseignantId = $president; roleJury = "PRESIDENT"; note = 16.0 } -ExpectedStatus @(201) | Out-Null

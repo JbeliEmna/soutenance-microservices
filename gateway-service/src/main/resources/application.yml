@@ -33,7 +33,7 @@ spring:
             - id: notes-service
               uri: lb://notes-service
               predicates:
-                - Path=/api/evaluations/**,/api/resultats/**,/api/etudiants/**
+                - Path=/api/evaluations/**,/api/resultats/**
 
             - id: auth-service
               uri: lb://auth-service

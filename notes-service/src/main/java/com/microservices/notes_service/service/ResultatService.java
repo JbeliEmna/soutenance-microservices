@@ -16,13 +16,16 @@ public class ResultatService {
 
     private final ResultatSoutenanceRepository resultatSoutenanceRepository;
     private final SoutenanceServiceClient soutenanceServiceClient;
+    private final AuthStudentService authStudentService;
 
     public ResultatService(
             ResultatSoutenanceRepository resultatSoutenanceRepository,
-            SoutenanceServiceClient soutenanceServiceClient
+            SoutenanceServiceClient soutenanceServiceClient,
+            AuthStudentService authStudentService
     ) {
         this.resultatSoutenanceRepository = resultatSoutenanceRepository;
         this.soutenanceServiceClient = soutenanceServiceClient;
+        this.authStudentService = authStudentService;
     }
 
     public ResultatSoutenanceResponse getBySoutenanceId(Long soutenanceId) {
@@ -34,7 +37,9 @@ public class ResultatService {
     }
 
     public List<ResultatSoutenanceResponse> getByEtudiantId(Long etudiantId) {
-        List<Long> soutenanceIds = soutenanceServiceClient.getSoutenancesByEtudiantId(etudiantId)
+        Long resolvedEtudiantId = authStudentService.resolveStudentIdFromAuth(etudiantId);
+
+        List<Long> soutenanceIds = soutenanceServiceClient.getSoutenancesByEtudiantId(resolvedEtudiantId)
                 .stream()
                 .map(SoutenanceFeignResponse::id)
                 .toList();
