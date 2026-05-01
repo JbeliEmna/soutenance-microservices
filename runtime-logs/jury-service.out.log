@@ -35,87 +35,87 @@
 
  :: Spring Boot ::               (v3.5.13)
 
-2026-05-01T02:55:10.826+01:00  INFO 26088 --- [jury-service] [  restartedMain] c.m.jury_service.JuryServiceApplication  : Starting JuryServiceApplication using Java 23.0.2 with PID 26088 (C:\Users\mouha\projet_microservice\jury-service\target\classes started by mouha in C:\Users\mouha\projet_microservice\jury-service)
-2026-05-01T02:55:10.836+01:00 DEBUG 26088 --- [jury-service] [  restartedMain] c.m.jury_service.JuryServiceApplication  : Running with Spring Boot v3.5.13, Spring v6.2.17
-2026-05-01T02:55:10.836+01:00  INFO 26088 --- [jury-service] [  restartedMain] c.m.jury_service.JuryServiceApplication  : No active profile set, falling back to 1 default profile: "default"
-2026-05-01T02:55:10.836+01:00 DEBUG 26088 --- [jury-service] [  restartedMain] o.s.boot.SpringApplication               : Loading source class com.microservices.jury_service.JuryServiceApplication
-2026-05-01T02:55:10.894+01:00  INFO 26088 --- [jury-service] [  restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
-2026-05-01T02:55:10.906+01:00  INFO 26088 --- [jury-service] [  restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=jury-service, profiles=[default], label=null, version=3d4c59ac665295bf9462d6c1b52b409e36603013, state=
-2026-05-01T02:55:10.906+01:00 DEBUG 26088 --- [jury-service] [  restartedMain] o.s.b.devtools.restart.ChangeableUrls    : Matching URLs for reloading : [file:/C:/Users/mouha/projet_microservice/jury-service/target/classes/]
-2026-05-01T02:55:10.906+01:00 DEBUG 26088 --- [jury-service] [  restartedMain] o.s.b.d.settings.DevToolsSettings        : Included patterns for restart : []
-2026-05-01T02:55:10.906+01:00 DEBUG 26088 --- [jury-service] [  restartedMain] o.s.b.d.settings.DevToolsSettings        : Excluded patterns for restart : [/spring-boot-starter-[\w-]+/, /spring-boot/(bin|build|out)/, /spring-boot-starter/(bin|build|out)/, /spring-boot-devtools/(bin|build|out)/, /spring-boot-actuator/(bin|build|out)/, /spring-boot-autoconfigure/(bin|build|out)/]
-2026-05-01T02:55:10.906+01:00  INFO 26088 --- [jury-service] [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2026-05-01T02:55:10.906+01:00  INFO 26088 --- [jury-service] [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2026-05-01T02:55:10.906+01:00 DEBUG 26088 --- [jury-service] [  restartedMain] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6a202850
-2026-05-01T02:55:11.797+01:00  INFO 26088 --- [jury-service] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
-2026-05-01T02:55:11.986+01:00  INFO 26088 --- [jury-service] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 172 ms. Found 2 MongoDB repository interfaces.
-2026-05-01T02:55:12.855+01:00  INFO 26088 --- [jury-service] [  restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=3d181a60-1fae-3332-8341-6caeaf80b7bd
-2026-05-01T02:55:13.132+01:00 DEBUG 26088 --- [jury-service] [  restartedMain] .s.b.w.e.t.TomcatServletWebServerFactory : Code archive: C:\Users\mouha\.m2\repository\org\springframework\boot\spring-boot\3.5.13\spring-boot-3.5.13.jar
-2026-05-01T02:55:13.141+01:00 DEBUG 26088 --- [jury-service] [  restartedMain] .s.b.w.e.t.TomcatServletWebServerFactory : Code archive: C:\Users\mouha\.m2\repository\org\springframework\boot\spring-boot\3.5.13\spring-boot-3.5.13.jar
-2026-05-01T02:55:13.141+01:00 DEBUG 26088 --- [jury-service] [  restartedMain] .s.b.w.e.t.TomcatServletWebServerFactory : None of the document roots [src/main/webapp, public, static] point to a directory and will be ignored.
-2026-05-01T02:55:13.246+01:00  INFO 26088 --- [jury-service] [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
-2026-05-01T02:55:13.265+01:00  INFO 26088 --- [jury-service] [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-05-01T02:55:13.265+01:00  INFO 26088 --- [jury-service] [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.53]
-2026-05-01T02:55:13.316+01:00  INFO 26088 --- [jury-service] [  restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-05-01T02:55:13.316+01:00 DEBUG 26088 --- [jury-service] [  restartedMain] w.s.c.ServletWebServerApplicationContext : Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
-2026-05-01T02:55:13.316+01:00  INFO 26088 --- [jury-service] [  restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2410 ms
-2026-05-01T02:55:13.495+01:00 DEBUG 26088 --- [jury-service] [  restartedMain] o.s.b.w.s.ServletContextInitializerBeans : Mapping filters: webMvcObservationFilter urls=[/*] order=-2147483647, characterEncodingFilter urls=[/*] order=-2147483648, formContentFilter urls=[/*] order=-9900, requestContextFilter urls=[/*] order=-105
-2026-05-01T02:55:13.506+01:00 DEBUG 26088 --- [jury-service] [  restartedMain] o.s.b.w.s.ServletContextInitializerBeans : Mapping servlets: dispatcherServlet urls=[/]
-2026-05-01T02:55:13.527+01:00 DEBUG 26088 --- [jury-service] [  restartedMain] o.s.b.w.s.f.OrderedRequestContextFilter  : Filter 'requestContextFilter' configured for use
-2026-05-01T02:55:13.529+01:00 DEBUG 26088 --- [jury-service] [  restartedMain] o.s.w.f.ServerHttpObservationFilter      : Filter 'webMvcObservationFilter' configured for use
-2026-05-01T02:55:13.529+01:00 DEBUG 26088 --- [jury-service] [  restartedMain] s.b.w.s.f.OrderedCharacterEncodingFilter : Filter 'characterEncodingFilter' configured for use
-2026-05-01T02:55:13.529+01:00 DEBUG 26088 --- [jury-service] [  restartedMain] o.s.b.w.s.f.OrderedFormContentFilter     : Filter 'formContentFilter' configured for use
-2026-05-01T02:55:13.789+01:00  INFO 26088 --- [jury-service] [  restartedMain] org.mongodb.driver.client                : MongoClient with metadata {"application": {"name": "Cluster0"}, "driver": {"name": "mongo-java-driver|sync", "version": "5.5.2"}, "os": {"type": "Windows", "name": "Windows 11", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/23.0.2+7-58"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=MongoCredential{mechanism=null, userName='mouhanedmliki66_db_user', source='admin', password=<hidden>, mechanismProperties=<hidden>}, transportSettings=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@3c6b9d5a, com.mongodb.Jep395RecordCodecProvider@7b6356a1, com.mongodb.KotlinCodecProvider@56509c7f]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[127.0.0.1:27017], srvHost=cluster0.s3inqkc.mongodb.net, srvServiceName=mongodb, mode=MULTIPLE, requiredClusterType=REPLICA_SET, requiredReplicaSetName='atlas-xur18c-shard-0', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverMonitoringMode=AUTO, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=true, invalidHostNameAllowed=false, context=null}, applicationName='Cluster0', compressorList=[], uuidRepresentation=UNSPECIFIED, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null, timeoutMS=null}
-2026-05-01T02:55:13.837+01:00  INFO 26088 --- [jury-service] [qkc.mongodb.net] org.mongodb.driver.cluster               : Adding discovered server ac-vaaajuo-shard-00-01.s3inqkc.mongodb.net:27017 to client view of cluster
-2026-05-01T02:55:13.883+01:00  INFO 26088 --- [jury-service] [qkc.mongodb.net] org.mongodb.driver.cluster               : Adding discovered server ac-vaaajuo-shard-00-02.s3inqkc.mongodb.net:27017 to client view of cluster
-2026-05-01T02:55:13.896+01:00  INFO 26088 --- [jury-service] [qkc.mongodb.net] org.mongodb.driver.cluster               : Adding discovered server ac-vaaajuo-shard-00-00.s3inqkc.mongodb.net:27017 to client view of cluster
-2026-05-01T02:55:14.017+01:00 DEBUG 26088 --- [jury-service] [  restartedMain] o.s.b.d.livereload.LiveReloadServer      : Starting live reload server on port 35729
-2026-05-01T02:55:14.030+01:00  INFO 26088 --- [jury-service] [  restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2026-05-01T02:55:14.406+01:00  INFO 26088 --- [jury-service] [ngodb.net:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=ac-vaaajuo-shard-00-01.s3inqkc.mongodb.net:27017, type=REPLICA_SET_PRIMARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=357888800, minRoundTripTimeNanos=0, setName='atlas-xur18c-shard-0', canonicalAddress=ac-vaaajuo-shard-00-01.s3inqkc.mongodb.net:27017, hosts=[ac-vaaajuo-shard-00-00.s3inqkc.mongodb.net:27017, ac-vaaajuo-shard-00-01.s3inqkc.mongodb.net:27017, ac-vaaajuo-shard-00-02.s3inqkc.mongodb.net:27017], passives=[], arbiters=[], primary='ac-vaaajuo-shard-00-01.s3inqkc.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='euw3-az2'}, Tag{name='cacheState', value='READY'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='EU_WEST_3'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=7fffffff0000000000000035, setVersion=8, topologyVersion=TopologyVersion{processId=69eb783a86006a5673fdc1e7, counter=6}, lastWriteDate=Fri May 01 02:55:13 CET 2026, lastUpdateTimeNanos=46208200672900}
-2026-05-01T02:55:14.406+01:00  INFO 26088 --- [jury-service] [ngodb.net:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=ac-vaaajuo-shard-00-02.s3inqkc.mongodb.net:27017, type=REPLICA_SET_SECONDARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=357924500, minRoundTripTimeNanos=0, setName='atlas-xur18c-shard-0', canonicalAddress=ac-vaaajuo-shard-00-02.s3inqkc.mongodb.net:27017, hosts=[ac-vaaajuo-shard-00-00.s3inqkc.mongodb.net:27017, ac-vaaajuo-shard-00-01.s3inqkc.mongodb.net:27017, ac-vaaajuo-shard-00-02.s3inqkc.mongodb.net:27017], passives=[], arbiters=[], primary='ac-vaaajuo-shard-00-01.s3inqkc.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='euw3-az3'}, Tag{name='cacheState', value='READY'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='EU_WEST_3'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=8, topologyVersion=TopologyVersion{processId=69eb786a1ec8a006d28c0a59, counter=3}, lastWriteDate=Fri May 01 02:55:13 CET 2026, lastUpdateTimeNanos=46208200672900}
-2026-05-01T02:55:14.406+01:00  INFO 26088 --- [jury-service] [ngodb.net:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=ac-vaaajuo-shard-00-00.s3inqkc.mongodb.net:27017, type=REPLICA_SET_SECONDARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=357923900, minRoundTripTimeNanos=0, setName='atlas-xur18c-shard-0', canonicalAddress=ac-vaaajuo-shard-00-00.s3inqkc.mongodb.net:27017, hosts=[ac-vaaajuo-shard-00-00.s3inqkc.mongodb.net:27017, ac-vaaajuo-shard-00-01.s3inqkc.mongodb.net:27017, ac-vaaajuo-shard-00-02.s3inqkc.mongodb.net:27017], passives=[], arbiters=[], primary='ac-vaaajuo-shard-00-01.s3inqkc.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='euw3-az1'}, Tag{name='cacheState', value='READY'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='EU_WEST_3'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=8, topologyVersion=TopologyVersion{processId=69eb780a773edd001bc2ec07, counter=4}, lastWriteDate=Fri May 01 02:55:13 CET 2026, lastUpdateTimeNanos=46208200672900}
-2026-05-01T02:55:14.415+01:00  INFO 26088 --- [jury-service] [ngodb.net:27017] org.mongodb.driver.cluster               : Discovered replica set primary ac-vaaajuo-shard-00-01.s3inqkc.mongodb.net:27017 with max election id 7fffffff0000000000000035 and max set version 8
-2026-05-01T02:55:15.064+01:00  INFO 26088 --- [jury-service] [  restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
-2026-05-01T02:55:15.409+01:00  INFO 26088 --- [jury-service] [  restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'
-2026-05-01T02:55:15.485+01:00  INFO 26088 --- [jury-service] [  restartedMain] o.s.c.openfeign.FeignClientFactoryBean   : For 'soutenance-service' URL not provided. Will try picking an instance via load-balancing.
-2026-05-01T02:55:15.547+01:00 DEBUG 26088 --- [jury-service] [  restartedMain] o.s.b.a.AutoConfigurationPackages        : @EnableAutoConfiguration was declared on a class in the package 'com.microservices.jury_service'. Automatic @Repository and @Entity scanning is enabled.
-2026-05-01T02:55:15.667+01:00 DEBUG 26088 --- [jury-service] [  restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 20 mappings in 'requestMappingHandlerMapping'
-2026-05-01T02:55:15.742+01:00 DEBUG 26088 --- [jury-service] [  restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
-2026-05-01T02:55:15.790+01:00 DEBUG 26088 --- [jury-service] [  restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
-2026-05-01T02:55:15.856+01:00 DEBUG 26088 --- [jury-service] [  restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
-2026-05-01T02:55:17.245+01:00  INFO 26088 --- [jury-service] [  restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
-2026-05-01T02:55:17.285+01:00  INFO 26088 --- [jury-service] [  restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
-2026-05-01T02:55:17.352+01:00  WARN 26088 --- [jury-service] [  restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2026-05-01T02:55:17.461+01:00  INFO 26088 --- [jury-service] [  restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
-2026-05-01T02:55:17.530+01:00  INFO 26088 --- [jury-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
-2026-05-01T02:55:17.548+01:00  INFO 26088 --- [jury-service] [  restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2026-05-01T02:55:17.566+01:00  INFO 26088 --- [jury-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
-2026-05-01T02:55:17.566+01:00  INFO 26088 --- [jury-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
-2026-05-01T02:55:17.566+01:00  INFO 26088 --- [jury-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
-2026-05-01T02:55:17.566+01:00  INFO 26088 --- [jury-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
-2026-05-01T02:55:17.566+01:00  INFO 26088 --- [jury-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
-2026-05-01T02:55:17.571+01:00  INFO 26088 --- [jury-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
-2026-05-01T02:55:17.571+01:00  INFO 26088 --- [jury-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
-2026-05-01T02:55:17.776+01:00 DEBUG 26088 --- [jury-service] [  restartedMain] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/
-2026-05-01T02:55:17.907+01:00 DEBUG 26088 --- [jury-service] [  restartedMain] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
-2026-05-01T02:55:18.016+01:00 DEBUG 26088 --- [jury-service] [  restartedMain] o.s.web.client.RestTemplate              : Response 200 OK
-2026-05-01T02:55:18.021+01:00 DEBUG 26088 --- [jury-service] [  restartedMain] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
-2026-05-01T02:55:18.063+01:00  INFO 26088 --- [jury-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
-2026-05-01T02:55:18.073+01:00  INFO 26088 --- [jury-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
-2026-05-01T02:55:18.078+01:00  INFO 26088 --- [jury-service] [  restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
-2026-05-01T02:55:18.081+01:00  INFO 26088 --- [jury-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1777600518081 with initial instances count: 2
-2026-05-01T02:55:18.086+01:00  INFO 26088 --- [jury-service] [  restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application JURY-SERVICE with eureka with status UP
-2026-05-01T02:55:18.086+01:00  INFO 26088 --- [jury-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1777600518086, current=UP, previous=STARTING]
-2026-05-01T02:55:18.094+01:00  INFO 26088 --- [jury-service] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_JURY-SERVICE/localhost:jury-service:8082: registering service...
-2026-05-01T02:55:18.098+01:00 DEBUG 26088 --- [jury-service] [foReplicator-%d] o.s.web.client.RestTemplate              : HTTP POST http://localhost:8761/eureka/apps/JURY-SERVICE
-2026-05-01T02:55:18.106+01:00 DEBUG 26088 --- [jury-service] [foReplicator-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
-2026-05-01T02:55:18.114+01:00  INFO 26088 --- [jury-service] [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8082 (http) with context path '/'
-2026-05-01T02:55:18.116+01:00  INFO 26088 --- [jury-service] [  restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8082
-2026-05-01T02:55:18.136+01:00 DEBUG 26088 --- [jury-service] [foReplicator-%d] o.s.web.client.RestTemplate              : Writing [InstanceInfo [instanceId = localhost:jury-service:8082, appName = JURY-SERVICE, hostName = 192.168.56.1, status = UP, ipAddr = 192.168.56.1, port = 8082, securePort = 443, dataCenterInfo = com.netflix.appinfo.MyDataCenterInfo@2a2f338d] as "application/json"
-2026-05-01T02:55:18.187+01:00 DEBUG 26088 --- [jury-service] [foReplicator-%d] o.s.web.client.RestTemplate              : Response 204 NO_CONTENT
-2026-05-01T02:55:18.187+01:00  INFO 26088 --- [jury-service] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_JURY-SERVICE/localhost:jury-service:8082 - registration status: 204
-2026-05-01T02:55:19.132+01:00  INFO 26088 --- [jury-service] [  restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
-2026-05-01T02:55:19.195+01:00 DEBUG 26088 --- [jury-service] [  restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+2026-05-01T03:37:59.650+01:00  INFO 10544 --- [jury-service] [  restartedMain] c.m.jury_service.JuryServiceApplication  : Starting JuryServiceApplication using Java 23.0.2 with PID 10544 (C:\Users\mouha\projet_microservice\jury-service\target\classes started by mouha in C:\Users\mouha\projet_microservice\jury-service)
+2026-05-01T03:37:59.657+01:00 DEBUG 10544 --- [jury-service] [  restartedMain] c.m.jury_service.JuryServiceApplication  : Running with Spring Boot v3.5.13, Spring v6.2.17
+2026-05-01T03:37:59.657+01:00  INFO 10544 --- [jury-service] [  restartedMain] c.m.jury_service.JuryServiceApplication  : No active profile set, falling back to 1 default profile: "default"
+2026-05-01T03:37:59.657+01:00 DEBUG 10544 --- [jury-service] [  restartedMain] o.s.boot.SpringApplication               : Loading source class com.microservices.jury_service.JuryServiceApplication
+2026-05-01T03:37:59.708+01:00  INFO 10544 --- [jury-service] [  restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2026-05-01T03:37:59.718+01:00  INFO 10544 --- [jury-service] [  restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=jury-service, profiles=[default], label=null, version=3d4c59ac665295bf9462d6c1b52b409e36603013, state=
+2026-05-01T03:37:59.718+01:00 DEBUG 10544 --- [jury-service] [  restartedMain] o.s.b.devtools.restart.ChangeableUrls    : Matching URLs for reloading : [file:/C:/Users/mouha/projet_microservice/jury-service/target/classes/]
+2026-05-01T03:37:59.723+01:00 DEBUG 10544 --- [jury-service] [  restartedMain] o.s.b.d.settings.DevToolsSettings        : Included patterns for restart : []
+2026-05-01T03:37:59.723+01:00 DEBUG 10544 --- [jury-service] [  restartedMain] o.s.b.d.settings.DevToolsSettings        : Excluded patterns for restart : [/spring-boot-starter-[\w-]+/, /spring-boot/(bin|build|out)/, /spring-boot-starter/(bin|build|out)/, /spring-boot-devtools/(bin|build|out)/, /spring-boot-actuator/(bin|build|out)/, /spring-boot-autoconfigure/(bin|build|out)/]
+2026-05-01T03:37:59.723+01:00  INFO 10544 --- [jury-service] [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-05-01T03:37:59.723+01:00  INFO 10544 --- [jury-service] [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-05-01T03:37:59.723+01:00 DEBUG 10544 --- [jury-service] [  restartedMain] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@7dae078e
+2026-05-01T03:38:00.429+01:00  INFO 10544 --- [jury-service] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2026-05-01T03:38:00.536+01:00  INFO 10544 --- [jury-service] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 91 ms. Found 2 MongoDB repository interfaces.
+2026-05-01T03:38:01.173+01:00  INFO 10544 --- [jury-service] [  restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=73b62512-3fb7-304e-a92c-a9d90f6c1ef7
+2026-05-01T03:38:01.521+01:00 DEBUG 10544 --- [jury-service] [  restartedMain] .s.b.w.e.t.TomcatServletWebServerFactory : Code archive: C:\Users\mouha\.m2\repository\org\springframework\boot\spring-boot\3.5.13\spring-boot-3.5.13.jar
+2026-05-01T03:38:01.527+01:00 DEBUG 10544 --- [jury-service] [  restartedMain] .s.b.w.e.t.TomcatServletWebServerFactory : Code archive: C:\Users\mouha\.m2\repository\org\springframework\boot\spring-boot\3.5.13\spring-boot-3.5.13.jar
+2026-05-01T03:38:01.527+01:00 DEBUG 10544 --- [jury-service] [  restartedMain] .s.b.w.e.t.TomcatServletWebServerFactory : None of the document roots [src/main/webapp, public, static] point to a directory and will be ignored.
+2026-05-01T03:38:01.635+01:00  INFO 10544 --- [jury-service] [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
+2026-05-01T03:38:01.657+01:00  INFO 10544 --- [jury-service] [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-01T03:38:01.657+01:00  INFO 10544 --- [jury-service] [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.53]
+2026-05-01T03:38:01.710+01:00  INFO 10544 --- [jury-service] [  restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-05-01T03:38:01.717+01:00 DEBUG 10544 --- [jury-service] [  restartedMain] w.s.c.ServletWebServerApplicationContext : Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
+2026-05-01T03:38:01.721+01:00  INFO 10544 --- [jury-service] [  restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1998 ms
+2026-05-01T03:38:01.902+01:00 DEBUG 10544 --- [jury-service] [  restartedMain] o.s.b.w.s.ServletContextInitializerBeans : Mapping filters: webMvcObservationFilter urls=[/*] order=-2147483647, characterEncodingFilter urls=[/*] order=-2147483648, formContentFilter urls=[/*] order=-9900, requestContextFilter urls=[/*] order=-105
+2026-05-01T03:38:01.910+01:00 DEBUG 10544 --- [jury-service] [  restartedMain] o.s.b.w.s.ServletContextInitializerBeans : Mapping servlets: dispatcherServlet urls=[/]
+2026-05-01T03:38:01.929+01:00 DEBUG 10544 --- [jury-service] [  restartedMain] o.s.b.w.s.f.OrderedRequestContextFilter  : Filter 'requestContextFilter' configured for use
+2026-05-01T03:38:01.929+01:00 DEBUG 10544 --- [jury-service] [  restartedMain] o.s.w.f.ServerHttpObservationFilter      : Filter 'webMvcObservationFilter' configured for use
+2026-05-01T03:38:01.935+01:00 DEBUG 10544 --- [jury-service] [  restartedMain] s.b.w.s.f.OrderedCharacterEncodingFilter : Filter 'characterEncodingFilter' configured for use
+2026-05-01T03:38:01.935+01:00 DEBUG 10544 --- [jury-service] [  restartedMain] o.s.b.w.s.f.OrderedFormContentFilter     : Filter 'formContentFilter' configured for use
+2026-05-01T03:38:02.188+01:00  INFO 10544 --- [jury-service] [  restartedMain] org.mongodb.driver.client                : MongoClient with metadata {"application": {"name": "Cluster0"}, "driver": {"name": "mongo-java-driver|sync", "version": "5.5.2"}, "os": {"type": "Windows", "name": "Windows 11", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/23.0.2+7-58"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=MongoCredential{mechanism=null, userName='mouhanedmliki66_db_user', source='admin', password=<hidden>, mechanismProperties=<hidden>}, transportSettings=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@531ace2f, com.mongodb.Jep395RecordCodecProvider@77cf45da, com.mongodb.KotlinCodecProvider@56268ff0]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[127.0.0.1:27017], srvHost=cluster0.s3inqkc.mongodb.net, srvServiceName=mongodb, mode=MULTIPLE, requiredClusterType=REPLICA_SET, requiredReplicaSetName='atlas-xur18c-shard-0', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverMonitoringMode=AUTO, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=true, invalidHostNameAllowed=false, context=null}, applicationName='Cluster0', compressorList=[], uuidRepresentation=UNSPECIFIED, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null, timeoutMS=null}
+2026-05-01T03:38:02.240+01:00  INFO 10544 --- [jury-service] [qkc.mongodb.net] org.mongodb.driver.cluster               : Adding discovered server ac-vaaajuo-shard-00-01.s3inqkc.mongodb.net:27017 to client view of cluster
+2026-05-01T03:38:02.277+01:00  INFO 10544 --- [jury-service] [qkc.mongodb.net] org.mongodb.driver.cluster               : Adding discovered server ac-vaaajuo-shard-00-02.s3inqkc.mongodb.net:27017 to client view of cluster
+2026-05-01T03:38:02.303+01:00  INFO 10544 --- [jury-service] [qkc.mongodb.net] org.mongodb.driver.cluster               : Adding discovered server ac-vaaajuo-shard-00-00.s3inqkc.mongodb.net:27017 to client view of cluster
+2026-05-01T03:38:02.430+01:00 DEBUG 10544 --- [jury-service] [  restartedMain] o.s.b.d.livereload.LiveReloadServer      : Starting live reload server on port 35729
+2026-05-01T03:38:02.454+01:00  INFO 10544 --- [jury-service] [  restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-05-01T03:38:02.852+01:00  INFO 10544 --- [jury-service] [ngodb.net:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=ac-vaaajuo-shard-00-01.s3inqkc.mongodb.net:27017, type=REPLICA_SET_PRIMARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=382249400, minRoundTripTimeNanos=0, setName='atlas-xur18c-shard-0', canonicalAddress=ac-vaaajuo-shard-00-01.s3inqkc.mongodb.net:27017, hosts=[ac-vaaajuo-shard-00-00.s3inqkc.mongodb.net:27017, ac-vaaajuo-shard-00-01.s3inqkc.mongodb.net:27017, ac-vaaajuo-shard-00-02.s3inqkc.mongodb.net:27017], passives=[], arbiters=[], primary='ac-vaaajuo-shard-00-01.s3inqkc.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='euw3-az2'}, Tag{name='cacheState', value='READY'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='EU_WEST_3'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=7fffffff0000000000000035, setVersion=8, topologyVersion=TopologyVersion{processId=69eb783a86006a5673fdc1e7, counter=6}, lastWriteDate=Fri May 01 03:38:02 CET 2026, lastUpdateTimeNanos=48776645298100}
+2026-05-01T03:38:02.852+01:00  INFO 10544 --- [jury-service] [ngodb.net:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=ac-vaaajuo-shard-00-00.s3inqkc.mongodb.net:27017, type=REPLICA_SET_SECONDARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=382263200, minRoundTripTimeNanos=0, setName='atlas-xur18c-shard-0', canonicalAddress=ac-vaaajuo-shard-00-00.s3inqkc.mongodb.net:27017, hosts=[ac-vaaajuo-shard-00-00.s3inqkc.mongodb.net:27017, ac-vaaajuo-shard-00-01.s3inqkc.mongodb.net:27017, ac-vaaajuo-shard-00-02.s3inqkc.mongodb.net:27017], passives=[], arbiters=[], primary='ac-vaaajuo-shard-00-01.s3inqkc.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='euw3-az1'}, Tag{name='cacheState', value='READY'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='EU_WEST_3'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=8, topologyVersion=TopologyVersion{processId=69eb780a773edd001bc2ec07, counter=4}, lastWriteDate=Fri May 01 03:38:02 CET 2026, lastUpdateTimeNanos=48776645298000}
+2026-05-01T03:38:02.852+01:00  INFO 10544 --- [jury-service] [ngodb.net:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=ac-vaaajuo-shard-00-02.s3inqkc.mongodb.net:27017, type=REPLICA_SET_SECONDARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=382270000, minRoundTripTimeNanos=0, setName='atlas-xur18c-shard-0', canonicalAddress=ac-vaaajuo-shard-00-02.s3inqkc.mongodb.net:27017, hosts=[ac-vaaajuo-shard-00-00.s3inqkc.mongodb.net:27017, ac-vaaajuo-shard-00-01.s3inqkc.mongodb.net:27017, ac-vaaajuo-shard-00-02.s3inqkc.mongodb.net:27017], passives=[], arbiters=[], primary='ac-vaaajuo-shard-00-01.s3inqkc.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='euw3-az3'}, Tag{name='cacheState', value='READY'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='EU_WEST_3'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=8, topologyVersion=TopologyVersion{processId=69eb786a1ec8a006d28c0a59, counter=3}, lastWriteDate=Fri May 01 03:38:02 CET 2026, lastUpdateTimeNanos=48776645300000}
+2026-05-01T03:38:02.867+01:00  INFO 10544 --- [jury-service] [ngodb.net:27017] org.mongodb.driver.cluster               : Discovered replica set primary ac-vaaajuo-shard-00-01.s3inqkc.mongodb.net:27017 with max election id 7fffffff0000000000000035 and max set version 8
+2026-05-01T03:38:03.470+01:00  INFO 10544 --- [jury-service] [  restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2026-05-01T03:38:03.710+01:00  INFO 10544 --- [jury-service] [  restartedMain] o.s.c.openfeign.FeignClientFactoryBean   : For 'soutenance-service' URL not provided. Will try picking an instance via load-balancing.
+2026-05-01T03:38:03.777+01:00 DEBUG 10544 --- [jury-service] [  restartedMain] o.s.b.a.AutoConfigurationPackages        : @EnableAutoConfiguration was declared on a class in the package 'com.microservices.jury_service'. Automatic @Repository and @Entity scanning is enabled.
+2026-05-01T03:38:03.887+01:00 DEBUG 10544 --- [jury-service] [  restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 20 mappings in 'requestMappingHandlerMapping'
+2026-05-01T03:38:03.969+01:00 DEBUG 10544 --- [jury-service] [  restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**, /swagger-ui/**, /swagger-ui/*swagger-initializer.js, /webjars/*swagger-ui/**, /webjars/*swagger-ui/*swagger-initializer.js, /webjars/*swagger-ui/5.32.2/*swagger-initializer.js] in 'resourceHandlerMapping'
+2026-05-01T03:38:04.001+01:00 DEBUG 10544 --- [jury-service] [  restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2026-05-01T03:38:04.058+01:00 DEBUG 10544 --- [jury-service] [  restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+2026-05-01T03:38:05.371+01:00  INFO 10544 --- [jury-service] [  restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2026-05-01T03:38:05.397+01:00  INFO 10544 --- [jury-service] [  restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2026-05-01T03:38:05.464+01:00  WARN 10544 --- [jury-service] [  restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-05-01T03:38:05.504+01:00  INFO 10544 --- [jury-service] [  restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'
+2026-05-01T03:38:05.635+01:00  INFO 10544 --- [jury-service] [  restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2026-05-01T03:38:05.688+01:00  INFO 10544 --- [jury-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2026-05-01T03:38:05.707+01:00  INFO 10544 --- [jury-service] [  restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-05-01T03:38:05.728+01:00  INFO 10544 --- [jury-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-05-01T03:38:05.728+01:00  INFO 10544 --- [jury-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-05-01T03:38:05.728+01:00  INFO 10544 --- [jury-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-05-01T03:38:05.728+01:00  INFO 10544 --- [jury-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-05-01T03:38:05.728+01:00  INFO 10544 --- [jury-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-05-01T03:38:05.728+01:00  INFO 10544 --- [jury-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2026-05-01T03:38:05.728+01:00  INFO 10544 --- [jury-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-05-01T03:38:05.909+01:00 DEBUG 10544 --- [jury-service] [  restartedMain] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/
+2026-05-01T03:38:06.072+01:00 DEBUG 10544 --- [jury-service] [  restartedMain] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2026-05-01T03:38:06.182+01:00 DEBUG 10544 --- [jury-service] [  restartedMain] o.s.web.client.RestTemplate              : Response 200 OK
+2026-05-01T03:38:06.187+01:00 DEBUG 10544 --- [jury-service] [  restartedMain] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2026-05-01T03:38:06.238+01:00  INFO 10544 --- [jury-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-05-01T03:38:06.241+01:00  INFO 10544 --- [jury-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2026-05-01T03:38:06.245+01:00  INFO 10544 --- [jury-service] [  restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-05-01T03:38:06.248+01:00  INFO 10544 --- [jury-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1777603086248 with initial instances count: 3
+2026-05-01T03:38:06.256+01:00  INFO 10544 --- [jury-service] [  restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application JURY-SERVICE with eureka with status UP
+2026-05-01T03:38:06.257+01:00  INFO 10544 --- [jury-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1777603086257, current=UP, previous=STARTING]
+2026-05-01T03:38:06.260+01:00  INFO 10544 --- [jury-service] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_JURY-SERVICE/localhost:jury-service:8082: registering service...
+2026-05-01T03:38:06.268+01:00 DEBUG 10544 --- [jury-service] [foReplicator-%d] o.s.web.client.RestTemplate              : HTTP POST http://localhost:8761/eureka/apps/JURY-SERVICE
+2026-05-01T03:38:06.268+01:00 DEBUG 10544 --- [jury-service] [foReplicator-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2026-05-01T03:38:06.277+01:00  INFO 10544 --- [jury-service] [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8082 (http) with context path '/'
+2026-05-01T03:38:06.285+01:00  INFO 10544 --- [jury-service] [  restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8082
+2026-05-01T03:38:06.301+01:00 DEBUG 10544 --- [jury-service] [foReplicator-%d] o.s.web.client.RestTemplate              : Writing [InstanceInfo [instanceId = localhost:jury-service:8082, appName = JURY-SERVICE, hostName = 192.168.56.1, status = UP, ipAddr = 192.168.56.1, port = 8082, securePort = 443, dataCenterInfo = com.netflix.appinfo.MyDataCenterInfo@10462300] as "application/json"
+2026-05-01T03:38:06.350+01:00 DEBUG 10544 --- [jury-service] [foReplicator-%d] o.s.web.client.RestTemplate              : Response 204 NO_CONTENT
+2026-05-01T03:38:06.350+01:00  INFO 10544 --- [jury-service] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_JURY-SERVICE/localhost:jury-service:8082 - registration status: 204
+2026-05-01T03:38:07.299+01:00  INFO 10544 --- [jury-service] [  restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2026-05-01T03:38:07.349+01:00 DEBUG 10544 --- [jury-service] [  restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
 
 
 ============================
@@ -850,6 +850,15 @@ Positive matches:
    SpringDocConfiguration#fileSupportConverter matched:
       - @ConditionalOnMissingBean (types: org.springdoc.core.converters.FileSupportConverter; SearchStrategy: all) did not find any beans (OnBeanCondition)
 
+   SpringDocConfiguration#globalOpenApiCustomizer matched:
+      - @ConditionalOnMissingBean (names: globalOpenApiCustomizer; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   SpringDocConfiguration#initExtraSchemas matched:
+      - @ConditionalOnProperty (springdoc.enable-extra-schemas) matched (OnPropertyCondition)
+
+   SpringDocConfiguration#methodParameterPojoExtractor matched:
+      - @ConditionalOnMissingBean (types: org.springdoc.core.extractor.MethodParameterPojoExtractor; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
    SpringDocConfiguration#openAPIBuilder matched:
       - @ConditionalOnMissingBean (types: org.springdoc.core.service.OpenAPIService; SearchStrategy: all) did not find any beans (OnBeanCondition)
 
@@ -858,6 +867,9 @@ Positive matches:
 
    SpringDocConfiguration#parameterBuilder matched:
       - @ConditionalOnMissingBean (types: org.springdoc.core.service.GenericParameterService; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   SpringDocConfiguration#parameterObjectNamingStrategyCustomizer matched:
+      - @ConditionalOnMissingBean (types: org.springdoc.core.customizers.ParameterObjectNamingStrategyCustomizer; SearchStrategy: all) did not find any beans (OnBeanCondition)
 
    SpringDocConfiguration#polymorphicModelConverter matched:
       - @ConditionalOnProperty (springdoc.model-converters.polymorphic-converter.enabled) matched (OnPropertyCondition)
@@ -873,8 +885,14 @@ Positive matches:
       - @ConditionalOnProperty (springdoc.model-converters.deprecating-converter.enabled) matched (OnPropertyCondition)
       - @ConditionalOnMissingBean (types: org.springdoc.core.converters.SchemaPropertyDeprecatingConverter; SearchStrategy: all) did not find any beans (OnBeanCondition)
 
+   SpringDocConfiguration#schemaUtils matched:
+      - @ConditionalOnMissingBean (types: org.springdoc.core.utils.SchemaUtils; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
    SpringDocConfiguration#securityParser matched:
       - @ConditionalOnMissingBean (types: org.springdoc.core.service.SecurityService; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   SpringDocConfiguration#springDocAppInitializer matched:
+      - @ConditionalOnMissingBean (names: springDocAppInitializer; SearchStrategy: all) did not find any beans (OnBeanCondition)
 
    SpringDocConfiguration#springDocCustomizers matched:
       - @ConditionalOnMissingBean (types: org.springdoc.core.customizers.SpringDocCustomizers; SearchStrategy: all) did not find any beans (OnBeanCondition)
@@ -898,9 +916,6 @@ Positive matches:
    SpringDocConfiguration.SpringDocActuatorConfiguration#actuatorCustomizer matched:
       - Management Port actual port type (SAME) matched required type (OnManagementPortCondition)
 
-   SpringDocConfiguration.SpringDocActuatorConfiguration#actuatorOpenApiCustomizer matched:
-      - Management Port actual port type (SAME) matched required type (OnManagementPortCondition)
-
    SpringDocConfiguration.SpringDocSpringDataWebPropertiesProvider matched:
       - @ConditionalOnClass found required class 'org.springframework.boot.autoconfigure.data.web.SpringDataWebProperties' (OnClassCondition)
 
@@ -922,8 +937,8 @@ Positive matches:
       - @ConditionalOnProperty (springdoc.api-docs.enabled) matched (OnPropertyCondition)
       - @ConditionalOnBean (types: org.springdoc.core.configuration.SpringDocConfiguration; SearchStrategy: all) found bean 'org.springdoc.core.configuration.SpringDocConfiguration' (OnBeanCondition)
 
-   SpringDocPageableConfiguration#delegatingMethodParameterCustomizer matched:
-      - @ConditionalOnMissingBean (types: org.springdoc.core.customizers.DelegatingMethodParameterCustomizer; SearchStrategy: all) did not find any beans (OnBeanCondition)
+   SpringDocPageableConfiguration#dataRestDelegatingMethodParameterCustomizer matched:
+      - @ConditionalOnMissingBean (types: org.springdoc.core.customizers.DataRestDelegatingMethodParameterCustomizer; SearchStrategy: all) did not find any beans (OnBeanCondition)
 
    SpringDocPageableConfiguration#pageOpenAPIConverter matched:
       - @ConditionalOnClass found required classes 'org.springframework.data.web.PagedModel', 'org.springframework.data.web.config.SpringDataWebSettings' (OnClassCondition)
@@ -942,10 +957,6 @@ Positive matches:
    SpringDocSortConfiguration#sortOpenAPIConverter matched:
       - @ConditionalOnProperty (springdoc.sort-converter.enabled) matched (OnPropertyCondition)
       - @ConditionalOnMissingBean (types: org.springdoc.core.converters.SortOpenAPIConverter; SearchStrategy: all) did not find any beans (OnBeanCondition)
-
-   SpringDocUIConfiguration matched:
-      - @ConditionalOnWebApplication (required) found 'session' scope (OnWebApplicationCondition)
-      - @ConditionalOnBean (types: org.springdoc.core.configuration.SpringDocConfiguration; SearchStrategy: all) found bean 'org.springdoc.core.configuration.SpringDocConfiguration' (OnBeanCondition)
 
    SpringDocWebMvcConfiguration matched:
       - found 'session' scope (OnWebApplicationCondition)
@@ -1013,6 +1024,10 @@ Positive matches:
    SwaggerConfig#indexPageTransformer matched:
       - @ConditionalOnMissingBean (types: org.springdoc.webmvc.ui.SwaggerIndexTransformer; SearchStrategy: all) did not find any beans (OnBeanCondition)
 
+   SwaggerConfig#springDocSwaggerInitializer matched:
+      - @ConditionalOnProperty (springdoc.use-management-port=false) matched (OnPropertyCondition)
+      - @ConditionalOnMissingBean (names: springDocSwaggerInitializer; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
    SwaggerConfig#swaggerConfigResource matched:
       - @ConditionalOnProperty (springdoc.use-management-port=false) matched (OnPropertyCondition)
       - @ConditionalOnMissingBean (types: org.springdoc.webmvc.ui.SwaggerConfigResource; SearchStrategy: all) did not find any beans (OnBeanCondition)
@@ -1026,10 +1041,6 @@ Positive matches:
    SwaggerConfig#swaggerWelcome matched:
       - @ConditionalOnProperty (springdoc.use-management-port=false) matched (OnPropertyCondition)
       - @ConditionalOnMissingBean (types: org.springdoc.webmvc.ui.SwaggerWelcomeWebMvc; SearchStrategy: all) did not find any beans (OnBeanCondition)
-
-   SwaggerUiConfigParameters matched:
-      - @ConditionalOnProperty (springdoc.swagger-ui.enabled) matched (OnPropertyCondition)
-      - @ConditionalOnBean (types: org.springdoc.core.configuration.SpringDocConfiguration; SearchStrategy: all) found bean 'org.springdoc.core.configuration.SpringDocConfiguration' (OnBeanCondition)
 
    SwaggerUiConfigProperties matched:
       - @ConditionalOnProperty (springdoc.swagger-ui.enabled) matched (OnPropertyCondition)
@@ -1164,6 +1175,9 @@ Positive matches:
 
    WebMvcAutoConfiguration.EnableWebMvcConfiguration#viewNameTranslator matched:
       - @ConditionalOnMissingBean (names: viewNameTranslator; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   WebMvcAutoConfiguration.ResourceChainCustomizerConfiguration matched:
+      - @ConditionalOnEnabledResourceChain found class org.webjars.WebJarVersionLocator (OnEnabledResourceChainCondition)
 
    WebMvcAutoConfiguration.WebMvcAutoConfigurationAdapter#defaultViewResolver matched:
       - @ConditionalOnMissingBean (types: org.springframework.web.servlet.view.InternalResourceViewResolver; SearchStrategy: all) did not find any beans (OnBeanCondition)
@@ -2112,7 +2126,7 @@ Negative matches:
 
    MongoRepositoriesAutoConfiguration:
       Did not match:
-         - @ConditionalOnMissingBean (types: org.springframework.data.mongodb.repository.support.MongoRepositoryFactoryBean,org.springframework.data.mongodb.repository.config.MongoRepositoryConfigurationExtension; SearchStrategy: all) found beans of type 'org.springframework.data.mongodb.repository.support.MongoRepositoryFactoryBean' &affectationJuryRepository, &membreJuryRepository and found beans of type 'org.springframework.data.mongodb.repository.config.MongoRepositoryConfigurationExtension' org.springframework.data.mongodb.repository.config.MongoRepositoryConfigurationExtension#0 (OnBeanCondition)
+         - @ConditionalOnMissingBean (types: org.springframework.data.mongodb.repository.support.MongoRepositoryFactoryBean,org.springframework.data.mongodb.repository.config.MongoRepositoryConfigurationExtension; SearchStrategy: all) found beans of type 'org.springframework.data.mongodb.repository.support.MongoRepositoryFactoryBean' &membreJuryRepository, &affectationJuryRepository and found beans of type 'org.springframework.data.mongodb.repository.config.MongoRepositoryConfigurationExtension' org.springframework.data.mongodb.repository.config.MongoRepositoryConfigurationExtension#0 (OnBeanCondition)
       Matched:
          - @ConditionalOnClass found required classes 'com.mongodb.client.MongoClient', 'org.springframework.data.mongodb.repository.MongoRepository' (OnClassCondition)
          - @ConditionalOnRepositoryType configured type of 'AUTO' matched required type (OnRepositoryTypeCondition)
@@ -2536,6 +2550,10 @@ Negative matches:
       Did not match:
          - @ConditionalOnBooleanProperty (spring.application.admin.enabled=true) did not find property 'spring.application.admin.enabled' (OnPropertyCondition)
 
+   SpringDocConfiguration#oas31ModelConverter:
+      Did not match:
+         - @ConditionalOnProperty (springdoc.explicit-object-schema=true) did not find property 'springdoc.explicit-object-schema' (OnPropertyCondition)
+
    SpringDocConfiguration#propertiesResolverForSchema:
       Did not match:
          - @ConditionalOnProperty (springdoc.api-docs.resolve-schema-properties) did not find property 'springdoc.api-docs.resolve-schema-properties' (OnPropertyCondition)
@@ -2598,9 +2616,9 @@ Negative matches:
       Did not match:
          - @ConditionalOnClass did not find required class 'org.springframework.security.web.SecurityFilterChain' (OnClassCondition)
 
-   SpringDocSortConfiguration#delegatingMethodParameterCustomizer:
+   SpringDocSortConfiguration#dataRestDelegatingMethodParameterCustomizer:
       Did not match:
-         - @ConditionalOnMissingBean (types: org.springdoc.core.customizers.DelegatingMethodParameterCustomizer; SearchStrategy: all) found beans of type 'org.springdoc.core.customizers.DelegatingMethodParameterCustomizer' delegatingMethodParameterCustomizer (OnBeanCondition)
+         - @ConditionalOnMissingBean (types: org.springdoc.core.customizers.DataRestDelegatingMethodParameterCustomizer; SearchStrategy: all) found beans of type 'org.springdoc.core.customizers.DataRestDelegatingMethodParameterCustomizer' dataRestDelegatingMethodParameterCustomizer (OnBeanCondition)
 
    SpringDocWebMvcConfiguration.SpringDocWebMvcActuatorConfiguration#openApiActuatorResource:
       Did not match:
@@ -2625,10 +2643,6 @@ Negative matches:
    SwaggerConfig#springWebProvider:
       Did not match:
          - @ConditionalOnMissingBean (types: org.springdoc.core.providers.SpringWebProvider; SearchStrategy: all) found beans of type 'org.springdoc.core.providers.SpringWebProvider' springWebProvider (OnBeanCondition)
-
-   SwaggerConfig#swaggerUiConfigParameters:
-      Did not match:
-         - @ConditionalOnMissingBean (types: org.springdoc.core.properties.SwaggerUiConfigParameters; SearchStrategy: all) found beans of type 'org.springdoc.core.properties.SwaggerUiConfigParameters' org.springdoc.core.properties.SwaggerUiConfigParameters (OnBeanCondition)
 
    SwaggerConfig#swaggerUiHome:
       Did not match:
@@ -2740,10 +2754,6 @@ Negative matches:
       Did not match:
          - @ConditionalOnBooleanProperty (spring.mvc.problemdetails.enabled=true) did not find property 'spring.mvc.problemdetails.enabled' (OnPropertyCondition)
 
-   WebMvcAutoConfiguration.ResourceChainCustomizerConfiguration:
-      Did not match:
-         - @ConditionalOnEnabledResourceChain did not find class org.webjars.WebJarVersionLocator (OnEnabledResourceChainCondition)
-
    WebMvcAutoConfiguration.WebMvcAutoConfigurationAdapter#beanNameViewResolver:
       Did not match:
          - @ConditionalOnMissingBean (types: org.springframework.web.servlet.view.BeanNameViewResolver; SearchStrategy: all) found beans of type 'org.springframework.web.servlet.view.BeanNameViewResolver' beanNameViewResolver (OnBeanCondition)
@@ -2852,207 +2862,209 @@ Unconditional classes:
 
 
 
-2026-05-01T02:55:19.197+01:00  INFO 26088 --- [jury-service] [  restartedMain] c.m.jury_service.JuryServiceApplication  : Started JuryServiceApplication in 10.541 seconds (process running for 11.23)
-2026-05-01T02:55:19.325+01:00 DEBUG 26088 --- [jury-service] [  restartedMain] o.s.b.a.ApplicationAvailabilityBean      : Application availability state LivenessState changed to CORRECT
-2026-05-01T02:55:19.368+01:00 DEBUG 26088 --- [jury-service] [  restartedMain] o.s.data.mongodb.core.MongoTemplate      : Executing count: { "_id" : "seed-president"} in collection: membres_jury
-2026-05-01T02:55:20.074+01:00 DEBUG 26088 --- [jury-service] [  restartedMain] o.s.data.mongodb.core.MongoTemplate      : Executing count: { "_id" : "seed-rapporteur"} in collection: membres_jury
-2026-05-01T02:55:20.149+01:00 DEBUG 26088 --- [jury-service] [  restartedMain] o.s.data.mongodb.core.MongoTemplate      : Executing count: { "_id" : "seed-examinateur"} in collection: membres_jury
-2026-05-01T02:55:20.246+01:00 DEBUG 26088 --- [jury-service] [  restartedMain] o.s.data.mongodb.core.MongoTemplate      : Executing count: { "_id" : "seed-intrus"} in collection: membres_jury
-2026-05-01T02:55:20.350+01:00 DEBUG 26088 --- [jury-service] [  restartedMain] o.s.data.mongodb.core.MongoTemplate      : Executing count: { "_id" : "seed-aff-president"} in collection: affectations_jury
-2026-05-01T02:55:20.450+01:00 DEBUG 26088 --- [jury-service] [  restartedMain] o.s.data.mongodb.core.MongoTemplate      : Executing count: { "_id" : "seed-aff-rapporteur"} in collection: affectations_jury
-2026-05-01T02:55:20.561+01:00 DEBUG 26088 --- [jury-service] [  restartedMain] o.s.data.mongodb.core.MongoTemplate      : Executing count: { "_id" : "seed-aff-examinateur"} in collection: affectations_jury
-2026-05-01T02:55:20.649+01:00 DEBUG 26088 --- [jury-service] [  restartedMain] o.s.boot.devtools.restart.Restarter      : Creating new Restarter for thread Thread[#1,main,5,main]
-2026-05-01T02:55:20.652+01:00 DEBUG 26088 --- [jury-service] [  restartedMain] o.s.boot.devtools.restart.Restarter      : Immediately restarting application
-2026-05-01T02:55:20.656+01:00 DEBUG 26088 --- [jury-service] [  restartedMain] o.s.boot.devtools.restart.Restarter      : Starting application com.microservices.jury_service.JuryServiceApplication with URLs [file:/C:/Users/mouha/projet_microservice/jury-service/target/classes/]
-2026-05-01T02:55:20.656+01:00 DEBUG 26088 --- [jury-service] [  restartedMain] o.s.b.a.ApplicationAvailabilityBean      : Application availability state ReadinessState changed to ACCEPTING_TRAFFIC
-2026-05-01T02:55:48.080+01:00 DEBUG 26088 --- [jury-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/delta
-2026-05-01T02:55:48.080+01:00 DEBUG 26088 --- [jury-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/JURY-SERVICE/localhost:jury-service:8082?status=UP&lastDirtyTimestamp=1777600518086
-2026-05-01T02:55:48.081+01:00 DEBUG 26088 --- [jury-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
-2026-05-01T02:55:48.087+01:00 DEBUG 26088 --- [jury-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
-2026-05-01T02:55:48.096+01:00 DEBUG 26088 --- [jury-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
-2026-05-01T02:55:48.096+01:00 DEBUG 26088 --- [jury-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
-2026-05-01T02:55:48.097+01:00 DEBUG 26088 --- [jury-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
-2026-05-01T02:55:57.650+01:00  INFO 26088 --- [jury-service] [nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-05-01T02:55:57.651+01:00  INFO 26088 --- [jury-service] [nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-05-01T02:55:57.651+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
-2026-05-01T02:55:57.652+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
-2026-05-01T02:55:57.652+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
-2026-05-01T02:55:57.657+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@610fb6b3
-2026-05-01T02:55:57.659+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@70b0b07b
-2026-05-01T02:55:57.661+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
-2026-05-01T02:55:57.661+01:00  INFO 26088 --- [jury-service] [nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 10 ms
-2026-05-01T02:55:57.696+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/actuator/health", parameters={}
-2026-05-01T02:55:57.703+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-1] s.b.a.e.w.s.WebMvcEndpointHandlerMapping : Mapped to Actuator web endpoint 'health'
-2026-05-01T02:55:57.722+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Read "application/octet-stream" to []
-2026-05-01T02:55:57.830+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/vnd.spring-boot.actuator.v3+json', given [*/*] and supported [application/vnd.spring-boot.actuator.v3+json, application/vnd.spring-boot.actuator.v2+json, application/json]
-2026-05-01T02:55:57.842+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [org.springframework.boot.actuate.health.SystemHealth@379bd8c4]
-2026-05-01T02:55:57.850+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2026-05-01T02:56:18.106+01:00 DEBUG 26088 --- [jury-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/delta
-2026-05-01T02:56:18.106+01:00 DEBUG 26088 --- [jury-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/JURY-SERVICE/localhost:jury-service:8082?status=UP&lastDirtyTimestamp=1777600518086
-2026-05-01T02:56:18.108+01:00 DEBUG 26088 --- [jury-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
-2026-05-01T02:56:18.109+01:00 DEBUG 26088 --- [jury-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
-2026-05-01T02:56:18.127+01:00 DEBUG 26088 --- [jury-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
-2026-05-01T02:56:18.130+01:00 DEBUG 26088 --- [jury-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
-2026-05-01T02:56:18.132+01:00 DEBUG 26088 --- [jury-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
-2026-05-01T02:56:23.944+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-3] o.s.web.servlet.DispatcherServlet        : POST "/api/membres-jury", parameters={}
-2026-05-01T02:56:23.946+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.microservices.jury_service.controller.MembreJuryController#createMembre(CreerMembreJuryRequest)
-2026-05-01T02:56:23.972+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [CreerMembreJuryRequest(idEnseignant=300501025614, nom=Jury, prenom=President, grade=Professeur, emai (truncated)...]
-2026-05-01T02:56:24.086+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-3] o.s.data.mongodb.core.MongoTemplate      : Inserting Document containing fields: [idEnseignant, nom, prenom, grade, email] in collection: membres_jury
-2026-05-01T02:56:24.308+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json] and supported [application/json, application/*+json, application/yaml]
-2026-05-01T02:56:24.310+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [MembreJuryDTO(id=69f40848b69c80ffbe0d2a33, idEnseignant=300501025614, nom=Jury, prenom=President, gr (truncated)...]
-2026-05-01T02:56:24.311+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 201 CREATED
-2026-05-01T02:56:24.349+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-2] o.s.web.servlet.DispatcherServlet        : POST "/api/membres-jury", parameters={}
-2026-05-01T02:56:24.351+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.microservices.jury_service.controller.MembreJuryController#createMembre(CreerMembreJuryRequest)
-2026-05-01T02:56:24.351+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [CreerMembreJuryRequest(idEnseignant=310501025614, nom=Jury, prenom=Rapporteur, grade=Professeur, ema (truncated)...]
-2026-05-01T02:56:24.352+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-2] o.s.data.mongodb.core.MongoTemplate      : Inserting Document containing fields: [idEnseignant, nom, prenom, grade, email] in collection: membres_jury
-2026-05-01T02:56:24.564+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json] and supported [application/json, application/*+json, application/yaml]
-2026-05-01T02:56:24.566+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [MembreJuryDTO(id=69f40848b69c80ffbe0d2a34, idEnseignant=310501025614, nom=Jury, prenom=Rapporteur, g (truncated)...]
-2026-05-01T02:56:24.568+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 201 CREATED
-2026-05-01T02:56:24.616+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-4] o.s.web.servlet.DispatcherServlet        : POST "/api/membres-jury", parameters={}
-2026-05-01T02:56:24.616+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.microservices.jury_service.controller.MembreJuryController#createMembre(CreerMembreJuryRequest)
-2026-05-01T02:56:24.617+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-4] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [CreerMembreJuryRequest(idEnseignant=320501025614, nom=Jury, prenom=Examinateur, grade=Professeur, em (truncated)...]
-2026-05-01T02:56:24.618+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-4] o.s.data.mongodb.core.MongoTemplate      : Inserting Document containing fields: [idEnseignant, nom, prenom, grade, email] in collection: membres_jury
-2026-05-01T02:56:24.811+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json] and supported [application/json, application/*+json, application/yaml]
-2026-05-01T02:56:24.812+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [MembreJuryDTO(id=69f40848b69c80ffbe0d2a35, idEnseignant=320501025614, nom=Jury, prenom=Examinateur,  (truncated)...]
-2026-05-01T02:56:24.813+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 201 CREATED
-2026-05-01T02:56:24.869+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-5] o.s.web.servlet.DispatcherServlet        : POST "/api/membres-jury", parameters={}
-2026-05-01T02:56:24.870+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.microservices.jury_service.controller.MembreJuryController#createMembre(CreerMembreJuryRequest)
-2026-05-01T02:56:24.871+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [CreerMembreJuryRequest(idEnseignant=390501025614, nom=Jury, prenom=Intrus, grade=Professeur, email=j (truncated)...]
-2026-05-01T02:56:24.872+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-5] o.s.data.mongodb.core.MongoTemplate      : Inserting Document containing fields: [idEnseignant, nom, prenom, grade, email] in collection: membres_jury
-2026-05-01T02:56:25.061+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json] and supported [application/json, application/*+json, application/yaml]
-2026-05-01T02:56:25.062+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [MembreJuryDTO(id=69f40848b69c80ffbe0d2a36, idEnseignant=390501025614, nom=Jury, prenom=Intrus, grade (truncated)...]
-2026-05-01T02:56:25.063+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 201 CREATED
-2026-05-01T02:56:25.114+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-6] o.s.web.servlet.DispatcherServlet        : POST "/api/affectations-jury", parameters={}
-2026-05-01T02:56:25.114+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.microservices.jury_service.controller.AffectationJuryController#affecterJury(AffecterJuryRequest)
-2026-05-01T02:56:25.119+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-6] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [AffecterJuryRequest(idSoutenance=1003, idEnseignant=300501025614, roleJury=president)]
-2026-05-01T02:56:25.455+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-6] o.s.w.c.HttpMessageConverterExtractor    : Reading to [com.microservices.jury_service.dto.SoutenanceSummaryDTO]
-2026-05-01T02:56:25.464+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-6] o.s.d.m.r.query.MongoQueryCreator        : Created query Query: { "idEnseignant" : 300501025614}, Fields: {}, Sort: {}
-2026-05-01T02:56:25.477+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-6] o.s.data.mongodb.core.MongoTemplate      : find using query: { "idEnseignant" : 300501025614} fields: Document{{}} sort: null for class: class com.microservices.jury_service.entity.MembreJury in collection: membres_jury
-2026-05-01T02:56:25.660+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-6] o.s.d.m.r.query.MongoQueryCreator        : Created query Query: { "idSoutenance" : 1003, "idEnseignant" : 300501025614}, Fields: {}, Sort: {}
-2026-05-01T02:56:25.665+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-6] o.s.data.mongodb.core.MongoTemplate      : Executing count: { "idSoutenance" : 1003, "idEnseignant" : 300501025614} in collection: affectations_jury
-2026-05-01T02:56:25.758+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-6] o.s.d.m.r.query.MongoQueryCreator        : Created query Query: { "idSoutenance" : 1003, "roleJury" : { "$java" : president } }, Fields: {}, Sort: {}
-2026-05-01T02:56:25.759+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-6] o.s.data.mongodb.core.MongoTemplate      : Executing count: { "idSoutenance" : 1003, "roleJury" : "president"} in collection: affectations_jury
-2026-05-01T02:56:25.839+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-6] o.s.d.m.r.query.MongoQueryCreator        : Created query Query: { "idSoutenance" : 1003}, Fields: {}, Sort: {}
-2026-05-01T02:56:25.841+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-6] o.s.data.mongodb.core.MongoTemplate      : Executing count: { "idSoutenance" : 1003} in collection: affectations_jury
-2026-05-01T02:56:25.920+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-6] o.s.data.mongodb.core.MongoTemplate      : Inserting Document containing fields: [idSoutenance, idEnseignant, roleJury, dateAffectation] in collection: affectations_jury
-2026-05-01T02:56:26.015+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-6] o.s.d.m.r.query.MongoQueryCreator        : Created query Query: { "idEnseignant" : 300501025614}, Fields: {}, Sort: {}
-2026-05-01T02:56:26.016+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-6] o.s.data.mongodb.core.MongoTemplate      : find using query: { "idEnseignant" : 300501025614} fields: Document{{}} sort: null for class: class com.microservices.jury_service.entity.MembreJury in collection: membres_jury
-2026-05-01T02:56:26.091+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json] and supported [application/json, application/*+json, application/yaml]
-2026-05-01T02:56:26.093+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [AffectationJuryDTO(id=69f40849b69c80ffbe0d2a37, idSoutenance=1003, idEnseignant=300501025614, roleJu (truncated)...]
-2026-05-01T02:56:26.096+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 201 CREATED
-2026-05-01T02:56:26.125+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-9] o.s.web.servlet.DispatcherServlet        : POST "/api/affectations-jury", parameters={}
-2026-05-01T02:56:26.126+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.microservices.jury_service.controller.AffectationJuryController#affecterJury(AffecterJuryRequest)
-2026-05-01T02:56:26.126+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-9] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [AffecterJuryRequest(idSoutenance=1003, idEnseignant=310501025614, roleJury=rapporteur)]
-2026-05-01T02:56:26.210+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-9] o.s.w.c.HttpMessageConverterExtractor    : Reading to [com.microservices.jury_service.dto.SoutenanceSummaryDTO]
-2026-05-01T02:56:26.211+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-9] o.s.d.m.r.query.MongoQueryCreator        : Created query Query: { "idEnseignant" : 310501025614}, Fields: {}, Sort: {}
-2026-05-01T02:56:26.212+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-9] o.s.data.mongodb.core.MongoTemplate      : find using query: { "idEnseignant" : 310501025614} fields: Document{{}} sort: null for class: class com.microservices.jury_service.entity.MembreJury in collection: membres_jury
-2026-05-01T02:56:26.288+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-9] o.s.d.m.r.query.MongoQueryCreator        : Created query Query: { "idSoutenance" : 1003, "idEnseignant" : 310501025614}, Fields: {}, Sort: {}
-2026-05-01T02:56:26.290+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-9] o.s.data.mongodb.core.MongoTemplate      : Executing count: { "idSoutenance" : 1003, "idEnseignant" : 310501025614} in collection: affectations_jury
-2026-05-01T02:56:26.366+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-9] o.s.d.m.r.query.MongoQueryCreator        : Created query Query: { "idSoutenance" : 1003, "roleJury" : { "$java" : rapporteur } }, Fields: {}, Sort: {}
-2026-05-01T02:56:26.367+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-9] o.s.data.mongodb.core.MongoTemplate      : Executing count: { "idSoutenance" : 1003, "roleJury" : "rapporteur"} in collection: affectations_jury
-2026-05-01T02:56:26.441+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-9] o.s.d.m.r.query.MongoQueryCreator        : Created query Query: { "idSoutenance" : 1003}, Fields: {}, Sort: {}
-2026-05-01T02:56:26.442+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-9] o.s.data.mongodb.core.MongoTemplate      : Executing count: { "idSoutenance" : 1003} in collection: affectations_jury
-2026-05-01T02:56:26.519+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-9] o.s.data.mongodb.core.MongoTemplate      : Inserting Document containing fields: [idSoutenance, idEnseignant, roleJury, dateAffectation] in collection: affectations_jury
-2026-05-01T02:56:26.604+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-9] o.s.d.m.r.query.MongoQueryCreator        : Created query Query: { "idEnseignant" : 310501025614}, Fields: {}, Sort: {}
-2026-05-01T02:56:26.606+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-9] o.s.data.mongodb.core.MongoTemplate      : find using query: { "idEnseignant" : 310501025614} fields: Document{{}} sort: null for class: class com.microservices.jury_service.entity.MembreJury in collection: membres_jury
-2026-05-01T02:56:26.773+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json] and supported [application/json, application/*+json, application/yaml]
-2026-05-01T02:56:26.774+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [AffectationJuryDTO(id=69f4084ab69c80ffbe0d2a38, idSoutenance=1003, idEnseignant=310501025614, roleJu (truncated)...]
-2026-05-01T02:56:26.777+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 201 CREATED
-2026-05-01T02:56:26.813+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-7] o.s.web.servlet.DispatcherServlet        : POST "/api/affectations-jury", parameters={}
-2026-05-01T02:56:26.816+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.microservices.jury_service.controller.AffectationJuryController#affecterJury(AffecterJuryRequest)
-2026-05-01T02:56:26.817+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-7] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [AffecterJuryRequest(idSoutenance=1003, idEnseignant=320501025614, roleJury=examinateur)]
-2026-05-01T02:56:26.909+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-7] o.s.w.c.HttpMessageConverterExtractor    : Reading to [com.microservices.jury_service.dto.SoutenanceSummaryDTO]
-2026-05-01T02:56:26.910+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-7] o.s.d.m.r.query.MongoQueryCreator        : Created query Query: { "idEnseignant" : 320501025614}, Fields: {}, Sort: {}
-2026-05-01T02:56:26.911+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-7] o.s.data.mongodb.core.MongoTemplate      : find using query: { "idEnseignant" : 320501025614} fields: Document{{}} sort: null for class: class com.microservices.jury_service.entity.MembreJury in collection: membres_jury
-2026-05-01T02:56:26.989+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-7] o.s.d.m.r.query.MongoQueryCreator        : Created query Query: { "idSoutenance" : 1003, "idEnseignant" : 320501025614}, Fields: {}, Sort: {}
-2026-05-01T02:56:26.990+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-7] o.s.data.mongodb.core.MongoTemplate      : Executing count: { "idSoutenance" : 1003, "idEnseignant" : 320501025614} in collection: affectations_jury
-2026-05-01T02:56:27.066+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-7] o.s.d.m.r.query.MongoQueryCreator        : Created query Query: { "idSoutenance" : 1003, "roleJury" : { "$java" : examinateur } }, Fields: {}, Sort: {}
-2026-05-01T02:56:27.067+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-7] o.s.data.mongodb.core.MongoTemplate      : Executing count: { "idSoutenance" : 1003, "roleJury" : "examinateur"} in collection: affectations_jury
-2026-05-01T02:56:27.146+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-7] o.s.d.m.r.query.MongoQueryCreator        : Created query Query: { "idSoutenance" : 1003}, Fields: {}, Sort: {}
-2026-05-01T02:56:27.147+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-7] o.s.data.mongodb.core.MongoTemplate      : Executing count: { "idSoutenance" : 1003} in collection: affectations_jury
-2026-05-01T02:56:27.230+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-7] o.s.data.mongodb.core.MongoTemplate      : Inserting Document containing fields: [idSoutenance, idEnseignant, roleJury, dateAffectation] in collection: affectations_jury
-2026-05-01T02:56:27.328+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-7] o.s.d.m.r.query.MongoQueryCreator        : Created query Query: { "idEnseignant" : 320501025614}, Fields: {}, Sort: {}
-2026-05-01T02:56:27.329+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-7] o.s.data.mongodb.core.MongoTemplate      : find using query: { "idEnseignant" : 320501025614} fields: Document{{}} sort: null for class: class com.microservices.jury_service.entity.MembreJury in collection: membres_jury
-2026-05-01T02:56:27.408+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json] and supported [application/json, application/*+json, application/yaml]
-2026-05-01T02:56:27.410+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [AffectationJuryDTO(id=69f4084bb69c80ffbe0d2a39, idSoutenance=1003, idEnseignant=320501025614, roleJu (truncated)...]
-2026-05-01T02:56:27.411+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 201 CREATED
-2026-05-01T02:56:27.451+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-8] o.s.web.servlet.DispatcherServlet        : POST "/api/affectations-jury", parameters={}
-2026-05-01T02:56:27.453+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.microservices.jury_service.controller.AffectationJuryController#affecterJury(AffecterJuryRequest)
-2026-05-01T02:56:27.454+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-8] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [AffecterJuryRequest(idSoutenance=1003, idEnseignant=390501025614, roleJury=examinateur)]
-2026-05-01T02:56:27.530+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-8] o.s.w.c.HttpMessageConverterExtractor    : Reading to [com.microservices.jury_service.dto.SoutenanceSummaryDTO]
-2026-05-01T02:56:27.532+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-8] o.s.d.m.r.query.MongoQueryCreator        : Created query Query: { "idEnseignant" : 390501025614}, Fields: {}, Sort: {}
-2026-05-01T02:56:27.533+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-8] o.s.data.mongodb.core.MongoTemplate      : find using query: { "idEnseignant" : 390501025614} fields: Document{{}} sort: null for class: class com.microservices.jury_service.entity.MembreJury in collection: membres_jury
-2026-05-01T02:56:27.629+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-8] o.s.d.m.r.query.MongoQueryCreator        : Created query Query: { "idSoutenance" : 1003, "idEnseignant" : 390501025614}, Fields: {}, Sort: {}
-2026-05-01T02:56:27.630+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-8] o.s.data.mongodb.core.MongoTemplate      : Executing count: { "idSoutenance" : 1003, "idEnseignant" : 390501025614} in collection: affectations_jury
-2026-05-01T02:56:27.713+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-8] o.s.d.m.r.query.MongoQueryCreator        : Created query Query: { "idSoutenance" : 1003, "roleJury" : { "$java" : examinateur } }, Fields: {}, Sort: {}
-2026-05-01T02:56:27.714+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-8] o.s.data.mongodb.core.MongoTemplate      : Executing count: { "idSoutenance" : 1003, "roleJury" : "examinateur"} in collection: affectations_jury
-2026-05-01T02:56:27.791+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-8] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler com.microservices.jury_service.exception.GlobalExceptionHandler#handleConflitAffectationException(ConflitAffectationException, HttpServletRequest)
-2026-05-01T02:56:27.795+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json] and supported [application/json, application/*+json, application/yaml]
-2026-05-01T02:56:27.796+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [ErrorDetails(timestamp=2026-05-01T02:56:27.794459600, message=Le role examinateur est deja affecte a (truncated)...]
-2026-05-01T02:56:27.796+01:00  WARN 26088 --- [jury-service] [nio-8082-exec-8] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.microservices.jury_service.exception.ConflitAffectationException: Le role examinateur est deja affecte a cette soutenance]
-2026-05-01T02:56:27.798+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 409 CONFLICT
-2026-05-01T02:56:28.779+01:00 DEBUG 26088 --- [jury-service] [io-8082-exec-10] o.s.web.servlet.DispatcherServlet        : GET "/api/affectations-jury/soutenance/1003", parameters={}
-2026-05-01T02:56:28.781+01:00 DEBUG 26088 --- [jury-service] [io-8082-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.microservices.jury_service.controller.AffectationJuryController#getAffectationsBySoutenance(Long)
-2026-05-01T02:56:28.783+01:00 DEBUG 26088 --- [jury-service] [io-8082-exec-10] o.s.d.m.r.query.MongoQueryCreator        : Created query Query: { "idSoutenance" : 1003}, Fields: {}, Sort: {}
-2026-05-01T02:56:28.784+01:00 DEBUG 26088 --- [jury-service] [io-8082-exec-10] o.s.data.mongodb.core.MongoTemplate      : find using query: { "idSoutenance" : 1003} fields: Document{{}} sort: null for class: class com.microservices.jury_service.entity.AffectationJury in collection: affectations_jury
-2026-05-01T02:56:28.890+01:00 DEBUG 26088 --- [jury-service] [io-8082-exec-10] o.s.d.m.r.query.MongoQueryCreator        : Created query Query: { "idEnseignant" : 300501025614}, Fields: {}, Sort: {}
-2026-05-01T02:56:28.892+01:00 DEBUG 26088 --- [jury-service] [io-8082-exec-10] o.s.data.mongodb.core.MongoTemplate      : find using query: { "idEnseignant" : 300501025614} fields: Document{{}} sort: null for class: class com.microservices.jury_service.entity.MembreJury in collection: membres_jury
-2026-05-01T02:56:28.988+01:00 DEBUG 26088 --- [jury-service] [io-8082-exec-10] o.s.d.m.r.query.MongoQueryCreator        : Created query Query: { "idEnseignant" : 310501025614}, Fields: {}, Sort: {}
-2026-05-01T02:56:28.988+01:00 DEBUG 26088 --- [jury-service] [io-8082-exec-10] o.s.data.mongodb.core.MongoTemplate      : find using query: { "idEnseignant" : 310501025614} fields: Document{{}} sort: null for class: class com.microservices.jury_service.entity.MembreJury in collection: membres_jury
-2026-05-01T02:56:29.078+01:00 DEBUG 26088 --- [jury-service] [io-8082-exec-10] o.s.d.m.r.query.MongoQueryCreator        : Created query Query: { "idEnseignant" : 320501025614}, Fields: {}, Sort: {}
-2026-05-01T02:56:29.079+01:00 DEBUG 26088 --- [jury-service] [io-8082-exec-10] o.s.data.mongodb.core.MongoTemplate      : find using query: { "idEnseignant" : 320501025614} fields: Document{{}} sort: null for class: class com.microservices.jury_service.entity.MembreJury in collection: membres_jury
-2026-05-01T02:56:29.173+01:00 DEBUG 26088 --- [jury-service] [io-8082-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
-2026-05-01T02:56:29.175+01:00 DEBUG 26088 --- [jury-service] [io-8082-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[AffectationJuryDTO(id=69f40849b69c80ffbe0d2a37, idSoutenance=1003, idEnseignant=300501025614, roleJ (truncated)...]
-2026-05-01T02:56:29.177+01:00 DEBUG 26088 --- [jury-service] [io-8082-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2026-05-01T02:56:29.301+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/api/affectations-jury/soutenance/1003", parameters={}
-2026-05-01T02:56:29.303+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.microservices.jury_service.controller.AffectationJuryController#getAffectationsBySoutenance(Long)
-2026-05-01T02:56:29.304+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-1] o.s.d.m.r.query.MongoQueryCreator        : Created query Query: { "idSoutenance" : 1003}, Fields: {}, Sort: {}
-2026-05-01T02:56:29.304+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-1] o.s.data.mongodb.core.MongoTemplate      : find using query: { "idSoutenance" : 1003} fields: Document{{}} sort: null for class: class com.microservices.jury_service.entity.AffectationJury in collection: affectations_jury
-2026-05-01T02:56:29.375+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-1] o.s.d.m.r.query.MongoQueryCreator        : Created query Query: { "idEnseignant" : 300501025614}, Fields: {}, Sort: {}
-2026-05-01T02:56:29.376+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-1] o.s.data.mongodb.core.MongoTemplate      : find using query: { "idEnseignant" : 300501025614} fields: Document{{}} sort: null for class: class com.microservices.jury_service.entity.MembreJury in collection: membres_jury
-2026-05-01T02:56:29.460+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-1] o.s.d.m.r.query.MongoQueryCreator        : Created query Query: { "idEnseignant" : 310501025614}, Fields: {}, Sort: {}
-2026-05-01T02:56:29.461+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-1] o.s.data.mongodb.core.MongoTemplate      : find using query: { "idEnseignant" : 310501025614} fields: Document{{}} sort: null for class: class com.microservices.jury_service.entity.MembreJury in collection: membres_jury
-2026-05-01T02:56:29.527+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-1] o.s.d.m.r.query.MongoQueryCreator        : Created query Query: { "idEnseignant" : 320501025614}, Fields: {}, Sort: {}
-2026-05-01T02:56:29.528+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-1] o.s.data.mongodb.core.MongoTemplate      : find using query: { "idEnseignant" : 320501025614} fields: Document{{}} sort: null for class: class com.microservices.jury_service.entity.MembreJury in collection: membres_jury
-2026-05-01T02:56:29.684+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
-2026-05-01T02:56:29.686+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[AffectationJuryDTO(id=69f40849b69c80ffbe0d2a37, idSoutenance=1003, idEnseignant=300501025614, roleJ (truncated)...]
-2026-05-01T02:56:29.687+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2026-05-01T02:56:31.324+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/api/affectations-jury/soutenance/1003", parameters={}
-2026-05-01T02:56:31.324+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.microservices.jury_service.controller.AffectationJuryController#getAffectationsBySoutenance(Long)
-2026-05-01T02:56:31.326+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-3] o.s.d.m.r.query.MongoQueryCreator        : Created query Query: { "idSoutenance" : 1003}, Fields: {}, Sort: {}
-2026-05-01T02:56:31.328+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-3] o.s.data.mongodb.core.MongoTemplate      : find using query: { "idSoutenance" : 1003} fields: Document{{}} sort: null for class: class com.microservices.jury_service.entity.AffectationJury in collection: affectations_jury
-2026-05-01T02:56:31.408+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-3] o.s.d.m.r.query.MongoQueryCreator        : Created query Query: { "idEnseignant" : 300501025614}, Fields: {}, Sort: {}
-2026-05-01T02:56:31.409+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-3] o.s.data.mongodb.core.MongoTemplate      : find using query: { "idEnseignant" : 300501025614} fields: Document{{}} sort: null for class: class com.microservices.jury_service.entity.MembreJury in collection: membres_jury
-2026-05-01T02:56:31.508+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-3] o.s.d.m.r.query.MongoQueryCreator        : Created query Query: { "idEnseignant" : 310501025614}, Fields: {}, Sort: {}
-2026-05-01T02:56:31.511+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-3] o.s.data.mongodb.core.MongoTemplate      : find using query: { "idEnseignant" : 310501025614} fields: Document{{}} sort: null for class: class com.microservices.jury_service.entity.MembreJury in collection: membres_jury
-2026-05-01T02:56:31.604+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-3] o.s.d.m.r.query.MongoQueryCreator        : Created query Query: { "idEnseignant" : 320501025614}, Fields: {}, Sort: {}
-2026-05-01T02:56:31.605+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-3] o.s.data.mongodb.core.MongoTemplate      : find using query: { "idEnseignant" : 320501025614} fields: Document{{}} sort: null for class: class com.microservices.jury_service.entity.MembreJury in collection: membres_jury
-2026-05-01T02:56:31.677+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
-2026-05-01T02:56:31.678+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[AffectationJuryDTO(id=69f40849b69c80ffbe0d2a37, idSoutenance=1003, idEnseignant=300501025614, roleJ (truncated)...]
-2026-05-01T02:56:31.679+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2026-05-01T02:56:32.603+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/api/affectations-jury/soutenance/1003", parameters={}
-2026-05-01T02:56:32.604+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.microservices.jury_service.controller.AffectationJuryController#getAffectationsBySoutenance(Long)
-2026-05-01T02:56:32.604+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-2] o.s.d.m.r.query.MongoQueryCreator        : Created query Query: { "idSoutenance" : 1003}, Fields: {}, Sort: {}
-2026-05-01T02:56:32.606+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-2] o.s.data.mongodb.core.MongoTemplate      : find using query: { "idSoutenance" : 1003} fields: Document{{}} sort: null for class: class com.microservices.jury_service.entity.AffectationJury in collection: affectations_jury
-2026-05-01T02:56:32.684+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-2] o.s.d.m.r.query.MongoQueryCreator        : Created query Query: { "idEnseignant" : 300501025614}, Fields: {}, Sort: {}
-2026-05-01T02:56:32.685+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-2] o.s.data.mongodb.core.MongoTemplate      : find using query: { "idEnseignant" : 300501025614} fields: Document{{}} sort: null for class: class com.microservices.jury_service.entity.MembreJury in collection: membres_jury
-2026-05-01T02:56:32.754+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-2] o.s.d.m.r.query.MongoQueryCreator        : Created query Query: { "idEnseignant" : 310501025614}, Fields: {}, Sort: {}
-2026-05-01T02:56:32.756+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-2] o.s.data.mongodb.core.MongoTemplate      : find using query: { "idEnseignant" : 310501025614} fields: Document{{}} sort: null for class: class com.microservices.jury_service.entity.MembreJury in collection: membres_jury
-2026-05-01T02:56:32.827+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-2] o.s.d.m.r.query.MongoQueryCreator        : Created query Query: { "idEnseignant" : 320501025614}, Fields: {}, Sort: {}
-2026-05-01T02:56:32.831+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-2] o.s.data.mongodb.core.MongoTemplate      : find using query: { "idEnseignant" : 320501025614} fields: Document{{}} sort: null for class: class com.microservices.jury_service.entity.MembreJury in collection: membres_jury
-2026-05-01T02:56:32.905+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
-2026-05-01T02:56:32.907+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[AffectationJuryDTO(id=69f40849b69c80ffbe0d2a37, idSoutenance=1003, idEnseignant=300501025614, roleJ (truncated)...]
-2026-05-01T02:56:32.909+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
-2026-05-01T02:56:34.676+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/api/affectations-jury/soutenance/1003", parameters={}
-2026-05-01T02:56:34.676+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.microservices.jury_service.controller.AffectationJuryController#getAffectationsBySoutenance(Long)
-2026-05-01T02:56:34.677+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-4] o.s.d.m.r.query.MongoQueryCreator        : Created query Query: { "idSoutenance" : 1003}, Fields: {}, Sort: {}
-2026-05-01T02:56:34.682+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-4] o.s.data.mongodb.core.MongoTemplate      : find using query: { "idSoutenance" : 1003} fields: Document{{}} sort: null for class: class com.microservices.jury_service.entity.AffectationJury in collection: affectations_jury
-2026-05-01T02:56:34.751+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-4] o.s.d.m.r.query.MongoQueryCreator        : Created query Query: { "idEnseignant" : 300501025614}, Fields: {}, Sort: {}
-2026-05-01T02:56:34.752+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-4] o.s.data.mongodb.core.MongoTemplate      : find using query: { "idEnseignant" : 300501025614} fields: Document{{}} sort: null for class: class com.microservices.jury_service.entity.MembreJury in collection: membres_jury
-2026-05-01T02:56:34.839+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-4] o.s.d.m.r.query.MongoQueryCreator        : Created query Query: { "idEnseignant" : 310501025614}, Fields: {}, Sort: {}
-2026-05-01T02:56:34.841+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-4] o.s.data.mongodb.core.MongoTemplate      : find using query: { "idEnseignant" : 310501025614} fields: Document{{}} sort: null for class: class com.microservices.jury_service.entity.MembreJury in collection: membres_jury
-2026-05-01T02:56:34.913+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-4] o.s.d.m.r.query.MongoQueryCreator        : Created query Query: { "idEnseignant" : 320501025614}, Fields: {}, Sort: {}
-2026-05-01T02:56:34.915+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-4] o.s.data.mongodb.core.MongoTemplate      : find using query: { "idEnseignant" : 320501025614} fields: Document{{}} sort: null for class: class com.microservices.jury_service.entity.MembreJury in collection: membres_jury
-2026-05-01T02:56:34.986+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
-2026-05-01T02:56:34.986+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[AffectationJuryDTO(id=69f40849b69c80ffbe0d2a37, idSoutenance=1003, idEnseignant=300501025614, roleJ (truncated)...]
-2026-05-01T02:56:34.986+01:00 DEBUG 26088 --- [jury-service] [nio-8082-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-05-01T03:38:07.360+01:00  INFO 10544 --- [jury-service] [  restartedMain] c.m.jury_service.JuryServiceApplication  : Started JuryServiceApplication in 9.8 seconds (process running for 10.408)
+2026-05-01T03:38:07.507+01:00 DEBUG 10544 --- [jury-service] [  restartedMain] o.s.b.a.ApplicationAvailabilityBean      : Application availability state LivenessState changed to CORRECT
+2026-05-01T03:38:07.567+01:00 DEBUG 10544 --- [jury-service] [  restartedMain] o.s.data.mongodb.core.MongoTemplate      : Executing count: { "_id" : "seed-president"} in collection: membres_jury
+2026-05-01T03:38:08.188+01:00 DEBUG 10544 --- [jury-service] [  restartedMain] o.s.data.mongodb.core.MongoTemplate      : Executing count: { "_id" : "seed-rapporteur"} in collection: membres_jury
+2026-05-01T03:38:08.271+01:00 DEBUG 10544 --- [jury-service] [  restartedMain] o.s.data.mongodb.core.MongoTemplate      : Executing count: { "_id" : "seed-examinateur"} in collection: membres_jury
+2026-05-01T03:38:08.357+01:00 DEBUG 10544 --- [jury-service] [  restartedMain] o.s.data.mongodb.core.MongoTemplate      : Executing count: { "_id" : "seed-intrus"} in collection: membres_jury
+2026-05-01T03:38:08.477+01:00 DEBUG 10544 --- [jury-service] [  restartedMain] o.s.data.mongodb.core.MongoTemplate      : Executing count: { "_id" : "seed-aff-president"} in collection: affectations_jury
+2026-05-01T03:38:08.578+01:00 DEBUG 10544 --- [jury-service] [  restartedMain] o.s.d.m.r.query.MongoQueryCreator        : Created query Query: { "idSoutenance" : 1, "idEnseignant" : 3001}, Fields: {}, Sort: {}
+2026-05-01T03:38:08.594+01:00 DEBUG 10544 --- [jury-service] [  restartedMain] o.s.data.mongodb.core.MongoTemplate      : Executing count: { "idSoutenance" : 1, "idEnseignant" : 3001} in collection: affectations_jury
+2026-05-01T03:38:08.837+01:00 DEBUG 10544 --- [jury-service] [  restartedMain] o.s.data.mongodb.core.MongoTemplate      : Executing count: { "_id" : "seed-aff-rapporteur"} in collection: affectations_jury
+2026-05-01T03:38:08.942+01:00 DEBUG 10544 --- [jury-service] [  restartedMain] o.s.data.mongodb.core.MongoTemplate      : Executing count: { "_id" : "seed-aff-examinateur"} in collection: affectations_jury
+2026-05-01T03:38:09.023+01:00 DEBUG 10544 --- [jury-service] [  restartedMain] o.s.boot.devtools.restart.Restarter      : Creating new Restarter for thread Thread[#1,main,5,main]
+2026-05-01T03:38:09.031+01:00 DEBUG 10544 --- [jury-service] [  restartedMain] o.s.boot.devtools.restart.Restarter      : Immediately restarting application
+2026-05-01T03:38:09.031+01:00 DEBUG 10544 --- [jury-service] [  restartedMain] o.s.boot.devtools.restart.Restarter      : Starting application com.microservices.jury_service.JuryServiceApplication with URLs [file:/C:/Users/mouha/projet_microservice/jury-service/target/classes/]
+2026-05-01T03:38:09.039+01:00 DEBUG 10544 --- [jury-service] [  restartedMain] o.s.b.a.ApplicationAvailabilityBean      : Application availability state ReadinessState changed to ACCEPTING_TRAFFIC
+2026-05-01T03:38:36.244+01:00 DEBUG 10544 --- [jury-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/delta
+2026-05-01T03:38:36.244+01:00 DEBUG 10544 --- [jury-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/JURY-SERVICE/localhost:jury-service:8082?status=UP&lastDirtyTimestamp=1777603086257
+2026-05-01T03:38:36.257+01:00 DEBUG 10544 --- [jury-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2026-05-01T03:38:36.265+01:00 DEBUG 10544 --- [jury-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2026-05-01T03:38:36.275+01:00 DEBUG 10544 --- [jury-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2026-05-01T03:38:36.276+01:00 DEBUG 10544 --- [jury-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2026-05-01T03:38:36.276+01:00 DEBUG 10544 --- [jury-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2026-05-01T03:38:47.910+01:00  INFO 10544 --- [jury-service] [nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-01T03:38:47.915+01:00  INFO 10544 --- [jury-service] [nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-05-01T03:38:47.918+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2026-05-01T03:38:47.918+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2026-05-01T03:38:47.918+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2026-05-01T03:38:47.920+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@2eecb363
+2026-05-01T03:38:47.920+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@3dd4ab63
+2026-05-01T03:38:47.924+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2026-05-01T03:38:47.924+01:00  INFO 10544 --- [jury-service] [nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
+2026-05-01T03:38:47.949+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/actuator/health", parameters={}
+2026-05-01T03:38:47.962+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-1] s.b.a.e.w.s.WebMvcEndpointHandlerMapping : Mapped to Actuator web endpoint 'health'
+2026-05-01T03:38:47.992+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Read "application/octet-stream" to []
+2026-05-01T03:38:48.138+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/vnd.spring-boot.actuator.v3+json', given [*/*] and supported [application/vnd.spring-boot.actuator.v3+json, application/vnd.spring-boot.actuator.v2+json, application/json]
+2026-05-01T03:38:48.162+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [org.springframework.boot.actuate.health.SystemHealth@537e07b2]
+2026-05-01T03:38:48.170+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-05-01T03:39:06.280+01:00 DEBUG 10544 --- [jury-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/JURY-SERVICE/localhost:jury-service:8082?status=UP&lastDirtyTimestamp=1777603086257
+2026-05-01T03:39:06.280+01:00 DEBUG 10544 --- [jury-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2026-05-01T03:39:06.296+01:00 DEBUG 10544 --- [jury-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/delta
+2026-05-01T03:39:06.296+01:00 DEBUG 10544 --- [jury-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/yaml, application/*+json]
+2026-05-01T03:39:06.297+01:00 DEBUG 10544 --- [jury-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2026-05-01T03:39:06.317+01:00 DEBUG 10544 --- [jury-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2026-05-01T03:39:06.317+01:00 DEBUG 10544 --- [jury-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2026-05-01T03:39:13.493+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-2] o.s.web.servlet.DispatcherServlet        : POST "/api/membres-jury", parameters={}
+2026-05-01T03:39:13.495+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.microservices.jury_service.controller.MembreJuryController#createMembre(CreerMembreJuryRequest)
+2026-05-01T03:39:13.501+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [CreerMembreJuryRequest(idEnseignant=300501033905, nom=Jury, prenom=President, grade=Professeur, emai (truncated)...]
+2026-05-01T03:39:13.564+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-2] o.s.data.mongodb.core.MongoTemplate      : Inserting Document containing fields: [idEnseignant, nom, prenom, grade, email] in collection: membres_jury
+2026-05-01T03:39:13.662+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json] and supported [application/json, application/*+json, application/yaml]
+2026-05-01T03:39:13.666+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [MembreJuryDTO(id=69f4125119ddc095c7d3fa31, idEnseignant=300501033905, nom=Jury, prenom=President, gr (truncated)...]
+2026-05-01T03:39:13.667+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 201 CREATED
+2026-05-01T03:39:13.698+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-3] o.s.web.servlet.DispatcherServlet        : POST "/api/membres-jury", parameters={}
+2026-05-01T03:39:13.699+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.microservices.jury_service.controller.MembreJuryController#createMembre(CreerMembreJuryRequest)
+2026-05-01T03:39:13.699+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [CreerMembreJuryRequest(idEnseignant=310501033905, nom=Jury, prenom=Rapporteur, grade=Professeur, ema (truncated)...]
+2026-05-01T03:39:13.700+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-3] o.s.data.mongodb.core.MongoTemplate      : Inserting Document containing fields: [idEnseignant, nom, prenom, grade, email] in collection: membres_jury
+2026-05-01T03:39:13.773+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json] and supported [application/json, application/*+json, application/yaml]
+2026-05-01T03:39:13.774+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [MembreJuryDTO(id=69f4125119ddc095c7d3fa32, idEnseignant=310501033905, nom=Jury, prenom=Rapporteur, g (truncated)...]
+2026-05-01T03:39:13.776+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 201 CREATED
+2026-05-01T03:39:13.873+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-4] o.s.web.servlet.DispatcherServlet        : POST "/api/membres-jury", parameters={}
+2026-05-01T03:39:13.873+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.microservices.jury_service.controller.MembreJuryController#createMembre(CreerMembreJuryRequest)
+2026-05-01T03:39:13.874+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-4] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [CreerMembreJuryRequest(idEnseignant=320501033905, nom=Jury, prenom=Examinateur, grade=Professeur, em (truncated)...]
+2026-05-01T03:39:13.875+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-4] o.s.data.mongodb.core.MongoTemplate      : Inserting Document containing fields: [idEnseignant, nom, prenom, grade, email] in collection: membres_jury
+2026-05-01T03:39:13.947+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json] and supported [application/json, application/*+json, application/yaml]
+2026-05-01T03:39:13.956+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [MembreJuryDTO(id=69f4125119ddc095c7d3fa33, idEnseignant=320501033905, nom=Jury, prenom=Examinateur,  (truncated)...]
+2026-05-01T03:39:13.957+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 201 CREATED
+2026-05-01T03:39:14.050+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-5] o.s.web.servlet.DispatcherServlet        : POST "/api/membres-jury", parameters={}
+2026-05-01T03:39:14.050+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.microservices.jury_service.controller.MembreJuryController#createMembre(CreerMembreJuryRequest)
+2026-05-01T03:39:14.054+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [CreerMembreJuryRequest(idEnseignant=390501033905, nom=Jury, prenom=Intrus, grade=Professeur, email=j (truncated)...]
+2026-05-01T03:39:14.055+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-5] o.s.data.mongodb.core.MongoTemplate      : Inserting Document containing fields: [idEnseignant, nom, prenom, grade, email] in collection: membres_jury
+2026-05-01T03:39:14.129+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json] and supported [application/json, application/*+json, application/yaml]
+2026-05-01T03:39:14.131+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [MembreJuryDTO(id=69f4125219ddc095c7d3fa34, idEnseignant=390501033905, nom=Jury, prenom=Intrus, grade (truncated)...]
+2026-05-01T03:39:14.131+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 201 CREATED
+2026-05-01T03:39:14.210+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-6] o.s.web.servlet.DispatcherServlet        : POST "/api/affectations-jury", parameters={}
+2026-05-01T03:39:14.210+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.microservices.jury_service.controller.AffectationJuryController#affecterJury(AffecterJuryRequest)
+2026-05-01T03:39:14.226+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-6] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [AffecterJuryRequest(idSoutenance=1004, idEnseignant=300501033905, roleJury=president)]
+2026-05-01T03:39:14.527+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-6] o.s.w.c.HttpMessageConverterExtractor    : Reading to [com.microservices.jury_service.dto.SoutenanceSummaryDTO]
+2026-05-01T03:39:14.530+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-6] o.s.d.m.r.query.MongoQueryCreator        : Created query Query: { "idEnseignant" : 300501033905}, Fields: {}, Sort: {}
+2026-05-01T03:39:14.537+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-6] o.s.data.mongodb.core.MongoTemplate      : find using query: { "idEnseignant" : 300501033905} fields: Document{{}} sort: null for class: class com.microservices.jury_service.entity.MembreJury in collection: membres_jury
+2026-05-01T03:39:14.647+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-6] o.s.d.m.r.query.MongoQueryCreator        : Created query Query: { "idSoutenance" : 1004, "idEnseignant" : 300501033905}, Fields: {}, Sort: {}
+2026-05-01T03:39:14.654+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-6] o.s.data.mongodb.core.MongoTemplate      : Executing count: { "idSoutenance" : 1004, "idEnseignant" : 300501033905} in collection: affectations_jury
+2026-05-01T03:39:14.736+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-6] o.s.d.m.r.query.MongoQueryCreator        : Created query Query: { "idSoutenance" : 1004, "roleJury" : { "$java" : president } }, Fields: {}, Sort: {}
+2026-05-01T03:39:14.737+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-6] o.s.data.mongodb.core.MongoTemplate      : Executing count: { "idSoutenance" : 1004, "roleJury" : "president"} in collection: affectations_jury
+2026-05-01T03:39:14.810+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-6] o.s.d.m.r.query.MongoQueryCreator        : Created query Query: { "idSoutenance" : 1004}, Fields: {}, Sort: {}
+2026-05-01T03:39:14.813+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-6] o.s.data.mongodb.core.MongoTemplate      : Executing count: { "idSoutenance" : 1004} in collection: affectations_jury
+2026-05-01T03:39:14.908+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-6] o.s.data.mongodb.core.MongoTemplate      : Inserting Document containing fields: [idSoutenance, idEnseignant, roleJury, dateAffectation] in collection: affectations_jury
+2026-05-01T03:39:14.985+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-6] o.s.d.m.r.query.MongoQueryCreator        : Created query Query: { "idEnseignant" : 300501033905}, Fields: {}, Sort: {}
+2026-05-01T03:39:14.988+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-6] o.s.data.mongodb.core.MongoTemplate      : find using query: { "idEnseignant" : 300501033905} fields: Document{{}} sort: null for class: class com.microservices.jury_service.entity.MembreJury in collection: membres_jury
+2026-05-01T03:39:15.087+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json] and supported [application/json, application/*+json, application/yaml]
+2026-05-01T03:39:15.094+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [AffectationJuryDTO(id=69f4125219ddc095c7d3fa35, idSoutenance=1004, idEnseignant=300501033905, roleJu (truncated)...]
+2026-05-01T03:39:15.098+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 201 CREATED
+2026-05-01T03:39:15.206+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-7] o.s.web.servlet.DispatcherServlet        : POST "/api/affectations-jury", parameters={}
+2026-05-01T03:39:15.207+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.microservices.jury_service.controller.AffectationJuryController#affecterJury(AffecterJuryRequest)
+2026-05-01T03:39:15.209+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-7] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [AffecterJuryRequest(idSoutenance=1004, idEnseignant=310501033905, roleJury=rapporteur)]
+2026-05-01T03:39:15.298+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-7] o.s.w.c.HttpMessageConverterExtractor    : Reading to [com.microservices.jury_service.dto.SoutenanceSummaryDTO]
+2026-05-01T03:39:15.303+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-7] o.s.d.m.r.query.MongoQueryCreator        : Created query Query: { "idEnseignant" : 310501033905}, Fields: {}, Sort: {}
+2026-05-01T03:39:15.303+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-7] o.s.data.mongodb.core.MongoTemplate      : find using query: { "idEnseignant" : 310501033905} fields: Document{{}} sort: null for class: class com.microservices.jury_service.entity.MembreJury in collection: membres_jury
+2026-05-01T03:39:15.391+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-7] o.s.d.m.r.query.MongoQueryCreator        : Created query Query: { "idSoutenance" : 1004, "idEnseignant" : 310501033905}, Fields: {}, Sort: {}
+2026-05-01T03:39:15.393+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-7] o.s.data.mongodb.core.MongoTemplate      : Executing count: { "idSoutenance" : 1004, "idEnseignant" : 310501033905} in collection: affectations_jury
+2026-05-01T03:39:15.468+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-7] o.s.d.m.r.query.MongoQueryCreator        : Created query Query: { "idSoutenance" : 1004, "roleJury" : { "$java" : rapporteur } }, Fields: {}, Sort: {}
+2026-05-01T03:39:15.472+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-7] o.s.data.mongodb.core.MongoTemplate      : Executing count: { "idSoutenance" : 1004, "roleJury" : "rapporteur"} in collection: affectations_jury
+2026-05-01T03:39:15.547+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-7] o.s.d.m.r.query.MongoQueryCreator        : Created query Query: { "idSoutenance" : 1004}, Fields: {}, Sort: {}
+2026-05-01T03:39:15.549+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-7] o.s.data.mongodb.core.MongoTemplate      : Executing count: { "idSoutenance" : 1004} in collection: affectations_jury
+2026-05-01T03:39:15.619+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-7] o.s.data.mongodb.core.MongoTemplate      : Inserting Document containing fields: [idSoutenance, idEnseignant, roleJury, dateAffectation] in collection: affectations_jury
+2026-05-01T03:39:15.693+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-7] o.s.d.m.r.query.MongoQueryCreator        : Created query Query: { "idEnseignant" : 310501033905}, Fields: {}, Sort: {}
+2026-05-01T03:39:15.698+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-7] o.s.data.mongodb.core.MongoTemplate      : find using query: { "idEnseignant" : 310501033905} fields: Document{{}} sort: null for class: class com.microservices.jury_service.entity.MembreJury in collection: membres_jury
+2026-05-01T03:39:15.768+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json] and supported [application/json, application/*+json, application/yaml]
+2026-05-01T03:39:15.768+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [AffectationJuryDTO(id=69f4125319ddc095c7d3fa36, idSoutenance=1004, idEnseignant=310501033905, roleJu (truncated)...]
+2026-05-01T03:39:15.768+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 201 CREATED
+2026-05-01T03:39:15.849+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-8] o.s.web.servlet.DispatcherServlet        : POST "/api/affectations-jury", parameters={}
+2026-05-01T03:39:15.849+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.microservices.jury_service.controller.AffectationJuryController#affecterJury(AffecterJuryRequest)
+2026-05-01T03:39:15.849+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-8] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [AffecterJuryRequest(idSoutenance=1004, idEnseignant=320501033905, roleJury=examinateur)]
+2026-05-01T03:39:15.932+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-8] o.s.w.c.HttpMessageConverterExtractor    : Reading to [com.microservices.jury_service.dto.SoutenanceSummaryDTO]
+2026-05-01T03:39:15.932+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-8] o.s.d.m.r.query.MongoQueryCreator        : Created query Query: { "idEnseignant" : 320501033905}, Fields: {}, Sort: {}
+2026-05-01T03:39:15.938+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-8] o.s.data.mongodb.core.MongoTemplate      : find using query: { "idEnseignant" : 320501033905} fields: Document{{}} sort: null for class: class com.microservices.jury_service.entity.MembreJury in collection: membres_jury
+2026-05-01T03:39:16.005+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-8] o.s.d.m.r.query.MongoQueryCreator        : Created query Query: { "idSoutenance" : 1004, "idEnseignant" : 320501033905}, Fields: {}, Sort: {}
+2026-05-01T03:39:16.008+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-8] o.s.data.mongodb.core.MongoTemplate      : Executing count: { "idSoutenance" : 1004, "idEnseignant" : 320501033905} in collection: affectations_jury
+2026-05-01T03:39:16.077+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-8] o.s.d.m.r.query.MongoQueryCreator        : Created query Query: { "idSoutenance" : 1004, "roleJury" : { "$java" : examinateur } }, Fields: {}, Sort: {}
+2026-05-01T03:39:16.081+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-8] o.s.data.mongodb.core.MongoTemplate      : Executing count: { "idSoutenance" : 1004, "roleJury" : "examinateur"} in collection: affectations_jury
+2026-05-01T03:39:16.164+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-8] o.s.d.m.r.query.MongoQueryCreator        : Created query Query: { "idSoutenance" : 1004}, Fields: {}, Sort: {}
+2026-05-01T03:39:16.169+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-8] o.s.data.mongodb.core.MongoTemplate      : Executing count: { "idSoutenance" : 1004} in collection: affectations_jury
+2026-05-01T03:39:16.244+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-8] o.s.data.mongodb.core.MongoTemplate      : Inserting Document containing fields: [idSoutenance, idEnseignant, roleJury, dateAffectation] in collection: affectations_jury
+2026-05-01T03:39:16.320+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-8] o.s.d.m.r.query.MongoQueryCreator        : Created query Query: { "idEnseignant" : 320501033905}, Fields: {}, Sort: {}
+2026-05-01T03:39:16.320+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-8] o.s.data.mongodb.core.MongoTemplate      : find using query: { "idEnseignant" : 320501033905} fields: Document{{}} sort: null for class: class com.microservices.jury_service.entity.MembreJury in collection: membres_jury
+2026-05-01T03:39:16.418+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json] and supported [application/json, application/*+json, application/yaml]
+2026-05-01T03:39:16.420+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [AffectationJuryDTO(id=69f4125419ddc095c7d3fa37, idSoutenance=1004, idEnseignant=320501033905, roleJu (truncated)...]
+2026-05-01T03:39:16.421+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 201 CREATED
+2026-05-01T03:39:16.507+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-9] o.s.web.servlet.DispatcherServlet        : POST "/api/affectations-jury", parameters={}
+2026-05-01T03:39:16.507+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.microservices.jury_service.controller.AffectationJuryController#affecterJury(AffecterJuryRequest)
+2026-05-01T03:39:16.510+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-9] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [AffecterJuryRequest(idSoutenance=1004, idEnseignant=390501033905, roleJury=examinateur)]
+2026-05-01T03:39:16.609+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-9] o.s.w.c.HttpMessageConverterExtractor    : Reading to [com.microservices.jury_service.dto.SoutenanceSummaryDTO]
+2026-05-01T03:39:16.609+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-9] o.s.d.m.r.query.MongoQueryCreator        : Created query Query: { "idEnseignant" : 390501033905}, Fields: {}, Sort: {}
+2026-05-01T03:39:16.609+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-9] o.s.data.mongodb.core.MongoTemplate      : find using query: { "idEnseignant" : 390501033905} fields: Document{{}} sort: null for class: class com.microservices.jury_service.entity.MembreJury in collection: membres_jury
+2026-05-01T03:39:16.690+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-9] o.s.d.m.r.query.MongoQueryCreator        : Created query Query: { "idSoutenance" : 1004, "idEnseignant" : 390501033905}, Fields: {}, Sort: {}
+2026-05-01T03:39:16.692+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-9] o.s.data.mongodb.core.MongoTemplate      : Executing count: { "idSoutenance" : 1004, "idEnseignant" : 390501033905} in collection: affectations_jury
+2026-05-01T03:39:16.782+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-9] o.s.d.m.r.query.MongoQueryCreator        : Created query Query: { "idSoutenance" : 1004, "roleJury" : { "$java" : examinateur } }, Fields: {}, Sort: {}
+2026-05-01T03:39:16.786+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-9] o.s.data.mongodb.core.MongoTemplate      : Executing count: { "idSoutenance" : 1004, "roleJury" : "examinateur"} in collection: affectations_jury
+2026-05-01T03:39:16.858+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-9] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler com.microservices.jury_service.exception.GlobalExceptionHandler#handleConflitAffectationException(ConflitAffectationException, HttpServletRequest)
+2026-05-01T03:39:16.869+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json] and supported [application/json, application/*+json, application/yaml]
+2026-05-01T03:39:16.873+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [ErrorDetails(timestamp=2026-05-01T03:39:16.869105200, message=Le role examinateur est deja affecte a (truncated)...]
+2026-05-01T03:39:16.873+01:00  WARN 10544 --- [jury-service] [nio-8082-exec-9] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.microservices.jury_service.exception.ConflitAffectationException: Le role examinateur est deja affecte a cette soutenance]
+2026-05-01T03:39:16.877+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 409 CONFLICT
+2026-05-01T03:39:17.426+01:00 DEBUG 10544 --- [jury-service] [io-8082-exec-10] o.s.web.servlet.DispatcherServlet        : GET "/api/affectations-jury/soutenance/1004", parameters={}
+2026-05-01T03:39:17.427+01:00 DEBUG 10544 --- [jury-service] [io-8082-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.microservices.jury_service.controller.AffectationJuryController#getAffectationsBySoutenance(Long)
+2026-05-01T03:39:17.427+01:00 DEBUG 10544 --- [jury-service] [io-8082-exec-10] o.s.d.m.r.query.MongoQueryCreator        : Created query Query: { "idSoutenance" : 1004}, Fields: {}, Sort: {}
+2026-05-01T03:39:17.432+01:00 DEBUG 10544 --- [jury-service] [io-8082-exec-10] o.s.data.mongodb.core.MongoTemplate      : find using query: { "idSoutenance" : 1004} fields: Document{{}} sort: null for class: class com.microservices.jury_service.entity.AffectationJury in collection: affectations_jury
+2026-05-01T03:39:17.517+01:00 DEBUG 10544 --- [jury-service] [io-8082-exec-10] o.s.d.m.r.query.MongoQueryCreator        : Created query Query: { "idEnseignant" : 300501033905}, Fields: {}, Sort: {}
+2026-05-01T03:39:17.522+01:00 DEBUG 10544 --- [jury-service] [io-8082-exec-10] o.s.data.mongodb.core.MongoTemplate      : find using query: { "idEnseignant" : 300501033905} fields: Document{{}} sort: null for class: class com.microservices.jury_service.entity.MembreJury in collection: membres_jury
+2026-05-01T03:39:17.600+01:00 DEBUG 10544 --- [jury-service] [io-8082-exec-10] o.s.d.m.r.query.MongoQueryCreator        : Created query Query: { "idEnseignant" : 310501033905}, Fields: {}, Sort: {}
+2026-05-01T03:39:17.600+01:00 DEBUG 10544 --- [jury-service] [io-8082-exec-10] o.s.data.mongodb.core.MongoTemplate      : find using query: { "idEnseignant" : 310501033905} fields: Document{{}} sort: null for class: class com.microservices.jury_service.entity.MembreJury in collection: membres_jury
+2026-05-01T03:39:17.687+01:00 DEBUG 10544 --- [jury-service] [io-8082-exec-10] o.s.d.m.r.query.MongoQueryCreator        : Created query Query: { "idEnseignant" : 320501033905}, Fields: {}, Sort: {}
+2026-05-01T03:39:17.692+01:00 DEBUG 10544 --- [jury-service] [io-8082-exec-10] o.s.data.mongodb.core.MongoTemplate      : find using query: { "idEnseignant" : 320501033905} fields: Document{{}} sort: null for class: class com.microservices.jury_service.entity.MembreJury in collection: membres_jury
+2026-05-01T03:39:17.767+01:00 DEBUG 10544 --- [jury-service] [io-8082-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2026-05-01T03:39:17.767+01:00 DEBUG 10544 --- [jury-service] [io-8082-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[AffectationJuryDTO(id=69f4125219ddc095c7d3fa35, idSoutenance=1004, idEnseignant=300501033905, roleJ (truncated)...]
+2026-05-01T03:39:17.772+01:00 DEBUG 10544 --- [jury-service] [io-8082-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-05-01T03:39:17.911+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/api/affectations-jury/soutenance/1004", parameters={}
+2026-05-01T03:39:17.913+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.microservices.jury_service.controller.AffectationJuryController#getAffectationsBySoutenance(Long)
+2026-05-01T03:39:17.915+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-1] o.s.d.m.r.query.MongoQueryCreator        : Created query Query: { "idSoutenance" : 1004}, Fields: {}, Sort: {}
+2026-05-01T03:39:17.916+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-1] o.s.data.mongodb.core.MongoTemplate      : find using query: { "idSoutenance" : 1004} fields: Document{{}} sort: null for class: class com.microservices.jury_service.entity.AffectationJury in collection: affectations_jury
+2026-05-01T03:39:17.988+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-1] o.s.d.m.r.query.MongoQueryCreator        : Created query Query: { "idEnseignant" : 300501033905}, Fields: {}, Sort: {}
+2026-05-01T03:39:17.996+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-1] o.s.data.mongodb.core.MongoTemplate      : find using query: { "idEnseignant" : 300501033905} fields: Document{{}} sort: null for class: class com.microservices.jury_service.entity.MembreJury in collection: membres_jury
+2026-05-01T03:39:18.079+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-1] o.s.d.m.r.query.MongoQueryCreator        : Created query Query: { "idEnseignant" : 310501033905}, Fields: {}, Sort: {}
+2026-05-01T03:39:18.079+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-1] o.s.data.mongodb.core.MongoTemplate      : find using query: { "idEnseignant" : 310501033905} fields: Document{{}} sort: null for class: class com.microservices.jury_service.entity.MembreJury in collection: membres_jury
+2026-05-01T03:39:18.152+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-1] o.s.d.m.r.query.MongoQueryCreator        : Created query Query: { "idEnseignant" : 320501033905}, Fields: {}, Sort: {}
+2026-05-01T03:39:18.154+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-1] o.s.data.mongodb.core.MongoTemplate      : find using query: { "idEnseignant" : 320501033905} fields: Document{{}} sort: null for class: class com.microservices.jury_service.entity.MembreJury in collection: membres_jury
+2026-05-01T03:39:18.223+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2026-05-01T03:39:18.225+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[AffectationJuryDTO(id=69f4125219ddc095c7d3fa35, idSoutenance=1004, idEnseignant=300501033905, roleJ (truncated)...]
+2026-05-01T03:39:18.228+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-05-01T03:39:20.492+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/api/affectations-jury/soutenance/1004", parameters={}
+2026-05-01T03:39:20.497+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.microservices.jury_service.controller.AffectationJuryController#getAffectationsBySoutenance(Long)
+2026-05-01T03:39:20.497+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-2] o.s.d.m.r.query.MongoQueryCreator        : Created query Query: { "idSoutenance" : 1004}, Fields: {}, Sort: {}
+2026-05-01T03:39:20.501+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-2] o.s.data.mongodb.core.MongoTemplate      : find using query: { "idSoutenance" : 1004} fields: Document{{}} sort: null for class: class com.microservices.jury_service.entity.AffectationJury in collection: affectations_jury
+2026-05-01T03:39:20.649+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-2] o.s.d.m.r.query.MongoQueryCreator        : Created query Query: { "idEnseignant" : 300501033905}, Fields: {}, Sort: {}
+2026-05-01T03:39:20.649+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-2] o.s.data.mongodb.core.MongoTemplate      : find using query: { "idEnseignant" : 300501033905} fields: Document{{}} sort: null for class: class com.microservices.jury_service.entity.MembreJury in collection: membres_jury
+2026-05-01T03:39:20.725+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-2] o.s.d.m.r.query.MongoQueryCreator        : Created query Query: { "idEnseignant" : 310501033905}, Fields: {}, Sort: {}
+2026-05-01T03:39:20.725+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-2] o.s.data.mongodb.core.MongoTemplate      : find using query: { "idEnseignant" : 310501033905} fields: Document{{}} sort: null for class: class com.microservices.jury_service.entity.MembreJury in collection: membres_jury
+2026-05-01T03:39:20.793+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-2] o.s.d.m.r.query.MongoQueryCreator        : Created query Query: { "idEnseignant" : 320501033905}, Fields: {}, Sort: {}
+2026-05-01T03:39:20.798+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-2] o.s.data.mongodb.core.MongoTemplate      : find using query: { "idEnseignant" : 320501033905} fields: Document{{}} sort: null for class: class com.microservices.jury_service.entity.MembreJury in collection: membres_jury
+2026-05-01T03:39:20.868+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2026-05-01T03:39:20.868+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[AffectationJuryDTO(id=69f4125219ddc095c7d3fa35, idSoutenance=1004, idEnseignant=300501033905, roleJ (truncated)...]
+2026-05-01T03:39:20.868+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-05-01T03:39:21.828+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/api/affectations-jury/soutenance/1004", parameters={}
+2026-05-01T03:39:21.828+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.microservices.jury_service.controller.AffectationJuryController#getAffectationsBySoutenance(Long)
+2026-05-01T03:39:21.830+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-3] o.s.d.m.r.query.MongoQueryCreator        : Created query Query: { "idSoutenance" : 1004}, Fields: {}, Sort: {}
+2026-05-01T03:39:21.830+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-3] o.s.data.mongodb.core.MongoTemplate      : find using query: { "idSoutenance" : 1004} fields: Document{{}} sort: null for class: class com.microservices.jury_service.entity.AffectationJury in collection: affectations_jury
+2026-05-01T03:39:21.921+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-3] o.s.d.m.r.query.MongoQueryCreator        : Created query Query: { "idEnseignant" : 300501033905}, Fields: {}, Sort: {}
+2026-05-01T03:39:21.922+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-3] o.s.data.mongodb.core.MongoTemplate      : find using query: { "idEnseignant" : 300501033905} fields: Document{{}} sort: null for class: class com.microservices.jury_service.entity.MembreJury in collection: membres_jury
+2026-05-01T03:39:21.998+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-3] o.s.d.m.r.query.MongoQueryCreator        : Created query Query: { "idEnseignant" : 310501033905}, Fields: {}, Sort: {}
+2026-05-01T03:39:21.998+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-3] o.s.data.mongodb.core.MongoTemplate      : find using query: { "idEnseignant" : 310501033905} fields: Document{{}} sort: null for class: class com.microservices.jury_service.entity.MembreJury in collection: membres_jury
+2026-05-01T03:39:22.070+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-3] o.s.d.m.r.query.MongoQueryCreator        : Created query Query: { "idEnseignant" : 320501033905}, Fields: {}, Sort: {}
+2026-05-01T03:39:22.070+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-3] o.s.data.mongodb.core.MongoTemplate      : find using query: { "idEnseignant" : 320501033905} fields: Document{{}} sort: null for class: class com.microservices.jury_service.entity.MembreJury in collection: membres_jury
+2026-05-01T03:39:22.142+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2026-05-01T03:39:22.142+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[AffectationJuryDTO(id=69f4125219ddc095c7d3fa35, idSoutenance=1004, idEnseignant=300501033905, roleJ (truncated)...]
+2026-05-01T03:39:22.142+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2026-05-01T03:39:24.297+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/api/affectations-jury/soutenance/1004", parameters={}
+2026-05-01T03:39:24.302+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.microservices.jury_service.controller.AffectationJuryController#getAffectationsBySoutenance(Long)
+2026-05-01T03:39:24.302+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-4] o.s.d.m.r.query.MongoQueryCreator        : Created query Query: { "idSoutenance" : 1004}, Fields: {}, Sort: {}
+2026-05-01T03:39:24.305+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-4] o.s.data.mongodb.core.MongoTemplate      : find using query: { "idSoutenance" : 1004} fields: Document{{}} sort: null for class: class com.microservices.jury_service.entity.AffectationJury in collection: affectations_jury
+2026-05-01T03:39:24.378+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-4] o.s.d.m.r.query.MongoQueryCreator        : Created query Query: { "idEnseignant" : 300501033905}, Fields: {}, Sort: {}
+2026-05-01T03:39:24.378+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-4] o.s.data.mongodb.core.MongoTemplate      : find using query: { "idEnseignant" : 300501033905} fields: Document{{}} sort: null for class: class com.microservices.jury_service.entity.MembreJury in collection: membres_jury
+2026-05-01T03:39:24.452+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-4] o.s.d.m.r.query.MongoQueryCreator        : Created query Query: { "idEnseignant" : 310501033905}, Fields: {}, Sort: {}
+2026-05-01T03:39:24.452+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-4] o.s.data.mongodb.core.MongoTemplate      : find using query: { "idEnseignant" : 310501033905} fields: Document{{}} sort: null for class: class com.microservices.jury_service.entity.MembreJury in collection: membres_jury
+2026-05-01T03:39:24.527+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-4] o.s.d.m.r.query.MongoQueryCreator        : Created query Query: { "idEnseignant" : 320501033905}, Fields: {}, Sort: {}
+2026-05-01T03:39:24.527+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-4] o.s.data.mongodb.core.MongoTemplate      : find using query: { "idEnseignant" : 320501033905} fields: Document{{}} sort: null for class: class com.microservices.jury_service.entity.MembreJury in collection: membres_jury
+2026-05-01T03:39:24.602+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/yaml]
+2026-05-01T03:39:24.608+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[AffectationJuryDTO(id=69f4125219ddc095c7d3fa35, idSoutenance=1004, idEnseignant=300501033905, roleJ (truncated)...]
+2026-05-01T03:39:24.609+01:00 DEBUG 10544 --- [jury-service] [nio-8082-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK

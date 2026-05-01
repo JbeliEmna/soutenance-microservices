@@ -35,76 +35,70 @@
 
  :: Spring Boot ::               (v3.5.13)
 
-2026-05-01T02:55:50.057+01:00  INFO 24740 --- [gateway-service] [           main] c.m.g.GatewayServiceApplication          : Starting GatewayServiceApplication using Java 23.0.2 with PID 24740 (C:\Users\mouha\projet_microservice\gateway-service\target\classes started by mouha in C:\Users\mouha\projet_microservice\gateway-service)
-2026-05-01T02:55:50.060+01:00  INFO 24740 --- [gateway-service] [           main] c.m.g.GatewayServiceApplication          : No active profile set, falling back to 1 default profile: "default"
-2026-05-01T02:55:50.061+01:00 DEBUG 24740 --- [gateway-service] [           main] o.s.boot.SpringApplication               : Loading source class com.microservices.gateway_service.GatewayServiceApplication
-2026-05-01T02:55:50.102+01:00  INFO 24740 --- [gateway-service] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
-2026-05-01T02:55:50.103+01:00  INFO 24740 --- [gateway-service] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=gateway-service, profiles=[default], label=null, version=3d4c59ac665295bf9462d6c1b52b409e36603013, state=
-2026-05-01T02:55:50.240+01:00 DEBUG 24740 --- [gateway-service] [           main] onfigReactiveWebServerApplicationContext : Refreshing org.springframework.boot.web.reactive.context.AnnotationConfigReactiveWebServerApplicationContext@43826ec
-2026-05-01T02:55:51.951+01:00  INFO 24740 --- [gateway-service] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=ee00bf93-7991-3e43-b852-eb4265ec5bd8
-2026-05-01T02:55:52.553+01:00 DEBUG 24740 --- [gateway-service] [           main] o.s.b.a.AutoConfigurationPackages        : @EnableAutoConfiguration was declared on a class in the package 'com.microservices.gateway_service'. Automatic @Repository and @Entity scanning is enabled.
-2026-05-01T02:55:54.016+01:00  INFO 24740 --- [gateway-service] [           main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
-2026-05-01T02:55:55.050+01:00  INFO 24740 --- [gateway-service] [           main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
-2026-05-01T02:55:55.496+01:00  INFO 24740 --- [gateway-service] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [After]
-2026-05-01T02:55:55.497+01:00  INFO 24740 --- [gateway-service] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Before]
-2026-05-01T02:55:55.497+01:00  INFO 24740 --- [gateway-service] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Between]
-2026-05-01T02:55:55.498+01:00  INFO 24740 --- [gateway-service] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Cookie]
-2026-05-01T02:55:55.498+01:00  INFO 24740 --- [gateway-service] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Header]
-2026-05-01T02:55:55.498+01:00  INFO 24740 --- [gateway-service] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Host]
-2026-05-01T02:55:55.498+01:00  INFO 24740 --- [gateway-service] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Method]
-2026-05-01T02:55:55.498+01:00  INFO 24740 --- [gateway-service] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Path]
-2026-05-01T02:55:55.498+01:00  INFO 24740 --- [gateway-service] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Query]
-2026-05-01T02:55:55.498+01:00  INFO 24740 --- [gateway-service] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [ReadBody]
-2026-05-01T02:55:55.499+01:00  INFO 24740 --- [gateway-service] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [RemoteAddr]
-2026-05-01T02:55:55.499+01:00  INFO 24740 --- [gateway-service] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [XForwardedRemoteAddr]
-2026-05-01T02:55:55.499+01:00  INFO 24740 --- [gateway-service] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Weight]
-2026-05-01T02:55:55.499+01:00  INFO 24740 --- [gateway-service] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [CloudFoundryRouteService]
-2026-05-01T02:55:55.583+01:00 DEBUG 24740 --- [gateway-service] [           main] o.s.w.r.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
-2026-05-01T02:55:56.648+01:00  INFO 24740 --- [gateway-service] [           main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
-2026-05-01T02:55:56.744+01:00  INFO 24740 --- [gateway-service] [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 3 endpoints beneath base path '/actuator'
-2026-05-01T02:55:56.769+01:00 DEBUG 24740 --- [gateway-service] [           main] .b.a.e.w.r.WebFluxEndpointHandlerMapping : 4 mappings in 'webEndpointReactiveHandlerMapping'
-2026-05-01T02:55:56.809+01:00 DEBUG 24740 --- [gateway-service] [           main] a.e.w.r.ControllerEndpointHandlerMapping : 12 mappings in 'controllerEndpointHandlerMapping'
-2026-05-01T02:55:56.898+01:00 DEBUG 24740 --- [gateway-service] [           main] o.s.w.r.r.m.a.ControllerMethodResolver   : ControllerAdvice beans: none
-2026-05-01T02:55:56.949+01:00 DEBUG 24740 --- [gateway-service] [           main] o.s.w.s.adapter.HttpWebHandlerAdapter    : enableLoggingRequestDetails='false': form data and headers will be masked to prevent unsafe logging of potentially sensitive data
-2026-05-01T02:55:57.078+01:00  INFO 24740 --- [gateway-service] [           main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
-2026-05-01T02:55:57.108+01:00  WARN 24740 --- [gateway-service] [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2026-05-01T02:55:57.163+01:00  INFO 24740 --- [gateway-service] [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
-2026-05-01T02:55:57.199+01:00  INFO 24740 --- [gateway-service] [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
-2026-05-01T02:55:57.203+01:00  INFO 24740 --- [gateway-service] [           main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2026-05-01T02:55:57.210+01:00  INFO 24740 --- [gateway-service] [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
-2026-05-01T02:55:57.211+01:00  INFO 24740 --- [gateway-service] [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
-2026-05-01T02:55:57.211+01:00  INFO 24740 --- [gateway-service] [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
-2026-05-01T02:55:57.211+01:00  INFO 24740 --- [gateway-service] [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
-2026-05-01T02:55:57.211+01:00  INFO 24740 --- [gateway-service] [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
-2026-05-01T02:55:57.212+01:00  INFO 24740 --- [gateway-service] [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
-2026-05-01T02:55:57.212+01:00  INFO 24740 --- [gateway-service] [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
-2026-05-01T02:55:57.357+01:00 DEBUG 24740 --- [gateway-service] [           main] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/
-2026-05-01T02:55:57.452+01:00 DEBUG 24740 --- [gateway-service] [           main] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
-2026-05-01T02:55:57.528+01:00 DEBUG 24740 --- [gateway-service] [           main] o.s.web.client.RestTemplate              : Response 200 OK
-2026-05-01T02:55:57.531+01:00 DEBUG 24740 --- [gateway-service] [           main] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
-2026-05-01T02:55:57.581+01:00  INFO 24740 --- [gateway-service] [           main] com.netflix.discovery.DiscoveryClient    : The response status is 200
-2026-05-01T02:55:57.600+01:00  INFO 24740 --- [gateway-service] [           main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
-2026-05-01T02:55:57.612+01:00  INFO 24740 --- [gateway-service] [           main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
-2026-05-01T02:55:57.615+01:00  INFO 24740 --- [gateway-service] [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1777600557614 with initial instances count: 4
-2026-05-01T02:55:57.629+01:00  INFO 24740 --- [gateway-service] [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application GATEWAY-SERVICE with eureka with status UP
-2026-05-01T02:55:57.631+01:00  INFO 24740 --- [gateway-service] [           main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1777600557631, current=UP, previous=STARTING]
-2026-05-01T02:55:57.669+01:00  INFO 24740 --- [gateway-service] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_GATEWAY-SERVICE/localhost:gateway-service:8089: registering service...
-2026-05-01T02:55:57.674+01:00 DEBUG 24740 --- [gateway-service] [foReplicator-%d] o.s.web.client.RestTemplate              : HTTP POST http://localhost:8761/eureka/apps/GATEWAY-SERVICE
-2026-05-01T02:55:57.678+01:00 DEBUG 24740 --- [gateway-service] [foReplicator-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
-2026-05-01T02:55:57.699+01:00 DEBUG 24740 --- [gateway-service] [foReplicator-%d] o.s.web.client.RestTemplate              : Writing [InstanceInfo [instanceId = localhost:gateway-service:8089, appName = GATEWAY-SERVICE, hostName = 192.168.56.1, status = UP, ipAddr = 192.168.56.1, port = 8089, securePort = 443, dataCenterInfo = com.netflix.appinfo.MyDataCenterInfo@a82b279] as "application/json"
-2026-05-01T02:55:57.729+01:00 DEBUG 24740 --- [gateway-service] [foReplicator-%d] o.s.web.client.RestTemplate              : Response 204 NO_CONTENT
-2026-05-01T02:55:57.729+01:00  INFO 24740 --- [gateway-service] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_GATEWAY-SERVICE/localhost:gateway-service:8089 - registration status: 204
-2026-05-01T02:55:57.974+01:00  INFO 24740 --- [gateway-service] [           main] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 8089 (http)
-2026-05-01T02:55:57.976+01:00  INFO 24740 --- [gateway-service] [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8089
-2026-05-01T02:55:58.856+01:00 DEBUG 24740 --- [gateway-service] [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [0e6b3047-1] HTTP GET "/actuator/health"
-2026-05-01T02:55:58.887+01:00 DEBUG 24740 --- [gateway-service] [ctor-http-nio-2] .b.a.e.w.r.WebFluxEndpointHandlerMapping : [0e6b3047-1] Mapped to Actuator web endpoint 'health'
-2026-05-01T02:55:58.943+01:00 DEBUG 24740 --- [gateway-service] [oundedElastic-2] .s.w.r.r.m.a.ResponseEntityResultHandler : [0e6b3047-1] Using 'application/vnd.spring-boot.actuator.v3+json' given [*/*] and supported [application/vnd.spring-boot.actuator.v3+json, application/vnd.spring-boot.actuator.v2+json, application/json]
-2026-05-01T02:55:58.944+01:00 DEBUG 24740 --- [gateway-service] [oundedElastic-2] .s.w.r.r.m.a.ResponseEntityResultHandler : [0e6b3047-1] 0..1 [org.springframework.boot.actuate.health.SystemHealth]
-2026-05-01T02:55:58.961+01:00 DEBUG 24740 --- [gateway-service] [oundedElastic-2] o.s.http.codec.json.Jackson2JsonEncoder  : [0e6b3047-1] Encoding [org.springframework.boot.actuate.health.SystemHealth@2a2e20c7]
-2026-05-01T02:55:58.974+01:00 DEBUG 24740 --- [gateway-service] [oundedElastic-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [0e6b3047-1] Completed 200 OK
-2026-05-01T02:55:58.992+01:00  INFO 24740 --- [gateway-service] [           main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
-2026-05-01T02:56:00.001+01:00  INFO 24740 --- [gateway-service] [           main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
-2026-05-01T02:56:00.030+01:00 DEBUG 24740 --- [gateway-service] [           main] .s.b.a.l.ConditionEvaluationReportLogger : 
+2026-05-01T03:38:38.543+01:00  INFO 25092 --- [gateway-service] [           main] c.m.g.GatewayServiceApplication          : Starting GatewayServiceApplication using Java 23.0.2 with PID 25092 (C:\Users\mouha\projet_microservice\gateway-service\target\classes started by mouha in C:\Users\mouha\projet_microservice\gateway-service)
+2026-05-01T03:38:38.547+01:00  INFO 25092 --- [gateway-service] [           main] c.m.g.GatewayServiceApplication          : No active profile set, falling back to 1 default profile: "default"
+2026-05-01T03:38:38.547+01:00 DEBUG 25092 --- [gateway-service] [           main] o.s.boot.SpringApplication               : Loading source class com.microservices.gateway_service.GatewayServiceApplication
+2026-05-01T03:38:38.597+01:00  INFO 25092 --- [gateway-service] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2026-05-01T03:38:38.597+01:00  INFO 25092 --- [gateway-service] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=gateway-service, profiles=[default], label=null, version=3d4c59ac665295bf9462d6c1b52b409e36603013, state=
+2026-05-01T03:38:38.740+01:00 DEBUG 25092 --- [gateway-service] [           main] onfigReactiveWebServerApplicationContext : Refreshing org.springframework.boot.web.reactive.context.AnnotationConfigReactiveWebServerApplicationContext@43826ec
+2026-05-01T03:38:39.788+01:00  INFO 25092 --- [gateway-service] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=ee00bf93-7991-3e43-b852-eb4265ec5bd8
+2026-05-01T03:38:40.107+01:00 DEBUG 25092 --- [gateway-service] [           main] o.s.b.a.AutoConfigurationPackages        : @EnableAutoConfiguration was declared on a class in the package 'com.microservices.gateway_service'. Automatic @Repository and @Entity scanning is enabled.
+2026-05-01T03:38:41.399+01:00  INFO 25092 --- [gateway-service] [           main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2026-05-01T03:38:42.446+01:00  INFO 25092 --- [gateway-service] [           main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2026-05-01T03:38:42.837+01:00  INFO 25092 --- [gateway-service] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [After]
+2026-05-01T03:38:42.837+01:00  INFO 25092 --- [gateway-service] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Before]
+2026-05-01T03:38:42.844+01:00  INFO 25092 --- [gateway-service] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Between]
+2026-05-01T03:38:42.845+01:00  INFO 25092 --- [gateway-service] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Cookie]
+2026-05-01T03:38:42.845+01:00  INFO 25092 --- [gateway-service] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Header]
+2026-05-01T03:38:42.845+01:00  INFO 25092 --- [gateway-service] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Host]
+2026-05-01T03:38:42.845+01:00  INFO 25092 --- [gateway-service] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Method]
+2026-05-01T03:38:42.845+01:00  INFO 25092 --- [gateway-service] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Path]
+2026-05-01T03:38:42.845+01:00  INFO 25092 --- [gateway-service] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Query]
+2026-05-01T03:38:42.845+01:00  INFO 25092 --- [gateway-service] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [ReadBody]
+2026-05-01T03:38:42.848+01:00  INFO 25092 --- [gateway-service] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [RemoteAddr]
+2026-05-01T03:38:42.848+01:00  INFO 25092 --- [gateway-service] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [XForwardedRemoteAddr]
+2026-05-01T03:38:42.848+01:00  INFO 25092 --- [gateway-service] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Weight]
+2026-05-01T03:38:42.848+01:00  INFO 25092 --- [gateway-service] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [CloudFoundryRouteService]
+2026-05-01T03:38:42.949+01:00 DEBUG 25092 --- [gateway-service] [           main] o.s.w.r.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2026-05-01T03:38:44.021+01:00  INFO 25092 --- [gateway-service] [           main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2026-05-01T03:38:44.173+01:00  INFO 25092 --- [gateway-service] [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 3 endpoints beneath base path '/actuator'
+2026-05-01T03:38:44.207+01:00 DEBUG 25092 --- [gateway-service] [           main] .b.a.e.w.r.WebFluxEndpointHandlerMapping : 4 mappings in 'webEndpointReactiveHandlerMapping'
+2026-05-01T03:38:44.244+01:00 DEBUG 25092 --- [gateway-service] [           main] a.e.w.r.ControllerEndpointHandlerMapping : 12 mappings in 'controllerEndpointHandlerMapping'
+2026-05-01T03:38:44.319+01:00 DEBUG 25092 --- [gateway-service] [           main] o.s.w.r.r.m.a.ControllerMethodResolver   : ControllerAdvice beans: none
+2026-05-01T03:38:44.392+01:00 DEBUG 25092 --- [gateway-service] [           main] o.s.w.s.adapter.HttpWebHandlerAdapter    : enableLoggingRequestDetails='false': form data and headers will be masked to prevent unsafe logging of potentially sensitive data
+2026-05-01T03:38:44.654+01:00  INFO 25092 --- [gateway-service] [           main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2026-05-01T03:38:44.731+01:00  WARN 25092 --- [gateway-service] [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-05-01T03:38:44.838+01:00  INFO 25092 --- [gateway-service] [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2026-05-01T03:38:44.899+01:00  INFO 25092 --- [gateway-service] [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2026-05-01T03:38:44.908+01:00  INFO 25092 --- [gateway-service] [           main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-05-01T03:38:44.937+01:00  INFO 25092 --- [gateway-service] [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-05-01T03:38:44.941+01:00  INFO 25092 --- [gateway-service] [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-05-01T03:38:44.941+01:00  INFO 25092 --- [gateway-service] [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-05-01T03:38:44.941+01:00  INFO 25092 --- [gateway-service] [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-05-01T03:38:44.941+01:00  INFO 25092 --- [gateway-service] [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-05-01T03:38:44.941+01:00  INFO 25092 --- [gateway-service] [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2026-05-01T03:38:44.941+01:00  INFO 25092 --- [gateway-service] [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-05-01T03:38:45.328+01:00 DEBUG 25092 --- [gateway-service] [           main] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/
+2026-05-01T03:38:45.448+01:00 DEBUG 25092 --- [gateway-service] [           main] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+2026-05-01T03:38:45.554+01:00 DEBUG 25092 --- [gateway-service] [           main] o.s.web.client.RestTemplate              : Response 200 OK
+2026-05-01T03:38:45.558+01:00 DEBUG 25092 --- [gateway-service] [           main] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2026-05-01T03:38:45.614+01:00  INFO 25092 --- [gateway-service] [           main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-05-01T03:38:45.619+01:00  INFO 25092 --- [gateway-service] [           main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2026-05-01T03:38:45.625+01:00  INFO 25092 --- [gateway-service] [           main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-05-01T03:38:45.628+01:00  INFO 25092 --- [gateway-service] [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1777603125628 with initial instances count: 5
+2026-05-01T03:38:45.637+01:00  INFO 25092 --- [gateway-service] [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application GATEWAY-SERVICE with eureka with status UP
+2026-05-01T03:38:45.637+01:00  INFO 25092 --- [gateway-service] [           main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1777603125637, current=UP, previous=STARTING]
+2026-05-01T03:38:45.648+01:00  INFO 25092 --- [gateway-service] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_GATEWAY-SERVICE/localhost:gateway-service:8089: registering service...
+2026-05-01T03:38:45.653+01:00 DEBUG 25092 --- [gateway-service] [foReplicator-%d] o.s.web.client.RestTemplate              : HTTP POST http://localhost:8761/eureka/apps/GATEWAY-SERVICE
+2026-05-01T03:38:45.660+01:00 DEBUG 25092 --- [gateway-service] [foReplicator-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+2026-05-01T03:38:45.693+01:00 DEBUG 25092 --- [gateway-service] [foReplicator-%d] o.s.web.client.RestTemplate              : Writing [InstanceInfo [instanceId = localhost:gateway-service:8089, appName = GATEWAY-SERVICE, hostName = 192.168.56.1, status = UP, ipAddr = 192.168.56.1, port = 8089, securePort = 443, dataCenterInfo = com.netflix.appinfo.MyDataCenterInfo@5c630ec9] as "application/json"
+2026-05-01T03:38:45.743+01:00 DEBUG 25092 --- [gateway-service] [foReplicator-%d] o.s.web.client.RestTemplate              : Response 204 NO_CONTENT
+2026-05-01T03:38:45.743+01:00  INFO 25092 --- [gateway-service] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_GATEWAY-SERVICE/localhost:gateway-service:8089 - registration status: 204
+2026-05-01T03:38:46.182+01:00  INFO 25092 --- [gateway-service] [           main] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 8089 (http)
+2026-05-01T03:38:46.188+01:00  INFO 25092 --- [gateway-service] [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8089
+2026-05-01T03:38:47.200+01:00  INFO 25092 --- [gateway-service] [           main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2026-05-01T03:38:48.212+01:00  INFO 25092 --- [gateway-service] [           main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2026-05-01T03:38:48.271+01:00 DEBUG 25092 --- [gateway-service] [           main] .s.b.a.l.ConditionEvaluationReportLogger : 
 
 
 ============================
@@ -2594,75 +2588,77 @@ Unconditional classes:
 
 
 
-2026-05-01T02:56:00.047+01:00  INFO 24740 --- [gateway-service] [           main] c.m.g.GatewayServiceApplication          : Started GatewayServiceApplication in 12.2 seconds (process running for 12.8)
-2026-05-01T02:56:00.048+01:00 DEBUG 24740 --- [gateway-service] [           main] o.s.b.a.ApplicationAvailabilityBean      : Application availability state LivenessState changed to CORRECT
-2026-05-01T02:56:00.051+01:00 DEBUG 24740 --- [gateway-service] [           main] o.s.b.a.ApplicationAvailabilityBean      : Application availability state ReadinessState changed to ACCEPTING_TRAFFIC
-2026-05-01T02:56:14.253+01:00 DEBUG 24740 --- [gateway-service] [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [0e6b3047-2] HTTP POST "/api/auth/login"
-2026-05-01T02:56:15.239+01:00 DEBUG 24740 --- [gateway-service] [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [0e6b3047-2] Completed 200 OK
-2026-05-01T02:56:15.375+01:00 DEBUG 24740 --- [gateway-service] [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [0e6b3047-3] HTTP POST "/api/auth/register"
-2026-05-01T02:56:15.882+01:00 DEBUG 24740 --- [gateway-service] [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [0e6b3047-3] Completed 201 CREATED
-2026-05-01T02:56:15.919+01:00 DEBUG 24740 --- [gateway-service] [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [0e6b3047-4] HTTP POST "/api/auth/register"
-2026-05-01T02:56:16.393+01:00 DEBUG 24740 --- [gateway-service] [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [0e6b3047-4] Completed 201 CREATED
-2026-05-01T02:56:16.421+01:00 DEBUG 24740 --- [gateway-service] [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [0e6b3047-5] HTTP POST "/api/auth/admin/create-user"
-2026-05-01T02:56:17.139+01:00 DEBUG 24740 --- [gateway-service] [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [0e6b3047-5] Completed 201 CREATED
-2026-05-01T02:56:17.176+01:00 DEBUG 24740 --- [gateway-service] [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [0e6b3047-6] HTTP POST "/api/auth/admin/create-user"
-2026-05-01T02:56:17.977+01:00 DEBUG 24740 --- [gateway-service] [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [0e6b3047-6] Completed 201 CREATED
-2026-05-01T02:56:18.027+01:00 DEBUG 24740 --- [gateway-service] [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [0e6b3047-7] HTTP POST "/api/auth/admin/create-user"
-2026-05-01T02:56:18.688+01:00 DEBUG 24740 --- [gateway-service] [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [0e6b3047-7] Completed 201 CREATED
-2026-05-01T02:56:18.711+01:00 DEBUG 24740 --- [gateway-service] [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [0e6b3047-8] HTTP POST "/api/auth/admin/create-user"
-2026-05-01T02:56:19.376+01:00 DEBUG 24740 --- [gateway-service] [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [0e6b3047-8] Completed 201 CREATED
-2026-05-01T02:56:19.416+01:00 DEBUG 24740 --- [gateway-service] [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [0e6b3047-9] HTTP POST "/api/auth/admin/create-user"
-2026-05-01T02:56:20.004+01:00 DEBUG 24740 --- [gateway-service] [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [0e6b3047-9] Completed 201 CREATED
-2026-05-01T02:56:20.038+01:00 DEBUG 24740 --- [gateway-service] [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [0e6b3047-10] HTTP POST "/api/salles"
-2026-05-01T02:56:20.824+01:00 DEBUG 24740 --- [gateway-service] [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [0e6b3047-10] Completed 201 CREATED
-2026-05-01T02:56:20.850+01:00 DEBUG 24740 --- [gateway-service] [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [0e6b3047-11] HTTP POST "/api/salles"
-2026-05-01T02:56:21.204+01:00 DEBUG 24740 --- [gateway-service] [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [0e6b3047-11] Completed 201 CREATED
-2026-05-01T02:56:21.232+01:00 DEBUG 24740 --- [gateway-service] [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [0e6b3047-12] HTTP POST "/api/salles"
-2026-05-01T02:56:21.322+01:00 DEBUG 24740 --- [gateway-service] [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [0e6b3047-12] Completed 409 CONFLICT
-2026-05-01T02:56:21.375+01:00 DEBUG 24740 --- [gateway-service] [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [0e6b3047-13] HTTP POST "/api/soutenances"
-2026-05-01T02:56:22.982+01:00 DEBUG 24740 --- [gateway-service] [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [0e6b3047-13] Completed 201 CREATED
-2026-05-01T02:56:23.018+01:00 DEBUG 24740 --- [gateway-service] [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [0e6b3047-14] HTTP POST "/api/soutenances"
-2026-05-01T02:56:23.869+01:00 DEBUG 24740 --- [gateway-service] [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [0e6b3047-14] Completed 409 CONFLICT
-2026-05-01T02:56:23.884+01:00 DEBUG 24740 --- [gateway-service] [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [0e6b3047-15] HTTP POST "/api/membres-jury"
-2026-05-01T02:56:24.314+01:00 DEBUG 24740 --- [gateway-service] [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [0e6b3047-15] Completed 201 CREATED
-2026-05-01T02:56:24.346+01:00 DEBUG 24740 --- [gateway-service] [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [0e6b3047-16] HTTP POST "/api/membres-jury"
-2026-05-01T02:56:24.574+01:00 DEBUG 24740 --- [gateway-service] [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [0e6b3047-16] Completed 201 CREATED
-2026-05-01T02:56:24.612+01:00 DEBUG 24740 --- [gateway-service] [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [0e6b3047-17] HTTP POST "/api/membres-jury"
-2026-05-01T02:56:24.818+01:00 DEBUG 24740 --- [gateway-service] [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [0e6b3047-17] Completed 201 CREATED
-2026-05-01T02:56:24.866+01:00 DEBUG 24740 --- [gateway-service] [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [0e6b3047-18] HTTP POST "/api/membres-jury"
-2026-05-01T02:56:25.066+01:00 DEBUG 24740 --- [gateway-service] [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [0e6b3047-18] Completed 201 CREATED
-2026-05-01T02:56:25.110+01:00 DEBUG 24740 --- [gateway-service] [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [0e6b3047-19] HTTP POST "/api/affectations-jury"
-2026-05-01T02:56:26.097+01:00 DEBUG 24740 --- [gateway-service] [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [0e6b3047-19] Completed 201 CREATED
-2026-05-01T02:56:26.122+01:00 DEBUG 24740 --- [gateway-service] [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [0e6b3047-20] HTTP POST "/api/affectations-jury"
-2026-05-01T02:56:26.779+01:00 DEBUG 24740 --- [gateway-service] [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [0e6b3047-20] Completed 201 CREATED
-2026-05-01T02:56:26.809+01:00 DEBUG 24740 --- [gateway-service] [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [0e6b3047-21] HTTP POST "/api/affectations-jury"
-2026-05-01T02:56:27.412+01:00 DEBUG 24740 --- [gateway-service] [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [0e6b3047-21] Completed 201 CREATED
-2026-05-01T02:56:27.446+01:00 DEBUG 24740 --- [gateway-service] [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [0e6b3047-22] HTTP POST "/api/affectations-jury"
-2026-05-01T02:56:27.607+01:00 DEBUG 24740 --- [gateway-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/delta
-2026-05-01T02:56:27.608+01:00 DEBUG 24740 --- [gateway-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
-2026-05-01T02:56:27.609+01:00 DEBUG 24740 --- [gateway-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/GATEWAY-SERVICE/localhost:gateway-service:8089?status=UP&lastDirtyTimestamp=1777600557630
-2026-05-01T02:56:27.617+01:00 DEBUG 24740 --- [gateway-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
-2026-05-01T02:56:27.630+01:00 DEBUG 24740 --- [gateway-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
-2026-05-01T02:56:27.630+01:00 DEBUG 24740 --- [gateway-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
-2026-05-01T02:56:27.639+01:00 DEBUG 24740 --- [gateway-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
-2026-05-01T02:56:27.799+01:00 DEBUG 24740 --- [gateway-service] [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [0e6b3047-22] Completed 409 CONFLICT
-2026-05-01T02:56:27.807+01:00 DEBUG 24740 --- [gateway-service] [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [0e6b3047-23] HTTP POST "/api/etudiants"
-2026-05-01T02:56:28.175+01:00 DEBUG 24740 --- [gateway-service] [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [0e6b3047-23] Completed 201 CREATED
-2026-05-01T02:56:28.193+01:00 DEBUG 24740 --- [gateway-service] [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [0e6b3047-24] HTTP POST "/api/etudiants"
-2026-05-01T02:56:28.464+01:00 DEBUG 24740 --- [gateway-service] [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [0e6b3047-24] Completed 201 CREATED
-2026-05-01T02:56:28.489+01:00 DEBUG 24740 --- [gateway-service] [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [0e6b3047-25] HTTP POST "/api/evaluations"
-2026-05-01T02:56:29.209+01:00 DEBUG 24740 --- [gateway-service] [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [0e6b3047-25] Completed 409 CONFLICT
-2026-05-01T02:56:29.212+01:00 DEBUG 24740 --- [gateway-service] [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [0e6b3047-26] HTTP POST "/api/evaluations"
-2026-05-01T02:56:31.196+01:00 DEBUG 24740 --- [gateway-service] [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [0e6b3047-26] Completed 201 CREATED
-2026-05-01T02:56:31.228+01:00 DEBUG 24740 --- [gateway-service] [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [0e6b3047-27] HTTP POST "/api/evaluations"
-2026-05-01T02:56:32.460+01:00 DEBUG 24740 --- [gateway-service] [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [0e6b3047-27] Completed 201 CREATED
-2026-05-01T02:56:32.517+01:00 DEBUG 24740 --- [gateway-service] [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [0e6b3047-28] HTTP POST "/api/evaluations"
-2026-05-01T02:56:33.904+01:00 DEBUG 24740 --- [gateway-service] [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [0e6b3047-28] Completed 201 CREATED
-2026-05-01T02:56:33.941+01:00 DEBUG 24740 --- [gateway-service] [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [0e6b3047-29] HTTP GET "/api/resultats/soutenances/1003"
-2026-05-01T02:56:34.114+01:00 DEBUG 24740 --- [gateway-service] [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [0e6b3047-29] Completed 200 OK
-2026-05-01T02:56:34.154+01:00 DEBUG 24740 --- [gateway-service] [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [0e6b3047-30] HTTP GET "/api/resultats/etudiants/100501025614"
-2026-05-01T02:56:34.419+01:00 DEBUG 24740 --- [gateway-service] [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [0e6b3047-30] Completed 200 OK
-2026-05-01T02:56:34.456+01:00 DEBUG 24740 --- [gateway-service] [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [0e6b3047-31] HTTP GET "/api/soutenances/1003/etudiants"
-2026-05-01T02:56:34.529+01:00 DEBUG 24740 --- [gateway-service] [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [0e6b3047-31] Completed 200 OK
-2026-05-01T02:56:34.562+01:00 DEBUG 24740 --- [gateway-service] [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [0e6b3047-32] HTTP GET "/api/soutenances/1003/details"
-2026-05-01T02:56:35.756+01:00 DEBUG 24740 --- [gateway-service] [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [0e6b3047-32] Completed 200 OK
+2026-05-01T03:38:48.313+01:00  INFO 25092 --- [gateway-service] [           main] c.m.g.GatewayServiceApplication          : Started GatewayServiceApplication in 12.002 seconds (process running for 12.733)
+2026-05-01T03:38:48.318+01:00 DEBUG 25092 --- [gateway-service] [           main] o.s.b.a.ApplicationAvailabilityBean      : Application availability state LivenessState changed to CORRECT
+2026-05-01T03:38:48.324+01:00 DEBUG 25092 --- [gateway-service] [           main] o.s.b.a.ApplicationAvailabilityBean      : Application availability state ReadinessState changed to ACCEPTING_TRAFFIC
+2026-05-01T03:38:49.810+01:00 DEBUG 25092 --- [gateway-service] [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [327995e1-1] HTTP GET "/actuator/health"
+2026-05-01T03:38:49.850+01:00 DEBUG 25092 --- [gateway-service] [ctor-http-nio-2] .b.a.e.w.r.WebFluxEndpointHandlerMapping : [327995e1-1] Mapped to Actuator web endpoint 'health'
+2026-05-01T03:38:49.931+01:00 DEBUG 25092 --- [gateway-service] [oundedElastic-2] .s.w.r.r.m.a.ResponseEntityResultHandler : [327995e1-1] Using 'application/vnd.spring-boot.actuator.v3+json' given [*/*] and supported [application/vnd.spring-boot.actuator.v3+json, application/vnd.spring-boot.actuator.v2+json, application/json]
+2026-05-01T03:38:49.931+01:00 DEBUG 25092 --- [gateway-service] [oundedElastic-2] .s.w.r.r.m.a.ResponseEntityResultHandler : [327995e1-1] 0..1 [org.springframework.boot.actuate.health.SystemHealth]
+2026-05-01T03:38:49.967+01:00 DEBUG 25092 --- [gateway-service] [oundedElastic-2] o.s.http.codec.json.Jackson2JsonEncoder  : [327995e1-1] Encoding [org.springframework.boot.actuate.health.SystemHealth@7ee5cc0e]
+2026-05-01T03:38:49.998+01:00 DEBUG 25092 --- [gateway-service] [oundedElastic-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [327995e1-1] Completed 200 OK
+2026-05-01T03:39:05.487+01:00 DEBUG 25092 --- [gateway-service] [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [327995e1-2] HTTP POST "/api/auth/login"
+2026-05-01T03:39:07.048+01:00 DEBUG 25092 --- [gateway-service] [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [327995e1-2] Completed 200 OK
+2026-05-01T03:39:07.259+01:00 DEBUG 25092 --- [gateway-service] [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [327995e1-3] HTTP POST "/api/auth/register"
+2026-05-01T03:39:07.705+01:00 DEBUG 25092 --- [gateway-service] [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [327995e1-3] Completed 201 CREATED
+2026-05-01T03:39:07.747+01:00 DEBUG 25092 --- [gateway-service] [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [327995e1-4] HTTP POST "/api/auth/register"
+2026-05-01T03:39:08.274+01:00 DEBUG 25092 --- [gateway-service] [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [327995e1-4] Completed 201 CREATED
+2026-05-01T03:39:08.308+01:00 DEBUG 25092 --- [gateway-service] [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [327995e1-5] HTTP POST "/api/auth/admin/create-user"
+2026-05-01T03:39:08.958+01:00 DEBUG 25092 --- [gateway-service] [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [327995e1-5] Completed 201 CREATED
+2026-05-01T03:39:08.997+01:00 DEBUG 25092 --- [gateway-service] [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [327995e1-6] HTTP POST "/api/auth/admin/create-user"
+2026-05-01T03:39:09.506+01:00 DEBUG 25092 --- [gateway-service] [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [327995e1-6] Completed 201 CREATED
+2026-05-01T03:39:09.534+01:00 DEBUG 25092 --- [gateway-service] [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [327995e1-7] HTTP POST "/api/auth/admin/create-user"
+2026-05-01T03:39:10.015+01:00 DEBUG 25092 --- [gateway-service] [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [327995e1-7] Completed 201 CREATED
+2026-05-01T03:39:10.047+01:00 DEBUG 25092 --- [gateway-service] [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [327995e1-8] HTTP POST "/api/auth/admin/create-user"
+2026-05-01T03:39:10.498+01:00 DEBUG 25092 --- [gateway-service] [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [327995e1-8] Completed 201 CREATED
+2026-05-01T03:39:10.538+01:00 DEBUG 25092 --- [gateway-service] [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [327995e1-9] HTTP POST "/api/auth/admin/create-user"
+2026-05-01T03:39:10.960+01:00 DEBUG 25092 --- [gateway-service] [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [327995e1-9] Completed 201 CREATED
+2026-05-01T03:39:11.004+01:00 DEBUG 25092 --- [gateway-service] [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [327995e1-10] HTTP POST "/api/salles"
+2026-05-01T03:39:11.446+01:00 DEBUG 25092 --- [gateway-service] [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [327995e1-10] Completed 201 CREATED
+2026-05-01T03:39:11.477+01:00 DEBUG 25092 --- [gateway-service] [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [327995e1-11] HTTP POST "/api/salles"
+2026-05-01T03:39:11.729+01:00 DEBUG 25092 --- [gateway-service] [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [327995e1-11] Completed 201 CREATED
+2026-05-01T03:39:11.764+01:00 DEBUG 25092 --- [gateway-service] [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [327995e1-12] HTTP POST "/api/salles"
+2026-05-01T03:39:11.887+01:00 DEBUG 25092 --- [gateway-service] [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [327995e1-12] Completed 409 CONFLICT
+2026-05-01T03:39:11.962+01:00 DEBUG 25092 --- [gateway-service] [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [327995e1-13] HTTP POST "/api/soutenances"
+2026-05-01T03:39:12.946+01:00 DEBUG 25092 --- [gateway-service] [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [327995e1-13] Completed 201 CREATED
+2026-05-01T03:39:12.988+01:00 DEBUG 25092 --- [gateway-service] [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [327995e1-14] HTTP POST "/api/soutenances"
+2026-05-01T03:39:13.467+01:00 DEBUG 25092 --- [gateway-service] [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [327995e1-14] Completed 409 CONFLICT
+2026-05-01T03:39:13.473+01:00 DEBUG 25092 --- [gateway-service] [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [327995e1-15] HTTP POST "/api/membres-jury"
+2026-05-01T03:39:13.669+01:00 DEBUG 25092 --- [gateway-service] [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [327995e1-15] Completed 201 CREATED
+2026-05-01T03:39:13.695+01:00 DEBUG 25092 --- [gateway-service] [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [327995e1-16] HTTP POST "/api/membres-jury"
+2026-05-01T03:39:13.780+01:00 DEBUG 25092 --- [gateway-service] [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [327995e1-16] Completed 201 CREATED
+2026-05-01T03:39:13.869+01:00 DEBUG 25092 --- [gateway-service] [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [327995e1-17] HTTP POST "/api/membres-jury"
+2026-05-01T03:39:13.957+01:00 DEBUG 25092 --- [gateway-service] [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [327995e1-17] Completed 201 CREATED
+2026-05-01T03:39:14.038+01:00 DEBUG 25092 --- [gateway-service] [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [327995e1-18] HTTP POST "/api/membres-jury"
+2026-05-01T03:39:14.137+01:00 DEBUG 25092 --- [gateway-service] [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [327995e1-18] Completed 201 CREATED
+2026-05-01T03:39:14.197+01:00 DEBUG 25092 --- [gateway-service] [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [327995e1-19] HTTP POST "/api/affectations-jury"
+2026-05-01T03:39:15.101+01:00 DEBUG 25092 --- [gateway-service] [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [327995e1-19] Completed 201 CREATED
+2026-05-01T03:39:15.192+01:00 DEBUG 25092 --- [gateway-service] [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [327995e1-20] HTTP POST "/api/affectations-jury"
+2026-05-01T03:39:15.625+01:00 DEBUG 25092 --- [gateway-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : HTTP GET http://localhost:8761/eureka/apps/delta
+2026-05-01T03:39:15.625+01:00 DEBUG 25092 --- [gateway-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+2026-05-01T03:39:15.627+01:00 DEBUG 25092 --- [gateway-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : HTTP PUT http://localhost:8761/eureka/apps/GATEWAY-SERVICE/localhost:gateway-service:8089?status=UP&lastDirtyTimestamp=1777603125637
+2026-05-01T03:39:15.642+01:00 DEBUG 25092 --- [gateway-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2026-05-01T03:39:15.645+01:00 DEBUG 25092 --- [gateway-service] [reshExecutor-%d] o.s.web.client.RestTemplate              : Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2026-05-01T03:39:15.651+01:00 DEBUG 25092 --- [gateway-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+2026-05-01T03:39:15.662+01:00 DEBUG 25092 --- [gateway-service] [beatExecutor-%d] o.s.web.client.RestTemplate              : Response 200 OK
+2026-05-01T03:39:15.775+01:00 DEBUG 25092 --- [gateway-service] [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [327995e1-20] Completed 201 CREATED
+2026-05-01T03:39:15.839+01:00 DEBUG 25092 --- [gateway-service] [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [327995e1-21] HTTP POST "/api/affectations-jury"
+2026-05-01T03:39:16.424+01:00 DEBUG 25092 --- [gateway-service] [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [327995e1-21] Completed 201 CREATED
+2026-05-01T03:39:16.497+01:00 DEBUG 25092 --- [gateway-service] [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [327995e1-22] HTTP POST "/api/affectations-jury"
+2026-05-01T03:39:16.879+01:00 DEBUG 25092 --- [gateway-service] [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [327995e1-22] Completed 409 CONFLICT
+2026-05-01T03:39:16.891+01:00 DEBUG 25092 --- [gateway-service] [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [327995e1-23] HTTP POST "/api/evaluations"
+2026-05-01T03:39:17.807+01:00 DEBUG 25092 --- [gateway-service] [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [327995e1-23] Completed 409 CONFLICT
+2026-05-01T03:39:17.807+01:00 DEBUG 25092 --- [gateway-service] [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [327995e1-24] HTTP POST "/api/evaluations"
+2026-05-01T03:39:20.257+01:00 DEBUG 25092 --- [gateway-service] [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [327995e1-24] Completed 201 CREATED
+2026-05-01T03:39:20.338+01:00 DEBUG 25092 --- [gateway-service] [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [327995e1-25] HTTP POST "/api/evaluations"
+2026-05-01T03:39:21.657+01:00 DEBUG 25092 --- [gateway-service] [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [327995e1-25] Completed 201 CREATED
+2026-05-01T03:39:21.733+01:00 DEBUG 25092 --- [gateway-service] [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [327995e1-26] HTTP POST "/api/evaluations"
+2026-05-01T03:39:23.151+01:00 DEBUG 25092 --- [gateway-service] [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [327995e1-26] Completed 201 CREATED
+2026-05-01T03:39:23.239+01:00 DEBUG 25092 --- [gateway-service] [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [327995e1-27] HTTP GET "/api/resultats/soutenances/1004"
+2026-05-01T03:39:23.428+01:00 DEBUG 25092 --- [gateway-service] [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [327995e1-27] Completed 200 OK
+2026-05-01T03:39:23.532+01:00 DEBUG 25092 --- [gateway-service] [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [327995e1-28] HTTP GET "/api/resultats/etudiants/100501033905"
+2026-05-01T03:39:23.931+01:00 DEBUG 25092 --- [gateway-service] [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [327995e1-28] Completed 200 OK
+2026-05-01T03:39:23.998+01:00 DEBUG 25092 --- [gateway-service] [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [327995e1-29] HTTP GET "/api/soutenances/1004/etudiants"
+2026-05-01T03:39:24.082+01:00 DEBUG 25092 --- [gateway-service] [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [327995e1-29] Completed 200 OK
+2026-05-01T03:39:24.180+01:00 DEBUG 25092 --- [gateway-service] [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [327995e1-30] HTTP GET "/api/soutenances/1004/details"
+2026-05-01T03:39:24.965+01:00 DEBUG 25092 --- [gateway-service] [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [327995e1-30] Completed 200 OK

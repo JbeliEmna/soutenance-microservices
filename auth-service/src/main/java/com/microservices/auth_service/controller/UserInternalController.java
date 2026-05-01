@@ -12,12 +12,24 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/api/users/internal")
 @RequiredArgsConstructor
 public class UserInternalController {
 
     private final UserRepository userRepository;
+
+    @GetMapping("/etudiants")
+    public ResponseEntity<List<UserInternalResponse>> getAllStudents() {
+        List<UserInternalResponse> students = userRepository.findByRoleAndEnabledTrue(Role.ROLE_ETUDIANT)
+                .stream()
+                .map(UserInternalResponse::fromEntity)
+                .toList();
+
+        return ResponseEntity.ok(students);
+    }
 
     @GetMapping("/{externalId}")
     public ResponseEntity<UserInternalResponse> getByExternalId(@PathVariable Long externalId) {
