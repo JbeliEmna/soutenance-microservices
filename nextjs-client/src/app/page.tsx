@@ -109,10 +109,10 @@ export default function Home() {
       <section className="bg-white p-8 rounded-xl border border-slate-200 shadow-sm">
         <h3 className="font-bold text-slate-900 mb-6 text-xl">Fonctionnalités disponibles</h3>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-slate-600">
-          <div className="p-4 rounded-lg bg-slate-50 border border-slate-100">
-            <p className="font-semibold text-slate-900 mb-1">Planification</p>
+          <Link href="/planning/salles" className="p-4 rounded-lg bg-slate-50 border border-slate-100 hover:border-blue-200 hover:bg-blue-50 transition-all group">
+            <p className="font-semibold text-slate-900 mb-1 group-hover:text-blue-600">Planification</p>
             <p className="text-sm">Gérer les dates, les salles et les créneaux horaires.</p>
-          </div>
+          </Link>
           <Link href="/jury" className="p-4 rounded-lg bg-slate-50 border border-slate-100 hover:border-blue-200 hover:bg-blue-50 transition-all group">
             <p className="font-semibold text-slate-900 mb-1 group-hover:text-blue-600">Jurys</p>
             <p className="text-sm">Affecter les présidents, rapporteurs et examinateurs.</p>
