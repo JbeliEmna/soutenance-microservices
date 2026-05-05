@@ -117,10 +117,10 @@ export default function Home() {
             <p className="font-semibold text-slate-900 mb-1 group-hover:text-blue-600">Jurys</p>
             <p className="text-sm">Affecter les présidents, rapporteurs et examinateurs.</p>
           </Link>
-          <div className="p-4 rounded-lg bg-slate-50 border border-slate-100">
-            <p className="font-semibold text-slate-900 mb-1">Évaluations</p>
-            <p className="text-sm">Saisir les notes et consulter les délibérations.</p>
-          </div>
+          <Link href="/jury/notes" className="p-4 rounded-lg bg-slate-50 border border-slate-100 hover:border-blue-200 hover:bg-blue-50 transition-all group">
+            <p className="font-semibold text-slate-900 mb-1 group-hover:text-blue-600">Évaluations (Notes Jury)</p>
+            <p className="text-sm">Saisir les notes pour chaque soutenance.</p>
+          </Link>
           <div className="p-4 rounded-lg bg-slate-50 border border-slate-100">
             <p className="font-semibold text-slate-900 mb-1">Résultats</p>
             <p className="text-sm">Calcul automatique des moyennes et mentions.</p>

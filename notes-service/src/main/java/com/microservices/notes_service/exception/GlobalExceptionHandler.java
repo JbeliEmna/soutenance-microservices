@@ -42,6 +42,21 @@ public class GlobalExceptionHandler {
                 .body(buildPayload(HttpStatus.BAD_REQUEST, "Validation error", request.getRequestURI(), errors));
     }
 
+    @ExceptionHandler(org.springframework.http.converter.HttpMessageNotReadableException.class)
+    public ResponseEntity<Map<String, Object>> handleHttpMessageNotReadableException(
+            org.springframework.http.converter.HttpMessageNotReadableException exception,
+            HttpServletRequest request
+    ) {
+        return ResponseEntity
+                .status(HttpStatus.BAD_REQUEST)
+                .body(buildPayload(
+                        HttpStatus.BAD_REQUEST,
+                        "JSON parse error: " + exception.getMessage(),
+                        request.getRequestURI(),
+                        null
+                ));
+    }
+
     @ExceptionHandler(Exception.class)
     public ResponseEntity<Map<String, Object>> handleUnexpectedException(
             Exception exception,

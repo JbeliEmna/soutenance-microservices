@@ -48,6 +48,11 @@ export const soutenanceService = {
     return response.data;
   },
 
+  async updateEtat(id: number, etat: string): Promise<Soutenance> {
+    const response = await api.patch<Soutenance>(`/api/soutenances/${id}/etat`, { etat });
+    return response.data;
+  },
+
   async deleteSoutenance(id: number): Promise<void> {
     await api.delete(`/api/soutenances/${id}`);
   }

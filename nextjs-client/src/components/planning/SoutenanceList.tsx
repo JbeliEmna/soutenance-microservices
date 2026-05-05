@@ -1,16 +1,19 @@
 'use client';
 
-import { Soutenance } from '@/types';
-import { Edit2, Trash2, Calendar, Clock, MapPin, Users, UserCheck } from 'lucide-react';
+import { Soutenance, User } from '@/types';
+import { Edit2, Trash2, Calendar, Clock, MapPin, Users, UserCheck, Play, CheckCircle2 } from 'lucide-react';
 
 interface SoutenanceListProps {
   soutenances: Soutenance[];
+  students: User[];
+  teachers: User[];
   onEdit: (soutenance: Soutenance) => void;
   onDelete: (id: number) => Promise<void>;
+  onUpdateEtat?: (id: number, etat: string) => Promise<void>;
   isLoading: boolean;
 }
 
-export default function SoutenanceList({ soutenances, onEdit, onDelete, isLoading }: SoutenanceListProps) {
+export default function SoutenanceList({ soutenances, students, teachers, onEdit, onDelete, onUpdateEtat, isLoading }: SoutenanceListProps) {
   if (isLoading) {
     return (
       <div className="space-y-4">
@@ -43,6 +46,16 @@ export default function SoutenanceList({ soutenances, onEdit, onDelete, isLoadin
       case 'TERMINEE': return 'bg-green-100 text-green-800';
       default: return 'bg-slate-100 text-slate-800';
     }
+  };
+
+  const getStudentName = (id: number) => {
+    const student = students.find(s => s.externalId === id);
+    return student ? `${student.prenom} ${student.nom}` : `ID: ${id}`;
+  };
+
+  const getTeacherName = (id: number) => {
+    const teacher = teachers.find(t => t.externalId === id);
+    return teacher ? `${teacher.prenom} ${teacher.nom}` : `ID: ${id}`;
   };
 
   return (
@@ -98,16 +111,41 @@ export default function SoutenanceList({ soutenances, onEdit, onDelete, isLoadin
                 <div>
                   <span className="font-medium block">Étudiants:</span>
                   <span className="text-slate-500">
-                    {soutenance.etudiantIds ? soutenance.etudiantIds.join(', ') : 'Aucun étudiant'}
+                    {soutenance.etudiantIds && soutenance.etudiantIds.length > 0 
+                      ? soutenance.etudiantIds.map(id => getStudentName(id)).join(', ') 
+                      : 'Aucun étudiant'}
                   </span>
                 </div>
               </div>
               <div className="flex items-center gap-2 text-slate-700">
                 <UserCheck className="w-4 h-4 text-slate-400" />
-                <span className="font-medium">Encadrant:</span> {soutenance.encadrantId}
+                <span className="font-medium">Encadrant:</span> {getTeacherName(soutenance.encadrantId)}
               </div>
             </div>
           </div>
+
+          {onUpdateEtat && soutenance.etat !== 'TERMINEE' && (
+            <div className="pt-3 border-t border-slate-100 flex justify-end">
+              {soutenance.etat === 'PLANIFIEE' && (
+                <button
+                  onClick={() => onUpdateEtat(soutenance.id, 'EN_COURS')}
+                  className="flex items-center gap-2 px-3 py-1.5 text-xs font-bold text-amber-600 bg-amber-50 hover:bg-amber-100 rounded-lg transition-colors border border-amber-200"
+                >
+                  <Play className="w-3.5 h-3.5 fill-current" />
+                  Démarrer la soutenance
+                </button>
+              )}
+              {soutenance.etat === 'EN_COURS' && (
+                <button
+                  onClick={() => onUpdateEtat(soutenance.id, 'TERMINEE')}
+                  className="flex items-center gap-2 px-3 py-1.5 text-xs font-bold text-green-600 bg-green-50 hover:bg-green-100 rounded-lg transition-colors border border-green-200"
+                >
+                  <CheckCircle2 className="w-3.5 h-3.5" />
+                  Terminer et Valider
+                </button>
+              )}
+            </div>
+          )}
         </div>
       ))}
     </div>

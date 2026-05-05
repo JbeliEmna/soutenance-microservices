@@ -227,18 +227,26 @@ public class EvaluationService {
     }
 
     private void updateSoutenanceStatusAfterEvaluation(Long soutenanceId) {
-        SoutenanceFeignResponse soutenance = soutenanceServiceClient.getSoutenanceById(soutenanceId);
-        long count = evaluationRepository.countBySoutenanceId(soutenanceId);
+        try {
+            SoutenanceFeignResponse soutenance = soutenanceServiceClient.getSoutenanceById(soutenanceId);
+            long count = evaluationRepository.countBySoutenanceId(soutenanceId);
+            String currentEtat = soutenance.etat();
 
-        if ("PLANIFIEE".equals(soutenance.etat())) {
-            soutenanceServiceClient.updateEtat(soutenanceId, new UpdateSoutenanceEtatFeignRequest("EN_COURS"));
-        }
+            // Transition logic: must be PLANIFIEE -> EN_COURS -> TERMINEE
+            if ("PLANIFIEE".equals(currentEtat)) {
+                soutenanceServiceClient.updateEtat(soutenanceId, new UpdateSoutenanceEtatFeignRequest("EN_COURS"));
+                currentEtat = "EN_COURS";
+            }
 
-        if (count >= 3) {
-            SoutenanceFeignResponse refreshed = soutenanceServiceClient.getSoutenanceById(soutenanceId);
-            if (!"TERMINEE".equals(refreshed.etat())) {
+            if (count >= 3 && "EN_COURS".equals(currentEtat)) {
                 soutenanceServiceClient.updateEtat(soutenanceId, new UpdateSoutenanceEtatFeignRequest("TERMINEE"));
             }
+        } catch (FeignException ex) {
+            // Log and ignore to prevent 500 error on evaluation save
+            // The evaluation is already saved, status update is a secondary effect
+            System.err.println("Failed to update soutenance status for ID " + soutenanceId + ": " + ex.getMessage());
+        } catch (Exception ex) {
+            System.err.println("Unexpected error updating soutenance status: " + ex.getMessage());
         }
     }
 

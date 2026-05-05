@@ -2,7 +2,8 @@
 
 import { useState, useEffect } from 'react';
 import { soutenanceService } from '@/lib/soutenance-service';
-import { Soutenance, Salle } from '@/types';
+import { authService } from '@/lib/auth-service';
+import { Soutenance, Salle, User } from '@/types';
 import SoutenanceList from '@/components/planning/SoutenanceList';
 import SoutenanceForm from '@/components/planning/SoutenanceForm';
 import { Calendar, Plus, ArrowLeft, Home as HomeIcon } from 'lucide-react';
@@ -11,6 +12,8 @@ import Link from 'next/link';
 export default function PlanningPage() {
   const [soutenances, setSoutenances] = useState<Soutenance[]>([]);
   const [salles, setSalles] = useState<Salle[]>([]);
+  const [students, setStudents] = useState<User[]>([]);
+  const [teachers, setTeachers] = useState<User[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [isFormOpen, setIsFormOpen] = useState(false);
   const [editingSoutenance, setEditingSoutenance] = useState<Soutenance | undefined>();
@@ -21,9 +24,11 @@ export default function PlanningPage() {
     try {
       setIsLoading(true);
       setError(null);
-      const [soutenancesData, sallesData] = await Promise.all([
+      const [soutenancesData, sallesData, studentsData, teachersData] = await Promise.all([
         soutenanceService.getAllSoutenances(),
-        soutenanceService.getAllSalles()
+        soutenanceService.getAllSalles(),
+        authService.getAllStudents(),
+        authService.getAllTeachers()
       ]);
       
       // Sort by date (newest first)
@@ -33,6 +38,8 @@ export default function PlanningPage() {
       
       setSoutenances(sortedSoutenances);
       setSalles(sallesData);
+      setStudents(studentsData);
+      setTeachers(teachersData);
     } catch (err) {
       console.error('Failed to fetch data', err);
       setError('Erreur lors du chargement des données. Veuillez vérifier la connexion au backend.');
@@ -85,6 +92,18 @@ export default function PlanningPage() {
     setEditingSoutenance(soutenance);
     setIsFormOpen(true);
     window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const handleUpdateEtat = async (id: number, etat: string) => {
+    try {
+      setError(null);
+      await soutenanceService.updateEtat(id, etat);
+      fetchData();
+    } catch (err: any) {
+      console.error('Failed to update state', err);
+      const message = err.response?.data?.message || 'Erreur lors de la mise à jour de l\'état.';
+      setError(message);
+    }
   };
 
   return (
@@ -158,8 +177,11 @@ export default function PlanningPage() {
         </div>
         <SoutenanceList
           soutenances={soutenances}
+          students={students}
+          teachers={teachers}
           onEdit={handleEdit}
           onDelete={handleDelete}
+          onUpdateEtat={handleUpdateEtat}
           isLoading={isLoading}
         />
       </div>
