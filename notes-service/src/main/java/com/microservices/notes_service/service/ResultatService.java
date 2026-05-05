@@ -54,4 +54,18 @@ public class ResultatService {
                 ))
                 .toList();
     }
+
+    public List<ResultatSoutenanceResponse> getAll() {
+        return resultatSoutenanceRepository.findAll().stream()
+                .map(resultat -> {
+                    List<Long> etudiantIds = List.of();
+                    try {
+                        etudiantIds = soutenanceServiceClient.getSoutenanceById(resultat.getSoutenanceId()).etudiantIds();
+                    } catch (Exception e) {
+                        // Log or handle the case where a soutenance might not be found in the other service
+                    }
+                    return ResultatSoutenanceResponse.fromEntity(resultat, etudiantIds);
+                })
+                .toList();
+    }
 }

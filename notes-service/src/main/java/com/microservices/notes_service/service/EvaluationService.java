@@ -102,6 +102,13 @@ public class EvaluationService {
                 .toList();
     }
 
+    public List<EvaluationResponse> listAll() {
+        return evaluationRepository.findAll()
+                .stream()
+                .map(EvaluationResponse::fromEntity)
+                .toList();
+    }
+
     public void delete(Long id) {
         Evaluation evaluation = getEntityOrThrow(id);
         Long soutenanceId = evaluation.getSoutenanceId();

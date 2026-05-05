@@ -28,6 +28,11 @@ public class EvaluationController {
         this.evaluationService = evaluationService;
     }
 
+    @GetMapping
+    public List<EvaluationResponse> listAll() {
+        return evaluationService.listAll();
+    }
+
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public EvaluationResponse create(@Valid @RequestBody CreateEvaluationRequest request) {

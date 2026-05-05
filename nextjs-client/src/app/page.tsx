@@ -1,9 +1,8 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import api from '@/lib/api-client';
 import { authService } from '@/lib/auth-service';
-import { Activity, CheckCircle, XCircle, LogOut, User as UserIcon } from 'lucide-react';
+import { Activity, CheckCircle, XCircle, Users, Calendar, ClipboardCheck, FileText, ArrowRight, ShieldCheck } from 'lucide-react';
 import { AuthResponse } from '@/types';
 import Link from 'next/link';
 
@@ -25,7 +24,6 @@ export default function Home() {
         if (response.ok) {
           setStatus('up');
         } else {
-          // Fallback to 127.0.0.1 if localhost fails
           const fallbackResponse = await fetch(`http://127.0.0.1:8089/actuator/health`, {
             cache: 'no-store',
             mode: 'cors'
@@ -41,92 +39,69 @@ export default function Home() {
     checkBackend();
   }, []);
 
+  const stats = [
+    { label: 'Planification', icon: Calendar, color: 'text-blue-600', bg: 'bg-blue-100', href: '/planning', desc: 'Gérer les créneaux et les salles' },
+    { label: 'Membres Jury', icon: Users, color: 'text-purple-600', bg: 'bg-purple-100', href: '/jury', desc: 'Gérer les enseignants et affectations' },
+    { label: 'Évaluations', icon: ClipboardCheck, color: 'text-green-600', bg: 'bg-green-100', href: '/jury/notes', desc: 'Saisie des notes de soutenance' },
+    { label: 'Résultats', icon: FileText, color: 'text-orange-600', bg: 'bg-orange-100', href: '/resultats', desc: 'Consulter les notes finales' },
+  ];
+
   return (
-    <div className="max-w-4xl mx-auto space-y-8">
-      <header className="border-b pb-4 flex justify-between items-center">
-        <div>
-          <h1 className="text-3xl font-bold tracking-tight text-slate-900">Gestion des Soutenances</h1>
-          <p className="text-slate-500">Tableau de bord de l'administration</p>
-        </div>
-        {user && (
-          <div className="flex items-center space-x-4">
-            <div className="text-right hidden sm:block">
-              <p className="text-sm font-semibold text-slate-900">{user.prenom} {user.nom}</p>
-              <p className="text-xs text-slate-500 font-medium">{user.role}</p>
-            </div>
-            <button
-              onClick={() => authService.logout()}
-              className="p-2 text-slate-500 hover:text-red-600 hover:bg-red-50 rounded-full transition-colors"
-              title="Déconnexion"
+    <div className="max-w-6xl mx-auto space-y-10 animate-in fade-in duration-700">
+      {/* Welcome Section */}
+      <section className="space-y-2">
+        <h1 className="text-2xl font-black tracking-tight text-slate-900">
+          Bienvenue, <span className="text-blue-600">{user?.prenom || 'Administrateur'}</span> 👋
+        </h1>
+        <p className="text-lg text-slate-500 font-medium">
+          Voici l'état actuel de votre système de gestion des soutenances.
+        </p>
+      </section>
+
+      
+      
+
+      {/* Navigation Grid */}
+      <section className="space-y-6">
+        <h3 className="font-black text-slate-900 text-xl tracking-tight">Accès Rapide</h3>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {stats.map((item) => (
+            <Link 
+              key={item.label} 
+              href={item.href} 
+              className="group p-6 bg-white rounded-2xl border border-slate-200 hover:border-blue-300 hover:shadow-xl hover:shadow-blue-500/5 transition-all relative overflow-hidden"
             >
-              <LogOut className="w-5 h-5" />
-            </button>
-          </div>
-        )}
-      </header>
-
-      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-        {/* Card: Backend Status */}
-        <div className="p-6 bg-white rounded-xl shadow-sm border border-slate-200">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-2">
-              <Activity className="w-5 h-5 text-blue-500" />
-              <h2 className="font-semibold text-xs uppercase tracking-wider text-slate-500">
-                Statut Backend
-              </h2>
-            </div>
-            {status === 'loading' && <span className="h-2 w-2 rounded-full bg-slate-300 animate-pulse" />}
-            {status === 'up' && <CheckCircle className="w-5 h-5 text-green-500" />}
-            {status === 'down' && <XCircle className="w-5 h-5 text-red-500" />}
-          </div>
-          <div className="mt-4">
-            <p className="text-2xl font-bold text-slate-900">
-              {status === 'loading' ? 'Vérification...' : status === 'up' ? 'Connecté' : 'Erreur'}
-            </p>
-            <p className="text-xs text-slate-400 mt-1">
-              Gateway API (Port 8089)
-            </p>
-          </div>
-        </div>
-
-        {/* Card: User Profile */}
-        {user && (
-          <div className="p-6 bg-white rounded-xl shadow-sm border border-slate-200">
-            <div className="flex items-center space-x-2 mb-4">
-              <UserIcon className="w-5 h-5 text-purple-500" />
-              <h2 className="font-semibold text-xs uppercase tracking-wider text-slate-500">
-                Session Active
-              </h2>
-            </div>
-            <p className="text-lg font-bold text-slate-900 truncate">{user.email}</p>
-            <span className="mt-2 inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-purple-100 text-purple-800">
-              {user.role.replace('ROLE_', '')}
-            </span>
-          </div>
-        )}
-      </div>
-
-      <section className="bg-white p-8 rounded-xl border border-slate-200 shadow-sm">
-        <h3 className="font-bold text-slate-900 mb-6 text-xl">Fonctionnalités disponibles</h3>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-slate-600">
-          <Link href="/planning" className="p-4 rounded-lg bg-slate-50 border border-slate-100 hover:border-blue-200 hover:bg-blue-50 transition-all group">
-            <p className="font-semibold text-slate-900 mb-1 group-hover:text-blue-600">Planification</p>
-            <p className="text-sm">Gérer les dates, les salles et les créneaux horaires.</p>
-          </Link>
-          <Link href="/jury" className="p-4 rounded-lg bg-slate-50 border border-slate-100 hover:border-blue-200 hover:bg-blue-50 transition-all group">
-            <p className="font-semibold text-slate-900 mb-1 group-hover:text-blue-600">Jurys</p>
-            <p className="text-sm">Affecter les présidents, rapporteurs et examinateurs.</p>
-          </Link>
-          <Link href="/jury/notes" className="p-4 rounded-lg bg-slate-50 border border-slate-100 hover:border-blue-200 hover:bg-blue-50 transition-all group">
-            <p className="font-semibold text-slate-900 mb-1 group-hover:text-blue-600">Évaluations (Notes Jury)</p>
-            <p className="text-sm">Saisir les notes pour chaque soutenance.</p>
-          </Link>
-          <div className="p-4 rounded-lg bg-slate-50 border border-slate-100">
-            <p className="font-semibold text-slate-900 mb-1">Résultats</p>
-            <p className="text-sm">Calcul automatique des moyennes et mentions.</p>
-          </div>
+              <div className={`${item.bg} ${item.color} w-12 h-12 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
+                <item.icon className="w-6 h-6" />
+              </div>
+              <h4 className="font-black text-slate-900 mb-1">{item.label}</h4>
+              <p className="text-xs text-slate-500 font-medium leading-relaxed">{item.desc}</p>
+              <div className="mt-4 flex items-center text-[10px] font-black uppercase tracking-widest text-blue-600 opacity-0 group-hover:opacity-100 transition-opacity">
+                Ouvrir <ArrowRight className="ml-1 w-3 h-3" />
+              </div>
+              <div className="absolute -right-2 -bottom-2 opacity-[0.03] group-hover:opacity-[0.08] transition-opacity">
+                <item.icon className="w-24 h-24" />
+              </div>
+            </Link>
+          ))}
         </div>
       </section>
+
+      {/* Info Box */}
+      <footer className="p-8 bg-slate-900 rounded-3xl text-white overflow-hidden relative">
+        <div className="relative z-10 space-y-4 max-w-2xl">
+          <h4 className="text-2xl font-black">Besoin d'aide ?</h4>
+          <p className="text-slate-400 font-medium">
+            Le système est conçu pour automatiser la vérification des conflits horaires et le calcul des mentions finales. 
+            Toutes les modifications sont synchronisées en temps réel avec les microservices.
+          </p>
+          <button className="px-6 py-2 bg-blue-600 hover:bg-blue-700 rounded-xl font-bold transition-colors">
+            Consulter la documentation
+          </button>
+        </div>
+        <div className="absolute right-0 top-0 h-full w-1/3 bg-gradient-to-l from-blue-600/20 to-transparent" />
+        <ShieldCheck className="absolute -right-10 -bottom-10 w-64 h-64 text-white/[0.03]" />
+      </footer>
     </div>
   );
 }

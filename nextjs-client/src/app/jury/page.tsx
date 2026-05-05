@@ -5,10 +5,13 @@ import { juryService } from '@/lib/jury-service';
 import { MembreJury, CreerMembreJuryRequest } from '@/types';
 import MembreJuryList from '@/components/jury/MembreJuryList';
 import MembreJuryForm from '@/components/jury/MembreJuryForm';
-import { Users, Plus, ArrowLeft } from 'lucide-react';
-import Link from 'next/link';
+import AffectationJuryModule from '@/components/jury/AffectationJuryModule';
+import { Users, Plus, UserPlus, UserCheck, ShieldCheck } from 'lucide-react';
+
+type Tab = 'membres' | 'affectations';
 
 export default function JuryPage() {
+  const [activeTab, setActiveTab] = useState<Tab>('membres');
   const [membres, setMembres] = useState<MembreJury[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [isFormOpen, setIsFormOpen] = useState(false);
@@ -28,8 +31,10 @@ export default function JuryPage() {
   };
 
   useEffect(() => {
-    fetchMembres();
-  }, []);
+    if (activeTab === 'membres') {
+      fetchMembres();
+    }
+  }, [activeTab]);
 
   const handleCreateOrUpdate = async (data: CreerMembreJuryRequest) => {
     try {
@@ -66,60 +71,91 @@ export default function JuryPage() {
   };
 
   return (
-    <div className="max-w-5xl mx-auto space-y-8">
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+    <div className="max-w-6xl mx-auto space-y-8">
+      {/* Header Section */}
+      <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
         <div>
-          <Link 
-            href="/" 
-            className="text-sm text-slate-500 hover:text-blue-600 flex items-center gap-1 mb-2 transition-colors"
-          >
-            <ArrowLeft className="w-4 h-4" />
-            Retour au tableau de bord
-          </Link>
-          <h1 className="text-3xl font-bold tracking-tight text-slate-900 flex items-center gap-3">
-            <Users className="w-8 h-8 text-blue-600" />
-            Gestion des Membres de Jury
+          <h1 className="text-2xl font-extrabold tracking-tight text-slate-900 flex items-center gap-3">
+            <ShieldCheck className="w-10 h-10 text-blue-600" />
+            Module Jury
           </h1>
-          <p className="text-slate-500 mt-1">Gérer les enseignants habilités à siéger dans les jurys de soutenance.</p>
+          <p className="text-slate-500 mt-2 text-lg max-w-2xl">
+            Gérez le vivier d'enseignants et organisez les commissions de soutenance en affectant les rôles stratégiques.
+          </p>
         </div>
 
-        {!isFormOpen && (
+        {activeTab === 'membres' && !isFormOpen && (
           <button
             onClick={() => setIsFormOpen(true)}
-            className="flex items-center justify-center gap-2 px-4 py-2.5 bg-blue-600 text-white rounded-xl hover:bg-blue-700 transition-all shadow-sm hover:shadow-md"
+            className="flex items-center justify-center gap-2 px-6 py-3 bg-blue-600 text-white font-bold rounded-xl hover:bg-blue-700 transition-all shadow-lg shadow-blue-600/20 hover:scale-[1.02] active:scale-[0.98]"
           >
-            <Plus className="w-5 h-5" />
-            Nouveau Membre
+            <UserPlus className="w-5 h-5" />
+            Ajouter un Enseignant
           </button>
         )}
       </div>
 
-      {isFormOpen && (
-        <div className="animate-in fade-in slide-in-from-top-4 duration-300">
-          <MembreJuryForm
-            initialData={editingMembre}
-            onSubmit={handleCreateOrUpdate}
-            onCancel={() => {
-              setIsFormOpen(false);
-              setEditingMembre(undefined);
-            }}
-            isLoading={isSubmitting}
-          />
-        </div>
-      )}
+      {/* Navigation Tabs */}
+      <div className="flex border-b border-slate-200">
+        <button
+          onClick={() => setActiveTab('membres')}
+          className={`px-8 py-4 text-sm font-bold transition-all border-b-2 flex items-center gap-2 ${
+            activeTab === 'membres' 
+              ? 'border-blue-600 text-blue-600 bg-blue-50/50' 
+              : 'border-transparent text-slate-500 hover:text-slate-700 hover:bg-slate-50'
+          }`}
+        >
+          <Users className="w-4 h-4" />
+          MEMBRES DE JURY
+        </button>
+        <button
+          onClick={() => setActiveTab('affectations')}
+          className={`px-8 py-4 text-sm font-bold transition-all border-b-2 flex items-center gap-2 ${
+            activeTab === 'affectations' 
+              ? 'border-blue-600 text-blue-600 bg-blue-50/50' 
+              : 'border-transparent text-slate-500 hover:text-slate-700 hover:bg-slate-50'
+          }`}
+        >
+          <UserCheck className="w-4 h-4" />
+          AFFECTATIONS
+        </button>
+      </div>
 
-      <div className="space-y-4">
-        <div className="flex items-center justify-between border-b border-slate-200 pb-2">
-          <h2 className="text-sm font-bold uppercase tracking-wider text-slate-500">
-            Liste des Enseignants ({membres.length})
-          </h2>
-        </div>
-        <MembreJuryList
-          membres={membres}
-          onEdit={handleEdit}
-          onDelete={handleDelete}
-          isLoading={isLoading}
-        />
+      {/* Content Area */}
+      <div className="animate-in fade-in duration-500">
+        {activeTab === 'membres' ? (
+          <div className="space-y-8">
+            {isFormOpen && (
+              <div className="animate-in slide-in-from-top-4 duration-300">
+                <MembreJuryForm
+                  initialData={editingMembre}
+                  onSubmit={handleCreateOrUpdate}
+                  onCancel={() => {
+                    setIsFormOpen(false);
+                    setEditingMembre(undefined);
+                  }}
+                  isLoading={isSubmitting}
+                />
+              </div>
+            )}
+
+            <div className="space-y-4">
+              <div className="flex items-center justify-between border-b border-slate-100 pb-2">
+                <h2 className="text-xs font-black uppercase tracking-[0.2em] text-slate-400">
+                  Enseignants Référencés ({membres.length})
+                </h2>
+              </div>
+              <MembreJuryList
+                membres={membres}
+                onEdit={handleEdit}
+                onDelete={handleDelete}
+                isLoading={isLoading}
+              />
+            </div>
+          </div>
+        ) : (
+          <AffectationJuryModule />
+        )}
       </div>
     </div>
   );

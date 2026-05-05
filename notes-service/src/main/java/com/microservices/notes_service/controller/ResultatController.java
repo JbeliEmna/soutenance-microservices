@@ -19,6 +19,11 @@ public class ResultatController {
         this.resultatService = resultatService;
     }
 
+    @GetMapping
+    public List<ResultatSoutenanceResponse> getAll() {
+        return resultatService.getAll();
+    }
+
     @GetMapping("/soutenances/{soutenanceId}")
     public ResultatSoutenanceResponse getBySoutenance(@PathVariable Long soutenanceId) {
         return resultatService.getBySoutenanceId(soutenanceId);

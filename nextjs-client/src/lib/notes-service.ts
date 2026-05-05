@@ -2,8 +2,14 @@ import api from './api-client';
 import { Evaluation, ResultatSoutenance, MentionFinale } from '@/types';
 
 export const notesService = {
+  // Evaluations
+  async getAllEvaluations(): Promise<Evaluation[]> {
+    const response = await api.get<Evaluation[]>('/api/evaluations');
+    return response.data;
+  },
+
   async getEvaluationsBySoutenance(soutenanceId: number): Promise<Evaluation[]> {
-    const response = await api.get<Evaluation[]>(`/api/evaluations/soutenance/${soutenanceId}`);
+    const response = await api.get<Evaluation[]>(`/api/evaluations/soutenances/${soutenanceId}`);
     return response.data;
   },
 
@@ -31,8 +37,19 @@ export const notesService = {
     await api.delete(`/api/evaluations/${id}`);
   },
 
+  // Résultats
+  async getAllResultats(): Promise<ResultatSoutenance[]> {
+    const response = await api.get<ResultatSoutenance[]>('/api/resultats');
+    return response.data;
+  },
+
   async getResultatBySoutenance(soutenanceId: number): Promise<ResultatSoutenance> {
-    const response = await api.get<ResultatSoutenance>(`/api/resultats/soutenance/${soutenanceId}`);
+    const response = await api.get<ResultatSoutenance>(`/api/resultats/soutenances/${soutenanceId}`);
+    return response.data;
+  },
+
+  async getResultatsByEtudiant(etudiantId: number): Promise<ResultatSoutenance> {
+    const response = await api.get<ResultatSoutenance>(`/api/resultats/etudiants/${etudiantId}`);
     return response.data;
   },
 
