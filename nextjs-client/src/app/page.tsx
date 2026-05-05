@@ -5,6 +5,7 @@ import api from '@/lib/api-client';
 import { authService } from '@/lib/auth-service';
 import { Activity, CheckCircle, XCircle, LogOut, User as UserIcon } from 'lucide-react';
 import { AuthResponse } from '@/types';
+import Link from 'next/link';
 
 export default function Home() {
   const [status, setStatus] = useState<'loading' | 'up' | 'down'>('loading');
@@ -112,10 +113,10 @@ export default function Home() {
             <p className="font-semibold text-slate-900 mb-1">Planification</p>
             <p className="text-sm">Gérer les dates, les salles et les créneaux horaires.</p>
           </div>
-          <div className="p-4 rounded-lg bg-slate-50 border border-slate-100">
-            <p className="font-semibold text-slate-900 mb-1">Jurys</p>
+          <Link href="/jury" className="p-4 rounded-lg bg-slate-50 border border-slate-100 hover:border-blue-200 hover:bg-blue-50 transition-all group">
+            <p className="font-semibold text-slate-900 mb-1 group-hover:text-blue-600">Jurys</p>
             <p className="text-sm">Affecter les présidents, rapporteurs et examinateurs.</p>
-          </div>
+          </Link>
           <div className="p-4 rounded-lg bg-slate-50 border border-slate-100">
             <p className="font-semibold text-slate-900 mb-1">Évaluations</p>
             <p className="text-sm">Saisir les notes et consulter les délibérations.</p>

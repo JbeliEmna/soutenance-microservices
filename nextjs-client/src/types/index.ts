@@ -63,8 +63,27 @@ export interface MembreJury {
   email: string;
 }
 
+export interface CreerMembreJuryRequest {
+  idEnseignant: number;
+  nom: string;
+  prenom: string;
+  grade: string;
+  email: string;
+}
+
+export interface ReponseJuryDTO {
+  message: string;
+  success: boolean;
+}
+
 export interface AffectationJury {
   id: string;
+  idSoutenance: number;
+  idEnseignant: number;
+  roleJury: RoleJury;
+}
+
+export interface CreerAffectationRequest {
   idSoutenance: number;
   idEnseignant: number;
   roleJury: RoleJury;
