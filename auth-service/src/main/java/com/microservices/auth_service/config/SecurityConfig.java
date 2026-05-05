@@ -34,7 +34,7 @@ public class SecurityConfig {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
-                .cors(cors -> cors.configurationSource(corsConfigurationSource()))
+                .cors(AbstractHttpConfigurer::disable)
                 .csrf(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests(auth -> auth
                         // Endpoints publics auth
@@ -76,10 +76,13 @@ public class SecurityConfig {
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration configuration = new CorsConfiguration();
 
-        // Angular tourne sur le port 4200
+        // Configuration des origines autorisées
         configuration.setAllowedOrigins(Arrays.asList(
-                "http://localhost:4200",  // Angular frontend
-                "http://localhost:8084"   // API Gateway
+                "http://localhost:4200",  // Angular
+                "http://localhost:3000",  // Next.js
+                "http://127.0.0.1:3000",
+                "http://localhost:8089",  // Gateway
+                "http://127.0.0.1:8089"
         ));
 
         configuration.setAllowedMethods(Arrays.asList(

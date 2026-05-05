@@ -8,6 +8,8 @@ spring:
     import: optional:configserver:http://localhost:8888
   cloud:
     gateway:
+      default-filters:
+        - DeduplicateResponseHeader=Access-Control-Allow-Origin Access-Control-Allow-Credentials, RETAIN_FIRST
       server:
         webflux:
           discovery:
@@ -46,6 +48,7 @@ spring:
                 allowedOrigins:
                   - "http://localhost:4200"
                   - "http://localhost:3000"
+                  - "http://127.0.0.1:3000"
                 allowedMethods:
                   - GET
                   - POST
@@ -68,6 +71,11 @@ management:
     web:
       exposure:
         include: health,info,gateway
+      cors:
+        allowed-origins:
+          - "http://localhost:3000"
+          - "http://127.0.0.1:3000"
+        allowed-methods: "*"
   endpoint:
     gateway:
       access: unrestricted
