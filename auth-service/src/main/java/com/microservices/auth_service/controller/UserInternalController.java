@@ -31,6 +31,16 @@ public class UserInternalController {
         return ResponseEntity.ok(students);
     }
 
+    @GetMapping("/enseignants")
+    public ResponseEntity<List<UserInternalResponse>> getAllTeachers() {
+        List<UserInternalResponse> teachers = userRepository.findByRoleAndEnabledTrue(Role.ROLE_ENSEIGNANT)
+                .stream()
+                .map(UserInternalResponse::fromEntity)
+                .toList();
+
+        return ResponseEntity.ok(teachers);
+    }
+
     @GetMapping("/{externalId}")
     public ResponseEntity<UserInternalResponse> getByExternalId(@PathVariable Long externalId) {
         return userRepository.findByExternalId(externalId)

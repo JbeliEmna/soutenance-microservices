@@ -26,6 +26,16 @@ export const authService = {
     return response.data;
   },
 
+  async getAllStudents(): Promise<User[]> {
+    const response = await api.get<User[]>('/api/users/internal/etudiants');
+    return response.data;
+  },
+
+  async getAllTeachers(): Promise<User[]> {
+    const response = await api.get<User[]>('/api/users/internal/enseignants');
+    return response.data;
+  },
+
   logout(): void {
     localStorage.removeItem('token');
     localStorage.removeItem('user');
