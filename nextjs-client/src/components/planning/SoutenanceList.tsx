@@ -97,7 +97,9 @@ export default function SoutenanceList({ soutenances, onEdit, onDelete, isLoadin
                 <Users className="w-4 h-4 text-slate-400 mt-0.5" />
                 <div>
                   <span className="font-medium block">Étudiants:</span>
-                  <span className="text-slate-500">{soutenance.etudiantIds.join(', ')}</span>
+                  <span className="text-slate-500">
+                    {soutenance.etudiantIds ? soutenance.etudiantIds.join(', ') : 'Aucun étudiant'}
+                  </span>
                 </div>
               </div>
               <div className="flex items-center gap-2 text-slate-700">

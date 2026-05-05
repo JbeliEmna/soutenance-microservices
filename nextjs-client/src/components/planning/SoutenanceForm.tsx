@@ -14,7 +14,7 @@ interface SoutenanceFormProps {
 
 export default function SoutenanceForm({ initialData, salles, onSubmit, onCancel, isLoading }: SoutenanceFormProps) {
   const [formData, setFormData] = useState({
-    etudiantIds: initialData?.etudiantIds.join(', ') || '',
+    etudiantIds: initialData?.etudiantIds ? initialData.etudiantIds.join(', ') : '',
     encadrantId: initialData?.encadrantId || '',
     salle: initialData?.salle || '',
     dateDebut: initialData?.dateDebut ? initialData.dateDebut.slice(0, 16) : '',
