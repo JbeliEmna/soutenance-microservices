@@ -48,8 +48,8 @@ export const notesService = {
     return response.data;
   },
 
-  async getResultatsByEtudiant(etudiantId: number): Promise<ResultatSoutenance> {
-    const response = await api.get<ResultatSoutenance>(`/api/resultats/etudiants/${etudiantId}`);
+  async getResultatsByEtudiant(etudiantId: number): Promise<ResultatSoutenance[]> {
+    const response = await api.get<ResultatSoutenance[]>(`/api/resultats/etudiants/${etudiantId}`);
     return response.data;
   },
 
