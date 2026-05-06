@@ -42,8 +42,7 @@ export default function Home() {
   const stats = [
     { label: 'Planification', icon: Calendar, color: 'text-blue-600', bg: 'bg-blue-100', href: '/planning', desc: 'Gérer les créneaux et les salles' },
     { label: 'Membres Jury', icon: Users, color: 'text-purple-600', bg: 'bg-purple-100', href: '/jury', desc: 'Gérer les enseignants et affectations' },
-    { label: 'Évaluations', icon: ClipboardCheck, color: 'text-green-600', bg: 'bg-green-100', href: '/jury/notes', desc: 'Saisie des notes de soutenance' },
-    { label: 'Résultats', icon: FileText, color: 'text-orange-600', bg: 'bg-orange-100', href: '/resultats', desc: 'Consulter les notes finales' },
+    { label: 'Évaluations', icon: ClipboardCheck, color: 'text-green-600', bg: 'bg-green-100', href: '/jury/notes', desc: 'Saisie des notes de soutenance' }
   ];
 
   return (
