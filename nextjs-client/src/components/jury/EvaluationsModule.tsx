@@ -4,8 +4,9 @@ import { useState, useEffect } from 'react';
 import { notesService } from '@/lib/notes-service';
 import { soutenanceService } from '@/lib/soutenance-service';
 import { juryService } from '@/lib/jury-service';
-import { Evaluation, Soutenance, AffectationJury, MembreJury } from '@/types';
-import { ClipboardList, Plus, Star, Calculator, User, X } from 'lucide-react';
+import { authService } from '@/lib/auth-service';
+import { Evaluation, Soutenance, AffectationJury, MembreJury, User as UserType } from '@/types';
+import { ClipboardList, Plus, Star, Calculator, User, X, GraduationCap, School } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import GradeForm from './GradeForm';
 
@@ -14,6 +15,8 @@ export default function EvaluationsModule() {
   const [evaluations, setEvaluations] = useState<Evaluation[]>([]);
   const [affectations, setAffectations] = useState<AffectationJury[]>([]);
   const [membres, setMembres] = useState<MembreJury[]>([]);
+  const [students, setStudents] = useState<UserType[]>([]);
+  const [teachers, setTeachers] = useState<UserType[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [editingGrade, setEditingGrade] = useState<{
     soutenanceId: number;
@@ -25,17 +28,21 @@ export default function EvaluationsModule() {
   const fetchData = async () => {
     try {
       setIsLoading(true);
-      const [soutData, evalData, affData, memData] = await Promise.all([
+      const [soutData, evalData, affData, memData, studData, teachData] = await Promise.all([
         soutenanceService.getAllSoutenances(),
         notesService.getAllEvaluations(),
         juryService.getAllAffectations(),
-        juryService.getAllMembres()
+        juryService.getAllMembres(),
+        authService.getAllStudents(),
+        authService.getAllTeachers()
       ]);
 
       setSoutenances(soutData);
       setEvaluations(evalData);
       setAffectations(affData);
       setMembres(memData);
+      setStudents(studData);
+      setTeachers(teachData);
     } catch (error) {
       console.error('Failed to fetch evaluation data', error);
     } finally {
@@ -92,6 +99,9 @@ export default function EvaluationsModule() {
             ? (validEvals.reduce((acc, curr) => acc + curr.note, 0) / validEvals.length).toFixed(2)
             : null;
 
+          const soutStudents = students.filter(s => sout.etudiantIds.includes(s.externalId));
+          const encadrant = membres.find(m => m.idEnseignant === sout.encadrantId) || teachers.find(t => t.externalId === sout.encadrantId);
+
           return (
             <div key={sout.id} className="bg-white border border-slate-200 rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
               <div className="p-6 border-b border-slate-100 flex flex-col md:flex-row md:items-center justify-between gap-4">
@@ -116,6 +126,39 @@ export default function EvaluationsModule() {
                     </div>
                   </div>
                 )}
+              </div>
+
+              {/* Nouveau bloc: Etudiants & Encadrant */}
+              <div className="px-6 py-4 bg-white border-b border-slate-100 grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="space-y-2">
+                  <div className="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-slate-400">
+                    <GraduationCap className="w-3 h-3" />
+                    Étudiants
+                  </div>
+                  <div className="flex flex-wrap gap-2">
+                    {soutStudents.length > 0 ? soutStudents.map(student => (
+                      <span key={student.id} className="inline-flex items-center px-3 py-1 rounded-full bg-slate-100 text-slate-700 text-xs font-bold">
+                        {student.prenom} {student.nom}
+                      </span>
+                    )) : <span className="text-xs text-slate-400 italic">Aucun étudiant assigné</span>}
+                  </div>
+                </div>
+
+                <div className="space-y-2">
+                  <div className="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-slate-400">
+                    <School className="w-3 h-3" />
+                    Encadrant
+                  </div>
+                  <div>
+                    {encadrant ? (
+                      <span className="inline-flex items-center px-3 py-1 rounded-full bg-blue-50 text-blue-700 text-xs font-bold">
+                        {encadrant.prenom} {encadrant.nom}
+                      </span>
+                    ) : (
+                      <span className="text-xs text-slate-400 italic">Non spécifié (ID: {sout.encadrantId})</span>
+                    )}
+                  </div>
+                </div>
               </div>
 
               <div className="p-6 bg-slate-50/50">
