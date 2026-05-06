@@ -7,16 +7,27 @@ import MembreJuryList from '@/components/jury/MembreJuryList';
 import MembreJuryForm from '@/components/jury/MembreJuryForm';
 import AffectationJuryModule from '@/components/jury/AffectationJuryModule';
 import { Users, Plus, UserPlus, UserCheck, ShieldCheck } from 'lucide-react';
+import { useRouter } from 'next/navigation'; // Import useRouter
+import { authService } from '@/lib/auth-service'; // Import authService
 
 type Tab = 'membres' | 'affectations';
 
 export default function JuryPage() {
+  const router = useRouter(); // Initialize router
   const [activeTab, setActiveTab] = useState<Tab>('membres');
   const [membres, setMembres] = useState<MembreJury[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [isFormOpen, setIsFormOpen] = useState(false);
   const [editingMembre, setEditingMembre] = useState<MembreJury | undefined>();
   const [isSubmitting, setIsSubmitting] = useState(false);
+
+  // Check user role on mount and redirect if necessary
+  useEffect(() => {
+    const user = authService.getCurrentUser();
+    if (user?.role === 'ROLE_ETUDIANT') {
+      router.push('/'); // Redirect students to dashboard
+    }
+  }, [router]);
 
   const fetchMembres = async () => {
     try {
@@ -31,8 +42,12 @@ export default function JuryPage() {
   };
 
   useEffect(() => {
-    if (activeTab === 'membres') {
-      fetchMembres();
+    // Fetch data only if the user is not a student (handled by redirect)
+    const user = authService.getCurrentUser();
+    if (user?.role !== 'ROLE_ETUDIANT') {
+      if (activeTab === 'membres') {
+        fetchMembres();
+      }
     }
   }, [activeTab]);
 
@@ -70,6 +85,7 @@ export default function JuryPage() {
     setIsFormOpen(true);
   };
 
+  // This component renders only if the user is NOT a student (due to the redirect)
   return (
     <div className="max-w-6xl mx-auto space-y-8">
       {/* Header Section */}

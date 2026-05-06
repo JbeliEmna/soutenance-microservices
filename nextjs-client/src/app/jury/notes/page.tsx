@@ -23,7 +23,7 @@ export default function NotesPage() {
   return (
     <div className="max-w-6xl mx-auto space-y-8 animate-in fade-in duration-500">
       <div className="flex flex-col gap-2">
-        <h1 className="text-2xl font-black tracking-tight text-slate-900 flex items-center gap-3">
+        <h1 className="text-xl font-black tracking-tight text-slate-900 flex items-center gap-3">
           {isStudent ? (
             <>
               <GraduationCap className="w-10 h-10 text-blue-600" />

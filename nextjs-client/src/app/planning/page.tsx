@@ -8,8 +8,10 @@ import SoutenanceList from '@/components/planning/SoutenanceList';
 import SoutenanceForm from '@/components/planning/SoutenanceForm';
 import { Calendar, Plus, ArrowLeft, Home as HomeIcon } from 'lucide-react';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation'; // Import useRouter
 
 export default function PlanningPage() {
+  const router = useRouter(); // Initialize router
   const [soutenances, setSoutenances] = useState<Soutenance[]>([]);
   const [salles, setSalles] = useState<Salle[]>([]);
   const [students, setStudents] = useState<User[]>([]);
@@ -19,6 +21,14 @@ export default function PlanningPage() {
   const [editingSoutenance, setEditingSoutenance] = useState<Soutenance | undefined>();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
+
+  // Check user role on mount and redirect if necessary
+  useEffect(() => {
+    const user = authService.getCurrentUser();
+    if (user?.role === 'ROLE_ETUDIANT') {
+      router.push('/'); // Redirect students to dashboard
+    }
+  }, [router]);
 
   const fetchData = async () => {
     try {
@@ -31,7 +41,7 @@ export default function PlanningPage() {
         authService.getAllTeachers()
       ]);
       
-      // Sort by date (newest first)
+      // Sort by date (newest first) - Reverted to descending based on original code logic for planning view
       const sortedSoutenances = soutenancesData.sort((a, b) => 
         new Date(b.dateDebut).getTime() - new Date(a.dateDebut).getTime()
       );
@@ -49,8 +59,12 @@ export default function PlanningPage() {
   };
 
   useEffect(() => {
-    fetchData();
-  }, []);
+    // Only fetch data if the user is not a student (handled by redirect)
+    const user = authService.getCurrentUser();
+    if (user?.role !== 'ROLE_ETUDIANT') {
+      fetchData(); // Ensure this call has a semicolon if needed by linter
+    }
+  }, []); 
 
   const handleCreateOrUpdate = async (data: any) => {
     try {
@@ -64,10 +78,11 @@ export default function PlanningPage() {
       }
       setIsFormOpen(false);
       setEditingSoutenance(undefined);
-      fetchData();
+      fetchData(); // Ensure this call has a semicolon
     } catch (err: any) {
       console.error('Failed to save soutenance', err);
-      const message = err.response?.data?.message || 'Une erreur est survenue lors de l\'enregistrement (conflit d\'horaire possible).';
+      // Using double quotes for the string to avoid potential parsing issues with apostrophes
+      const message = err.response?.data?.message || "Une erreur est survenue lors de l'enregistrement (conflit d'horaire possible).";
       setError(message);
     } finally {
       setIsSubmitting(false);
@@ -79,10 +94,11 @@ export default function PlanningPage() {
       try {
         setError(null);
         await soutenanceService.deleteSoutenance(id);
-        fetchData();
+        fetchData(); // Ensure this call has a semicolon
       } catch (err: any) {
         console.error('Failed to delete soutenance', err);
-        const message = err.response?.data?.message || 'Impossible de supprimer la soutenance.';
+        // Using double quotes for the string to avoid potential parsing issues with apostrophes
+        const message = err.response?.data?.message || "Impossible de supprimer la soutenance.";
         setError(message);
       }
     }
@@ -98,14 +114,16 @@ export default function PlanningPage() {
     try {
       setError(null);
       await soutenanceService.updateEtat(id, etat);
-      fetchData();
+      fetchData(); // Ensure this call has a semicolon
     } catch (err: any) {
       console.error('Failed to update state', err);
-      const message = err.response?.data?.message || 'Erreur lors de la mise à jour de l\'état.';
+      // Using double quotes for the string to avoid potential parsing issues with apostrophes
+      const message = err.response?.data?.message || "Erreur lors de la mise à jour de l'état.";
       setError(message);
     }
   };
 
+  // This part is only rendered if the user is NOT a student, as students are redirected
   return (
     <div className="max-w-5xl mx-auto space-y-8">
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
